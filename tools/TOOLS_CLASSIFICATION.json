@@ -1,0 +1,5792 @@
+{
+  "timestamp": "2025-11-24T04:09:06.872651",
+  "total_tools": 222,
+  "signal": [
+    {
+      "file": "github_create_and_push_repo.py",
+      "name": "github_create_and_push_repo",
+      "size": 10092,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "os",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "typing",
+        "requests",
+        "argparse"
+      ],
+      "functions": [
+        "get_github_token",
+        "create_github_repo",
+        "push_to_github",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "add_remaining_swarm_knowledge.py",
+      "name": "add_remaining_swarm_knowledge",
+      "size": 6574,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "os",
+        "src.swarm_brain.swarm_memory"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "agent_fuel_monitor.py",
+      "name": "agent_fuel_monitor",
+      "size": 12742,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "sys",
+        "datetime",
+        "pathlib",
+        "typing",
+        "argparse",
+        "subprocess"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "load_fuel_log",
+        "save_fuel_log",
+        "check_agent_activity",
+        "needs_refuel",
+        "generate_jet_fuel_message",
+        "deliver_fuel",
+        "monitor_and_refuel",
+        "schedule_monitoring"
+      ],
+      "classes": [
+        "AgentFuelMonitor"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "agent_lifecycle_automator.py",
+      "name": "agent_lifecycle_automator",
+      "size": 8132,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "subprocess",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "update",
+        "__init__",
+        "check",
+        "_send",
+        "__init__",
+        "start_cycle",
+        "start_mission",
+        "complete_item",
+        "end_cycle",
+        "_increment_cycle",
+        "_add_points",
+        "_commit_status"
+      ],
+      "classes": [
+        "StatusUpdater",
+        "PipelineGas",
+        "AgentLifecycleAutomator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "agent_message_history.py",
+      "name": "agent_message_history",
+      "size": 10264,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "sys",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "get_agent_inbox",
+        "get_sent_messages",
+        "_extract_sender",
+        "_extract_recipient",
+        "_extract_priority",
+        "format_message_list",
+        "_get_priority_icon",
+        "show_conversation"
+      ],
+      "classes": [
+        "MessageHistoryViewer"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "agent_mission_controller.py",
+      "name": "agent_mission_controller",
+      "size": 21970,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "ast",
+        "json",
+        "sys",
+        "dataclasses",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "load",
+        "matches_specialty",
+        "__init__",
+        "_load_patterns_db",
+        "analyze_file_for_mission",
+        "_determine_pattern_and_plan",
+        "_estimate_points",
+        "_assess_difficulty",
+        "_calculate_priority",
+        "_estimate_time",
+        "scan_for_missions",
+        "recommend_mission"
+      ],
+      "classes": [
+        "AgentProfile",
+        "Mission",
+        "MissionRecommendation",
+        "MissionIntelligence"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "agent_orient.py",
+      "name": "agent_orient",
+      "size": 8800,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "quick_start",
+        "list_systems",
+        "list_tools",
+        "search",
+        "show_help",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "agent_task_finder.py",
+      "name": "agent_task_finder",
+      "size": 4453,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "load_project_analysis",
+        "calculate_roi",
+        "find_violations",
+        "rank_tasks_by_roi",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "agent_toolbelt.py",
+      "name": "agent_toolbelt",
+      "size": 6790,
+      "has_main": true,
+      "has_docstring": false,
+      "imports": [
+        "dataclasses",
+        "pathlib",
+        "argparse",
+        "json",
+        "sys",
+        "time",
+        "hashlib"
+      ],
+      "functions": [
+        "_append_jsonl",
+        "_iter_jsonl",
+        "brain_note",
+        "brain_search",
+        "brain_share",
+        "oss_clone",
+        "oss_issues",
+        "oss_import",
+        "oss_status",
+        "debate_start",
+        "debate_vote",
+        "debate_status",
+        "msgtask_ingest",
+        "msgtask_parse",
+        "msgtask_fingerprint",
+        "main"
+      ],
+      "classes": [
+        "BrainNote"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "analysis_cli.py",
+      "name": "analysis_cli",
+      "size": 12746,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "__future__",
+        "logging",
+        "ast",
+        "sys",
+        "json",
+        "argparse",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "should_exclude_file",
+        "count_lines",
+        "analyze_python_file",
+        "analyze_project",
+        "ci_gate_check",
+        "format_violations_text",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "analyze_init_files.py",
+      "name": "analyze_init_files",
+      "size": 8687,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "hashlib",
+        "json",
+        "os",
+        "collections",
+        "pathlib"
+      ],
+      "functions": [
+        "analyze_init_files",
+        "print_analysis",
+        "generate_consolidation_plan",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "arch_pattern_validator.py",
+      "name": "arch_pattern_validator",
+      "size": 14494,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "ast",
+        "dataclasses",
+        "pathlib"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "validate_file",
+        "_analyze_patterns",
+        "_has_repository_pattern",
+        "_has_service_pattern",
+        "_has_dependency_injection",
+        "_has_error_handling",
+        "_has_logging",
+        "_has_type_hints",
+        "_has_docstrings",
+        "_check_function_sizes",
+        "_check_class_sizes",
+        "_calculate_complexity",
+        "_calculate_quality_score",
+        "print_result"
+      ],
+      "classes": [
+        "ValidationResult",
+        "ArchitectureValidator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "architecture_review.py",
+      "name": "architecture_review",
+      "size": 3911,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "sys",
+        "datetime",
+        "pathlib"
+      ],
+      "functions": [
+        "request_review",
+        "provide_review",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "audit_broken_tools.py",
+      "name": "audit_broken_tools",
+      "size": 13181,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "ast",
+        "argparse",
+        "json",
+        "subprocess",
+        "sys",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "audit_directory",
+        "_should_skip",
+        "_test_file",
+        "_check_syntax",
+        "_check_imports",
+        "_is_cli_tool",
+        "_check_help",
+        "_add_to_quarantine",
+        "generate_report",
+        "save_manifest"
+      ],
+      "classes": [
+        "ToolAuditor"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "audit_cleanup.py",
+      "name": "audit_cleanup",
+      "size": 9130,
+      "has_main": true,
+      "has_docstring": false,
+      "imports": [
+        "logging",
+        "__future__",
+        "argparse",
+        "fnmatch",
+        "hashlib",
+        "json",
+        "os",
+        "re",
+        "subprocess",
+        "sys",
+        "time",
+        "collections"
+      ],
+      "functions": [
+        "load_config",
+        "load_ignores",
+        "path_ignored_by_patterns",
+        "is_ignored_dir",
+        "sha256_file",
+        "list_files",
+        "ext_of",
+        "match_any",
+        "git_available",
+        "git_head_stats",
+        "percent",
+        "main",
+        "top_exts"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "audit_imports.py",
+      "name": "audit_imports",
+      "size": 4694,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "importlib",
+        "sys",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "test_import",
+        "file_to_module_path",
+        "audit_imports",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "audit_project_components.py",
+      "name": "audit_project_components",
+      "size": 3931,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "importlib",
+        "pathlib"
+      ],
+      "functions": [
+        "test_import",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "audit_toolbelt.py",
+      "name": "audit_toolbelt",
+      "size": 4299,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "logging",
+        "pathlib",
+        "sys",
+        "tools_v2.tool_registry",
+        "tools_v2.toolbelt_core"
+      ],
+      "functions": [
+        "audit_all_tools"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "auto_inbox_processor.py",
+      "name": "auto_inbox_processor",
+      "size": 11587,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "re",
+        "shutil",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "parse_message_metadata",
+        "categorize_message",
+        "process_inbox",
+        "process_all_inboxes"
+      ],
+      "classes": [
+        "AutoInboxProcessor"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "auto_remediate_loc.py",
+      "name": "auto_remediate_loc",
+      "size": 12530,
+      "has_main": true,
+      "has_docstring": false,
+      "imports": [
+        "logging",
+        "__future__",
+        "ast",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "should_exclude",
+        "count_lines",
+        "analyze_file_loc",
+        "analyze_class_loc",
+        "analyze_function_loc",
+        "generate_file_split_suggestion",
+        "generate_class_split_suggestion",
+        "generate_function_split_suggestion",
+        "generate_refactor_plan",
+        "generate_text_report",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "auto_status_updater.py",
+      "name": "auto_status_updater",
+      "size": 10262,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "subprocess",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "get_current_status",
+        "update_status",
+        "commit_status_update",
+        "auto_detect_activity"
+      ],
+      "classes": [
+        "AutoStatusUpdater"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "auto_workspace_cleanup.py",
+      "name": "auto_workspace_cleanup",
+      "size": 8389,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "shutil",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "get_file_age",
+        "should_archive",
+        "cleanup_agent_workspace",
+        "cleanup_all_agents"
+      ],
+      "classes": [
+        "AutoWorkspaceCleanup"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "autonomous_leaderboard.py",
+      "name": "autonomous_leaderboard",
+      "size": 5532,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "argparse",
+        "src.core.gamification.autonomous_competition_system"
+      ],
+      "functions": [
+        "show_leaderboard",
+        "award_achievement_cli",
+        "show_agent_details",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "autonomous_task_engine.py",
+      "name": "autonomous_task_engine",
+      "size": 28782,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "subprocess",
+        "pathlib",
+        "typing",
+        "dataclasses",
+        "datetime",
+        "collections",
+        "ast",
+        "re",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "discover_tasks",
+        "get_optimal_task_for_agent",
+        "get_top_n_tasks_for_agent",
+        "claim_task",
+        "start_task",
+        "complete_task",
+        "generate_autonomous_report",
+        "_discover_v2_violations",
+        "_discover_tech_debt",
+        "_discover_code_todos",
+        "_discover_optimizations",
+        "_discover_test_gaps",
+        "_calculate_skill_matches",
+        "_score_task_for_agent",
+        "_get_or_create_agent_profile",
+        "_has_unmet_blockers",
+        "_find_task",
+        "_update_agent_profile",
+        "_load_tasks",
+        "_save_tasks",
+        "_load_agent_profiles",
+        "_save_agent_profiles"
+      ],
+      "classes": [
+        "Task",
+        "AgentProfile",
+        "TaskRecommendation",
+        "AutonomousTaskEngine"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "browser_pool_manager.py",
+      "name": "browser_pool_manager",
+      "size": 9178,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "logging",
+        "time",
+        "collections",
+        "dataclasses",
+        "datetime",
+        "threading",
+        "typing",
+        "selenium",
+        "selenium.webdriver.chrome.options"
+      ],
+      "functions": [
+        "is_expired",
+        "mark_used",
+        "__init__",
+        "_create_browser",
+        "acquire",
+        "release",
+        "_close_driver",
+        "cleanup",
+        "_get_reuse_rate",
+        "get_stats",
+        "__enter__",
+        "__exit__"
+      ],
+      "classes": [
+        "BrowserInstance",
+        "BrowserPoolManager"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "cache_invalidator.py",
+      "name": "cache_invalidator",
+      "size": 7831,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "shutil",
+        "sys",
+        "datetime",
+        "pathlib"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "check_cache_age",
+        "clear_cache_file",
+        "clear_all_caches",
+        "clear_analysis_chunks",
+        "verify_caches"
+      ],
+      "classes": [
+        "CacheInvalidator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_completion_processor.py",
+      "name": "captain_completion_processor",
+      "size": 4782,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "sys",
+        "re",
+        "pathlib",
+        "datetime",
+        "tools_v2.categories.captain_coordination_tools",
+        "json"
+      ],
+      "functions": [
+        "extract_completion_info",
+        "process_completion"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_coordinate_validator.py",
+      "name": "captain_coordinate_validator",
+      "size": 4724,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "sys",
+        "json",
+        "pathlib"
+      ],
+      "functions": [
+        "load_coordinates",
+        "validate_coordinate",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_find_idle_agents.py",
+      "name": "captain_find_idle_agents",
+      "size": 5526,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "json",
+        "pathlib",
+        "argparse",
+        "tools_v2.categories.captain_tools"
+      ],
+      "functions": [
+        "find_idle_agents"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_hard_onboard_agent.py",
+      "name": "captain_hard_onboard_agent",
+      "size": 3068,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "sys",
+        "pathlib",
+        "src.services.hard_onboarding_service"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_import_validator.py",
+      "name": "captain_import_validator",
+      "size": 5600,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "sys",
+        "ast",
+        "pathlib",
+        "typing",
+        "tools_v2.categories.import_fix_tools"
+      ],
+      "functions": [
+        "extract_imports",
+        "validate_import",
+        "validate_file_imports",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_leaderboard_update.py",
+      "name": "captain_leaderboard_update",
+      "size": 4413,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "json",
+        "datetime",
+        "pathlib",
+        "argparse",
+        "tools_v2.categories.captain_coordination_tools"
+      ],
+      "functions": [
+        "update_leaderboard"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_message_all_agents.py",
+      "name": "captain_message_all_agents",
+      "size": 4445,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "subprocess",
+        "sys",
+        "argparse",
+        "tools_v2.categories.messaging_tools"
+      ],
+      "functions": [
+        "message_all_agents"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_morning_briefing.py",
+      "name": "captain_morning_briefing",
+      "size": 6523,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "sys",
+        "pathlib",
+        "datetime",
+        "json"
+      ],
+      "functions": [
+        "get_agent_last_activity",
+        "get_recent_completions",
+        "get_pending_tasks",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_next_task_picker.py",
+      "name": "captain_next_task_picker",
+      "size": 2890,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "argparse",
+        "json",
+        "tools_v2.categories.captain_coordination_tools"
+      ],
+      "functions": [
+        "calculate_roi",
+        "get_next_task_for_agent"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_roi_quick_calc.py",
+      "name": "captain_roi_quick_calc",
+      "size": 4410,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "argparse",
+        "tools_v2.categories.captain_coordination_tools"
+      ],
+      "functions": [
+        "calculate_task_roi"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_self_message.py",
+      "name": "captain_self_message",
+      "size": 3722,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "subprocess",
+        "sys",
+        "argparse",
+        "tools_v2.categories.messaging_tools"
+      ],
+      "functions": [
+        "send_self_message"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_snapshot.py",
+      "name": "captain_snapshot",
+      "size": 3843,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "logging",
+        "datetime",
+        "pathlib",
+        "typing",
+        "core.unified_utilities"
+      ],
+      "functions": [
+        "load_agents_index",
+        "calculate_staleness",
+        "get_status_priority",
+        "format_agent_row",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_toolbelt_help.py",
+      "name": "captain_toolbelt_help",
+      "size": 3707,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [],
+      "functions": [
+        "show_toolbelt"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "captain_update_log.py",
+      "name": "captain_update_log",
+      "size": 1982,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "datetime",
+        "pathlib"
+      ],
+      "functions": [
+        "update_captains_log"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "cleanup_documentation.py",
+      "name": "cleanup_documentation",
+      "size": 1354,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "cleanup_documentation_refactored"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "cleanup_documentation_deduplicator.py",
+      "name": "cleanup_documentation_deduplicator",
+      "size": 3326,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "re",
+        "collections",
+        "pathlib"
+      ],
+      "functions": [
+        "__init__",
+        "apply_deduplication",
+        "_normalize_topic",
+        "_select_preferred_file"
+      ],
+      "classes": [
+        "DocumentationDeduplicator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "cleanup_documentation_refactored.py",
+      "name": "cleanup_documentation_refactored",
+      "size": 13418,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "os",
+        "re",
+        "shutil",
+        "subprocess",
+        "tempfile",
+        "collections",
+        "datetime",
+        "pathlib",
+        "cleanup_documentation_deduplicator",
+        "cleanup_documentation_reference_scanner"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "run",
+        "scan_documentation_files",
+        "apply_criteria",
+        "_is_agent_chatter",
+        "apply_preserve_allowlist",
+        "generate_report",
+        "execute_archive",
+        "_flatten_candidates",
+        "_write_list"
+      ],
+      "classes": [
+        "DocumentationCleanup"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "cleanup_documentation_reference_scanner.py",
+      "name": "cleanup_documentation_reference_scanner",
+      "size": 3921,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "pathlib"
+      ],
+      "functions": [
+        "__init__",
+        "scan_references",
+        "_glob_files",
+        "_is_referenced"
+      ],
+      "classes": [
+        "ReferenceScanner"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "complexity_analyzer_cli.py",
+      "name": "complexity_analyzer_cli",
+      "size": 2136,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "sys",
+        "pathlib",
+        "complexity_analyzer_core"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "complexity_analyzer_core.py",
+      "name": "complexity_analyzer_core",
+      "size": 14349,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "ast",
+        "dataclasses",
+        "pathlib",
+        "complexity_analyzer_formatters",
+        "complexity_analyzer_formatters",
+        "complexity_analyzer_formatters",
+        "complexity_analyzer_formatters"
+      ],
+      "functions": [
+        "has_violations",
+        "__init__",
+        "visit_If",
+        "visit_While",
+        "visit_For",
+        "visit_ExceptHandler",
+        "visit_With",
+        "visit_BoolOp",
+        "visit_comprehension",
+        "__init__",
+        "visit_If",
+        "visit_While",
+        "visit_For",
+        "visit_ExceptHandler",
+        "visit_BoolOp",
+        "visit_Continue",
+        "visit_Break",
+        "__init__",
+        "analyze_file",
+        "_analyze_function",
+        "_check_violations",
+        "_get_severity",
+        "_get_cyclomatic_suggestion",
+        "_get_cognitive_suggestion",
+        "_get_nesting_suggestion",
+        "__init__",
+        "analyze_file",
+        "analyze_directory",
+        "_should_skip_file",
+        "generate_summary_report"
+      ],
+      "classes": [
+        "ComplexityMetrics",
+        "ComplexityViolation",
+        "ComplexityReport",
+        "CyclomaticComplexityVisitor",
+        "CognitiveComplexityVisitor",
+        "ComplexityAnalyzer",
+        "ComplexityAnalysisService"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "complexity_analyzer_formatters.py",
+      "name": "complexity_analyzer_formatters",
+      "size": 4858,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "pathlib",
+        "complexity_analyzer_core",
+        "complexity_analyzer_core"
+      ],
+      "functions": [
+        "format_report",
+        "generate_summary_report"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "compliance_dashboard.py",
+      "name": "compliance_dashboard",
+      "size": 5072,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "datetime",
+        "pathlib",
+        "complexity_analyzer",
+        "compliance_history_tracker",
+        "dashboard_data_aggregator",
+        "dashboard_html_generator_refactored",
+        "refactoring_suggestion_engine",
+        "v2_compliance_checker",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "generate_dashboard"
+      ],
+      "classes": [
+        "ComplianceDashboard"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "compliance_history_database.py",
+      "name": "compliance_history_database",
+      "size": 4576,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sqlite3",
+        "pathlib",
+        "compliance_history_models"
+      ],
+      "functions": [
+        "__init__",
+        "_ensure_database",
+        "save_snapshot",
+        "get_recent_snapshots",
+        "get_all_snapshots",
+        "_row_to_snapshot"
+      ],
+      "classes": [
+        "ComplianceDatabase"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "compliance_history_reports.py",
+      "name": "compliance_history_reports",
+      "size": 7877,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "datetime",
+        "typing",
+        "compliance_history_models"
+      ],
+      "functions": [
+        "get_trend_data",
+        "get_week_comparison",
+        "generate_trend_report",
+        "_generate_recommendations",
+        "format_trend_report"
+      ],
+      "classes": [
+        "ComplianceReports"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "compliance_history_tracker.py",
+      "name": "compliance_history_tracker",
+      "size": 6800,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "datetime",
+        "pathlib",
+        "typing",
+        "compliance_history_database",
+        "compliance_history_models",
+        "compliance_history_reports",
+        "complexity_analyzer",
+        "v2_compliance_checker",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "record_snapshot",
+        "get_recent_snapshots",
+        "get_all_snapshots",
+        "get_trend_data",
+        "get_week_comparison",
+        "generate_trend_report",
+        "format_trend_report"
+      ],
+      "classes": [
+        "ComplianceHistoryTracker"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "comprehensive_tool_runtime_audit.py",
+      "name": "comprehensive_tool_runtime_audit",
+      "size": 6891,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "subprocess",
+        "sys",
+        "pathlib",
+        "datetime",
+        "json"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "is_cli_tool",
+        "test_cli_tool",
+        "audit_directory",
+        "generate_report"
+      ],
+      "classes": [
+        "RuntimeAuditor"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "consolidation_runner.py",
+      "name": "consolidation_runner",
+      "size": 8313,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "shutil",
+        "pathlib",
+        "datetime",
+        "typing",
+        "dataclasses"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "analyze_structure",
+        "create_plan",
+        "execute_plan",
+        "list_plans",
+        "_create_backup",
+        "_consolidate_files"
+      ],
+      "classes": [
+        "ConsolidationPlan",
+        "ConsolidationRunner"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "coverage_validator.py",
+      "name": "coverage_validator",
+      "size": 3506,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "parse_jest_coverage_summary",
+        "validate_coverage"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "dashboard_charts.py",
+      "name": "dashboard_charts",
+      "size": 6411,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "typing",
+        "json"
+      ],
+      "functions": [
+        "generate_chart_scripts"
+      ],
+      "classes": [
+        "DashboardCharts"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "dashboard_data_aggregator.py",
+      "name": "dashboard_data_aggregator",
+      "size": 6074,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "dataclasses",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "aggregate_data",
+        "identify_top_violators",
+        "calculate_overall_score"
+      ],
+      "classes": [
+        "DashboardData",
+        "DashboardDataAggregator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "dashboard_html_generator_refactored.py",
+      "name": "dashboard_html_generator_refactored",
+      "size": 15143,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "typing",
+        "dashboard_charts",
+        "dashboard_styles"
+      ],
+      "functions": [
+        "__init__",
+        "generate_html",
+        "generate_header",
+        "generate_score_card",
+        "generate_metrics_grid",
+        "generate_violations_section",
+        "generate_complexity_section",
+        "generate_top_violators",
+        "generate_suggestions",
+        "generate_footer",
+        "generate_violators_rows",
+        "generate_suggestions_rows",
+        "get_score_class",
+        "get_priority_badge",
+        "generate_week_comparison",
+        "generate_historical_trends",
+        "get_change_indicator"
+      ],
+      "classes": [
+        "DashboardHTMLGenerator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "dashboard_styles.py",
+      "name": "dashboard_styles",
+      "size": 6326,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [],
+      "functions": [
+        "get_css"
+      ],
+      "classes": [
+        "DashboardStyles"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "devlog_auto_poster.py",
+      "name": "devlog_auto_poster",
+      "size": 5405,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "sys",
+        "pathlib",
+        "datetime",
+        "src.services.publishers.discord_publisher",
+        "os"
+      ],
+      "functions": [
+        "load_webhook_url",
+        "parse_devlog_file",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "devlog_manager.py",
+      "name": "devlog_manager",
+      "size": 12870,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "os",
+        "re",
+        "argparse",
+        "pathlib",
+        "datetime",
+        "typing",
+        "requests",
+        "discord_mermaid_renderer",
+        "sys",
+        "pathlib",
+        "discord_mermaid_renderer"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "categorize_devlog",
+        "upload_to_swarm_brain",
+        "post_to_discord",
+        "update_index",
+        "post"
+      ],
+      "classes": [
+        "DevlogManager"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "discord_status_dashboard.py",
+      "name": "discord_status_dashboard",
+      "size": 6485,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "os",
+        "pathlib",
+        "datetime",
+        "dotenv",
+        "requests",
+        "time"
+      ],
+      "functions": [
+        "create_wow_factor_status",
+        "post_to_discord",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "doc_templates_achievements.py",
+      "name": "doc_templates_achievements",
+      "size": 3500,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "datetime",
+        "pathlib"
+      ],
+      "functions": [
+        "create_milestone_template",
+        "create_enhancement_request_template"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "doc_templates_mission.py",
+      "name": "doc_templates_mission",
+      "size": 3265,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "datetime",
+        "pathlib"
+      ],
+      "functions": [
+        "create_mission_tracking_template",
+        "create_completion_report_template"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "documentation_assistant.py",
+      "name": "documentation_assistant",
+      "size": 8223,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "sys",
+        "datetime",
+        "pathlib",
+        "typing",
+        "doc_templates_mission",
+        "doc_templates_achievements"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "create_mission_doc",
+        "create_completion_report",
+        "create_milestone_doc",
+        "create_enhancement_request",
+        "create_status_snapshot",
+        "_count_active_agents",
+        "_list_recent_missions",
+        "_list_recent_milestones"
+      ],
+      "classes": [
+        "DocumentationAssistant"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "duplication_analysis.py",
+      "name": "duplication_analysis",
+      "size": 5137,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "difflib",
+        "typing",
+        "duplication_planner"
+      ],
+      "functions": [
+        "analyze_duplicates",
+        "_categorize_function_duplicates",
+        "_categorize_class_duplicates",
+        "_get_file_domain",
+        "_are_contents_identical",
+        "_are_contents_similar",
+        "_calculate_similarity"
+      ],
+      "classes": [
+        "DuplicationAnalysis"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "duplication_analyzer.py",
+      "name": "duplication_analyzer",
+      "size": 3017,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "tools.duplication_analysis",
+        "tools.duplication_reporter",
+        "tools.duplication_scanner",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "scan_codebase",
+        "analyze_duplicates",
+        "generate_report"
+      ],
+      "classes": [
+        "DuplicationAnalyzer"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "duplication_planner.py",
+      "name": "duplication_planner",
+      "size": 3559,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "typing"
+      ],
+      "functions": [
+        "generate_consolidation_plan",
+        "_choose_target_file",
+        "_get_file_domain"
+      ],
+      "classes": [
+        "DuplicationPlanner"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "duplication_reporter.py",
+      "name": "duplication_reporter",
+      "size": 2898,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "typing"
+      ],
+      "functions": [
+        "generate_report"
+      ],
+      "classes": [
+        "DuplicationReporter"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "duplication_scanner.py",
+      "name": "duplication_scanner",
+      "size": 5117,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "ast",
+        "hashlib",
+        "collections",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "__init__",
+        "scan_codebase",
+        "_should_include_file",
+        "_get_function_hash",
+        "_get_class_hash",
+        "_get_node_content",
+        "_clean_code_content"
+      ],
+      "classes": [
+        "DuplicationScanner"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "extraction_roadmap_generator.py",
+      "name": "extraction_roadmap_generator",
+      "size": 8429,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "load_from_analysis_file",
+        "main",
+        "__init__",
+        "add_pattern",
+        "generate_roadmap"
+      ],
+      "classes": [
+        "ExtractionRoadmapGenerator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "file_refactor_detector.py",
+      "name": "file_refactor_detector",
+      "size": 8720,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "re",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "typing",
+        "json",
+        "json"
+      ],
+      "functions": [
+        "scan_directory",
+        "main",
+        "__init__",
+        "check_file",
+        "_check_file_header",
+        "_check_git_history",
+        "_get_warning"
+      ],
+      "classes": [
+        "RefactorDetector"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "find_file_size_violations.py",
+      "name": "find_file_size_violations",
+      "size": 1941,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "os",
+        "pathlib"
+      ],
+      "functions": [
+        "count_lines",
+        "scan_violations"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "functionality_comparison.py",
+      "name": "functionality_comparison",
+      "size": 3945,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "__init__",
+        "save_baseline",
+        "load_baseline",
+        "compare_with_baseline"
+      ],
+      "classes": [
+        "FunctionalityComparison"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "functionality_reports.py",
+      "name": "functionality_reports",
+      "size": 4102,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "typing"
+      ],
+      "functions": [
+        "generate_report"
+      ],
+      "classes": [
+        "FunctionalityReports"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "functionality_signature.py",
+      "name": "functionality_signature",
+      "size": 3739,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "hashlib",
+        "re",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "__init__",
+        "generate_signature",
+        "_should_include_file",
+        "extract_functions",
+        "extract_classes",
+        "extract_imports"
+      ],
+      "classes": [
+        "SignatureGenerator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "functionality_verification.py",
+      "name": "functionality_verification",
+      "size": 10262,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "datetime",
+        "pathlib",
+        "typing",
+        "functionality_comparison",
+        "functionality_reports",
+        "functionality_signature",
+        "functionality_tests",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "generate_functionality_signature",
+        "save_baseline",
+        "load_baseline",
+        "compare_with_baseline",
+        "run_agent_specific_verification",
+        "generate_verification_report"
+      ],
+      "classes": [
+        "FunctionalityVerifier"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "gas_messaging.py",
+      "name": "gas_messaging",
+      "size": 1960,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "subprocess",
+        "sys",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "send_gas_message"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "generate_utils_catalog_enhanced.py",
+      "name": "generate_utils_catalog_enhanced",
+      "size": 8610,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "ast",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "analyze_file",
+        "scan_utils_directories",
+        "generate_markdown"
+      ],
+      "classes": [
+        "UtilsAnalyzer"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "git_commit_verifier.py",
+      "name": "git_commit_verifier",
+      "size": 4553,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "subprocess",
+        "sys",
+        "datetime",
+        "pathlib"
+      ],
+      "functions": [
+        "run_git_command",
+        "check_commits_today",
+        "verify_work_exists",
+        "check_file_exists"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "git_work_verifier.py",
+      "name": "git_work_verifier",
+      "size": 10336,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "subprocess",
+        "json",
+        "datetime",
+        "pathlib",
+        "typing",
+        "dataclasses",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "verify_claim",
+        "_get_git_evidence",
+        "_parse_git_log",
+        "verify_multiple_claims",
+        "generate_report"
+      ],
+      "classes": [
+        "WorkClaim",
+        "GitEvidence",
+        "VerificationResult",
+        "GitWorkVerifier"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "github_repo_roi_calculator.py",
+      "name": "github_repo_roi_calculator",
+      "size": 8783,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "dataclasses",
+        "datetime",
+        "typing"
+      ],
+      "functions": [
+        "calculate_value_score",
+        "calculate_maintenance_effort",
+        "calculate_roi",
+        "analyze_repository_portfolio",
+        "generate_consolidation_strategy",
+        "__post_init__"
+      ],
+      "classes": [
+        "RepoMetrics"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "hard_onboard_captain.py",
+      "name": "hard_onboard_captain",
+      "size": 1411,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "src.services.hard_onboarding_service"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "import_chain_validator.py",
+      "name": "import_chain_validator",
+      "size": 4184,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "importlib.util",
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "test_import",
+        "find_import_statements",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "integrity_validator.py",
+      "name": "integrity_validator",
+      "size": 12742,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "dataclasses",
+        "datetime",
+        "git_work_verifier",
+        "work_attribution_tool",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "validate_task_completion",
+        "validate_agent_status",
+        "validate_points_claim",
+        "generate_integrity_report"
+      ],
+      "classes": [
+        "IntegrityCheck",
+        "IntegrityValidator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "markov_8agent_roi_optimizer.py",
+      "name": "markov_8agent_roi_optimizer",
+      "size": 12581,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "markov_task_optimizer"
+      ],
+      "functions": [
+        "calculate_roi",
+        "load_top_violations",
+        "create_roi_optimized_tasks",
+        "assign_tasks_to_8_agents"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "markov_cycle_simulator.py",
+      "name": "markov_cycle_simulator",
+      "size": 13023,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "markov_task_optimizer"
+      ],
+      "functions": [
+        "load_real_violations_from_scanner",
+        "create_tasks_from_violations",
+        "simulate_cycle",
+        "run_4_cycle_simulation"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "markov_task_optimizer.py",
+      "name": "markov_task_optimizer",
+      "size": 15964,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "dataclasses",
+        "datetime",
+        "numpy"
+      ],
+      "functions": [
+        "demo_markov_optimizer",
+        "__init__",
+        "select_next_task",
+        "_calculate_transition_probability",
+        "_dependency_score",
+        "_agent_match_score",
+        "_strategic_value",
+        "_risk_score",
+        "_resource_availability",
+        "_get_historical_success_rate",
+        "_update_history",
+        "build_transition_matrix",
+        "_create_dummy_state_after",
+        "find_optimal_sequence",
+        "_simulate_state_after_task",
+        "explain_recommendation"
+      ],
+      "classes": [
+        "Task",
+        "ProjectState",
+        "MarkovTaskOptimizer"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "memory_leak_scanner.py",
+      "name": "memory_leak_scanner",
+      "size": 4925,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "re",
+        "sys",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "scan_file",
+        "scan_directory",
+        "print_report",
+        "__init__"
+      ],
+      "classes": [
+        "MemoryLeakPattern"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "mission_control.py",
+      "name": "mission_control",
+      "size": 14438,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "subprocess",
+        "sys",
+        "datetime",
+        "pathlib",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "check_task_queue",
+        "run_scanner_analysis",
+        "consult_swarm_brain",
+        "check_agent_statuses",
+        "find_real_violations",
+        "generate_mission",
+        "suggest_pattern",
+        "print_mission_brief",
+        "save_mission_brief"
+      ],
+      "classes": [
+        "MissionControl"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "module_extractor.py",
+      "name": "module_extractor",
+      "size": 6246,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "ast",
+        "sys",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "extract_function_or_class",
+        "list_extractable_items",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "opportunity_scanners.py",
+      "name": "opportunity_scanners",
+      "size": 5360,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "subprocess",
+        "sys",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "scan_todo_comments",
+        "scan_v2_violations",
+        "scan_memory_leaks",
+        "scan_linter_errors",
+        "scan_test_coverage",
+        "scan_duplication",
+        "scan_complexity"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "pattern_extractor.py",
+      "name": "pattern_extractor",
+      "size": 7302,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "ast",
+        "shutil",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "analyze_file",
+        "extract_class",
+        "list_extractables",
+        "main",
+        "__init__",
+        "visit_ClassDef",
+        "visit_FunctionDef",
+        "visit_Import",
+        "visit_ImportFrom"
+      ],
+      "classes": [
+        "PatternAnalyzer"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "pattern_suggester.py",
+      "name": "pattern_suggester",
+      "size": 5151,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "ast",
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "analyze_file_structure",
+        "suggest_pattern",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "pipeline_gas_scheduler.py",
+      "name": "pipeline_gas_scheduler",
+      "size": 9358,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "logging",
+        "datetime",
+        "pathlib",
+        "typing",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "check_progress",
+        "_send_gas_at_checkpoint",
+        "_send_early_gas",
+        "_send_safety_gas",
+        "_send_final_gas",
+        "_format_early_gas_message",
+        "_format_safety_gas_message",
+        "_format_final_gas_message",
+        "_default_send_message",
+        "force_send_all_checkpoints"
+      ],
+      "classes": [
+        "PipelineGasScheduler"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "post_devlog_to_discord.py",
+      "name": "post_devlog_to_discord",
+      "size": 1782,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "os",
+        "sys",
+        "pathlib",
+        "dotenv",
+        "requests"
+      ],
+      "functions": [
+        "post_devlog_to_discord"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "progress_auto_tracker.py",
+      "name": "progress_auto_tracker",
+      "size": 7941,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "subprocess",
+        "pathlib",
+        "datetime",
+        "typing"
+      ],
+      "functions": [
+        "get_recent_commits",
+        "extract_tasks_from_commits",
+        "update_status_json",
+        "show_status",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "projectscanner.py",
+      "name": "projectscanner",
+      "size": 3068,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "logging",
+        "pathlib",
+        "projectscanner_core"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "projectscanner_core.py",
+      "name": "projectscanner_core",
+      "size": 9095,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "logging",
+        "os",
+        "threading",
+        "collections.abc",
+        "pathlib",
+        "typing",
+        "projectscanner_language_analyzer",
+        "projectscanner_legacy_reports",
+        "projectscanner_modular_reports",
+        "projectscanner_workers"
+      ],
+      "functions": [
+        "__init__",
+        "load_cache",
+        "save_cache",
+        "scan_project",
+        "_process_file",
+        "generate_init_files",
+        "export_chatgpt_context",
+        "generate_modular_reports",
+        "categorize_agents",
+        "_maturity_level",
+        "_agent_type"
+      ],
+      "classes": [
+        "ProjectScanner"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "projectscanner_language_analyzer.py",
+      "name": "projectscanner_language_analyzer",
+      "size": 12117,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "ast",
+        "logging",
+        "pathlib",
+        "tree_sitter"
+      ],
+      "functions": [
+        "__init__",
+        "_init_tree_sitter_language",
+        "analyze_file",
+        "_analyze_python",
+        "_analyze_rust",
+        "_analyze_javascript",
+        "_traverse",
+        "get_node_text",
+        "_traverse"
+      ],
+      "classes": [
+        "LanguageAnalyzer"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "projectscanner_legacy_reports.py",
+      "name": "projectscanner_legacy_reports",
+      "size": 7687,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "logging",
+        "collections",
+        "pathlib",
+        "typing",
+        "jinja2"
+      ],
+      "functions": [
+        "__init__",
+        "load_existing_report",
+        "save_report",
+        "generate_init_files",
+        "load_existing_chatgpt_context",
+        "export_chatgpt_context"
+      ],
+      "classes": [
+        "ReportGenerator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "projectscanner_modular_reports.py",
+      "name": "projectscanner_modular_reports",
+      "size": 13675,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "logging",
+        "pathlib"
+      ],
+      "functions": [
+        "__init__",
+        "generate_modular_reports",
+        "_generate_agent_analysis",
+        "_generate_module_analysis",
+        "_generate_file_type_analysis",
+        "_generate_complexity_analysis",
+        "_generate_dependency_analysis",
+        "_generate_architecture_overview"
+      ],
+      "classes": [
+        "ModularReportGenerator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "projectscanner_workers.py",
+      "name": "projectscanner_workers",
+      "size": 6588,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "hashlib",
+        "logging",
+        "queue",
+        "threading",
+        "pathlib"
+      ],
+      "functions": [
+        "__init__",
+        "run",
+        "__init__",
+        "add_task",
+        "wait_for_completion",
+        "stop_workers",
+        "__init__",
+        "hash_file",
+        "should_exclude",
+        "process_file"
+      ],
+      "classes": [
+        "BotWorker",
+        "MultibotManager",
+        "FileProcessor"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "quarantine_manager.py",
+      "name": "quarantine_manager",
+      "size": 8315,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "shutil",
+        "datetime",
+        "pathlib",
+        "typing",
+        "sys"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "_load_manifest",
+        "_save_manifest",
+        "quarantine_tool",
+        "list_quarantined",
+        "assign_tool",
+        "mark_fixed",
+        "reintegrate_tool"
+      ],
+      "classes": [
+        "QuarantineManager"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "quick_broken_tools_audit.py",
+      "name": "quick_broken_tools_audit",
+      "size": 2909,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "ast",
+        "sys",
+        "pathlib",
+        "collections"
+      ],
+      "functions": [
+        "check_syntax",
+        "audit_tools",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "quick_line_counter.py",
+      "name": "quick_line_counter",
+      "size": 1998,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "count_lines",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "quick_linecount.py",
+      "name": "quick_linecount",
+      "size": 4048,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "glob",
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "count_lines",
+        "format_result",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "quick_metrics.py",
+      "name": "quick_metrics",
+      "size": 7246,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "ast",
+        "sys",
+        "pathlib",
+        "typing",
+        "glob",
+        "json"
+      ],
+      "functions": [
+        "analyze_file",
+        "analyze_multiple",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "real_violation_scanner.py",
+      "name": "real_violation_scanner",
+      "size": 4501,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "scan_file",
+        "find_real_violations",
+        "verify_claimed_files",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "refactor_analyzer.py",
+      "name": "refactor_analyzer",
+      "size": 5515,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "ast",
+        "sys",
+        "pathlib",
+        "typing",
+        "json"
+      ],
+      "functions": [
+        "analyze_file",
+        "print_report",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "refactor_validator.py",
+      "name": "refactor_validator",
+      "size": 4618,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "importlib",
+        "typing",
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "validate_imports",
+        "validate_backwards_compatibility",
+        "run_basic_functionality_test",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "refactoring_ast_analyzer.py",
+      "name": "refactoring_ast_analyzer",
+      "size": 8052,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "ast",
+        "pathlib",
+        "refactoring_models",
+        "refactoring_models"
+      ],
+      "functions": [
+        "__init__",
+        "analyze_file",
+        "_extract_entities",
+        "_extract_class",
+        "_extract_function",
+        "_extract_import",
+        "_extract_class_methods",
+        "_categorize_method",
+        "_categorize_class",
+        "_categorize_function"
+      ],
+      "classes": [
+        "ASTAnalyzer"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "refactoring_cli.py",
+      "name": "refactoring_cli",
+      "size": 4987,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "pathlib",
+        "refactoring_models",
+        "refactoring_suggestion_engine",
+        "refactoring_models",
+        "refactoring_suggestion_engine"
+      ],
+      "functions": [
+        "format_suggestion",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "refactoring_suggestion_engine.py",
+      "name": "refactoring_suggestion_engine",
+      "size": 12224,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "pathlib",
+        "refactoring_ast_analyzer",
+        "refactoring_models",
+        "refactoring_cli",
+        "refactoring_ast_analyzer",
+        "refactoring_models"
+      ],
+      "functions": [
+        "__init__",
+        "suggest_refactoring",
+        "_group_entities_by_category",
+        "_generate_module_suggestions",
+        "_estimate_main_file_size",
+        "_generate_import_changes",
+        "_calculate_confidence",
+        "_generate_reasoning",
+        "__init__",
+        "analyze_and_suggest",
+        "analyze_directory",
+        "_should_skip_file"
+      ],
+      "classes": [
+        "RefactoringSuggestionEngine",
+        "RefactoringSuggestionService"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "refresh_cache.py",
+      "name": "refresh_cache",
+      "size": 7494,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "shutil",
+        "sys",
+        "datetime",
+        "pathlib",
+        "subprocess"
+      ],
+      "functions": [
+        "check_cache_freshness",
+        "delete_cache_files",
+        "refresh_cache",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "repo_analysis_enforcer.py",
+      "name": "repo_analysis_enforcer",
+      "size": 9810,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "pathlib",
+        "datetime",
+        "typing",
+        "argparse"
+      ],
+      "functions": [
+        "load_tracker",
+        "save_tracker",
+        "show_status",
+        "get_next_repo",
+        "mark_started",
+        "mark_complete",
+        "check_can_proceed",
+        "main"
+      ],
+      "classes": [
+        "Colors"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "repo_batch_analyzer.py",
+      "name": "repo_batch_analyzer",
+      "size": 10686,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "subprocess",
+        "json",
+        "pathlib",
+        "datetime",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "clone_repos",
+        "analyze_repo_metadata",
+        "generate_analysis_report",
+        "batch_analyze",
+        "save_results"
+      ],
+      "classes": [
+        "RepoBatchAnalyzer"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "share_mission_to_swarm_brain.py",
+      "name": "share_mission_to_swarm_brain",
+      "size": 8383,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "os",
+        "src.swarm_brain.swarm_memory"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "soft_onboard_cli.py",
+      "name": "soft_onboard_cli",
+      "size": 7400,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "logging",
+        "sys",
+        "pathlib",
+        "src.services.soft_onboarding_service"
+      ],
+      "functions": [
+        "main",
+        "execute_single_step"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "ssot_validator.py",
+      "name": "ssot_validator",
+      "size": 4740,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "re",
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "extract_code_flags",
+        "extract_documented_flags",
+        "validate_ssot",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "swarm_brain_cli.py",
+      "name": "swarm_brain_cli",
+      "size": 5868,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "sys",
+        "pathlib",
+        "src.swarm_brain.swarm_memory"
+      ],
+      "functions": [
+        "share_learning",
+        "record_decision",
+        "search_knowledge",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "swarm_orchestrator.py",
+      "name": "swarm_orchestrator",
+      "size": 11180,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "time",
+        "datetime",
+        "pathlib",
+        "typing",
+        "gas_messaging",
+        "opportunity_scanners",
+        "task_creator",
+        "argparse"
+      ],
+      "functions": [
+        "run_orchestrator",
+        "__init__",
+        "_discover_agents",
+        "get_agent_status",
+        "scan_all_opportunities",
+        "calculate_roi",
+        "match_to_agent",
+        "run_cycle"
+      ],
+      "classes": [
+        "SwarmOrchestrator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "swarm_status_broadcaster.py",
+      "name": "swarm_status_broadcaster",
+      "size": 8159,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "subprocess",
+        "json",
+        "pathlib",
+        "typing",
+        "dataclasses",
+        "datetime",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "broadcast",
+        "broadcast_c055_status",
+        "broadcast_v2_progress",
+        "broadcast_achievement",
+        "_send_to_agent",
+        "broadcast_with_template"
+      ],
+      "classes": [
+        "BroadcastMessage",
+        "SwarmStatusBroadcaster"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "task_cli.py",
+      "name": "task_cli",
+      "size": 2472,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "subprocess",
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "run_messaging_cli",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "task_creator.py",
+      "name": "task_creator",
+      "size": 2404,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "create_inbox_task"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "task_verification_tool.py",
+      "name": "task_verification_tool",
+      "size": 8614,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "ast",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "typing",
+        "json"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "verify_all",
+        "_get_metrics",
+        "_check_git_history",
+        "_check_refactor_headers",
+        "_get_recommendation"
+      ],
+      "classes": [
+        "TaskVerifier"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "toolbelt.py",
+      "name": "toolbelt",
+      "size": 3374,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "logging",
+        "sys",
+        "pathlib",
+        "tools.toolbelt_help",
+        "tools.toolbelt_registry",
+        "tools.toolbelt_runner"
+      ],
+      "functions": [
+        "create_parser",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "toolbelt_help.py",
+      "name": "toolbelt_help",
+      "size": 3786,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "typing"
+      ],
+      "functions": [
+        "__init__",
+        "generate_help",
+        "show_tool_help"
+      ],
+      "classes": [
+        "HelpGenerator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "toolbelt_registry.py",
+      "name": "toolbelt_registry",
+      "size": 17002,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "typing"
+      ],
+      "functions": [
+        "__init__",
+        "_build_flag_map",
+        "get_tool_for_flag",
+        "get_tool_by_name",
+        "list_tools",
+        "get_all_flags"
+      ],
+      "classes": [
+        "ToolRegistry"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "toolbelt_runner.py",
+      "name": "toolbelt_runner",
+      "size": 3087,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "importlib",
+        "logging",
+        "sys",
+        "typing"
+      ],
+      "functions": [
+        "__init__",
+        "execute_tool"
+      ],
+      "classes": [
+        "ToolRunner"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "update_swarm_brain.py",
+      "name": "update_swarm_brain",
+      "size": 9011,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "datetime",
+        "pathlib"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "_load_brain",
+        "add_insight",
+        "add_lesson",
+        "add_recommendation",
+        "add_pattern",
+        "save"
+      ],
+      "classes": [
+        "SwarmBrainUpdater"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "validate_imports.py",
+      "name": "validate_imports",
+      "size": 5358,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "importlib",
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "validate_module_imports",
+        "validate_directory",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "verify_task.py",
+      "name": "verify_task",
+      "size": 8254,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "ast",
+        "sys",
+        "pathlib",
+        "typing",
+        "subprocess",
+        "json"
+      ],
+      "functions": [
+        "get_file_metrics",
+        "search_file",
+        "verify_task",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "work_attribution_tool.py",
+      "name": "work_attribution_tool",
+      "size": 10356,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "subprocess",
+        "json",
+        "datetime",
+        "pathlib",
+        "typing",
+        "dataclasses",
+        "collections",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "get_agent_work",
+        "get_all_agents_work",
+        "verify_agent_did_work",
+        "who_worked_on_file",
+        "generate_attribution_report",
+        "_parse_git_log"
+      ],
+      "classes": [
+        "WorkItem",
+        "WorkAttributionTool"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "work_completion_verifier.py",
+      "name": "work_completion_verifier",
+      "size": 11170,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "verify_extension",
+        "verify_python_module",
+        "_parse_coverage",
+        "format_results"
+      ],
+      "classes": [
+        "WorkCompletionVerifier"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "workspace_auto_cleaner.py",
+      "name": "workspace_auto_cleaner",
+      "size": 7946,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "shutil",
+        "pathlib",
+        "datetime",
+        "typing"
+      ],
+      "functions": [
+        "archive_old_messages",
+        "clean_temp_files",
+        "organize_workspace",
+        "generate_cleanup_report",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "add_license_automation.py",
+      "name": "add_license_automation",
+      "size": 5357,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "subprocess",
+        "pathlib",
+        "datetime"
+      ],
+      "functions": [
+        "add_license_to_repo",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "comprehensive_project_analyzer.py",
+      "name": "comprehensive_project_analyzer",
+      "size": 2201,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "project_analyzer_core",
+        "project_analyzer_file",
+        "project_analyzer_reports",
+        "argparse"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "cycle_1_dependency_progress.py",
+      "name": "cycle_1_dependency_progress",
+      "size": 10618,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "time",
+        "os",
+        "pathlib",
+        "pyautogui",
+        "pyperclip"
+      ],
+      "functions": [
+        "load_coordinates",
+        "load_dependency_summary",
+        "send_dependency_progress_update"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "independent_architecture_review.py",
+      "name": "independent_architecture_review",
+      "size": 8358,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "subprocess",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "get_repo_list",
+        "assess_architecture",
+        "clone_and_assess_deep",
+        "assess_from_audit_data",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "reset_all_agent_status.py",
+      "name": "reset_all_agent_status",
+      "size": 3950,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "os",
+        "pathlib",
+        "datetime"
+      ],
+      "functions": [
+        "create_clean_status",
+        "reset_agent_status",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "session_transition_helper.py",
+      "name": "session_transition_helper",
+      "size": 8126,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "datetime",
+        "enum",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "load_status",
+        "save_status",
+        "check_deliverable",
+        "get_completion_summary",
+        "mark_complete",
+        "get_template"
+      ],
+      "classes": [
+        "DeliverableStatus",
+        "SessionTransitionHelper"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "carmyn_workflow_helper.py",
+      "name": "carmyn_workflow_helper",
+      "size": 3371,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "datetime"
+      ],
+      "functions": [
+        "post_to_discord",
+        "create_discord_message",
+        "workflow_action",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "session_transition_automator.py",
+      "name": "session_transition_automator",
+      "size": 15205,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "sys",
+        "datetime",
+        "pathlib",
+        "typing",
+        "src.core.messaging_core",
+        "src.core.messaging_models_core"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "generate_passdown",
+        "create_devlog_template",
+        "update_swarm_brain",
+        "update_state_report",
+        "validate_deliverables",
+        "send_handoff_message",
+        "run"
+      ],
+      "classes": [
+        "SessionTransitionAutomator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "workspace_health_monitor.py",
+      "name": "workspace_health_monitor",
+      "size": 11303,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "pathlib",
+        "datetime",
+        "typing",
+        "dataclasses"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "check_agent_workspace",
+        "_calculate_health_score",
+        "_generate_recommendations",
+        "check_all_workspaces",
+        "print_report",
+        "print_summary"
+      ],
+      "classes": [
+        "WorkspaceHealth",
+        "WorkspaceHealthMonitor"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "discord_mermaid_renderer.py",
+      "name": "discord_mermaid_renderer",
+      "size": 8870,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "os",
+        "re",
+        "requests",
+        "base64",
+        "pathlib",
+        "typing",
+        "dotenv",
+        "urllib.parse"
+      ],
+      "functions": [
+        "__init__",
+        "extract_mermaid_diagrams",
+        "render_mermaid_to_image_url",
+        "render_mermaid_to_file",
+        "replace_mermaid_with_images",
+        "post_to_discord_with_mermaid"
+      ],
+      "classes": [
+        "DiscordMermaidRenderer"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "message_compression_automation.py",
+      "name": "message_compression_automation",
+      "size": 10331,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "hashlib",
+        "json",
+        "logging",
+        "datetime",
+        "pathlib",
+        "typing",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "compress_message",
+        "aggregate_messages",
+        "calculate_age_days",
+        "compress_history",
+        "run_automated_compression"
+      ],
+      "classes": [
+        "MessageCompressionAutomation"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "infrastructure_monitoring_enhancement.py",
+      "name": "infrastructure_monitoring_enhancement",
+      "size": 6628,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "logging",
+        "subprocess",
+        "datetime",
+        "pathlib",
+        "typing",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "check_message_compression_health",
+        "check_discord_bot_status",
+        "check_message_history_size",
+        "comprehensive_monitoring_report",
+        "print_monitoring_report"
+      ],
+      "classes": [
+        "InfrastructureMonitoringEnhancement"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "scheduled_compression_automation.py",
+      "name": "scheduled_compression_automation",
+      "size": 2127,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "logging",
+        "sys",
+        "pathlib",
+        "message_compression_automation",
+        "message_compression_health_check"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "infrastructure_health_dashboard.py",
+      "name": "infrastructure_health_dashboard",
+      "size": 6213,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "logging",
+        "subprocess",
+        "datetime",
+        "pathlib",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "check_all_systems",
+        "print_dashboard"
+      ],
+      "classes": [
+        "InfrastructureHealthDashboard"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "repo_consolidation_analyzer.py",
+      "name": "repo_consolidation_analyzer",
+      "size": 10047,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "logging",
+        "re",
+        "collections",
+        "pathlib",
+        "typing",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "load_all_repos",
+        "_parse_repo_analysis",
+        "_extract_repo_name",
+        "_extract_agent",
+        "_extract_purpose",
+        "_extract_tech_stack",
+        "_extract_category",
+        "find_similar_repos",
+        "generate_consolidation_report",
+        "print_consolidation_report"
+      ],
+      "classes": [
+        "RepoConsolidationAnalyzer"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "discord_status_updater.py",
+      "name": "discord_status_updater",
+      "size": 4578,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "asyncio",
+        "logging",
+        "os",
+        "sys",
+        "datetime",
+        "pathlib",
+        "discord",
+        "discord.ext",
+        "argparse"
+      ],
+      "functions": [
+        "post_infrastructure_update",
+        "main",
+        "__init__",
+        "post_update_sync"
+      ],
+      "classes": [
+        "DiscordStatusUpdater"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "infrastructure_automation_suite.py",
+      "name": "infrastructure_automation_suite",
+      "size": 6049,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "logging",
+        "subprocess",
+        "datetime",
+        "pathlib",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "run_compression_automation",
+        "check_infrastructure_health",
+        "analyze_repo_consolidation",
+        "run_full_automation",
+        "print_automation_report"
+      ],
+      "classes": [
+        "InfrastructureAutomationSuite"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "post_infrastructure_update_to_discord.py",
+      "name": "post_infrastructure_update_to_discord",
+      "size": 4505,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "asyncio",
+        "logging",
+        "os",
+        "sys",
+        "datetime",
+        "pathlib",
+        "discord",
+        "discord.ext",
+        "argparse"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "start_message_queue_processor.py",
+      "name": "start_message_queue_processor",
+      "size": 2249,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "logging",
+        "sys",
+        "time",
+        "pathlib",
+        "src.core.message_queue_processor"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "discord_system_diagnostics.py",
+      "name": "discord_system_diagnostics",
+      "size": 9785,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "logging",
+        "os",
+        "sys",
+        "pathlib",
+        "dotenv",
+        "discord",
+        "psutil",
+        "json",
+        "psutil",
+        "subprocess",
+        "subprocess"
+      ],
+      "functions": [
+        "check_discord_bot_token",
+        "check_discord_library",
+        "check_queue_processor",
+        "check_message_queue",
+        "check_discord_bot_process",
+        "run_diagnostics"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "start_discord_system.py",
+      "name": "start_discord_system",
+      "size": 4184,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "logging",
+        "os",
+        "subprocess",
+        "sys",
+        "time",
+        "pathlib",
+        "dotenv"
+      ],
+      "functions": [
+        "check_token",
+        "start_discord_bot",
+        "start_queue_processor",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "verify_discord_messaging.py",
+      "name": "verify_discord_messaging",
+      "size": 2243,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "src.core.message_queue",
+        "src.services.messaging_infrastructure"
+      ],
+      "functions": [
+        "check_queue_processor",
+        "check_messaging_service",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "reset_stuck_messages.py",
+      "name": "reset_stuck_messages",
+      "size": 4124,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "sys",
+        "pathlib",
+        "datetime",
+        "argparse",
+        "shutil"
+      ],
+      "functions": [
+        "reset_stuck_messages"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "diagnose_stuck_messages.py",
+      "name": "diagnose_stuck_messages",
+      "size": 4773,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "sys",
+        "pathlib",
+        "datetime"
+      ],
+      "functions": [
+        "diagnose_stuck_messages"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "diagnose_queue.py",
+      "name": "diagnose_queue",
+      "size": 2346,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "src.core.message_queue",
+        "src.core.keyboard_control_lock",
+        "traceback"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "repo_overlap_analyzer.py",
+      "name": "repo_overlap_analyzer",
+      "size": 11554,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "re",
+        "collections",
+        "pathlib",
+        "typing",
+        "difflib"
+      ],
+      "functions": [
+        "similarity_score",
+        "normalize_repo_name",
+        "extract_repo_info_from_devlog",
+        "analyze_overlaps",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "organize_repo_consolidation_groups.py",
+      "name": "organize_repo_consolidation_groups",
+      "size": 8369,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "shutil",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "find_analysis_file",
+        "find_analysis_by_name",
+        "organize_consolidation_groups",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "repo_consolidation_continuation.py",
+      "name": "repo_consolidation_continuation",
+      "size": 15017,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "re",
+        "collections",
+        "pathlib",
+        "typing",
+        "difflib"
+      ],
+      "functions": [
+        "load_existing_consolidation_plan",
+        "load_master_repo_list",
+        "load_repo_analyses",
+        "find_additional_overlaps",
+        "identify_unanalyzed_consolidation_opportunities",
+        "refine_existing_groups",
+        "generate_continuation_report",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "repo_consolidation_enhanced.py",
+      "name": "repo_consolidation_enhanced",
+      "size": 18453,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "re",
+        "collections",
+        "pathlib",
+        "typing",
+        "difflib"
+      ],
+      "functions": [
+        "normalize_repo_name",
+        "similarity_score",
+        "load_master_repo_list",
+        "load_existing_consolidation_plan",
+        "find_duplicate_names",
+        "find_similar_names",
+        "categorize_repos",
+        "build_consolidation_groups",
+        "compare_with_existing",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "integration_pattern_analyzer.py",
+      "name": "integration_pattern_analyzer",
+      "size": 14374,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "re",
+        "collections",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "load_master_repo_list",
+        "check_repo_integrated_into_v2",
+        "categorize_by_integration_pattern",
+        "find_shared_integration_code",
+        "find_core_system_merges",
+        "analyze_integration_opportunities",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "enhanced_repo_consolidation_analyzer.py",
+      "name": "enhanced_repo_consolidation_analyzer",
+      "size": 9356,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "re",
+        "collections",
+        "pathlib",
+        "typing",
+        "difflib"
+      ],
+      "functions": [
+        "similarity_score",
+        "normalize_repo_name",
+        "load_all_75_repos",
+        "extract_repo_number",
+        "extract_repo_name_from_file",
+        "analyze_comprehensive_overlaps"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "architectural_pattern_analyzer.py",
+      "name": "architectural_pattern_analyzer",
+      "size": 22868,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "re",
+        "collections",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "load_master_repo_list",
+        "load_repo_analyses",
+        "extract_architectural_patterns",
+        "find_architectural_similarities",
+        "_is_in_existing_plan",
+        "analyze_shared_component_opportunities",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "comprehensive_repo_analysis.py",
+      "name": "comprehensive_repo_analysis",
+      "size": 14694,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "re",
+        "collections",
+        "pathlib",
+        "typing",
+        "difflib",
+        "itertools"
+      ],
+      "functions": [
+        "similarity_score",
+        "normalize_name",
+        "extract_repo_number_from_filename",
+        "load_all_repos",
+        "extract_repo_name",
+        "extract_tech_stack",
+        "extract_purpose",
+        "extract_category",
+        "create_similarity_matrix",
+        "find_consolidation_groups",
+        "analyze_all_repos",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "extract_all_75_repos.py",
+      "name": "extract_all_75_repos",
+      "size": 4050,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "re",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "extract_repos_from_book"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "update_master_list_from_analysis.py",
+      "name": "update_master_list_from_analysis",
+      "size": 5018,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "pathlib"
+      ],
+      "functions": [
+        "load_master_list",
+        "update_from_agent8_analysis",
+        "update_from_comprehensive_book",
+        "update_from_vision_analysis",
+        "update_master_list"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "update_master_consolidation_plan.py",
+      "name": "update_master_consolidation_plan",
+      "size": 7825,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "shutil"
+      ],
+      "functions": [
+        "load_comprehensive_analysis",
+        "load_master_plan",
+        "update_plan_with_comprehensive_findings",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "verify_master_list.py",
+      "name": "verify_master_list",
+      "size": 5120,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "load_master_list",
+        "analyze_master_list",
+        "print_analysis_report",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "fetch_repo_names.py",
+      "name": "fetch_repo_names",
+      "size": 7022,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "os",
+        "sys",
+        "pathlib",
+        "typing",
+        "requests",
+        "subprocess"
+      ],
+      "functions": [
+        "get_github_token",
+        "fetch_repo_info",
+        "load_master_list",
+        "get_github_owner",
+        "fetch_unknown_repos",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "generate_blog_post.py",
+      "name": "generate_blog_post",
+      "size": 14482,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "random",
+        "sys",
+        "pathlib",
+        "typing",
+        "yaml",
+        "argparse",
+        "traceback"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "load_style_guide",
+        "load_repos",
+        "find_overlaps",
+        "_names_similar",
+        "get_style_phrase",
+        "generate_what_it_is",
+        "generate_why_built",
+        "generate_what_learned",
+        "generate_what_worked",
+        "generate_what_didnt",
+        "generate_overlap_alert",
+        "generate_would_build_again",
+        "generate_verdict",
+        "generate_post",
+        "save_post",
+        "generate_all",
+        "generate_single"
+      ],
+      "classes": [
+        "BlogPostGenerator"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "cross_reference_analysis.py",
+      "name": "cross_reference_analysis",
+      "size": 6323,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "pathlib",
+        "typing",
+        "traceback"
+      ],
+      "functions": [
+        "load_master_list",
+        "load_consolidation_plan",
+        "load_agent5_analysis",
+        "cross_reference_sources",
+        "print_cross_reference_report",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "repo_safe_merge.py",
+      "name": "repo_safe_merge",
+      "size": 10305,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "sys",
+        "pathlib",
+        "datetime",
+        "typing",
+        "subprocess",
+        "shutil"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "create_backup",
+        "verify_target_repo",
+        "check_conflicts",
+        "generate_merge_report",
+        "execute_merge"
+      ],
+      "classes": [
+        "SafeRepoMerge"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "consolidation_executor.py",
+      "name": "consolidation_executor",
+      "size": 15164,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "sys",
+        "pathlib",
+        "datetime",
+        "typing",
+        "subprocess",
+        "tools.repo_safe_merge"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "_load_phase1_plan",
+        "load_progress",
+        "save_progress",
+        "execute_group",
+        "execute_phase1"
+      ],
+      "classes": [
+        "ConsolidationExecutor"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "verify_phase1_repos.py",
+      "name": "verify_phase1_repos",
+      "size": 10511,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "sys",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "load_master_list",
+        "get_repo_info",
+        "verify_phase1_repos",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    },
+    {
+      "file": "classify_tools.py",
+      "name": "classify_tools",
+      "size": 9669,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "ast",
+        "sys",
+        "pathlib",
+        "typing",
+        "datetime"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "load_toolbelt_registry",
+        "analyze_tool_file",
+        "classify_tool",
+        "classify_all_tools",
+        "generate_report"
+      ],
+      "classes": [
+        "ToolClassifier"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "signal"
+    }
+  ],
+  "noise": [
+    {
+      "file": "comprehensive_project_analyzer_BACKUP_PRE_REFACTOR.py",
+      "name": "comprehensive_project_analyzer_BACKUP_PRE_REFACTOR",
+      "size": 25439,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "ast",
+        "json",
+        "os",
+        "re",
+        "collections",
+        "datetime",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "analyze_python_file",
+        "analyze_js_file",
+        "analyze_md_file",
+        "analyze_yaml_file",
+        "analyze_file",
+        "get_project_structure",
+        "analyze_directory_chunk",
+        "identify_consolidation_opportunity",
+        "get_consolidation_reason",
+        "get_consolidation_priority",
+        "generate_chunk_reports",
+        "generate_consolidation_summary"
+      ],
+      "classes": [
+        "ProjectAnalyzer"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "noise"
+    },
+    {
+      "file": "cycle_1_backup_partial.py",
+      "name": "cycle_1_backup_partial",
+      "size": 7930,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "os",
+        "shutil",
+        "datetime",
+        "json",
+        "pathlib"
+      ],
+      "functions": [
+        "copy_file_safely",
+        "copy_tree_safely",
+        "create_partial_backup"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "noise"
+    }
+  ],
+  "unknown": [
+    {
+      "file": "agent_checkin.py",
+      "name": "agent_checkin",
+      "size": 3128,
+      "has_main": true,
+      "has_docstring": false,
+      "imports": [
+        "argparse",
+        "json",
+        "os",
+        "sys",
+        "tempfile",
+        "datetime",
+        "pathlib",
+        "typing",
+        "src.core.unified_utilities"
+      ],
+      "functions": [
+        "_iso_now",
+        "ensure_dirs",
+        "load_json_arg",
+        "validate_minimum",
+        "append_jsonl",
+        "atomic_write",
+        "update_index",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "agent_status_quick_check.py",
+      "name": "agent_status_quick_check",
+      "size": 8056,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "json",
+        "sys",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "get_agent_status",
+        "format_quick_status",
+        "format_detailed_status",
+        "check_all_agents"
+      ],
+      "classes": [
+        "AgentStatusChecker"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "agent_toolbelt_executors.py",
+      "name": "agent_toolbelt_executors",
+      "size": 1953,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "logging",
+        "tools.toolbelt.executors"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "captain_architectural_checker.py",
+      "name": "captain_architectural_checker",
+      "size": 6896,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "ast",
+        "re",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "extract_method_calls",
+        "extract_class_methods",
+        "find_missing_methods",
+        "find_circular_imports",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "captain_check_agent_status.py",
+      "name": "captain_check_agent_status",
+      "size": 4090,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "json",
+        "pathlib",
+        "tools_v2.categories.captain_tools"
+      ],
+      "functions": [
+        "check_all_agent_status"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "captain_gas_check.py",
+      "name": "captain_gas_check",
+      "size": 4929,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "datetime",
+        "pathlib",
+        "tools_v2.categories.captain_tools_extension"
+      ],
+      "functions": [
+        "check_agent_gas_levels"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "check_file_size.py",
+      "name": "check_file_size",
+      "size": 1285,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "os",
+        "sys"
+      ],
+      "functions": [
+        "check_file_size",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "check_snapshot_up_to_date.py",
+      "name": "check_snapshot_up_to_date",
+      "size": 2147,
+      "has_main": true,
+      "has_docstring": false,
+      "imports": [
+        "logging",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "tools.projectscanner",
+        "os"
+      ],
+      "functions": [
+        "git_diff_has_changes",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "complexity_analyzer.py",
+      "name": "complexity_analyzer",
+      "size": 980,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "complexity_analyzer_cli",
+        "complexity_analyzer_core"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "compliance_history_models.py",
+      "name": "compliance_history_models",
+      "size": 988,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "dataclasses"
+      ],
+      "functions": [],
+      "classes": [
+        "ComplianceSnapshot",
+        "TrendReport"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "extension_test_runner.py",
+      "name": "extension_test_runner",
+      "size": 9333,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "get_extension_path",
+        "run_tests",
+        "_parse_test_output",
+        "format_results",
+        "list_extensions"
+      ],
+      "classes": [
+        "ExtensionTestRunner"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "functionality_tests.py",
+      "name": "functionality_tests",
+      "size": 4548,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "subprocess",
+        "datetime",
+        "typing"
+      ],
+      "functions": [
+        "run_agent_tests",
+        "_get_agent_tests"
+      ],
+      "classes": [
+        "FunctionalityTests"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "generate_utils_catalog.py",
+      "name": "generate_utils_catalog",
+      "size": 1255,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "ast",
+        "pathlib"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "qa_validation_checklist.py",
+      "name": "qa_validation_checklist",
+      "size": 5261,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "subprocess",
+        "pathlib"
+      ],
+      "functions": [
+        "__init__",
+        "check",
+        "run_git_command",
+        "verify_git_commits_exist",
+        "verify_files_exist",
+        "run_validation",
+        "print_summary"
+      ],
+      "classes": [
+        "QAChecklist"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "refactoring_models.py",
+      "name": "refactoring_models",
+      "size": 1421,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "dataclasses"
+      ],
+      "functions": [],
+      "classes": [
+        "CodeEntity",
+        "ModuleSuggestion",
+        "RefactoringSuggestion"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "run_project_scan.py",
+      "name": "run_project_scan",
+      "size": 2195,
+      "has_main": false,
+      "has_docstring": false,
+      "imports": [
+        "logging",
+        "subprocess",
+        "sys",
+        "pathlib",
+        "projectscanner_core",
+        "os",
+        "projectscanner",
+        "tools.projectscanner_core"
+      ],
+      "functions": [
+        "run"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "show_quarantine.py",
+      "name": "show_quarantine",
+      "size": 713,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "collections"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "test_consolidation_comprehensive.py",
+      "name": "test_consolidation_comprehensive",
+      "size": 7123,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "src.discord_commander",
+        "src.discord_commander",
+        "src.discord_commander",
+        "src.infrastructure.browser",
+        "src.infrastructure.browser",
+        "src.infrastructure.browser",
+        "src.infrastructure.browser"
+      ],
+      "functions": [
+        "test_discord_consolidation",
+        "test_browser_consolidation",
+        "test_v2_compliance",
+        "test_gui_imports",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "test_imports.py",
+      "name": "test_imports",
+      "size": 2319,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "test_imports"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "test_pyramid_analyzer.py",
+      "name": "test_pyramid_analyzer",
+      "size": 5428,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "count_tests_in_file",
+        "analyze_pyramid",
+        "print_pyramid_report"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "v2_checker_cli.py",
+      "name": "v2_checker_cli",
+      "size": 2290,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "argparse",
+        "sys",
+        "pathlib",
+        "v2_compliance_checker",
+        "v2_compliance_checker"
+      ],
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "v2_checker_formatters.py",
+      "name": "v2_checker_formatters",
+      "size": 6170,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "v2_checker_models",
+        "refactoring_suggestion_engine",
+        "complexity_analyzer",
+        "v2_checker_models"
+      ],
+      "functions": [
+        "get_file_suggestions",
+        "get_complexity_analysis",
+        "format_report"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "v2_checker_models.py",
+      "name": "v2_checker_models",
+      "size": 1518,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "dataclasses"
+      ],
+      "functions": [
+        "has_violations",
+        "critical_violations",
+        "major_violations",
+        "minor_violations"
+      ],
+      "classes": [
+        "ComplianceViolation",
+        "ComplianceReport"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "v2_compliance_batch_checker.py",
+      "name": "v2_compliance_batch_checker",
+      "size": 4399,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib"
+      ],
+      "functions": [
+        "check_file_compliance",
+        "batch_check",
+        "print_report"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "v2_compliance_checker.py",
+      "name": "v2_compliance_checker",
+      "size": 12778,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "warnings",
+        "ast",
+        "pathlib",
+        "v2_checker_models",
+        "refactoring_suggestion_engine",
+        "complexity_analyzer",
+        "v2_checker_models",
+        "v2_checker_cli",
+        "v2_checker_formatters",
+        "v2_checker_cli",
+        "v2_checker_formatters"
+      ],
+      "functions": [
+        "__init__",
+        "scan_file",
+        "_check_ast_compliance",
+        "_get_node_line_count",
+        "scan_directory",
+        "_should_skip_file",
+        "format_report"
+      ],
+      "classes": [
+        "V2ComplianceChecker"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "workspace_health_checker.py",
+      "name": "workspace_health_checker",
+      "size": 14220,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "sys",
+        "pathlib",
+        "datetime",
+        "typing",
+        "dataclasses",
+        "argparse"
+      ],
+      "functions": [
+        "check_inbox_health",
+        "check_workspace_cleanliness",
+        "check_status_files_consistency",
+        "identify_issues",
+        "check_devlog_status",
+        "check_workspace_health",
+        "print_health_report",
+        "main"
+      ],
+      "classes": [
+        "HealthCheckResult"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "test_new_tools.py",
+      "name": "test_new_tools",
+      "size": 4051,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "tools_v2.toolbelt_core"
+      ],
+      "functions": [
+        "test_system_datetime",
+        "test_queue_status",
+        "test_agent_activity",
+        "test_message_history_view",
+        "test_checkin"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "message_compression_health_check.py",
+      "name": "message_compression_health_check",
+      "size": 9087,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "logging",
+        "datetime",
+        "pathlib",
+        "typing",
+        "argparse"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "calculate_age_days",
+        "check_compression_health",
+        "print_health_report"
+      ],
+      "classes": [
+        "MessageCompressionHealthCheck"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "verify_discord_running.py",
+      "name": "verify_discord_running",
+      "size": 1328,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "os",
+        "dotenv",
+        "src.discord_commander.unified_discord_bot",
+        "src.core.message_queue_processor"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "check_queue_errors.py",
+      "name": "check_queue_errors",
+      "size": 806,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "pathlib"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "check_queue_status.py",
+      "name": "check_queue_status",
+      "size": 1062,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "src.core.message_queue_persistence"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "check_queue_processor.py",
+      "name": "check_queue_processor",
+      "size": 3246,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "src.core.message_queue",
+        "src.core.message_queue_persistence",
+        "traceback"
+      ],
+      "functions": [
+        "check_queue_status"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "fix_stuck_message.py",
+      "name": "fix_stuck_message",
+      "size": 1219,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "json",
+        "sys",
+        "pathlib",
+        "shutil"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "check_recent_message.py",
+      "name": "check_recent_message",
+      "size": 1175,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "src.core.message_queue_persistence"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "check_debug_test.py",
+      "name": "check_debug_test",
+      "size": 1269,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "src.core.message_queue_persistence"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "check_verbose_test.py",
+      "name": "check_verbose_test",
+      "size": 1277,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "src.core.message_queue_persistence"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "test_discord_commands.py",
+      "name": "test_discord_commands",
+      "size": 12475,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "time",
+        "json",
+        "pathlib",
+        "datetime",
+        "src.services.messaging_infrastructure",
+        "src.core.coordinate_loader",
+        "subprocess",
+        "platform",
+        "traceback",
+        "traceback",
+        "traceback",
+        "traceback"
+      ],
+      "functions": [
+        "print_test_header",
+        "print_result",
+        "test_message_queue_available",
+        "test_send_message_to_agent",
+        "test_broadcast_message",
+        "test_queue_status",
+        "test_coordinates_available",
+        "test_queue_processor_running",
+        "test_message_delivery_flow",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "test_all_discord_commands.py",
+      "name": "test_all_discord_commands",
+      "size": 16078,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "asyncio",
+        "json",
+        "sys",
+        "logging",
+        "pathlib",
+        "typing",
+        "datetime",
+        "src.discord_commander.unified_discord_bot",
+        "re",
+        "src.discord_commander.unified_discord_bot",
+        "src.discord_commander.unified_discord_bot",
+        "src.discord_commander.unified_discord_bot"
+      ],
+      "functions": [
+        "main",
+        "__init__",
+        "get_last_message",
+        "__init__",
+        "test_command_registration",
+        "test_messaging_commands",
+        "test_swarm_showcase_commands",
+        "test_github_book_commands",
+        "test_command_error_handling",
+        "_check_error_handling",
+        "run_all_tests",
+        "_generate_summary",
+        "print_report"
+      ],
+      "classes": [
+        "MockContext",
+        "DiscordCommandsTester"
+      ],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "check_discord_dependencies.py",
+      "name": "check_discord_dependencies",
+      "size": 2785,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "discord"
+      ],
+      "functions": [
+        "check_discord",
+        "check_test_requirements",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "share_repo_consolidation_findings.py",
+      "name": "share_repo_consolidation_findings",
+      "size": 1474,
+      "has_main": false,
+      "has_docstring": true,
+      "imports": [
+        "sys",
+        "pathlib",
+        "src.swarm_brain.swarm_memory"
+      ],
+      "functions": [],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    },
+    {
+      "file": "check_sensitive_files.py",
+      "name": "check_sensitive_files",
+      "size": 4816,
+      "has_main": true,
+      "has_docstring": true,
+      "imports": [
+        "subprocess",
+        "sys",
+        "pathlib",
+        "typing"
+      ],
+      "functions": [
+        "run_git_command",
+        "check_tracked_sensitive_files",
+        "check_gitignore_coverage",
+        "print_security_report",
+        "main"
+      ],
+      "classes": [],
+      "errors": [],
+      "is_registered": false,
+      "classification": "unknown"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+<!-- wp:heading -->
+<h2>Strategy Analysis: {strategy_name}</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Analysis Date:</strong> {analysis_date} | <strong>Symbol:</strong> {symbol}</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator" />
+<!-- /wp:separator -->
+
+<!-- wp:heading {{"level": 3}} -->
+<h3>Overview</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This analysis covers the {strategy_name} trading strategy for {symbol}. The strategy combines {strategy_type}
+    indicators with risk-based position sizing to manage trades systematically.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {{"level": 3}} -->
+<h3>Strategy Configuration</h3>
+<!-- /wp:heading -->
+
+<!-- wp:group {{"layout":{{"type":"flex","flexWrap":"wrap"}}}} -->
+<div class="wp-block-group">
+    <!-- wp:column -->
+    <div class="wp-block-column">
+        <!-- wp:heading {{"level": 4}} -->
+        <h4>Indicators</h4>
+        <!-- /wp:heading -->
+
+        <!-- wp:list -->
+        <ul>
+            {indicators_list}
+        </ul>
+        <!-- /wp:list -->
+    </div>
+    <!-- /wp:column -->
+
+    <!-- wp:column -->
+    <div class="wp-block-column">
+        <!-- wp:heading {{"level": 4}} -->
+        <h4>Risk Parameters</h4>
+        <!-- /wp:heading -->
+
+        <!-- wp:list -->
+        <ul>
+            {risk_parameters_list}
+        </ul>
+        <!-- /wp:list -->
+    </div>
+    <!-- /wp:column -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading {{"level": 3}} -->
+<h3>Entry Logic</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Long Entries:</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul>
+    {long_entry_conditions}
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Short Entries:</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul>
+    {short_entry_conditions}
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {{"level": 3}} -->
+<h3>Exit Strategy</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul>
+    {exit_strategy_list}
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {{"level": 3}} -->
+<h3>Risk Management</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The strategy implements true risk-based position sizing, ensuring consistent risk across all trades regardless of
+    entry price or market volatility.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul>
+    {risk_management_list}
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {{"level": 3}} -->
+<h3>Key Features</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul>
+    {key_features_list}
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {{"level": 3}} -->
+<h3>Backtest Performance Summary</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Initial Capital:</strong> {initial_capital_formatted} USD</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {{"layout":{{"type":"flex","flexWrap":"wrap"}}}} -->
+<div class="wp-block-group">
+    <!-- wp:column -->
+    <div class="wp-block-column">
+        <!-- wp:heading {{"level": 4}} -->
+        <h4>Profit Metrics</h4>
+        <!-- /wp:heading -->
+
+        <!-- wp:list -->
+        <ul>
+            <li><strong>Net Profit:</strong> {net_profit_formatted} ({net_profit_pct_formatted}%)</li>
+            <li><strong>Gross Profit:</strong> {gross_profit_formatted} ({gross_profit_pct_formatted}%)</li>
+            <li><strong>Gross Loss:</strong> {gross_loss_formatted} ({gross_loss_pct_formatted}%)</li>
+        </ul>
+        <!-- /wp:list -->
+    </div>
+    <!-- /wp:column -->
+
+    <!-- wp:column -->
+    <div class="wp-block-column">
+        <!-- wp:heading {{"level": 4}} -->
+        <h4>Risk Metrics</h4>
+        <!-- /wp:heading -->
+
+        <!-- wp:list -->
+        <ul>
+            <li><strong>Max Drawdown:</strong> {max_drawdown_formatted} ({max_drawdown_pct_formatted}%)</li>
+            <li><strong>Max Run-up:</strong> {max_runup_formatted} ({max_runup_pct_formatted}%)</li>
+            <li><strong>Buy & Hold Return:</strong> {buy_hold_return_formatted} ({buy_hold_return_pct_formatted}%)</li>
+        </ul>
+        <!-- /wp:list -->
+    </div>
+    <!-- /wp:column -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading {{"level": 3}} -->
+<h3>Performance Considerations</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul>
+    {performance_notes_list}
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:separator -->
+<hr class="wp-block-separator" />
+<!-- /wp:separator -->
+
+<!-- wp:heading {{"level": 3}} -->
+<h3>Want the Complete Analysis?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This blog post provides an overview of the strategy. For the complete analysis including:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul>
+    <li>Detailed backtesting results and performance metrics</li>
+    <li>Trade-by-trade analysis and statistics</li>
+    <li>Optimization suggestions and parameter testing</li>
+    <li>Downloadable PineScript code</li>
+    <li>Email support for strategy questions</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+    <!-- wp:button -->
+    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/{report_slug}">View Free
+            Report</a></div>
+    <!-- /wp:button -->
+
+    <!-- wp:button {{"className":"is-style-outline"}} -->
+    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button"
+            href="/{premium_report_slug}">Get Premium Report ($9.99)</a></div>
+    <!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p><em>This is a hobbyist trading blog sharing strategy analysis and insights. All strategies are for educational
+        purposes only. Past performance does not guarantee future results.</em></p>
+<!-- /wp:paragraph -->

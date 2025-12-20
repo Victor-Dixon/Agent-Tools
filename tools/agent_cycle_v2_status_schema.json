@@ -1,0 +1,310 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agent Status.json v2 Schema Extension",
+  "description": "V2 cycle fields for machine-gradable agent reports",
+  "type": "object",
+  "properties": {
+    "agent_id": {
+      "type": "string",
+      "pattern": "^Agent-[1-8]$"
+    },
+    "agent_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ACTIVE_AGENT_MODE", "IDLE", "BLOCKED", "HANDOFF_READY"]
+    },
+    "fsm_state": {
+      "type": "string"
+    },
+    "current_phase": {
+      "type": "string"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "current_mission": {
+      "type": "string"
+    },
+    "mission_priority": {
+      "type": "string",
+      "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
+    },
+    "cycle_v2": {
+      "type": "object",
+      "properties": {
+        "cycle_id": {
+          "type": "string",
+          "description": "Unique cycle identifier"
+        },
+        "wip_limit": {
+          "type": "integer",
+          "const": 1,
+          "description": "WIP must be 1"
+        },
+        "current_wip": {
+          "type": "integer",
+          "maximum": 1,
+          "description": "Current work in progress count"
+        },
+        "micro_plan": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "string"
+          },
+          "description": "3-bullet micro-plan: change target, validation method, exit criteria"
+        },
+        "dod": {
+          "type": "string",
+          "description": "Definition of Done (3 lines max)"
+        },
+        "dod_defined": {
+          "type": "boolean",
+          "description": "Whether DoD was provided or agent wrote it"
+        },
+        "ssot_boundaries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "SSOT boundaries confirmed before editing"
+        },
+        "v2_compliance_checked": {
+          "type": "boolean",
+          "description": "V2 compliance gate passed"
+        },
+        "execution_burst": {
+          "type": "object",
+          "properties": {
+            "started": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "smallest_viable_change": {
+              "type": "string",
+              "description": "Description of smallest change implemented"
+            },
+            "scope_expanded": {
+              "type": "boolean",
+              "description": "Whether scope expanded beyond original plan"
+            },
+            "subtasks_created": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Subtasks created if scope expanded"
+            }
+          }
+        },
+        "mid_cycle_checkpoint": {
+          "type": "object",
+          "properties": {
+            "checked": {
+              "type": "boolean"
+            },
+            "aligned_with_dod": {
+              "type": "boolean"
+            },
+            "within_ssot": {
+              "type": "boolean"
+            },
+            "within_v2": {
+              "type": "boolean"
+            },
+            "corrections_made": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "validation": {
+          "type": "object",
+          "properties": {
+            "tests_run": {
+              "type": "boolean"
+            },
+            "lint_run": {
+              "type": "boolean"
+            },
+            "verification_run": {
+              "type": "boolean"
+            },
+            "tests_added": {
+              "type": "boolean",
+              "description": "Minimal tests added if missing"
+            },
+            "evidence": {
+              "type": "object",
+              "properties": {
+                "commands": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "output_summary": {
+                  "type": "string"
+                },
+                "test_results": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "reporting": {
+          "type": "object",
+          "properties": {
+            "artifacts_changed": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Files/artifacts changed (artifact-level)"
+            },
+            "validation_evidence": {
+              "type": "string",
+              "description": "Validation evidence provided"
+            },
+            "measurable_result": {
+              "type": "string",
+              "description": "Measurable result achieved"
+            },
+            "next_action": {
+              "type": "string",
+              "description": "Next recommended action"
+            },
+            "blockers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "blocker": {
+                    "type": "string"
+                  },
+                  "proposed_fix": {
+                    "type": "string"
+                  }
+                },
+                "required": ["blocker", "proposed_fix"]
+              }
+            }
+          },
+          "required": ["artifacts_changed", "validation_evidence", "measurable_result", "next_action"]
+        },
+        "documentation": {
+          "type": "object",
+          "properties": {
+            "status_json_updated": {
+              "type": "boolean"
+            },
+            "status_value": {
+              "type": "string",
+              "enum": ["COMPLETE", "BLOCKED", "HANDOFF_READY"]
+            },
+            "discord_devlog_posted": {
+              "type": "boolean"
+            }
+          }
+        },
+        "escalation": {
+          "type": "object",
+          "properties": {
+            "escalated": {
+              "type": "boolean"
+            },
+            "reason": {
+              "type": "string",
+              "enum": [
+                "dod_unclear_after_two_assumptions",
+                "ssot_conflict_detected",
+                "cross_agent_dependency_required",
+                "change_impacts_more_than_two_domains"
+              ]
+            },
+            "escalation_message": {
+              "type": "string"
+            }
+          }
+        },
+        "success_metrics": {
+          "type": "object",
+          "properties": {
+            "output_delivered": {
+              "type": "boolean",
+              "description": "≥1 merged-ready artifact OR ≥1 validated decision"
+            },
+            "validation_evidence_included": {
+              "type": "boolean"
+            },
+            "zero_drift": {
+              "type": "boolean",
+              "description": "Zero off-mission edits"
+            },
+            "wip_respected": {
+              "type": "boolean",
+              "description": "WIP never >1"
+            }
+          }
+        }
+      },
+      "required": [
+        "cycle_id",
+        "wip_limit",
+        "current_wip",
+        "micro_plan",
+        "dod",
+        "dod_defined"
+      ]
+    },
+    "current_tasks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "completed_tasks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "achievements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ssot_domain": {
+      "type": "string"
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "agent_id",
+    "agent_name",
+    "status",
+    "last_updated",
+    "current_mission",
+    "mission_priority"
+  ]
+}
+
+

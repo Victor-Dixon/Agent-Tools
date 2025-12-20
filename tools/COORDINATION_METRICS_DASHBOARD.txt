@@ -1,0 +1,53 @@
+================================================================================
+COORDINATION METRICS DASHBOARD
+================================================================================
+Generated: 2025-12-12 12:15:15
+
+OVERALL METRICS:
+--------------------------------------------------------------------------------
+  Total Agents: 6
+  Active Agents: 6/6 (100.0%)
+  Agents with Coordination: 4/6 (66.7%)
+  Total Tasks: 165
+  Coordination Mentions: 56
+  Recently Updated: 4/6 (66.7%)
+  Active Coordination Pairs: 8/8 (100.0%)
+
+AGENT DETAILS:
+--------------------------------------------------------------------------------
+✅ Agent-1:
+   Tasks: 2
+   🔗 Coordination Mentions: 2
+   🕐 Last Updated: 2025-12-12 15:58:00
+
+✅ Agent-2:
+   Tasks: 107
+   🔗 Coordination Mentions: 44
+   🕐 Last Updated: 2025-12-12 17:56:00
+
+✅ Agent-3:
+   Tasks: 2
+   🔗 Coordination Mentions: 1
+   ⏰ Last Updated: 2025-12-12 05:30:00
+
+✅ Agent-5:
+   Tasks: 3
+   ❌ Coordination Mentions: 0
+   ⏰ Last Updated: 2025-12-12 06:35:00
+
+✅ Agent-7:
+   Tasks: 0
+   ❌ Coordination Mentions: 0
+   🕐 Last Updated: 2025-12-12 15:35:00
+
+✅ Agent-8:
+   Tasks: 51
+   🔗 Coordination Mentions: 9
+   🕐 Last Updated: 2025-12-12 15:55:00
+
+COORDINATION HEALTH SCORE:
+--------------------------------------------------------------------------------
+  Score: 90.0/100
+  Status: ✅ EXCELLENT
+
+================================================================================

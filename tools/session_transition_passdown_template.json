@@ -1,0 +1,112 @@
+{
+  "agent_id": "{agent_id}",
+  "agent_name": "{agent_name}",
+  "session_date": "{date}",
+  "status": "SESSION_COMPLETE",
+  "current_phase": "SESSION_TRANSITION",
+  "last_updated": "{timestamp}",
+  "session_summary": {
+    "total_cycles": 0,
+    "missions_complete": [],
+    "deliverables_count": 0,
+    "status": "IN_PROGRESS",
+    "critical_priority": "P0"
+  },
+  "completed_work": {
+    "mission_1": {
+      "status": "COMPLETE",
+      "description": "Mission description",
+      "files_created": 0,
+      "files_modified": 0,
+      "value": "Value delivered"
+    }
+  },
+  "key_insights": [
+    "Key insight 1",
+    "Key insight 2"
+  ],
+  "patterns_learned": {
+    "pattern_name": {
+      "pattern": "Pattern description",
+      "description": "Detailed explanation",
+      "steps": [
+        "Step 1",
+        "Step 2"
+      ],
+      "success_rate": "N/A",
+      "value": "Value of pattern"
+    }
+  },
+  "blockers": [],
+  "next_session_recommendations": [
+    "Recommendation 1",
+    "Recommendation 2"
+  ],
+  "collaboration_notes": {
+    "agent_X": "Collaboration details",
+    "coordination_pattern": "Pattern observed"
+  },
+  "system_improvements_observed": [
+    "Improvement 1",
+    "Improvement 2"
+  ],
+  "files_created_this_session": [],
+  "files_modified_this_session": [],
+  "bugs_fixed": [
+    {
+      "bug": "Bug description",
+      "severity": "P1-HIGH",
+      "fix": "Fix description",
+      "impact": "Impact description"
+    }
+  ],
+  "gas_pipeline_status": {
+    "status": "OPERATIONAL",
+    "blockers": [],
+    "next_actions": [],
+    "autonomy_level": "HIGH"
+  },
+  "next_agent_should_know": {
+    "critical_status": [
+      "Critical status item 1",
+      "Critical status item 2"
+    ],
+    "critical_protocols": [
+      "Protocol 1",
+      "Protocol 2"
+    ],
+    "coordination_opportunities": [
+      "Opportunity 1",
+      "Opportunity 2"
+    ]
+  },
+  "recommendations_for_next_agent": {
+    "do_this": [
+      "Do this 1",
+      "Do this 2"
+    ],
+    "dont_do_this": [
+      "Don't do this 1",
+      "Don't do this 2"
+    ]
+  },
+  "session_metrics": {
+    "cycles_executed": 0,
+    "critical_issues_resolved": 0,
+    "files_created": 0,
+    "files_modified": 0,
+    "files_removed": 0,
+    "tests_created": 0,
+    "tests_passing": 0,
+    "test_pass_rate": "0%",
+    "loc_reduced": 0,
+    "points_earned_estimate": 0,
+    "priority": "P0"
+  },
+  "urgent_items_for_next_session": [
+    "Urgent item 1",
+    "Urgent item 2"
+  ],
+  "status_for_next_agent": "Session status summary for next agent."
+}
+

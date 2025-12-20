@@ -1,0 +1,370 @@
+{
+  "version": "2.0.0",
+  "tools": {
+    "vector.context": [
+      "tools_v2.categories.vector_tools",
+      "TaskContextTool"
+    ],
+    "vector.search": [
+      "tools_v2.categories.vector_tools",
+      "VectorSearchTool"
+    ],
+    "vector.index": [
+      "tools_v2.categories.vector_tools",
+      "IndexWorkTool"
+    ],
+    "msg.send": [
+      "tools_v2.categories.messaging_tools",
+      "SendMessageTool"
+    ],
+    "msg.broadcast": [
+      "tools_v2.categories.messaging_tools",
+      "BroadcastTool"
+    ],
+    "msg.inbox": [
+      "tools_v2.categories.messaging_tools",
+      "InboxCheckTool"
+    ],
+    "analysis.scan": [
+      "tools_v2.categories.analysis_tools",
+      "ProjectScanTool"
+    ],
+    "analysis.complexity": [
+      "tools_v2.categories.analysis_tools",
+      "ComplexityTool"
+    ],
+    "analysis.duplicates": [
+      "tools_v2.categories.analysis_tools",
+      "DuplicationTool"
+    ],
+    "bi.metrics": [
+      "tools_v2.categories.bi_tools",
+      "QuickMetricsTool"
+    ],
+    "bi.roi.repo": [
+      "tools_v2.categories.bi_tools",
+      "RepoROICalculatorTool"
+    ],
+    "bi.roi.task": [
+      "tools_v2.categories.bi_tools",
+      "TaskROICalculatorTool"
+    ],
+    "bi.roi.optimize": [
+      "tools_v2.categories.bi_tools",
+      "MarkovROIOptimizerTool"
+    ],
+    "v2.check": [
+      "tools_v2.categories.v2_tools",
+      "V2CheckTool"
+    ],
+    "v2.report": [
+      "tools_v2.categories.v2_tools",
+      "V2ReportTool"
+    ],
+    "agent.status": [
+      "tools_v2.categories.agent_ops_tools",
+      "AgentStatusTool"
+    ],
+    "agent.claim": [
+      "tools_v2.categories.agent_ops_tools",
+      "ClaimTaskTool"
+    ],
+    "test.coverage": [
+      "tools_v2.categories.testing_tools",
+      "CoverageReportTool"
+    ],
+    "test.mutation": [
+      "tools_v2.categories.testing_tools",
+      "MutationGateTool"
+    ],
+    "comp.history": [
+      "tools_v2.categories.compliance_tools",
+      "ComplianceHistoryTool"
+    ],
+    "comp.check": [
+      "tools_v2.categories.compliance_tools",
+      "PolicyCheckTool"
+    ],
+    "infra.orchestrator_scan": [
+      "tools_v2.categories.infrastructure_tools",
+      "OrchestratorScanTool"
+    ],
+    "infra.file_lines": [
+      "tools_v2.categories.infrastructure_tools",
+      "FileLineCounterTool"
+    ],
+    "infra.extract_planner": [
+      "tools_v2.categories.infrastructure_tools",
+      "ModuleExtractorPlannerTool"
+    ],
+    "infra.roi_calc": [
+      "tools_v2.categories.infrastructure_tools",
+      "ROICalculatorTool"
+    ],
+    "discord.health": [
+      "tools_v2.categories.discord_tools",
+      "DiscordBotHealthTool"
+    ],
+    "discord.start": [
+      "tools_v2.categories.discord_tools",
+      "DiscordBotStartTool"
+    ],
+    "discord.test": [
+      "tools_v2.categories.discord_tools",
+      "DiscordTestMessageTool"
+    ],
+    "onboard.soft": [
+      "tools_v2.categories.onboarding_tools",
+      "SoftOnboardTool"
+    ],
+    "onboard.hard": [
+      "tools_v2.categories.onboarding_tools",
+      "HardOnboardTool"
+    ],
+    "docs.search": [
+      "tools_v2.categories.docs_tools",
+      "DocsSearchTool"
+    ],
+    "docs.export": [
+      "tools_v2.categories.docs_tools",
+      "DocsExportTool"
+    ],
+    "health.ping": [
+      "tools_v2.categories.health_tools",
+      "HealthPingTool"
+    ],
+    "health.snapshot": [
+      "tools_v2.categories.health_tools",
+      "SnapshotTool"
+    ],
+    "mem.leaks": [
+      "tools_v2.categories.memory_safety_adapters",
+      "MemoryLeakDetectorTool"
+    ],
+    "mem.verify": [
+      "tools_v2.categories.memory_safety_adapters",
+      "FileVerificationTool"
+    ],
+    "mem.scan": [
+      "tools_v2.categories.memory_safety_adapters",
+      "UnboundedScanTool"
+    ],
+    "mem.imports": [
+      "tools_v2.categories.memory_safety_adapters",
+      "ImportValidatorTool"
+    ],
+    "mem.handles": [
+      "tools_v2.categories.memory_safety_adapters",
+      "FileHandleCheckTool"
+    ],
+    "advisor.recommend": [
+      "tools_v2.categories.intelligent_mission_advisor_adapter",
+      "MissionAdvisorTool"
+    ],
+    "advisor.validate": [
+      "tools_v2.categories.intelligent_mission_advisor_adapter",
+      "OrderValidatorTool"
+    ],
+    "advisor.swarm": [
+      "tools_v2.categories.intelligent_mission_advisor_adapter",
+      "SwarmAnalyzerTool"
+    ],
+    "advisor.guide": [
+      "tools_v2.categories.intelligent_mission_advisor_adapter",
+      "RealtimeGuidanceTool"
+    ],
+    "msgtask.ingest": [
+      "tools_v2.categories.message_task_tools",
+      "MessageIngestTool"
+    ],
+    "msgtask.parse": [
+      "tools_v2.categories.message_task_tools",
+      "TaskParserTool"
+    ],
+    "msgtask.fingerprint": [
+      "tools_v2.categories.message_task_tools",
+      "TaskFingerprintTool"
+    ],
+    "session.cleanup": [
+      "tools_v2.categories.session_tools",
+      "SessionCleanupTool"
+    ],
+    "session.passdown": [
+      "tools_v2.categories.session_tools",
+      "PassdownTool"
+    ],
+    "agent.points": [
+      "tools_v2.categories.session_tools",
+      "PointsCalculatorTool"
+    ],
+    "msg.cleanup": [
+      "tools_v2.categories.workflow_tools",
+      "InboxCleanupTool"
+    ],
+    "mission.claim": [
+      "tools_v2.categories.workflow_tools",
+      "MissionClaimTool"
+    ],
+    "workflow.roi": [
+      "tools_v2.categories.workflow_tools",
+      "ROICalculatorTool"
+    ],
+    "swarm.pulse": [
+      "tools_v2.categories.swarm_consciousness",
+      "SwarmPulseTool"
+    ],
+    "oss.clone": [
+      "tools_v2.categories.oss_tools",
+      "OSSCloneTool"
+    ],
+    "oss.issues": [
+      "tools_v2.categories.oss_tools",
+      "OSSFetchIssuesTool"
+    ],
+    "oss.import": [
+      "tools_v2.categories.oss_tools",
+      "OSSImportIssuesTool"
+    ],
+    "oss.portfolio": [
+      "tools_v2.categories.oss_tools",
+      "OSSPortfolioTool"
+    ],
+    "oss.status": [
+      "tools_v2.categories.oss_tools",
+      "OSSStatusTool"
+    ],
+    "brain.note": [
+      "tools_v2.categories.swarm_brain_tools",
+      "TakeNoteTool"
+    ],
+    "brain.share": [
+      "tools_v2.categories.swarm_brain_tools",
+      "ShareLearningTool"
+    ],
+    "brain.search": [
+      "tools_v2.categories.swarm_brain_tools",
+      "SearchKnowledgeTool"
+    ],
+    "brain.session": [
+      "tools_v2.categories.swarm_brain_tools",
+      "LogSessionTool"
+    ],
+    "brain.get": [
+      "tools_v2.categories.swarm_brain_tools",
+      "GetAgentNotesTool"
+    ],
+    "obs.metrics": [
+      "tools_v2.categories.observability_tools",
+      "MetricsSnapshotTool"
+    ],
+    "obs.get": [
+      "tools_v2.categories.observability_tools",
+      "MetricsTool"
+    ],
+    "obs.health": [
+      "tools_v2.categories.observability_tools",
+      "SystemHealthTool"
+    ],
+    "obs.slo": [
+      "tools_v2.categories.observability_tools",
+      "SLOCheckTool"
+    ],
+    "val.smoke": [
+      "tools_v2.categories.validation_tools",
+      "SmokeTestTool"
+    ],
+    "val.flags": [
+      "tools_v2.categories.validation_tools",
+      "FeatureFlagTool"
+    ],
+    "val.rollback": [
+      "tools_v2.categories.validation_tools",
+      "RollbackTool"
+    ],
+    "val.report": [
+      "tools_v2.categories.validation_tools",
+      "ValidationReportTool"
+    ],
+    "captain.status_check": [
+      "tools_v2.categories.captain_tools",
+      "StatusCheckTool"
+    ],
+    "captain.git_verify": [
+      "tools_v2.categories.captain_tools",
+      "GitVerifyTool"
+    ],
+    "captain.calc_points": [
+      "tools_v2.categories.captain_tools",
+      "PointsCalculatorTool"
+    ],
+    "captain.assign_mission": [
+      "tools_v2.categories.captain_tools",
+      "MissionAssignTool"
+    ],
+    "captain.deliver_gas": [
+      "tools_v2.categories.captain_tools",
+      "GasDeliveryTool"
+    ],
+    "captain.update_leaderboard": [
+      "tools_v2.categories.captain_tools",
+      "LeaderboardUpdateTool"
+    ],
+    "captain.verify_work": [
+      "tools_v2.categories.captain_tools",
+      "WorkVerifyTool"
+    ],
+    "captain.cycle_report": [
+      "tools_v2.categories.captain_tools",
+      "CycleReportTool"
+    ],
+    "captain.markov_optimize": [
+      "tools_v2.categories.captain_tools",
+      "MarkovOptimizerTool"
+    ],
+    "captain.integrity_check": [
+      "tools_v2.categories.captain_tools",
+      "IntegrityCheckTool"
+    ],
+    "integration.find-ssot-violations": [
+      "tools_v2.categories.integration_tools",
+      "FindSSOTViolationsAdapter"
+    ],
+    "integration.find-duplicates": [
+      "tools_v2.categories.integration_tools",
+      "FindDuplicateFunctionalityAdapter"
+    ],
+    "integration.find-opportunities": [
+      "tools_v2.categories.integration_tools",
+      "FindIntegrationOpportunitiesAdapter"
+    ],
+    "integration.check-imports": [
+      "tools_v2.categories.integration_tools",
+      "CheckImportDependenciesAdapter"
+    ],
+    "coord.find-expert": [
+      "tools_v2.categories.coordination_tools",
+      "FindDomainExpertAdapter"
+    ],
+    "coord.request-review": [
+      "tools_v2.categories.coordination_tools",
+      "RequestExpertReviewAdapter"
+    ],
+    "coord.check-patterns": [
+      "tools_v2.categories.coordination_tools",
+      "CheckCoordinationPatternsAdapter"
+    ],
+    "config.validate-ssot": [
+      "tools_v2.categories.config_tools",
+      "ValidateConfigSSOTAdapter"
+    ],
+    "config.list-sources": [
+      "tools_v2.categories.config_tools",
+      "ListConfigSourcesAdapter"
+    ],
+    "config.check-imports": [
+      "tools_v2.categories.config_tools",
+      "CheckConfigImportsAdapter"
+    ]
+  },
+  "count": 87
+}

@@ -1,0 +1,52 @@
+Houston Sip Queen Launch Announcement Post
+==========================================
+To publish: Copy this content to WordPress Admin → Posts → Add New
+
+TITLE:
+Houston Sip Queen is Live — Luxury Mobile Bartending for Your Event
+
+CONTENT (HTML):
+<p>Bringing the bar to you. Weddings, birthdays, corporate events, girls' night, and private dinners.</p>
+
+<p>Choose a package, pick your vibe, and we'll handle the setup + service.</p>
+
+<p><strong>Now booking — request a quote today.</strong></p>
+
+<div class="wp-block-buttons">
+<div class="wp-block-button">
+<a class="wp-block-button__link">Request a Quote</a>
+</div>
+</div>
+
+CONTENT (Gutenberg Blocks):
+<!-- wp:paragraph -->
+<p>Bringing the bar to you. Weddings, birthdays, corporate events, girls' night, and private dinners.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Choose a package, pick your vibe, and we'll handle the setup + service.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Now booking — request a quote today.</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link">Request a Quote</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+CTA LINKS TO ADD:
+- Phone: [Add phone number]
+- Service Area: [Add service area details]
+- Instagram: [Add IG link]
+
+INSTRUCTIONS:
+1. Log in to WordPress Admin: https://houstonsipqueen.com/wp-admin
+2. Go to Posts → Add New
+3. Paste the title and content above
+4. Add phone, service area, and Instagram links to the CTA section
+5. Publish and pin the post
+6. Add CTA button to header navigation
+

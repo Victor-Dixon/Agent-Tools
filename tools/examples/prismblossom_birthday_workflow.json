@@ -1,0 +1,123 @@
+{
+  "site": "prismblossom",
+  "workflow": "birthday_website_updates",
+  "steps": [
+    {
+      "step": 1,
+      "name": "Invitation Page",
+      "action": "update_colors",
+      "template": "page-invitation.php",
+      "colors": {
+        "#ff00ff": "#000000",
+        "#ffffff": "#FFD700",
+        "rgba(255, 255, 255, 0.15)": "rgba(0, 0, 0, 0.8)",
+        "rgba(255, 255, 255, 0.2)": "rgba(0, 0, 0, 0.6)",
+        "rgba(255, 255, 255, 0.3)": "rgba(255, 215, 0, 0.5)"
+      },
+      "description": "Update colors to black and gold theme, keep Carmyn's text"
+    },
+    {
+      "step": 2,
+      "name": "Guestbook Page",
+      "action": "add_placeholders",
+      "template": "page-guestbook.php",
+      "entries": [
+        {
+          "name": "Sarah M.",
+          "date": "Jan 25, 2025",
+          "message": "Happy Birthday Carmyn! 🎉 Wishing you an amazing year ahead filled with music and joy!"
+        },
+        {
+          "name": "Mike T.",
+          "date": "Jan 24, 2025",
+          "message": "Have a fantastic birthday! Your DJ skills are incredible! 🎵"
+        },
+        {
+          "name": "Jessica L.",
+          "date": "Jan 23, 2025",
+          "message": "Happy Birthday! 🎂 Can't wait to hear your next mix!"
+        }
+      ],
+      "description": "Add placeholder entries, black and gold theme"
+    },
+    {
+      "step": 3,
+      "name": "Birthday Fun Page",
+      "action": "add_features",
+      "template": "page-birthday-fun.php",
+      "features": [
+        {
+          "type": "button_group",
+          "class": "mini-games-container",
+          "title": "🎮 Mini Games",
+          "style": "margin: 40px 0; padding: 30px; background: rgba(0, 0, 0, 0.8); border: 2px solid #FFD700; border-radius: 15px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);",
+          "title_style": "color: #FFD700; text-shadow: 0 0 10px #FFD700; margin-bottom: 20px;",
+          "buttons": [
+            {
+              "id": "confetti-burst",
+              "text": "🎉 Confetti Burst",
+              "style": "background: rgba(0, 0, 0, 0.6); border: 2px solid #FFD700; color: #FFD700; padding: 15px 25px; border-radius: 25px; cursor: pointer; font-size: 16px; font-weight: bold; text-shadow: 0 0 5px #FFD700; box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); transition: all 0.3s ease;",
+              "action": "for (let i = 0; i < 100; i++) { setTimeout(() => createConfetti(), i * 10); }"
+            },
+            {
+              "id": "golden-sparkles",
+              "text": "✨ Golden Sparkles",
+              "style": "background: rgba(0, 0, 0, 0.6); border: 2px solid #FFD700; color: #FFD700; padding: 15px 25px; border-radius: 25px; cursor: pointer; font-size: 16px; font-weight: bold; text-shadow: 0 0 5px #FFD700; box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); transition: all 0.3s ease;",
+              "action": "createSparkles();"
+            },
+            {
+              "id": "birthday-song",
+              "text": "🎵 Birthday Song",
+              "style": "background: rgba(0, 0, 0, 0.6); border: 2px solid #FFD700; color: #FFD700; padding: 15px 25px; border-radius: 25px; cursor: pointer; font-size: 16px; font-weight: bold; text-shadow: 0 0 5px #FFD700; box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); transition: all 0.3s ease;",
+              "action": "playBirthdaySong();"
+            }
+          ]
+        },
+        {
+          "type": "gallery",
+          "class": "birthday-gallery",
+          "title": "📸 Birthday Memories",
+          "style": "margin: 40px 0; padding: 30px; background: rgba(0, 0, 0, 0.8); border: 2px solid #FFD700; border-radius: 15px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);",
+          "title_style": "color: #FFD700; text-shadow: 0 0 10px #FFD700; margin-bottom: 20px;",
+          "items": [
+            {
+              "text": "[Birthday Image 1]<br><small style='opacity: 0.7;'>Click to add image</small>",
+              "style": "background: rgba(0, 0, 0, 0.6); border: 2px solid #FFD700; border-radius: 10px; padding: 20px; text-align: center; min-height: 200px; display: flex; align-items: center; justify-content: center;",
+              "text_style": "color: #FFD700; text-shadow: 0 0 5px #FFD700;"
+            },
+            {
+              "text": "[Birthday Image 2]<br><small style='opacity: 0.7;'>Click to add image</small>",
+              "style": "background: rgba(0, 0, 0, 0.6); border: 2px solid #FFD700; border-radius: 10px; padding: 20px; text-align: center; min-height: 200px; display: flex; align-items: center; justify-content: center;",
+              "text_style": "color: #FFD700; text-shadow: 0 0 5px #FFD700;"
+            },
+            {
+              "text": "[Birthday Image 3]<br><small style='opacity: 0.7;'>Click to add image</small>",
+              "style": "background: rgba(0, 0, 0, 0.6); border: 2px solid #FFD700; border-radius: 10px; padding: 20px; text-align: center; min-height: 200px; display: flex; align-items: center; justify-content: center;",
+              "text_style": "color: #FFD700; text-shadow: 0 0 5px #FFD700;"
+            }
+          ]
+        }
+      ],
+      "description": "Add interactive features, black and gold colors"
+    },
+    {
+      "step": 4,
+      "name": "Blog Post",
+      "action": "create_template",
+      "template": "page-birthday-blog.php",
+      "page_name": "Birthday Blog Post",
+      "description": "Create blog post draft with black and gold theme"
+    }
+  ],
+  "deployment": {
+    "method": "hostinger_file_manager",
+    "instructions": "Use Hostinger File Manager (same method as dadudekc website)"
+  }
+}
+
+
+
+
+
+
+

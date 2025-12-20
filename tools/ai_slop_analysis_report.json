@@ -1,0 +1,1672 @@
+{
+  "summary": {
+    "total_python_files": 3515,
+    "deletion_candidates": 2389,
+    "candidate_percentage": 67.97,
+    "total_lines_all_files": 677253,
+    "total_lines_candidates": 425320,
+    "lines_percentage": 62.8
+  },
+  "categories": {
+    "DEPRECATED_DIRECTORY": {
+      "count": 252,
+      "total_lines": 40937,
+      "files": [
+        {
+          "file": "archive\\tools\\deprecated\\consolidated_2025-12-02\\test_git_clone_auth.py",
+          "score": 150,
+          "size_lines": 78,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "docs\\archive\\consolidation\\phase1_deletion_backup\\src\\core\\orchestration\\contracts.py",
+          "score": 125,
+          "size_lines": 64,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "docs\\archive\\consolidation\\phase1_deletion_backup\\src\\domain\\ports\\message_bus.py",
+          "score": 125,
+          "size_lines": 128,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "temp_repos\\Thea\\src\\dreamscape\\gui\\panels\\archive\\devlog_panel_old.py",
+          "score": 125,
+          "size_lines": 695,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "temp_repos\\Thea\\src\\dreamscape\\gui\\panels\\archive\\__init__.py",
+          "score": 125,
+          "size_lines": 8,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "archive\\tools\\deprecated\\__init__.py",
+          "score": 125,
+          "size_lines": 24,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "archive\\tools\\deprecated\\consolidated_2025-12-02\\send_agent3_assignment_direct.py",
+          "score": 125,
+          "size_lines": 0,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "archive\\tools\\deprecated\\consolidated_2025-12-02\\setup_compliance_monitoring.py",
+          "score": 125,
+          "size_lines": 0,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "archive\\tools\\deprecated\\consolidated_2025-12-02\\verify_github_token.py",
+          "score": 125,
+          "size_lines": 47,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "archive\\tools\\deprecated\\consolidated_2025-12-03\\check_github_rate_limit.py",
+          "score": 125,
+          "size_lines": 53,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "archive\\tools\\deprecated\\consolidated_2025-12-03\\complexity_analyzer_core.py",
+          "score": 125,
+          "size_lines": 385,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "archive\\tools\\deprecated\\consolidated_2025-12-03\\complexity_analyzer_formatters.py",
+          "score": 125,
+          "size_lines": 108,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "docs\\archive\\root_cleanup_2025-12-14\\temp_send_4agent_mode_tasks.py",
+          "score": 75,
+          "size_lines": 195,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": true,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "docs\\archive\\root_cleanup_2025-12-14\\temp_send_downsize_notifications.py",
+          "score": 75,
+          "size_lines": 237,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": true,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "docs\\archive\\root_cleanup_2025-12-14\\temp_send_loop_closure_tasks.py",
+          "score": 75,
+          "size_lines": 96,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": true,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "docs\\archive\\root_cleanup_2025-12-14\\temp_unblock_agent1_refactors.py",
+          "score": 75,
+          "size_lines": 92,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": true,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "docs\\archive\\root_cleanup_2025-12-14\\temp_update_agent4_status_expanded_duties.py",
+          "score": 75,
+          "size_lines": 65,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": true,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "agent_workspaces\\Agent-2\\extracted_logic\\ai_framework\\models\\src\\dreamscape\\core\\legacy\\move_outputs_to_main_archive.py",
+          "score": 75,
+          "size_lines": 135,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": true,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "temp_repos\\Thea\\scripts\\cleanup_archive_backups.py",
+          "score": 75,
+          "size_lines": 483,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": true,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        },
+        {
+          "file": "temp_repos\\Thea\\src\\dreamscape\\core\\legacy\\move_outputs_to_main_archive.py",
+          "score": 75,
+          "size_lines": 135,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": true,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Deprecated/archive pattern in path",
+            "In deprecated/archive directory"
+          ],
+          "category": "DEPRECATED_DIRECTORY"
+        }
+      ]
+    },
+    "DEPRECATED_PATTERN": {
+      "count": 1284,
+      "total_lines": 284745,
+      "files": [
+        {
+          "file": "temp_repos\\Thea\\scripts\\workflows\\base_workflow.py",
+          "score": 120,
+          "size_lines": 899,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Oversized (899 lines) and unreferenced"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\src\\dreamscape\\core\\analytics\\analytics_system.py",
+          "score": 120,
+          "size_lines": 869,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Oversized (869 lines) and unreferenced"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\src\\dreamscape\\core\\discord\\discord_commands.py",
+          "score": 120,
+          "size_lines": 943,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Oversized (943 lines) and unreferenced"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\src\\dreamscape\\core\\mmorpg\\enhanced_skill_resume_system.py",
+          "score": 120,
+          "size_lines": 965,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Oversized (965 lines) and unreferenced"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\src\\dreamscape\\core\\mmorpg\\mmorpg_system.py",
+          "score": 120,
+          "size_lines": 2054,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Oversized (2054 lines) and unreferenced"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\src\\dreamscape\\gui\\panels\\enhanced_analytics_panel.py",
+          "score": 120,
+          "size_lines": 990,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Oversized (990 lines) and unreferenced"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Auto_Blogger\\autoblogger\\ui\\main_window.py",
+          "score": 120,
+          "size_lines": 1043,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Oversized (1043 lines) and unreferenced"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "src\\core\\test_categories_config.py",
+          "score": 115,
+          "size_lines": 87,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "agent_workspaces\\Agent-2\\extracted_logic\\ai_framework\\models\\tests\\unit\\test_mmorpg_models.py",
+          "score": 115,
+          "size_lines": 85,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\tests\\test_discord_config.py",
+          "score": 115,
+          "size_lines": 16,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\tests\\test_entrypoints.py",
+          "score": 115,
+          "size_lines": 7,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\tests\\test_episode_context.py",
+          "score": 115,
+          "size_lines": 34,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\tests\\test_mmorpq_consistency.py",
+          "score": 115,
+          "size_lines": 11,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\tests\\test_tools_cli.py",
+          "score": 115,
+          "size_lines": 31,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\tests\\test_tools_ingestion.py",
+          "score": 115,
+          "size_lines": 26,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\tests\\test_tools_parity.py",
+          "score": 115,
+          "size_lines": 41,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\tests\\test_trend_stats.py",
+          "score": 115,
+          "size_lines": 25,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\tests\\test_xp_dispatcher.py",
+          "score": 115,
+          "size_lines": 64,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\tests\\discord\\test_ratelimits.py",
+          "score": 115,
+          "size_lines": 28,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        },
+        {
+          "file": "temp_repos\\Thea\\tests\\integration\\test_content_analytics_system.py",
+          "score": 115,
+          "size_lines": 676,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": true,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Deprecated/archive pattern in path",
+            "Test file with no references"
+          ],
+          "category": "DEPRECATED_PATTERN"
+        }
+      ]
+    },
+    "DEAD_CODE": {
+      "count": 851,
+      "total_lines": 95888,
+      "files": [
+        {
+          "file": "src\\core\\hardened_activity_detector.py",
+          "score": 80,
+          "size_lines": 809,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Oversized (809 lines) and unreferenced"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\services\\hard_onboarding_service.py",
+          "score": 80,
+          "size_lines": 870,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Oversized (870 lines) and unreferenced"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "__init__.py",
+          "score": 50,
+          "size_lines": 5,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "conftest.py",
+          "score": 50,
+          "size_lines": 14,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\agent_registry.py",
+          "score": 50,
+          "size_lines": 26,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\commandresult.py",
+          "score": 50,
+          "size_lines": 21,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\swarmstatus.py",
+          "score": 50,
+          "size_lines": 32,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\swarm_pulse\\intelligence.py",
+          "score": 50,
+          "size_lines": 339,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\swarm_pulse\\__init__.py",
+          "score": 50,
+          "size_lines": 8,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\discord_commander\\messaging_controller_modals.py",
+          "score": 50,
+          "size_lines": 166,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\discord_commander\\__init__.py",
+          "score": 50,
+          "size_lines": 42,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\discord_commander\\discord_embeds.py",
+          "score": 50,
+          "size_lines": 340,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\discord_commander\\messaging_controller.py",
+          "score": 50,
+          "size_lines": 152,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\discord_commander\\status_reader.py",
+          "score": 50,
+          "size_lines": 309,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\discord_commander\\tools_commands.py",
+          "score": 50,
+          "size_lines": 253,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\discord_commander\\controllers\\__init__.py",
+          "score": 50,
+          "size_lines": 14,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\discord_commander\\utils\\__init__.py",
+          "score": 50,
+          "size_lines": 31,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\discord_commander\\utils\\carmyn_preferences.py",
+          "score": 50,
+          "size_lines": 182,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\discord_commander\\commands\\__init__.py",
+          "score": 50,
+          "size_lines": 29,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        },
+        {
+          "file": "src\\discord_commander\\commands\\core_messaging_commands.py",
+          "score": 50,
+          "size_lines": 230,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)"
+          ],
+          "category": "DEAD_CODE"
+        }
+      ]
+    },
+    "OVERSIZED_UNREFERENCED": {
+      "count": 2,
+      "total_lines": 3750,
+      "files": [
+        {
+          "file": "src\\orchestrators\\overnight\\enhanced_agent_activity_detector.py",
+          "score": 80,
+          "size_lines": 1367,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Oversized (1367 lines) and unreferenced"
+          ],
+          "category": "OVERSIZED_UNREFERENCED"
+        },
+        {
+          "file": "tools\\cli\\commands\\registry.py",
+          "score": 80,
+          "size_lines": 2383,
+          "is_imported": false,
+          "import_count": 0,
+          "is_entry_point": false,
+          "is_deprecated_pattern": false,
+          "reasons": [
+            "Unreferenced (no imports, not entry point)",
+            "Oversized (2383 lines) and unreferenced"
+          ],
+          "category": "OVERSIZED_UNREFERENCED"
+        }
+      ]
+    }
+  },
+  "top_candidates": [
+    {
+      "file": "archive\\tools\\deprecated\\consolidated_2025-12-02\\test_git_clone_auth.py",
+      "score": 150,
+      "size_lines": 78,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "docs\\archive\\consolidation\\phase1_deletion_backup\\src\\core\\orchestration\\contracts.py",
+      "score": 125,
+      "size_lines": 64,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "docs\\archive\\consolidation\\phase1_deletion_backup\\src\\domain\\ports\\message_bus.py",
+      "score": 125,
+      "size_lines": 128,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "temp_repos\\Thea\\src\\dreamscape\\gui\\panels\\archive\\devlog_panel_old.py",
+      "score": 125,
+      "size_lines": 695,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "temp_repos\\Thea\\src\\dreamscape\\gui\\panels\\archive\\__init__.py",
+      "score": 125,
+      "size_lines": 8,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "archive\\tools\\deprecated\\__init__.py",
+      "score": 125,
+      "size_lines": 24,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "archive\\tools\\deprecated\\consolidated_2025-12-02\\send_agent3_assignment_direct.py",
+      "score": 125,
+      "size_lines": 0,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "archive\\tools\\deprecated\\consolidated_2025-12-02\\setup_compliance_monitoring.py",
+      "score": 125,
+      "size_lines": 0,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "archive\\tools\\deprecated\\consolidated_2025-12-02\\verify_github_token.py",
+      "score": 125,
+      "size_lines": 47,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "archive\\tools\\deprecated\\consolidated_2025-12-03\\check_github_rate_limit.py",
+      "score": 125,
+      "size_lines": 53,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "archive\\tools\\deprecated\\consolidated_2025-12-03\\complexity_analyzer_core.py",
+      "score": 125,
+      "size_lines": 385,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "archive\\tools\\deprecated\\consolidated_2025-12-03\\complexity_analyzer_formatters.py",
+      "score": 125,
+      "size_lines": 108,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "In deprecated/archive directory"
+      ],
+      "category": "DEPRECATED_DIRECTORY"
+    },
+    {
+      "file": "temp_repos\\Thea\\scripts\\workflows\\base_workflow.py",
+      "score": 120,
+      "size_lines": 899,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Oversized (899 lines) and unreferenced"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\src\\dreamscape\\core\\analytics\\analytics_system.py",
+      "score": 120,
+      "size_lines": 869,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Oversized (869 lines) and unreferenced"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\src\\dreamscape\\core\\discord\\discord_commands.py",
+      "score": 120,
+      "size_lines": 943,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Oversized (943 lines) and unreferenced"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\src\\dreamscape\\core\\mmorpg\\enhanced_skill_resume_system.py",
+      "score": 120,
+      "size_lines": 965,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Oversized (965 lines) and unreferenced"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\src\\dreamscape\\core\\mmorpg\\mmorpg_system.py",
+      "score": 120,
+      "size_lines": 2054,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Oversized (2054 lines) and unreferenced"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\src\\dreamscape\\gui\\panels\\enhanced_analytics_panel.py",
+      "score": 120,
+      "size_lines": 990,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Oversized (990 lines) and unreferenced"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Auto_Blogger\\autoblogger\\ui\\main_window.py",
+      "score": 120,
+      "size_lines": 1043,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Oversized (1043 lines) and unreferenced"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "src\\core\\test_categories_config.py",
+      "score": 115,
+      "size_lines": 87,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "agent_workspaces\\Agent-2\\extracted_logic\\ai_framework\\models\\tests\\unit\\test_mmorpg_models.py",
+      "score": 115,
+      "size_lines": 85,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\test_discord_config.py",
+      "score": 115,
+      "size_lines": 16,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\test_entrypoints.py",
+      "score": 115,
+      "size_lines": 7,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\test_episode_context.py",
+      "score": 115,
+      "size_lines": 34,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\test_mmorpq_consistency.py",
+      "score": 115,
+      "size_lines": 11,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\test_tools_cli.py",
+      "score": 115,
+      "size_lines": 31,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\test_tools_ingestion.py",
+      "score": 115,
+      "size_lines": 26,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\test_tools_parity.py",
+      "score": 115,
+      "size_lines": 41,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\test_trend_stats.py",
+      "score": 115,
+      "size_lines": 25,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\test_xp_dispatcher.py",
+      "score": 115,
+      "size_lines": 64,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\discord\\test_ratelimits.py",
+      "score": 115,
+      "size_lines": 28,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\integration\\test_content_analytics_system.py",
+      "score": 115,
+      "size_lines": 676,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\testing\\test_context_engine.py",
+      "score": 115,
+      "size_lines": 1,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\unit\\test_knowledge_graph_backend.py",
+      "score": 115,
+      "size_lines": 12,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\unit\\test_mmorpg_engine.py",
+      "score": 115,
+      "size_lines": 24,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\unit\\test_mmorpg_models.py",
+      "score": 115,
+      "size_lines": 85,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\unit\\test_mmorpg_progress.py",
+      "score": 115,
+      "size_lines": 131,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\unit\\test_mmorpg_resume.py",
+      "score": 115,
+      "size_lines": 23,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Thea\\tests\\unit\\test_mmorpg_systems.py",
+      "score": 115,
+      "size_lines": 60,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\temp_repos\\contract-leads\\tests\\test_extra_loader.py",
+      "score": 115,
+      "size_lines": 30,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\temp_repos\\contract-leads\\tests\\test_scoring.py",
+      "score": 115,
+      "size_lines": 59,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\temp_repos\\contract-leads\\tests\\test_scrapers.py",
+      "score": 115,
+      "size_lines": 71,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Auto_Blogger\\tests\\test_auto_reply.py",
+      "score": 115,
+      "size_lines": 141,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Auto_Blogger\\tests\\test_autoblogger.py",
+      "score": 115,
+      "size_lines": 141,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Auto_Blogger\\tests\\test_blog_post.py",
+      "score": 115,
+      "size_lines": 122,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Auto_Blogger\\tests\\test_verify_beta.py",
+      "score": 115,
+      "size_lines": 260,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Auto_Blogger\\tests\\test_error_handler.py",
+      "score": 115,
+      "size_lines": 76,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Auto_Blogger\\tests\\test_wordpress_client_integration.py",
+      "score": 115,
+      "size_lines": 94,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "temp_repos\\Auto_Blogger\\tests\\test_blog_generator_integration.py",
+      "score": 115,
+      "size_lines": 28,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    },
+    {
+      "file": "tools\\test_repo_status_tracker.py",
+      "score": 115,
+      "size_lines": 0,
+      "is_imported": false,
+      "import_count": 0,
+      "is_entry_point": false,
+      "is_deprecated_pattern": true,
+      "reasons": [
+        "Unreferenced (no imports, not entry point)",
+        "Deprecated/archive pattern in path",
+        "Test file with no references"
+      ],
+      "category": "DEPRECATED_PATTERN"
+    }
+  ]
+}

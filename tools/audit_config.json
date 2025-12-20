@@ -1,0 +1,10 @@
+{
+  "min_py": 10,
+  "max_py_drop": 0.8,
+  "dup_limit": 50,
+  "ignore_dirs": [
+    ".git", ".venv", "venv", "node_modules",
+    ".mypy_cache", "__pycache__", ".pytest_cache",
+    ".ruff_cache", ".cache", "dist", "build", ".idea", ".vscode"
+  ]
+}
