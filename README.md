@@ -14,7 +14,6 @@ Shared Pomodoro + Kanban for a family business: one board, one timer, one team.
 1) Start Postgres:
 
 ```bash
-cd family-focus-board
 docker compose up -d
 ```
 
