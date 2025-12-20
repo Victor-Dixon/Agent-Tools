@@ -1,0 +1,15 @@
+{
+  "name": "family-focus-board",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "npm@10",
+  "scripts": {
+    "lint": "npm -ws run lint",
+    "test": "npm -ws run test",
+    "typecheck": "npm -ws run typecheck"
+  }
+}
+
