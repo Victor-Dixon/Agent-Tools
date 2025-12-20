@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "swarm-brain": {
+      "command": "python",
+      "args": [
+        "D:/Agent_Cellphone_V2_Repository/mcp_servers/swarm_brain_server.py"
+      ],
+      "description": "Swarm Brain knowledge base access and contribution"
+    }
+  }
+}

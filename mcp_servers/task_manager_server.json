@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "task-manager": {
+      "command": "python",
+      "args": [
+        "D:/Agent_Cellphone_V2_Repository/mcp_servers/task_manager_server.py"
+      ],
+      "description": "Task management system for MASTER_TASK_LOG.md operations"
+    }
+  }
+}

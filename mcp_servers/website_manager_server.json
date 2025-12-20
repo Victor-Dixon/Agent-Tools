@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "website-manager": {
+      "command": "python",
+      "args": [
+        "D:/Agent_Cellphone_V2_Repository/mcp_servers/website_manager_server.py"
+      ],
+      "description": "Website and WordPress management system for site operations"
+    }
+  }
+}

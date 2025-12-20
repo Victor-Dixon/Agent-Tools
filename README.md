@@ -6,6 +6,7 @@ This repository contains all tools used by the Agent Swarm system for autonomous
 
 - **`tools/`** - Legacy tools and individual utility scripts
 - **`tools_v2/`** - Modern toolbelt system with categorized tools, adapters, and core infrastructure
+- **`mcp_servers/`** - Custom MCP (Model Context Protocol) servers for agent operations
 
 ## Tool Categories
 
@@ -35,6 +36,16 @@ The `tools/` directory contains individual utility scripts for:
 - Content management
 - Analysis and reporting
 - And more...
+
+### MCP Servers
+
+The `mcp_servers/` directory contains custom MCP servers:
+- **`swarm_brain_server.py`** - Swarm knowledge and memory management
+- **`task_manager_server.py`** - Task management and tracking
+- **`v2_compliance_server.py`** - V2 compliance checking
+- **`website_manager_server.py`** - Website management operations
+- **`git_operations_server.py`** - Git operations and verification
+- **`messaging_server.py`** - Agent messaging operations
 
 ## Usage
 

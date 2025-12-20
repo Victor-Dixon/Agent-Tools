@@ -1,0 +1,46 @@
+{
+  "mcpServers": {
+    "swarm-messaging": {
+      "command": "python",
+      "args": [
+        "D:/Agent_Cellphone_V2_Repository/mcp_servers/messaging_server.py"
+      ],
+      "description": "Swarm messaging system (PyAutoGUI-based agent messaging)"
+    },
+    "task-manager": {
+      "command": "python",
+      "args": [
+        "D:/Agent_Cellphone_V2_Repository/mcp_servers/task_manager_server.py"
+      ],
+      "description": "Task management system for MASTER_TASK_LOG.md operations"
+    },
+    "website-manager": {
+      "command": "python",
+      "args": [
+        "D:/Agent_Cellphone_V2_Repository/mcp_servers/website_manager_server.py"
+      ],
+      "description": "Website and WordPress management system for site operations"
+    },
+    "swarm-brain": {
+      "command": "python",
+      "args": [
+        "D:/Agent_Cellphone_V2_Repository/mcp_servers/swarm_brain_server.py"
+      ],
+      "description": "Swarm Brain knowledge base access and contribution"
+    },
+    "git-operations": {
+      "command": "python",
+      "args": [
+        "D:/Agent_Cellphone_V2_Repository/mcp_servers/git_operations_server.py"
+      ],
+      "description": "Git operations and work verification for agents"
+    },
+    "v2-compliance": {
+      "command": "python",
+      "args": [
+        "D:/Agent_Cellphone_V2_Repository/mcp_servers/v2_compliance_server.py"
+      ],
+      "description": "V2 compliance checking and validation for agents"
+    }
+  }
+}
