@@ -62,6 +62,20 @@
         "D:/Agent_Cellphone_V2_Repository/mcp_servers/memory_safety_server.py"
       ],
       "description": "Memory leak detection and resource verification"
+    },
+    "mission-control-server": {
+      "command": "python",
+      "args": [
+        "D:/Agent_Cellphone_V2_Repository/mcp_servers/mission_control_server.py"
+      ],
+      "description": "Captain's coordination, mission assignment, and integrity tools"
+    },
+    "refactoring-server": {
+      "command": "python",
+      "args": [
+        "D:/Agent_Cellphone_V2_Repository/mcp_servers/refactoring_server.py"
+      ],
+      "description": "Automated refactoring and code quality tools"
     }
   }
 }

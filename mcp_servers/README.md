@@ -8,12 +8,14 @@ The MCP servers are organized into three main categories:
 
 ### 1. Core Operations
 Essential servers for agent coordination and task management.
+- **Mission Control Server**: Central command for task assignment and integrity (Captain)
 - **Swarm Messaging**: Inter-agent communication
 - **Task Manager**: Master task log operations
 - **Swarm Brain**: Knowledge base and memory
 
 ### 2. Development & Quality
 Tools for maintaining code quality and standards.
+- **Refactoring Server**: Automated code cleanup and pyramid analysis
 - **Git Operations**: Work verification and commit checking
 - **V2 Compliance**: Code standard enforcement
 - **Testing Server**: Test execution and coverage analysis
@@ -28,49 +30,58 @@ Tools for system health and external services.
 
 ## 🚀 Server Details
 
-### 1. Swarm Messaging Server
-Exposes the swarm messaging system via MCP, allowing agents and external tools to send messages to agents via PyAutoGUI coordinates.
+### 1. Mission Control Server (Captain)
+Exposes Captain's coordination, mission assignment, and integrity tools.
+- **Tools**: 
+  - `assign_mission`: Create structured mission files
+  - `check_integrity`: Verify work claims with git history
+  - `update_leaderboard`: Manage agent points and achievements
+  - `calculate_points`: Standardized point calculation
+  - `check_agent_status`: Monitor agent activity
+
+### 2. Refactoring Server
+Exposes automated code analysis and refactoring tools.
+- **Tools**:
+  - `auto_extract_code`: Plan function extraction for large files
+  - `fix_linting_issues`: Auto-fix linting errors
+  - `analyze_test_pyramid`: check unit/integration/e2e balance
+  - `check_file_size`: Validate file length compliance
+
+### 3. Swarm Messaging Server
+Exposes the swarm messaging system via MCP.
 - **Tools**: `send_agent_message`, `broadcast_message`, `get_agent_coordinates`
 
-### 2. Task Manager Server
+### 4. Task Manager Server
 Exposes the MASTER_TASK_LOG.md system via MCP.
 - **Tools**: `add_task_to_inbox`, `mark_task_complete`, `move_task_to_waiting`, `get_tasks`
 
-### 3. Website Manager Server
+### 5. Website Manager Server
 Exposes WordPress and website management capabilities.
 - **Tools**: `create_wordpress_page`, `deploy_file_to_wordpress`, `create_blog_post`, `generate_image_prompts`
 
-### 4. Swarm Brain Server
+### 6. Swarm Brain Server
 Exposes Swarm Brain knowledge base operations.
 - **Tools**: `share_learning`, `record_decision`, `search_swarm_knowledge`, `take_note`
 
-### 5. Git Operations Server
+### 7. Git Operations Server
 Exposes git verification and commit checking capabilities.
 - **Tools**: `verify_git_work`, `get_recent_commits`, `check_file_history`, `validate_commit`
 
-### 6. V2 Compliance Checker Server
+### 8. V2 Compliance Checker Server
 Exposes V2 compliance validation capabilities.
 - **Tools**: `check_v2_compliance`, `validate_file_size`, `check_function_size`, `get_v2_exceptions`
 
-### 7. Testing Server (NEW)
+### 9. Testing Server
 Exposes testing and coverage capabilities.
-- **Tools**: 
-  - `run_coverage_analysis`: Run tests with coverage reporting
-  - `run_mutation_tests`: Run mutation quality gate
+- **Tools**: `run_coverage_analysis`, `run_mutation_tests`
 
-### 8. Observability Server (NEW)
+### 10. Observability Server
 Exposes metrics and system health monitoring.
-- **Tools**: 
-  - `get_metrics_snapshot`: Get current system metrics
-  - `check_system_health`: Verify component health status
-  - `check_slo_compliance`: Check Service Level Objectives
+- **Tools**: `get_metrics_snapshot`, `check_system_health`, `check_slo_compliance`
 
-### 9. Memory Safety Server (NEW)
+### 11. Memory Safety Server
 Exposes memory leak detection and resource verification.
-- **Tools**: 
-  - `detect_memory_leaks`: Scan for unbounded data structures
-  - `verify_files_exist`: Prevent phantom task references
-  - `check_file_handles`: Detect unclosed file resources
+- **Tools**: `detect_memory_leaks`, `verify_files_exist`, `check_file_handles`
 
 ---
 
