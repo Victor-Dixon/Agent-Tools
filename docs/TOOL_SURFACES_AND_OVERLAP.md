@@ -2,11 +2,21 @@
 
 _Generated: 2025-12-21 12:24 UTC_
 
+This document maps **where “tool capabilities” live** in this repository, and where the **same capability is exposed through multiple surfaces** (MCP vs Toolbelt V2 vs legacy CLI vs app/runtime code).
+
+**Canonical source-of-truth files (start here):**
+
+- **MCP server inventory**: `mcp_servers/all_mcp_servers.json`
+- **Toolbelt V2 registry (internal adapters)**: `tools_v2/tool_registry.lock.json`
+- **Legacy CLI registry (flags → modules)**: `tools/toolbelt_registry.py`
+
 ## Tool surfaces in this repo
 
 - **MCP servers** (`mcp_servers/*_server.py`): JSON-RPC tools exposed externally.
 - **Toolbelt V2** (`tools_v2/tool_registry.lock.json`): in-process adapter tools keyed like `msg.send`.
 - **Legacy CLI toolbelt** (`tools/toolbelt_registry.py`): CLI flags map to many scripts/unified tools.
+- **Standalone scripts** (`tools/*.py`): many utilities exist outside the registries (some are referenced by the registries; many are “direct-run only”).
+- **Family Focus Board runtime** (`apps/*`, `packages/*`): product code (API/Web/shared) with its own command surface via `package.json` scripts.
 
 ## MCP servers (external tool surface)
 
@@ -57,12 +67,25 @@ _Generated: 2025-12-21 12:24 UTC_
 - **`list_wordpress_pages`**: List all pages on WordPress site
 - **`purge_wordpress_cache`**: Purge WordPress cache
 
+## Family Focus Board (runtime surface)
+
+This repo also contains a TypeScript monorepo for the Family Focus Board product. This is **not an agent tool surface**, but it is an important “capability surface” in the repository (API routes, realtime events, and shared timer state machine).
+
+- **API service**: `apps/api`
+  - entrypoint: `apps/api/src/server.ts`
+  - scripts: `dev`, `start`, `db:migrate`, `db:seed` (see `apps/api/package.json`)
+- **Web app**: `apps/web` (Next.js)
+  - scripts: `dev`, `build`, `start` (see `apps/web/package.json`)
+- **Shared library**: `packages/shared`
+  - timer state machine + types shared across API/web (see `packages/shared/src/`)
+
 ## Toolbelt V2 registry (internal adapter tool surface)
 
 - **Registry**: `tools_v2/tool_registry.lock.json`
-- **Declared tools**: 91 (registry `count`=87)
+- **Lockfile entries**: 91 (`tools` keys)
+- **Registry `count`**: 87 (typically “loadable/healthy” tools at generation time; a mismatch indicates stale/broken entries or partial generation)
 
-### `<<unknown>>`
+### Registry health (known failing entries)
 - **`agent.points`** — _IMPORT ERROR_ (AttributeError: module 'tools_v2.categories.session_tools' has no attribute 'PointsCalculatorTool') — `tools_v2.categories.session_tools:PointsCalculatorTool`
 - **`brain.get`** — _IMPORT ERROR_ (TypeError: Can't instantiate abstract class GetAgentNotesTool without an implementation for abstract methods 'get_spec', 'validate') — `tools_v2.categories.swarm_brain_tools:GetAgentNotesTool`
 - **`brain.note`** — _IMPORT ERROR_ (TypeError: Can't instantiate abstract class TakeNoteTool without an implementation for abstract methods 'get_spec', 'validate') — `tools_v2.categories.swarm_brain_tools:TakeNoteTool`
@@ -311,6 +334,7 @@ _Generated: 2025-12-21 12:24 UTC_
 
 - **Registry**: `tools/toolbelt_registry.py`
 - **Registered tools**: 87
+  - Note: this is the “flags → module” mapping used by the legacy CLI entrypoints; it overlaps heavily with `tools/*.py` scripts.
 
 ### `analysis`
 - **`analyze-dreamvault`**: DreamVault-specific duplicate detection (consolidated into unified_analyzer) — `tools.unified_analyzer:main`
