@@ -483,5 +483,95 @@ export const routes: FastifyPluginAsync = async (fastify) => {
     );
     return { weekly: res.rows[0] ?? { total_seconds: 0, total_sessions: 0 } };
   });
+
+  fastify.post("/inventory/categories", async (req, reply) => {
+    const { orgId, userId } = req.auth;
+    const body = z.object({ name: z.string().min(1) }).parse(req.body);
+
+    const out = await tx(async (client) => {
+      const res = await client.query<{ id: string; name: string }>(
+        "insert into inventory_categories (org_id, name) values ($1, $2) returning id, name",
+        [orgId, body.name]
+      );
+      const category = res.rows[0]!;
+
+      await logActivity(client, {
+        orgId,
+        actorUserId: userId,
+        entityType: "inventory_category",
+        entityId: category.id,
+        action: "inventory_category:created",
+        meta: { name: category.name }
+      });
+
+      return category;
+    });
+
+    return reply.code(201).send(out);
+  });
+
+  fastify.post("/inventory/items", async (req, reply) => {
+    const { orgId, userId } = req.auth;
+    const body = z
+      .object({
+        name: z.string().min(1),
+        description: z.string().optional(),
+        value: z.number().int().default(0),
+        categoryId: uuid.optional()
+      })
+      .parse(req.body);
+
+    const out = await tx(async (client) => {
+      if (body.categoryId) {
+        const cat = await client.query("select id from inventory_categories where id = $1 and org_id = $2", [
+          body.categoryId,
+          orgId
+        ]);
+        if (!cat.rows[0]) throw new Error("Invalid category");
+      }
+
+      const res = await client.query<{ id: string }>(
+        "insert into inventory_items (org_id, category_id, name, description, value) values ($1, $2, $3, $4, $5) returning id",
+        [orgId, body.categoryId, body.name, body.description ?? "", body.value]
+      );
+      const item = res.rows[0]!;
+
+      await logActivity(client, {
+        orgId,
+        actorUserId: userId,
+        entityType: "inventory_item",
+        entityId: item.id,
+        action: "inventory_item:created",
+        meta: { name: body.name, value: body.value, categoryId: body.categoryId }
+      });
+
+      return item;
+    });
+
+    return reply.code(201).send(out);
+  });
+
+  fastify.get("/inventory/items", async (req) => {
+    const { orgId } = req.auth;
+    const query = z.object({ categoryId: uuid.optional() }).parse(req.query);
+
+    let sql = `
+        select i.*, c.name as category_name
+        from inventory_items i
+        left join inventory_categories c on c.id = i.category_id
+        where i.org_id = $1
+    `;
+    const params: any[] = [orgId];
+
+    if (query.categoryId) {
+      sql += " and i.category_id = $2";
+      params.push(query.categoryId);
+    }
+
+    sql += " order by i.value desc";
+
+    const res = await fastify.pg.query(sql, params);
+    return { items: res.rows };
+  });
 };
 
