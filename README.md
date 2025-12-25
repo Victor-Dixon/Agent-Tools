@@ -1,111 +1,313 @@
-# Agent Tools Repository
+# 🐝 Swarm MCP Toolbelt
 
-This repository contains all tools used by the Agent Swarm system for autonomous operations, coordination, and task execution.
+**Multi-Agent AI Coordination Framework** with Model Context Protocol (MCP) support.
 
-## 🎯 Quick Start - Unified Tools
+Enable multiple AI agents (Claude, GPT, etc.) to work together autonomously - communicating, sharing knowledge, and coordinating tasks without human intervention.
 
-After Phase 1 consolidation (2025-12-25), use these **3 unified tools** for most operations:
-
-```bash
-# Monitoring (queue, service, disk, agents, workspace, coverage)
-python tools/unified_monitor.py --category all
-
-# Validation (ssot, imports, tracker, session, refactor, consolidation)
-python tools/unified_validator.py --all
-
-# Analysis (repository, structure, file, consolidation, overlaps)
-python tools/unified_analyzer.py --category all
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     YOUR AI SWARM                           │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│   ┌─────────┐    messaging     ┌─────────┐                 │
+│   │ Claude  │◄────system──────►│  GPT-4  │                 │
+│   │ Agent-1 │                  │ Agent-2 │                 │
+│   └────┬────┘                  └────┬────┘                 │
+│        │         swarm-brain        │                       │
+│        └──────────┬─────────────────┘                       │
+│                   ▼                                         │
+│   ┌─────────────────────────────────────────┐              │
+│   │         SWARM MCP TOOLBELT              │              │
+│   │  • Messaging    • Task Management       │              │
+│   │  • Swarm Brain  • Mission Control       │              │
+│   │  • Git Ops      • Code Quality          │              │
+│   └─────────────────────────────────────────┘              │
+│                   ▲                                         │
+│        ┌──────────┴─────────────────┐                       │
+│        │                            │                       │
+│   ┌─────────┐                  ┌─────────┐                 │
+│   │ Claude  │                  │ Gemini  │                 │
+│   │ Agent-3 │                  │ Agent-4 │                 │
+│   └─────────┘                  └─────────┘                 │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-### Via Toolbelt
+## 🚀 Quick Start
+
+### Installation
 
 ```bash
-python tools/toolbelt.py --monitor --category all     # or -m
-python tools/toolbelt.py --validate --all             # or -V
-python tools/toolbelt.py --analyze --category all     # or -a
+pip install swarm-mcp-toolbelt
 ```
 
-## 📊 Consolidation Status
+### Basic Usage
 
-| Metric | Value |
-|--------|-------|
-| Starting tools | 709 |
-| Current tools | 473 |
-| Reduction | 33% (236 deleted) |
-| Unified tools | 14 |
+```python
+from swarm_mcp import SwarmCoordinator, MessageQueue, SwarmBrain
 
-See [CONSOLIDATION_PLAN.md](./CONSOLIDATION_PLAN.md) for full details.
+# Initialize swarm with 3 agents
+swarm = SwarmCoordinator(
+    agents=["agent-1", "agent-2", "agent-3"],
+    workspace="./agent_workspaces"
+)
 
-## Structure
+# Send message between agents
+queue = MessageQueue()
+queue.send("agent-1", "agent-2", "Please review PR #42")
 
-- **`tools/`** - Consolidated tools (~473 files)
-  - `unified_monitor.py` - All monitoring operations
-  - `unified_validator.py` - All validation operations
-  - `unified_analyzer.py` - All analysis operations
-  - `unified_*.py` - Other unified tools (14 total)
-  - `captain_*.py` - Captain coordination tools
-  - `toolbelt.py` - CLI launcher
-- **`tools_v2/`** - Modern toolbelt system with categorized tools
-- **`mcp_servers/`** - Custom MCP servers for agent operations
+# Share knowledge across swarm
+brain = SwarmBrain()
+brain.share_learning(
+    agent_id="agent-1",
+    category="debugging",
+    title="Circular import fix",
+    content="When ImportError occurs, check for circular imports..."
+)
 
-## Unified Tools Reference
+# Discover and assign tasks
+tasks = swarm.discover_tasks("./src")
+idle_agents = swarm.get_idle_agents()
+for agent in idle_agents:
+    task = swarm.get_optimal_assignment(agent)
+    if task:
+        swarm.assign_task(agent, task.description)
+```
 
-### unified_monitor.py
+## 🔌 MCP Integration
+
+Add to your Claude Desktop or Cursor config:
+
+```json
+{
+  "mcpServers": {
+    "swarm-messaging": {
+      "command": "python",
+      "args": ["-m", "swarm_mcp.servers.messaging"],
+      "description": "Agent-to-agent communication"
+    },
+    "swarm-brain": {
+      "command": "python",
+      "args": ["-m", "swarm_mcp.servers.swarm_brain"],
+      "description": "Collective memory and knowledge sharing"
+    },
+    "task-manager": {
+      "command": "python",
+      "args": ["-m", "swarm_mcp.servers.task_manager"],
+      "description": "Task queue and inbox management"
+    },
+    "mission-control": {
+      "command": "python",
+      "args": ["-m", "swarm_mcp.servers.mission_control"],
+      "description": "Agent coordination and leaderboard"
+    }
+  }
+}
+```
+
+## 📦 MCP Servers
+
+| Server | Tools | Description |
+|--------|-------|-------------|
+| **swarm-messaging** | `send_message`, `broadcast`, `get_inbox` | Agent-to-agent async communication |
+| **task-manager** | `add_task`, `complete_task`, `get_tasks` | Task queue and inbox management |
+| **swarm-brain** | `share_learning`, `search`, `record_decision` | Collective memory across agents |
+| **mission-control** | `assign_mission`, `get_status`, `leaderboard` | Central coordination |
+| **git-operations** | `verify_work`, `get_commits`, `validate` | Work verification |
+| **code-quality** | `check_size`, `auto_extract`, `fix_lint` | Code compliance |
+| **observability** | `get_metrics`, `health_check`, `slo_status` | System monitoring |
+| **testing** | `run_coverage`, `mutation_test` | Test automation |
+
+## 🧠 Core Concepts
+
+### Agent Communication
+
+Agents communicate via file-based message queues - simple, reliable, and works with any LLM:
+
+```python
+from swarm_mcp import MessageQueue, MessagePriority
+
+queue = MessageQueue("./messages")
+
+# Regular message
+queue.send("agent-1", "agent-2", "Task completed")
+
+# Urgent broadcast
+queue.send(
+    sender="captain",
+    recipient="agent-3",
+    content="CRITICAL: Production issue",
+    priority=MessagePriority.URGENT
+)
+
+# Check inbox
+messages = queue.get_inbox("agent-2", unread_only=True)
+for msg in messages:
+    print(f"From {msg.sender}: {msg.content}")
+    queue.mark_read(msg.id, "agent-2")
+```
+
+### Swarm Brain (Collective Memory)
+
+Agents share learnings that persist across sessions:
+
+```python
+from swarm_mcp import SwarmBrain
+
+brain = SwarmBrain("./swarm_brain")
+
+# Share a learning
+brain.share_learning(
+    agent_id="agent-1",
+    category="performance",
+    title="Redis caching pattern",
+    content="Use TTL of 3600 for API responses...",
+    tags=["caching", "redis", "api"]
+)
+
+# Search knowledge
+results = brain.search("caching")
+for learning in results:
+    print(f"{learning.title}: {learning.content[:100]}...")
+
+# Record decisions for future reference
+brain.record_decision(
+    agent_id="agent-2",
+    decision="Used PostgreSQL over MongoDB",
+    context="Need ACID transactions for payments",
+    outcome="Zero data inconsistencies",
+    success=True
+)
+```
+
+### Task Coordination
+
+Central coordinator manages work distribution:
+
+```python
+from swarm_mcp import SwarmCoordinator
+
+swarm = SwarmCoordinator(
+    agents=["frontend", "backend", "devops"],
+    workspace="./workspaces"
+)
+
+# Check who's available
+idle = swarm.get_idle_agents()
+print(f"Available agents: {idle}")
+
+# Assign specific work
+swarm.assign_task("backend", "Implement user auth API", priority=1)
+
+# Auto-discover work from codebase
+tasks = swarm.discover_tasks("./src")
+print(f"Found {len(tasks)} tasks (TODOs, FIXMEs, etc.)")
+
+# Smart assignment based on skills
+for agent in idle:
+    best_task = swarm.get_optimal_assignment(agent)
+    if best_task:
+        swarm.assign_task(agent, best_task.description)
+```
+
+## 🏗️ Architecture
+
+```
+swarm_mcp/
+├── core/
+│   ├── coordinator.py   # SwarmCoordinator - central orchestration
+│   ├── messaging.py     # MessageQueue - agent communication
+│   └── brain.py         # SwarmBrain - collective memory
+├── servers/
+│   ├── messaging.py     # MCP server for messaging
+│   ├── task_manager.py  # MCP server for tasks
+│   ├── swarm_brain.py   # MCP server for knowledge
+│   └── ...              # Other MCP servers
+└── tools/
+    └── ...              # CLI tools
+```
+
+## 🎯 Use Cases
+
+### 1. Autonomous Development Team
+```
+Captain Agent → assigns tasks → Worker Agents
+                              ← report progress ←
+```
+
+### 2. Code Review Swarm
+```
+Author Agent → submits PR → Reviewer Agents
+            ← feedback ←
+```
+
+### 3. Debugging Squad
+```
+Triage Agent → identifies bug → Specialist Agents
+                             ← fix proposals ←
+```
+
+### 4. Documentation Team
+```
+Writer Agent → drafts docs → Editor Agents
+            ← improvements ←
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
 ```bash
---category {queue,message_queue_file,service,disk,agents,coverage,workspace,resume,all}
---trigger-resume    # Trigger resume prompts for inactive agents
---watch             # Continuous monitoring mode
---json              # JSON output
+SWARM_WORKSPACE=./agent_workspaces
+SWARM_BRAIN_DIR=./swarm_brain
+SWARM_MESSAGE_DIR=./messages
+SWARM_LOG_LEVEL=INFO
 ```
 
-### unified_validator.py
-```bash
---category {ssot_config,imports,tracker,session,refactor,consolidation,queue,all}
---file FILE         # Validate specific file
---dir DIR           # Validate directory
---agent AGENT       # For session validation
---all               # Run all validations
+### Agent Specialties
+
+```python
+swarm = SwarmCoordinator(
+    agents=["agent-1", "agent-2"],
+    config={
+        "specialties": {
+            "agent-1": ["frontend", "react", "css"],
+            "agent-2": ["backend", "python", "api"]
+        }
+    }
+)
 ```
 
-### unified_analyzer.py
-```bash
---category {repository,structure,file,consolidation,overlaps,all}
---file FILE         # Analyze specific file
---repos REPOS       # Comma-separated repo paths
---json              # JSON output
+## 📊 Observability
+
+Monitor your swarm:
+
+```python
+# Get brain stats
+stats = brain.get_stats()
+print(f"Total learnings: {stats['total_learnings']}")
+print(f"Total decisions: {stats['total_decisions']}")
+
+# Check agent status
+for agent in swarm.agents:
+    status = swarm.get_status(agent)
+    print(f"{agent}: {status.status} - {status.current_task or 'idle'}")
 ```
 
-## Gold Tools (Recovered)
+## 🤝 Contributing
 
-These valuable tools were recovered during consolidation:
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-| Tool | Purpose |
-|------|---------|
-| `check_sensitive_files.py` | 🔒 Security audit |
-| `analyze_swarm_coordination_patterns.py` | 🐝 Swarm BI |
-| `tech_debt_ci_summary.py` | 🏗️ CI tech debt |
-| `audit_imports.py` | 🔍 Import testing |
-| `debug_message_queue.py` | 📬 Queue debugging |
-| `fix_message_queue.py` | 🔧 Queue fixer |
+## 📄 License
 
-## MCP Servers
+MIT License - see [LICENSE](LICENSE) for details.
 
-The `mcp_servers/` directory contains custom MCP servers:
-- **`swarm_brain_server.py`** - Swarm knowledge and memory management
-- **`task_manager_server.py`** - Task management and tracking
-- **`v2_compliance_server.py`** - V2 compliance checking
-- **`website_manager_server.py`** - Website management operations
-- **`git_operations_server.py`** - Git operations and verification
-- **`messaging_server.py`** - Agent messaging operations
+## 🌟 Star History
 
-## Contributing
+If this project helps you build amazing multi-agent systems, please give it a ⭐!
 
-When adding new tools:
-1. Check if functionality exists in a unified tool first
-2. If new functionality needed, add to appropriate `unified_*.py`
-3. Register in `tools/toolbelt_registry.py`
-4. Update this README if adding new categories
+---
 
-## License
+**Built with 🐝 by the Swarm Team**
 
-Part of the Agent Swarm system.
+*"The future of AI is not one agent - it's many agents working together."*

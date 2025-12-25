@@ -2,80 +2,43 @@
   "mcpServers": {
     "swarm-messaging": {
       "command": "python",
-      "args": [
-        "D:/Agent_Cellphone_V2_Repository/mcp_servers/messaging_server.py"
-      ],
-      "description": "Swarm messaging system (PyAutoGUI-based agent messaging)"
+      "args": ["-m", "swarm_mcp.servers.messaging"],
+      "description": "Swarm messaging system - agent-to-agent communication"
     },
     "task-manager": {
       "command": "python",
-      "args": [
-        "D:/Agent_Cellphone_V2_Repository/mcp_servers/task_manager_server.py"
-      ],
-      "description": "Task management system for MASTER_TASK_LOG.md operations"
-    },
-    "website-manager": {
-      "command": "python",
-      "args": [
-        "D:/Agent_Cellphone_V2_Repository/mcp_servers/website_manager_server.py"
-      ],
-      "description": "Website and WordPress management system for site operations"
+      "args": ["-m", "swarm_mcp.servers.task_manager"],
+      "description": "Task management - inbox, task log, completion tracking"
     },
     "swarm-brain": {
       "command": "python",
-      "args": [
-        "D:/Agent_Cellphone_V2_Repository/mcp_servers/swarm_brain_server.py"
-      ],
-      "description": "Swarm Brain knowledge base access and contribution"
+      "args": ["-m", "swarm_mcp.servers.swarm_brain"],
+      "description": "Swarm Brain - collective memory and knowledge sharing"
+    },
+    "mission-control": {
+      "command": "python",
+      "args": ["-m", "swarm_mcp.servers.mission_control"],
+      "description": "Mission control - agent status, assignment, leaderboard"
     },
     "git-operations": {
       "command": "python",
-      "args": [
-        "D:/Agent_Cellphone_V2_Repository/mcp_servers/git_operations_server.py"
-      ],
-      "description": "Git operations and work verification for agents"
+      "args": ["-m", "swarm_mcp.servers.git_operations"],
+      "description": "Git operations - work verification, commit history"
     },
-    "v2-compliance": {
+    "code-quality": {
       "command": "python",
-      "args": [
-        "D:/Agent_Cellphone_V2_Repository/mcp_servers/v2_compliance_server.py"
-      ],
-      "description": "V2 compliance checking and validation for agents"
+      "args": ["-m", "swarm_mcp.servers.code_quality"],
+      "description": "Code quality - compliance checking, refactoring"
     },
-    "testing-server": {
+    "observability": {
       "command": "python",
-      "args": [
-        "D:/Agent_Cellphone_V2_Repository/mcp_servers/testing_server.py"
-      ],
-      "description": "Testing and coverage analysis tools"
+      "args": ["-m", "swarm_mcp.servers.observability"],
+      "description": "Observability - metrics, health checks, SLO monitoring"
     },
-    "observability-server": {
+    "testing": {
       "command": "python",
-      "args": [
-        "D:/Agent_Cellphone_V2_Repository/mcp_servers/observability_server.py"
-      ],
-      "description": "System health monitoring and metrics"
-    },
-    "memory-safety-server": {
-      "command": "python",
-      "args": [
-        "D:/Agent_Cellphone_V2_Repository/mcp_servers/memory_safety_server.py"
-      ],
-      "description": "Memory leak detection and resource verification"
-    },
-    "mission-control-server": {
-      "command": "python",
-      "args": [
-        "D:/Agent_Cellphone_V2_Repository/mcp_servers/mission_control_server.py"
-      ],
-      "description": "Captain's coordination, mission assignment, and integrity tools"
-    },
-    "refactoring-server": {
-      "command": "python",
-      "args": [
-        "D:/Agent_Cellphone_V2_Repository/mcp_servers/refactoring_server.py"
-      ],
-      "description": "Automated refactoring and code quality tools"
+      "args": ["-m", "swarm_mcp.servers.testing"],
+      "description": "Testing - coverage analysis, mutation testing"
     }
   }
 }
