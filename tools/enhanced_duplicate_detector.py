@@ -17,6 +17,7 @@ import stat
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from collections import defaultdict
+from src.core.config.timeout_constants import TimeoutConstants
 
 # Add project root to path
 project_root = Path(__file__).resolve().parent.parent
@@ -293,7 +294,6 @@ def main():
     except Exception as e:
         print(f"❌ Error: {e}")
         import traceback
-from src.core.config.timeout_constants import TimeoutConstants
         traceback.print_exc()
         return 1
     finally:
