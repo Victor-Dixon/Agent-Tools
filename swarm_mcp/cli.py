@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-🐺 Wolfpack MCP Toolbelt CLI
+🐺 Swarm MCP Toolbelt CLI
 
+WE ARE SWARM - A pack of wolves, not bees.
 "Alone we are strong. Together we are unstoppable."
 """
 
@@ -131,8 +132,8 @@ def cmd_scout(args):
 def main():
     """Main CLI entry point."""
     parser = argparse.ArgumentParser(
-        prog="wolfpack",
-        description="🐺 Wolfpack MCP Toolbelt - Multi-Agent AI Coordination"
+        prog="swarm",
+        description="🐺 Swarm MCP Toolbelt - WE ARE SWARM (wolves, not bees)"
     )
     parser.add_argument("--den", default="./wolf_den", help="Pack den directory")
     parser.add_argument("--territory", default="./pack_messages", help="Message territory")
@@ -182,8 +183,9 @@ def main():
     args = parser.parse_args()
     
     if not args.command:
-        print("🐺 WOLFPACK MCP TOOLBELT")
+        print("🐺 WE ARE SWARM")
         print("=" * 40)
+        print("A pack of wolves, not bees.")
         print('"Alone we are strong. Together we are unstoppable."')
         print()
         parser.print_help()

@@ -1,14 +1,16 @@
-# 🐺 Wolfpack MCP
+# 🐺 WE ARE SWARM
 
 **Multi-Agent AI Coordination Framework** with Model Context Protocol (MCP) support.
 
+*A pack of wolves, not bees.*
+
 *"Alone we are strong. Together we are unstoppable."*
 
-Enable a pack of AI agents (Claude, GPT, etc.) to hunt together - communicating, sharing knowledge, and coordinating attacks without human intervention.
+Enable a swarm of AI agents (Claude, GPT, etc.) to hunt together - communicating, sharing knowledge, and coordinating attacks without human intervention.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     THE WOLFPACK                            │
+│                     WE ARE SWARM 🐺                         │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │   ┌─────────┐      howls       ┌─────────┐                 │
@@ -19,7 +21,7 @@ Enable a pack of AI agents (Claude, GPT, etc.) to hunt together - communicating,
 │        └──────────┬─────────────────┘                       │
 │                   ▼                                         │
 │   ┌─────────────────────────────────────────┐              │
-│   │         WOLFPACK MCP TOOLBELT           │              │
+│   │           SWARM MCP TOOLBELT            │              │
 │   │  • Howls (messaging)  • Den (tasks)     │              │
 │   │  • Pack Memory        • Alpha Control   │              │
 │   │  • Territory (git)    • Hunt Quality    │              │
@@ -40,15 +42,15 @@ Enable a pack of AI agents (Claude, GPT, etc.) to hunt together - communicating,
 ### Installation
 
 ```bash
-pip install wolfpack-mcp
+pip install swarm-mcp
 ```
 
 ### Basic Usage
 
 ```python
-from wolfpack_mcp import PackCoordinator, MessageQueue, PackMemory
+from swarm_mcp import PackCoordinator, MessageQueue, PackMemory
 
-# Initialize pack with wolves
+# Initialize the swarm
 pack = PackCoordinator(
     wolves=["alpha", "beta", "scout-1", "scout-2"],
     den="./wolf_den"
@@ -83,73 +85,71 @@ Add to your Claude Desktop or Cursor config:
 ```json
 {
   "mcpServers": {
-    "pack-messaging": {
+    "swarm-messaging": {
       "command": "python",
-      "args": ["-m", "wolfpack_mcp.servers.messaging"],
-      "description": "Wolf-to-wolf communication"
+      "args": ["-m", "swarm_mcp.servers.messaging"],
+      "description": "🐺 Wolf-to-wolf communication"
     },
-    "pack-memory": {
+    "swarm-memory": {
       "command": "python",
-      "args": ["-m", "wolfpack_mcp.servers.memory"],
-      "description": "Collective hunting knowledge"
+      "args": ["-m", "swarm_mcp.servers.memory"],
+      "description": "🐺 Collective pack knowledge"
     },
-    "den-manager": {
+    "swarm-tasks": {
       "command": "python",
-      "args": ["-m", "wolfpack_mcp.servers.den_manager"],
-      "description": "Task queue and territory management"
+      "args": ["-m", "swarm_mcp.servers.tasks"],
+      "description": "🐺 Hunt queue and territory"
     },
-    "alpha-control": {
+    "swarm-control": {
       "command": "python",
-      "args": ["-m", "wolfpack_mcp.servers.alpha_control"],
-      "description": "Pack coordination and rankings"
+      "args": ["-m", "swarm_mcp.servers.control"],
+      "description": "🐺 Alpha coordination"
     }
   }
 }
+```
+
+## 🐺 CLI Commands
+
+```bash
+# Check swarm status
+swarm status --wolves alpha,beta,scout-1
+
+# Send a howl
+swarm howl alpha scout-1 "Hunt the bug in auth.py"
+
+# Listen for incoming howls
+swarm listen scout-1 --unheard
+
+# Search pack memory
+swarm recall "circular import"
+
+# Share wisdom
+swarm share --wolf beta --category debugging \
+  --title "Import fix pattern" \
+  --wisdom "When ImportError occurs..."
+
+# Scout territory for prey
+swarm scout --path ./src --limit 20
 ```
 
 ## 📦 MCP Servers
 
 | Server | Tools | Description |
 |--------|-------|-------------|
-| **pack-messaging** | `howl`, `broadcast`, `listen` | Wolf-to-wolf async communication |
-| **den-manager** | `assign_hunt`, `complete_hunt`, `get_hunts` | Hunt/task management |
-| **pack-memory** | `share_lore`, `recall`, `record_hunt` | Collective knowledge |
-| **alpha-control** | `roll_call`, `assign_territory`, `rankings` | Pack coordination |
+| **swarm-messaging** | `howl`, `broadcast`, `listen` | Wolf-to-wolf async communication |
+| **swarm-tasks** | `assign_hunt`, `complete_hunt`, `get_hunts` | Hunt/task management |
+| **swarm-memory** | `share_lore`, `recall`, `record_hunt` | Collective knowledge |
+| **swarm-control** | `roll_call`, `assign_territory`, `rankings` | Pack coordination |
 | **git-operations** | `verify_kill`, `get_commits`, `validate` | Hunt verification |
 | **code-quality** | `check_size`, `auto_extract`, `fix_lint` | Code compliance |
-| **observability** | `get_metrics`, `health_check`, `slo_status` | Pack monitoring |
-| **testing** | `run_coverage`, `mutation_test` | Test automation |
-
-## 🐺 CLI Commands
-
-```bash
-# Check pack status
-wolfpack status --wolves alpha,beta,scout-1
-
-# Send a howl
-wolfpack howl alpha scout-1 "Hunt the bug in auth.py"
-
-# Listen for incoming howls
-wolfpack listen scout-1 --unheard
-
-# Search pack memory
-wolfpack recall "circular import"
-
-# Share wisdom
-wolfpack share --wolf beta --category debugging \
-  --title "Import fix pattern" \
-  --wisdom "When ImportError occurs..."
-
-# Scout territory for prey
-wolfpack scout --path ./src --limit 20
-```
 
 ## 🧠 Core Concepts
 
-### The Pack Hierarchy
+### The Swarm Hierarchy
 
 ```
-👑 Alpha    - Coordinates the pack, assigns territory
+👑 Alpha    - Coordinates the swarm, assigns territory
 🐺 Beta     - Second in command, handles complex hunts  
 🐺 Scouts   - Find prey, execute hunts
 🐺 Omega    - Learning wolves, simple tasks
@@ -160,7 +160,7 @@ wolfpack scout --path ./src --limit 20
 Wolves communicate through howls - async, persistent, reliable:
 
 ```python
-from wolfpack_mcp import MessageQueue, HowlUrgency
+from swarm_mcp import MessageQueue, HowlUrgency
 
 queue = MessageQueue("./pack_messages")
 
@@ -179,15 +179,14 @@ queue.send(
 howls = queue.listen("alpha", unheard_only=True)
 for howl in howls:
     print(f"🐺 {howl.sender}: {howl.content}")
-    queue.mark_heard(howl.id, "alpha")
 ```
 
 ### Pack Memory (Collective Knowledge)
 
-The pack remembers. Every hunt teaches something:
+The swarm remembers. Every hunt teaches something:
 
 ```python
-from wolfpack_mcp import PackMemory
+from swarm_mcp import PackMemory
 
 memory = PackMemory("./pack_memory")
 
@@ -204,23 +203,14 @@ memory.share_lore(
 lore = memory.recall("caching")
 for wisdom in lore:
     print(f"📜 {wisdom.title}: {wisdom.wisdom[:100]}...")
-
-# Record hunt decisions
-memory.record_hunt(
-    wolf_id="beta",
-    decision="Used PostgreSQL over MongoDB",
-    context="Need ACID transactions for payments",
-    outcome="Zero data inconsistencies",
-    success=True
-)
 ```
 
-### Pack Coordination
+### Swarm Coordination
 
 The Alpha coordinates without micromanaging:
 
 ```python
-from wolfpack_mcp import PackCoordinator
+from swarm_mcp import PackCoordinator
 
 pack = PackCoordinator(
     wolves=["alpha", "beta", "scout-1", "scout-2"],
@@ -232,103 +222,25 @@ status = pack.roll_call()
 for wolf_id, wolf_status in status.items():
     print(f"🐺 {wolf_id}: {wolf_status.status}")
 
-# Find ready wolves
-ready = pack.get_ready_wolves()
-print(f"Ready for the hunt: {ready}")
-
-# Assign specific hunt
+# Assign hunt
 pack.assign_hunt("scout-1", "Fix authentication bug", difficulty=2)
 
-# Broadcast to pack
-pack.broadcast("Pack meeting at sunset", urgency=3)
-
-# Scout and auto-assign
-prey = pack.scout_territory("./src")
-for wolf in ready:
-    best = pack.get_best_prey(wolf)
-    if best:
-        pack.assign_hunt(wolf, best.description)
-```
-
-## 🎯 Use Cases
-
-### 1. Autonomous Dev Pack
-```
-Alpha (Captain) → assigns hunts → Scout wolves
-                                ← report kills ←
-```
-
-### 2. Code Review Pack
-```
-Author wolf → submits PR → Reviewer wolves
-           ← feedback ←
-```
-
-### 3. Bug Hunting Pack
-```
-Triage wolf → identifies bug → Specialist wolves
-                            ← fix proposals ←
-```
-
-### 4. Documentation Pack
-```
-Writer wolf → drafts docs → Editor wolves
-           ← improvements ←
-```
-
-## 🔧 Configuration
-
-### Environment Variables
-
-```bash
-WOLFPACK_DEN=./wolf_den
-WOLFPACK_MEMORY=./pack_memory
-WOLFPACK_MESSAGES=./pack_messages
-WOLFPACK_LOG_LEVEL=INFO
-```
-
-### Wolf Territories (Specialties)
-
-```python
-pack = PackCoordinator(
-    wolves=["alpha", "beta", "scout-1", "scout-2"],
-    config={
-        "territories": {
-            "alpha": ["coordination", "architecture"],
-            "beta": ["backend", "python", "api"],
-            "scout-1": ["frontend", "react", "css"],
-            "scout-2": ["devops", "infrastructure"]
-        }
-    }
-)
-```
-
-## 📊 Pack Stats
-
-```python
-# Memory stats
-stats = memory.pack_stats()
-print(f"Total lore: {stats['total_lore']}")
-print(f"Total hunts: {stats['total_hunts']}")
-
-# Pack status
-for wolf in pack.wolves:
-    status = pack.get_status(wolf)
-    print(f"🐺 {wolf}: {status.kills} kills")
+# Broadcast to swarm
+pack.broadcast("Swarm meeting at sunset", urgency=3)
 ```
 
 ## 🏗️ Architecture
 
 ```
-wolfpack_mcp/
+swarm_mcp/
 ├── core/
 │   ├── coordinator.py   # PackCoordinator - Alpha's control
 │   ├── messaging.py     # Howls - wolf communication
 │   └── memory.py        # PackMemory - collective wisdom
 ├── servers/
 │   ├── messaging.py     # MCP server for howls
-│   ├── den_manager.py   # MCP server for hunts
-│   ├── pack_memory.py   # MCP server for knowledge
+│   ├── tasks.py         # MCP server for hunts
+│   ├── memory.py        # MCP server for knowledge
 │   └── ...              # Other MCP servers
 └── tools/
     └── ...              # CLI tools
@@ -336,18 +248,16 @@ wolfpack_mcp/
 
 ## 🤝 Contributing
 
-We welcome new wolves to the pack! See [CONTRIBUTING.md](CONTRIBUTING.md).
+We welcome new wolves to the swarm! See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## 📄 License
 
 MIT License - see [LICENSE](LICENSE).
 
-## 🌟 Join the Pack
-
-If this helps you build amazing multi-agent systems, give it a ⭐!
-
 ---
 
-**Built by the Wolfpack 🐺**
+## 🐺 WE ARE SWARM
 
 *"The strength of the pack is the wolf, and the strength of the wolf is the pack."*
+
+**Alone we are strong. Together we are unstoppable.**

@@ -3,17 +3,17 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "wolfpack-mcp"
+name = "swarm-mcp"
 version = "0.1.0"
-description = "🐺 Multi-Agent AI Coordination Framework - The pack hunts together"
+description = "🐺 WE ARE SWARM - Multi-Agent AI Coordination (wolves, not bees)"
 readme = "README.md"
 license = "MIT"
 authors = [
-    { name = "Wolfpack Team" }
+    { name = "The Swarm" }
 ]
 keywords = [
-    "ai", "agents", "multi-agent", "wolfpack", "mcp", "model-context-protocol",
-    "coordination", "llm", "claude", "gpt", "automation", "swarm"
+    "ai", "agents", "multi-agent", "swarm", "mcp", "model-context-protocol",
+    "coordination", "llm", "claude", "gpt", "automation", "wolfpack"
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -45,16 +45,16 @@ full = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/wolfpack-team/wolfpack-mcp"
-Documentation = "https://github.com/wolfpack-team/wolfpack-mcp#readme"
-Repository = "https://github.com/wolfpack-team/wolfpack-mcp"
-Issues = "https://github.com/wolfpack-team/wolfpack-mcp/issues"
+Homepage = "https://github.com/swarm-team/swarm-mcp"
+Documentation = "https://github.com/swarm-team/swarm-mcp#readme"
+Repository = "https://github.com/swarm-team/swarm-mcp"
+Issues = "https://github.com/swarm-team/swarm-mcp/issues"
 
 [project.scripts]
-wolfpack = "wolfpack_mcp.cli:main"
+swarm = "swarm_mcp.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["wolfpack_mcp"]
+packages = ["swarm_mcp"]
 
 [tool.ruff]
 line-length = 100
