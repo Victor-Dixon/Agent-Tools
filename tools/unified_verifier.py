@@ -164,7 +164,7 @@ class UnifiedVerifier:
             file_path = kwargs.get("file")
             
             if action == "usage":
-                from tools.verify_file_usage_enhanced_v2 import verify_file_usage
+                from tools.verify_file_usage_enhanced import verify_file_usage
                 if file_path:
                     result = verify_file_usage(file_path)
                 else:
