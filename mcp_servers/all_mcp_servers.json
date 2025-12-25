@@ -1,44 +1,44 @@
 {
   "mcpServers": {
-    "swarm-messaging": {
+    "pack-messaging": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.messaging"],
-      "description": "Swarm messaging system - agent-to-agent communication"
+      "args": ["-m", "wolfpack_mcp.servers.messaging"],
+      "description": "🐺 Wolf-to-wolf communication via howls"
     },
-    "task-manager": {
+    "den-manager": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.task_manager"],
-      "description": "Task management - inbox, task log, completion tracking"
+      "args": ["-m", "wolfpack_mcp.servers.den_manager"],
+      "description": "🐺 Hunt/task queue and territory management"
     },
-    "swarm-brain": {
+    "pack-memory": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.swarm_brain"],
-      "description": "Swarm Brain - collective memory and knowledge sharing"
+      "args": ["-m", "wolfpack_mcp.servers.memory"],
+      "description": "🐺 Collective hunting knowledge and wisdom"
     },
-    "mission-control": {
+    "alpha-control": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.mission_control"],
-      "description": "Mission control - agent status, assignment, leaderboard"
+      "args": ["-m", "wolfpack_mcp.servers.alpha_control"],
+      "description": "🐺 Pack coordination, rankings, roll call"
     },
     "git-operations": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.git_operations"],
-      "description": "Git operations - work verification, commit history"
+      "args": ["-m", "wolfpack_mcp.servers.git_operations"],
+      "description": "🐺 Hunt verification, commit tracking"
     },
     "code-quality": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.code_quality"],
-      "description": "Code quality - compliance checking, refactoring"
+      "args": ["-m", "wolfpack_mcp.servers.code_quality"],
+      "description": "🐺 Code compliance and refactoring"
     },
     "observability": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.observability"],
-      "description": "Observability - metrics, health checks, SLO monitoring"
+      "args": ["-m", "wolfpack_mcp.servers.observability"],
+      "description": "🐺 Pack health monitoring and metrics"
     },
     "testing": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.testing"],
-      "description": "Testing - coverage analysis, mutation testing"
+      "args": ["-m", "wolfpack_mcp.servers.testing"],
+      "description": "🐺 Coverage analysis and mutation testing"
     }
   }
 }

@@ -1,33 +1,35 @@
-# 🐝 Swarm MCP Toolbelt
+# 🐺 Wolfpack MCP
 
 **Multi-Agent AI Coordination Framework** with Model Context Protocol (MCP) support.
 
-Enable multiple AI agents (Claude, GPT, etc.) to work together autonomously - communicating, sharing knowledge, and coordinating tasks without human intervention.
+*"Alone we are strong. Together we are unstoppable."*
+
+Enable a pack of AI agents (Claude, GPT, etc.) to hunt together - communicating, sharing knowledge, and coordinating attacks without human intervention.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     YOUR AI SWARM                           │
+│                     THE WOLFPACK                            │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│   ┌─────────┐    messaging     ┌─────────┐                 │
-│   │ Claude  │◄────system──────►│  GPT-4  │                 │
-│   │ Agent-1 │                  │ Agent-2 │                 │
+│   ┌─────────┐      howls       ┌─────────┐                 │
+│   │  Alpha  │◄────────────────►│  Beta   │                 │
+│   │ Claude  │                  │  GPT-4  │                 │
 │   └────┬────┘                  └────┬────┘                 │
-│        │         swarm-brain        │                       │
+│        │        pack memory         │                       │
 │        └──────────┬─────────────────┘                       │
 │                   ▼                                         │
 │   ┌─────────────────────────────────────────┐              │
-│   │         SWARM MCP TOOLBELT              │              │
-│   │  • Messaging    • Task Management       │              │
-│   │  • Swarm Brain  • Mission Control       │              │
-│   │  • Git Ops      • Code Quality          │              │
+│   │         WOLFPACK MCP TOOLBELT           │              │
+│   │  • Howls (messaging)  • Den (tasks)     │              │
+│   │  • Pack Memory        • Alpha Control   │              │
+│   │  • Territory (git)    • Hunt Quality    │              │
 │   └─────────────────────────────────────────┘              │
 │                   ▲                                         │
 │        ┌──────────┴─────────────────┐                       │
 │        │                            │                       │
 │   ┌─────────┐                  ┌─────────┐                 │
+│   │ Scout-1 │                  │ Scout-2 │                 │
 │   │ Claude  │                  │ Gemini  │                 │
-│   │ Agent-3 │                  │ Agent-4 │                 │
 │   └─────────┘                  └─────────┘                 │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
@@ -38,40 +40,40 @@ Enable multiple AI agents (Claude, GPT, etc.) to work together autonomously - co
 ### Installation
 
 ```bash
-pip install swarm-mcp-toolbelt
+pip install wolfpack-mcp
 ```
 
 ### Basic Usage
 
 ```python
-from swarm_mcp import SwarmCoordinator, MessageQueue, SwarmBrain
+from wolfpack_mcp import PackCoordinator, MessageQueue, PackMemory
 
-# Initialize swarm with 3 agents
-swarm = SwarmCoordinator(
-    agents=["agent-1", "agent-2", "agent-3"],
-    workspace="./agent_workspaces"
+# Initialize pack with wolves
+pack = PackCoordinator(
+    wolves=["alpha", "beta", "scout-1", "scout-2"],
+    den="./wolf_den"
 )
 
-# Send message between agents
+# Howl between wolves
 queue = MessageQueue()
-queue.send("agent-1", "agent-2", "Please review PR #42")
+queue.send("alpha", "scout-1", "Hunt the bug in auth.py")
 
-# Share knowledge across swarm
-brain = SwarmBrain()
-brain.share_learning(
-    agent_id="agent-1",
+# Share hunting wisdom
+memory = PackMemory()
+memory.share_lore(
+    wolf_id="beta",
     category="debugging",
-    title="Circular import fix",
-    content="When ImportError occurs, check for circular imports..."
+    title="Tracking circular imports",
+    wisdom="When ImportError strikes, follow the import chain..."
 )
 
-# Discover and assign tasks
-tasks = swarm.discover_tasks("./src")
-idle_agents = swarm.get_idle_agents()
-for agent in idle_agents:
-    task = swarm.get_optimal_assignment(agent)
-    if task:
-        swarm.assign_task(agent, task.description)
+# Scout for prey and assign hunts
+prey = pack.scout_territory("./src")
+ready_wolves = pack.get_ready_wolves()
+for wolf in ready_wolves:
+    target = pack.get_best_prey(wolf)
+    if target:
+        pack.assign_hunt(wolf, target.description)
 ```
 
 ## 🔌 MCP Integration
@@ -81,25 +83,25 @@ Add to your Claude Desktop or Cursor config:
 ```json
 {
   "mcpServers": {
-    "swarm-messaging": {
+    "pack-messaging": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.messaging"],
-      "description": "Agent-to-agent communication"
+      "args": ["-m", "wolfpack_mcp.servers.messaging"],
+      "description": "Wolf-to-wolf communication"
     },
-    "swarm-brain": {
+    "pack-memory": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.swarm_brain"],
-      "description": "Collective memory and knowledge sharing"
+      "args": ["-m", "wolfpack_mcp.servers.memory"],
+      "description": "Collective hunting knowledge"
     },
-    "task-manager": {
+    "den-manager": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.task_manager"],
-      "description": "Task queue and inbox management"
+      "args": ["-m", "wolfpack_mcp.servers.den_manager"],
+      "description": "Task queue and territory management"
     },
-    "mission-control": {
+    "alpha-control": {
       "command": "python",
-      "args": ["-m", "swarm_mcp.servers.mission_control"],
-      "description": "Agent coordination and leaderboard"
+      "args": ["-m", "wolfpack_mcp.servers.alpha_control"],
+      "description": "Pack coordination and rankings"
     }
   }
 }
@@ -109,70 +111,103 @@ Add to your Claude Desktop or Cursor config:
 
 | Server | Tools | Description |
 |--------|-------|-------------|
-| **swarm-messaging** | `send_message`, `broadcast`, `get_inbox` | Agent-to-agent async communication |
-| **task-manager** | `add_task`, `complete_task`, `get_tasks` | Task queue and inbox management |
-| **swarm-brain** | `share_learning`, `search`, `record_decision` | Collective memory across agents |
-| **mission-control** | `assign_mission`, `get_status`, `leaderboard` | Central coordination |
-| **git-operations** | `verify_work`, `get_commits`, `validate` | Work verification |
+| **pack-messaging** | `howl`, `broadcast`, `listen` | Wolf-to-wolf async communication |
+| **den-manager** | `assign_hunt`, `complete_hunt`, `get_hunts` | Hunt/task management |
+| **pack-memory** | `share_lore`, `recall`, `record_hunt` | Collective knowledge |
+| **alpha-control** | `roll_call`, `assign_territory`, `rankings` | Pack coordination |
+| **git-operations** | `verify_kill`, `get_commits`, `validate` | Hunt verification |
 | **code-quality** | `check_size`, `auto_extract`, `fix_lint` | Code compliance |
-| **observability** | `get_metrics`, `health_check`, `slo_status` | System monitoring |
+| **observability** | `get_metrics`, `health_check`, `slo_status` | Pack monitoring |
 | **testing** | `run_coverage`, `mutation_test` | Test automation |
+
+## 🐺 CLI Commands
+
+```bash
+# Check pack status
+wolfpack status --wolves alpha,beta,scout-1
+
+# Send a howl
+wolfpack howl alpha scout-1 "Hunt the bug in auth.py"
+
+# Listen for incoming howls
+wolfpack listen scout-1 --unheard
+
+# Search pack memory
+wolfpack recall "circular import"
+
+# Share wisdom
+wolfpack share --wolf beta --category debugging \
+  --title "Import fix pattern" \
+  --wisdom "When ImportError occurs..."
+
+# Scout territory for prey
+wolfpack scout --path ./src --limit 20
+```
 
 ## 🧠 Core Concepts
 
-### Agent Communication
+### The Pack Hierarchy
 
-Agents communicate via file-based message queues - simple, reliable, and works with any LLM:
-
-```python
-from swarm_mcp import MessageQueue, MessagePriority
-
-queue = MessageQueue("./messages")
-
-# Regular message
-queue.send("agent-1", "agent-2", "Task completed")
-
-# Urgent broadcast
-queue.send(
-    sender="captain",
-    recipient="agent-3",
-    content="CRITICAL: Production issue",
-    priority=MessagePriority.URGENT
-)
-
-# Check inbox
-messages = queue.get_inbox("agent-2", unread_only=True)
-for msg in messages:
-    print(f"From {msg.sender}: {msg.content}")
-    queue.mark_read(msg.id, "agent-2")
+```
+👑 Alpha    - Coordinates the pack, assigns territory
+🐺 Beta     - Second in command, handles complex hunts  
+🐺 Scouts   - Find prey, execute hunts
+🐺 Omega    - Learning wolves, simple tasks
 ```
 
-### Swarm Brain (Collective Memory)
+### Howls (Communication)
 
-Agents share learnings that persist across sessions:
+Wolves communicate through howls - async, persistent, reliable:
 
 ```python
-from swarm_mcp import SwarmBrain
+from wolfpack_mcp import MessageQueue, HowlUrgency
 
-brain = SwarmBrain("./swarm_brain")
+queue = MessageQueue("./pack_messages")
 
-# Share a learning
-brain.share_learning(
-    agent_id="agent-1",
+# Regular howl
+queue.send("scout-1", "alpha", "Prey spotted in sector 7")
+
+# Emergency howl
+queue.send(
+    sender="beta",
+    recipient="alpha",
+    content="CRITICAL: Production down!",
+    urgency=HowlUrgency.EMERGENCY
+)
+
+# Listen for howls
+howls = queue.listen("alpha", unheard_only=True)
+for howl in howls:
+    print(f"🐺 {howl.sender}: {howl.content}")
+    queue.mark_heard(howl.id, "alpha")
+```
+
+### Pack Memory (Collective Knowledge)
+
+The pack remembers. Every hunt teaches something:
+
+```python
+from wolfpack_mcp import PackMemory
+
+memory = PackMemory("./pack_memory")
+
+# Share hunting wisdom
+memory.share_lore(
+    wolf_id="scout-1",
     category="performance",
     title="Redis caching pattern",
-    content="Use TTL of 3600 for API responses...",
+    wisdom="Use TTL of 3600 for API responses...",
     tags=["caching", "redis", "api"]
 )
 
-# Search knowledge
-results = brain.search("caching")
-for learning in results:
-    print(f"{learning.title}: {learning.content[:100]}...")
+# Recall wisdom
+lore = memory.recall("caching")
+for wisdom in lore:
+    print(f"📜 {wisdom.title}: {wisdom.wisdom[:100]}...")
 
-# Record decisions for future reference
-brain.record_decision(
-    agent_id="agent-2",
+# Record hunt decisions
+memory.record_hunt(
+    wolf_id="beta",
     decision="Used PostgreSQL over MongoDB",
     context="Need ACID transactions for payments",
     outcome="Zero data inconsistencies",
@@ -180,77 +215,65 @@ brain.record_decision(
 )
 ```
 
-### Task Coordination
+### Pack Coordination
 
-Central coordinator manages work distribution:
+The Alpha coordinates without micromanaging:
 
 ```python
-from swarm_mcp import SwarmCoordinator
+from wolfpack_mcp import PackCoordinator
 
-swarm = SwarmCoordinator(
-    agents=["frontend", "backend", "devops"],
-    workspace="./workspaces"
+pack = PackCoordinator(
+    wolves=["alpha", "beta", "scout-1", "scout-2"],
+    den="./wolf_den"
 )
 
-# Check who's available
-idle = swarm.get_idle_agents()
-print(f"Available agents: {idle}")
+# Roll call
+status = pack.roll_call()
+for wolf_id, wolf_status in status.items():
+    print(f"🐺 {wolf_id}: {wolf_status.status}")
 
-# Assign specific work
-swarm.assign_task("backend", "Implement user auth API", priority=1)
+# Find ready wolves
+ready = pack.get_ready_wolves()
+print(f"Ready for the hunt: {ready}")
 
-# Auto-discover work from codebase
-tasks = swarm.discover_tasks("./src")
-print(f"Found {len(tasks)} tasks (TODOs, FIXMEs, etc.)")
+# Assign specific hunt
+pack.assign_hunt("scout-1", "Fix authentication bug", difficulty=2)
 
-# Smart assignment based on skills
-for agent in idle:
-    best_task = swarm.get_optimal_assignment(agent)
-    if best_task:
-        swarm.assign_task(agent, best_task.description)
-```
+# Broadcast to pack
+pack.broadcast("Pack meeting at sunset", urgency=3)
 
-## 🏗️ Architecture
-
-```
-swarm_mcp/
-├── core/
-│   ├── coordinator.py   # SwarmCoordinator - central orchestration
-│   ├── messaging.py     # MessageQueue - agent communication
-│   └── brain.py         # SwarmBrain - collective memory
-├── servers/
-│   ├── messaging.py     # MCP server for messaging
-│   ├── task_manager.py  # MCP server for tasks
-│   ├── swarm_brain.py   # MCP server for knowledge
-│   └── ...              # Other MCP servers
-└── tools/
-    └── ...              # CLI tools
+# Scout and auto-assign
+prey = pack.scout_territory("./src")
+for wolf in ready:
+    best = pack.get_best_prey(wolf)
+    if best:
+        pack.assign_hunt(wolf, best.description)
 ```
 
 ## 🎯 Use Cases
 
-### 1. Autonomous Development Team
+### 1. Autonomous Dev Pack
 ```
-Captain Agent → assigns tasks → Worker Agents
-                              ← report progress ←
-```
-
-### 2. Code Review Swarm
-```
-Author Agent → submits PR → Reviewer Agents
-            ← feedback ←
+Alpha (Captain) → assigns hunts → Scout wolves
+                                ← report kills ←
 ```
 
-### 3. Debugging Squad
+### 2. Code Review Pack
 ```
-Triage Agent → identifies bug → Specialist Agents
-                             ← fix proposals ←
+Author wolf → submits PR → Reviewer wolves
+           ← feedback ←
 ```
 
-### 4. Documentation Team
+### 3. Bug Hunting Pack
 ```
-Writer Agent → drafts docs → Editor Agents
-            ← improvements ←
+Triage wolf → identifies bug → Specialist wolves
+                            ← fix proposals ←
+```
+
+### 4. Documentation Pack
+```
+Writer wolf → drafts docs → Editor wolves
+           ← improvements ←
 ```
 
 ## 🔧 Configuration
@@ -258,56 +281,73 @@ Writer Agent → drafts docs → Editor Agents
 ### Environment Variables
 
 ```bash
-SWARM_WORKSPACE=./agent_workspaces
-SWARM_BRAIN_DIR=./swarm_brain
-SWARM_MESSAGE_DIR=./messages
-SWARM_LOG_LEVEL=INFO
+WOLFPACK_DEN=./wolf_den
+WOLFPACK_MEMORY=./pack_memory
+WOLFPACK_MESSAGES=./pack_messages
+WOLFPACK_LOG_LEVEL=INFO
 ```
 
-### Agent Specialties
+### Wolf Territories (Specialties)
 
 ```python
-swarm = SwarmCoordinator(
-    agents=["agent-1", "agent-2"],
+pack = PackCoordinator(
+    wolves=["alpha", "beta", "scout-1", "scout-2"],
     config={
-        "specialties": {
-            "agent-1": ["frontend", "react", "css"],
-            "agent-2": ["backend", "python", "api"]
+        "territories": {
+            "alpha": ["coordination", "architecture"],
+            "beta": ["backend", "python", "api"],
+            "scout-1": ["frontend", "react", "css"],
+            "scout-2": ["devops", "infrastructure"]
         }
     }
 )
 ```
 
-## 📊 Observability
-
-Monitor your swarm:
+## 📊 Pack Stats
 
 ```python
-# Get brain stats
-stats = brain.get_stats()
-print(f"Total learnings: {stats['total_learnings']}")
-print(f"Total decisions: {stats['total_decisions']}")
+# Memory stats
+stats = memory.pack_stats()
+print(f"Total lore: {stats['total_lore']}")
+print(f"Total hunts: {stats['total_hunts']}")
 
-# Check agent status
-for agent in swarm.agents:
-    status = swarm.get_status(agent)
-    print(f"{agent}: {status.status} - {status.current_task or 'idle'}")
+# Pack status
+for wolf in pack.wolves:
+    status = pack.get_status(wolf)
+    print(f"🐺 {wolf}: {status.kills} kills")
+```
+
+## 🏗️ Architecture
+
+```
+wolfpack_mcp/
+├── core/
+│   ├── coordinator.py   # PackCoordinator - Alpha's control
+│   ├── messaging.py     # Howls - wolf communication
+│   └── memory.py        # PackMemory - collective wisdom
+├── servers/
+│   ├── messaging.py     # MCP server for howls
+│   ├── den_manager.py   # MCP server for hunts
+│   ├── pack_memory.py   # MCP server for knowledge
+│   └── ...              # Other MCP servers
+└── tools/
+    └── ...              # CLI tools
 ```
 
 ## 🤝 Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome new wolves to the pack! See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## 📄 License
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License - see [LICENSE](LICENSE).
 
-## 🌟 Star History
+## 🌟 Join the Pack
 
-If this project helps you build amazing multi-agent systems, please give it a ⭐!
+If this helps you build amazing multi-agent systems, give it a ⭐!
 
 ---
 
-**Built with 🐝 by the Swarm Team**
+**Built by the Wolfpack 🐺**
 
-*"The future of AI is not one agent - it's many agents working together."*
+*"The strength of the pack is the wolf, and the strength of the wolf is the pack."*
