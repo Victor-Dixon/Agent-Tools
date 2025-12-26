@@ -171,6 +171,30 @@ TOOLS_REGISTRY: dict[str, dict[str, Any]] = {
         "flags": ["--create-session", "--session"],
         "args_passthrough": True,
     },
+    "security-scan": {
+        "name": "Unified Security Scanner",
+        "module": "tools.security.unified_security_scanner",
+        "main_function": "main",
+        "description": "Comprehensive security scanner (Secrets, Deps, SAST)",
+        "flags": ["--security-scan", "--scan-security"],
+        "args_passthrough": True,
+    },
+    "debugger": {
+        "name": "Unified Debugger",
+        "module": "tools.debug.unified_debugger",
+        "main_function": "main",
+        "description": "System-wide debugging (Logs, Queue, Processes)",
+        "flags": ["--debugger", "--debug"],
+        "args_passthrough": True,
+    },
+    "environment": {
+        "name": "Unified Environment",
+        "module": "tools.devops.unified_environment",
+        "main_function": "main",
+        "description": "Environment verification and setup",
+        "flags": ["--environment", "--env"],
+        "args_passthrough": True,
+    },
 
     # -------------------------------------------------------------------------
     # 🔵 DIAMOND TOOLS (High Value Specialists)
