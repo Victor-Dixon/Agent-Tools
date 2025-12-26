@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "total_tools": 0,
+    "total_categories": 0,
+    "registered_tools": 0,
+    "unregistered_tools": 0,
+    "consolidation_opportunities": 0,
+    "deletion_candidates": 0,
+    "integration_opportunities": 0
+  },
+  "categories": {},
+  "consolidation_opportunities": [],
+  "deletion_candidates": [],
+  "integration_opportunities": [],
+  "all_tools": []
+}
