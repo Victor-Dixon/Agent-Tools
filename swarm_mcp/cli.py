@@ -147,6 +147,187 @@ def cmd_assign(args):
     print(f"   Task: {args.task[:60]}...")
 
 
+def cmd_vote(args):
+    """Participate in consensus."""
+    from .core.consensus import ConsensusEngine, VoteType, ConsensusRule
+    
+    engine = ConsensusEngine()
+    
+    if args.create:
+        proposal = engine.propose(
+            proposer=args.agent,
+            title=args.title,
+            description=args.description,
+            category=args.category,
+            rule=ConsensusRule(args.rule)
+        )
+        print(f"✅ Proposal created: {proposal.id}")
+        print(f"   Title: {proposal.title}")
+        return
+
+    if args.vote:
+        engine.vote(
+            proposal_id=args.proposal_id,
+            agent_id=args.agent,
+            vote=VoteType(args.vote),
+            reasoning=args.reasoning
+        )
+        print(f"🗳️ Vote cast by {args.agent}")
+        
+        # Check if resolved
+        result = engine.resolve(args.proposal_id)
+        if result.get("status") == "passed":
+            print(f"🎉 Proposal PASSED!")
+        elif result.get("status") == "rejected":
+            print(f"❌ Proposal REJECTED")
+        return
+
+    # List proposals
+    proposals = engine.get_open_proposals()
+    print(f"🗳️ Open Proposals ({len(proposals)})")
+    print("=" * 40)
+    
+    for p in proposals:
+        tally = engine.get_tally(p.id)
+        approvals = tally["tally"].get("approve", {}).get("count", 0)
+        print(f"📄 {p.title} (ID: {p.id})")
+        print(f"   By: {p.proposer} | Rule: {p.rule.value}")
+        print(f"   Votes: {approvals} approvals | Status: {p.status}")
+        print()
+
+
+def cmd_conflict(args):
+    """Check for conflicts."""
+    from .core.conflict import ConflictDetector
+    
+    detector = ConflictDetector()
+    
+    if args.check:
+        conflicts = detector.check_conflicts(
+            agent_id=args.agent,
+            files=args.files.split(",") if args.files else [],
+            keywords=args.keywords.split(",") if args.keywords else []
+        )
+        
+        if conflicts:
+            print(f"⚠️ {len(conflicts)} Conflicts Detected!")
+            for c in conflicts:
+                print(f"   🔴 {c.severity.value.upper()}: {c.reason}")
+                print(f"      Between: {', '.join(c.agents)}")
+        else:
+            print("✅ No conflicts found. Safe to proceed.")
+        return
+
+    # List active intents
+    intents = detector.get_active_intents()
+    print(f"🚧 Active Work ({len(intents)})")
+    print("=" * 40)
+    
+    for intent in intents:
+        print(f"👷 {intent.agent_id}: {intent.description}")
+        if intent.files:
+            print(f"   Files: {', '.join(intent.files[:3])}...")
+        print()
+
+
+def cmd_profile(args):
+    """View agent capabilities."""
+    from .core.agent_dna import AgentDNA
+    
+    dna = AgentDNA()
+    
+    if args.best:
+        result = dna.find_best_agent(category=args.category)
+        if result:
+            agent, score = result
+            print(f"🏆 Best agent for '{args.category}': {agent} (Score: {score:.2f})")
+        else:
+            print(f"No suitable agent found for '{args.category}'")
+        return
+
+    profile = dna.get_profile(args.agent)
+    if not profile:
+        print(f"No profile found for {args.agent}")
+        return
+        
+    print(f"🧬 Agent DNA: {profile.agent_id}")
+    print("=" * 40)
+    print(f"Task Count: {profile.total_tasks}")
+    print(f"Success Rate: {profile.success_rate:.1%}")
+    print(f"Strengths: {', '.join(profile.strengths)}")
+    print(f"Weaknesses: {', '.join(profile.weaknesses)}")
+    
+    if profile.category_scores:
+        print("\nTop Categories:")
+        for cat, score in sorted(profile.category_scores.items(), key=lambda x: x[1], reverse=True)[:5]:
+            print(f"   {cat}: {score:.2f}")
+
+
+def cmd_prove(args):
+    """Work proof system."""
+    from .core.work_proof import WorkProofSystem
+    
+    system = WorkProofSystem()
+    
+    if args.commit:
+        commitment = system.commit(
+            agent_id=args.agent,
+            task=args.task,
+            files=args.files.split(",")
+        )
+        print(f"🔒 Commitment recorded: {commitment.id}")
+        return
+
+    if args.generate:
+        proof = system.prove(args.id)
+        print(f"✅ Proof generated for {proof.agent_id}")
+        print(f"   Changes: {len(proof.files_modified)} modified, {len(proof.files_created)} created")
+        print(f"   Valid: {proof.valid}")
+        return
+
+    if args.verify:
+        # Load proof from file (mocking this part as CLI args usually pass ID)
+        # In a real CLI we'd read the file content or load by ID
+        print("To verify, please inspect the proof file in ./swarm_proofs/proofs/")
+
+
+def cmd_patterns(args):
+    """View mined patterns."""
+    from .core.pattern_miner import PatternMiner
+    
+    miner = PatternMiner()
+    
+    if args.suggest:
+        suggestions = miner.suggest({
+            "category": args.category,
+            "files": args.files.split(",") if args.files else []
+        })
+        
+        print(f"💡 Suggestions for '{args.category}'")
+        print("=" * 40)
+        
+        if not suggestions:
+            print("(no suggestions yet)")
+        
+        for s in suggestions:
+            print(f"✨ {s.pattern_name} ({s.confidence:.0%} confidence)")
+            print(f"   {s.reasoning}")
+            for action in s.suggested_actions:
+                print(f"   👉 {action}")
+            print()
+        return
+
+    patterns = miner.get_patterns()
+    print(f"🧠 Discovered Patterns ({len(patterns)})")
+    print("=" * 40)
+    
+    for p in patterns:
+        print(f"🧩 {p.name}")
+        print(f"   Type: {p.pattern_type} | Success: {p.success_rate:.0%}")
+        print(f"   {p.description}")
+        print()
+
+
 def main():
     """Main CLI entry point."""
     parser = argparse.ArgumentParser(
@@ -159,31 +340,31 @@ def main():
     
     subparsers = parser.add_subparsers(dest="command", help="Commands")
     
-    # status - Check who's available
+    # status
     status_parser = subparsers.add_parser("status", help="Check which agents are available")
     status_parser.add_argument("--agents", help="Comma-separated agent names")
     status_parser.set_defaults(func=cmd_status)
     
-    # send - Send a message
+    # send
     send_parser = subparsers.add_parser("send", help="Send a message to an agent")
     send_parser.add_argument("sender", help="Your agent name")
     send_parser.add_argument("recipient", help="Recipient agent name")
     send_parser.add_argument("message", help="Message to send")
     send_parser.set_defaults(func=cmd_send)
     
-    # inbox - Check messages
+    # inbox
     inbox_parser = subparsers.add_parser("inbox", help="Check your messages")
     inbox_parser.add_argument("agent", help="Your agent name")
     inbox_parser.add_argument("--unread", action="store_true", help="Only show unread")
     inbox_parser.set_defaults(func=cmd_inbox)
     
-    # search - Search shared knowledge
+    # search
     search_parser = subparsers.add_parser("search", help="Search shared knowledge")
     search_parser.add_argument("query", help="What to search for")
     search_parser.add_argument("--limit", type=int, default=10, help="Max results")
     search_parser.set_defaults(func=cmd_search)
     
-    # learn - Save something learned
+    # learn
     learn_parser = subparsers.add_parser("learn", help="Save something you learned")
     learn_parser.add_argument("--agent", required=True, help="Your agent name")
     learn_parser.add_argument("--category", required=True, help="Category (e.g., debugging, api)")
@@ -192,18 +373,65 @@ def main():
     learn_parser.add_argument("--tags", help="Comma-separated tags")
     learn_parser.set_defaults(func=cmd_learn)
     
-    # tasks - Find tasks in codebase
+    # tasks
     tasks_parser = subparsers.add_parser("tasks", help="Find tasks in the codebase")
     tasks_parser.add_argument("--path", default=".", help="Path to scan")
     tasks_parser.add_argument("--limit", type=int, default=20, help="Max results")
     tasks_parser.set_defaults(func=cmd_tasks)
     
-    # assign - Assign a task
+    # assign
     assign_parser = subparsers.add_parser("assign", help="Assign a task to an agent")
     assign_parser.add_argument("agent", help="Agent to assign to")
     assign_parser.add_argument("task", help="Task description")
     assign_parser.add_argument("--priority", type=int, default=3, help="Priority 1-5 (1=highest)")
     assign_parser.set_defaults(func=cmd_assign)
+
+    # vote
+    vote_parser = subparsers.add_parser("vote", help="Consensus voting")
+    vote_parser.add_argument("--agent", required=True, help="Agent ID")
+    vote_parser.add_argument("--create", action="store_true", help="Create new proposal")
+    vote_parser.add_argument("--title", help="Proposal title")
+    vote_parser.add_argument("--description", help="Proposal description")
+    vote_parser.add_argument("--category", default="general", help="Proposal category")
+    vote_parser.add_argument("--rule", default="majority", help="Consensus rule")
+    vote_parser.add_argument("--vote", help="Vote value (approve/reject)")
+    vote_parser.add_argument("--proposal-id", help="Proposal ID to vote on")
+    vote_parser.add_argument("--reasoning", help="Reason for vote")
+    vote_parser.set_defaults(func=cmd_vote)
+
+    # conflict
+    conflict_parser = subparsers.add_parser("conflict", help="Conflict detection")
+    conflict_parser.add_argument("--check", action="store_true", help="Check for conflicts")
+    conflict_parser.add_argument("--agent", help="Agent ID")
+    conflict_parser.add_argument("--files", help="Comma-separated files")
+    conflict_parser.add_argument("--keywords", help="Comma-separated keywords")
+    conflict_parser.add_argument("--list", action="store_true", help="List active intents")
+    conflict_parser.set_defaults(func=cmd_conflict)
+
+    # profile
+    profile_parser = subparsers.add_parser("profile", help="Agent capabilities")
+    profile_parser.add_argument("--agent", help="Agent ID")
+    profile_parser.add_argument("--best", action="store_true", help="Find best agent")
+    profile_parser.add_argument("--category", help="Category to find best agent for")
+    profile_parser.set_defaults(func=cmd_profile)
+
+    # prove
+    prove_parser = subparsers.add_parser("prove", help="Work proof")
+    prove_parser.add_argument("--commit", action="store_true", help="Commit to work")
+    prove_parser.add_argument("--generate", action="store_true", help="Generate proof")
+    prove_parser.add_argument("--verify", action="store_true", help="Verify proof")
+    prove_parser.add_argument("--agent", help="Agent ID")
+    prove_parser.add_argument("--task", help="Task description")
+    prove_parser.add_argument("--files", help="Files involved")
+    prove_parser.add_argument("--id", help="Commitment/Proof ID")
+    prove_parser.set_defaults(func=cmd_prove)
+
+    # patterns
+    patterns_parser = subparsers.add_parser("patterns", help="Pattern mining")
+    patterns_parser.add_argument("--suggest", action="store_true", help="Get suggestions")
+    patterns_parser.add_argument("--category", help="Context category")
+    patterns_parser.add_argument("--files", help="Context files")
+    patterns_parser.set_defaults(func=cmd_patterns)
     
     args = parser.parse_args()
     
@@ -219,15 +447,11 @@ def main():
         print("  learn    - Save something you learned")
         print("  tasks    - Find tasks in the codebase")
         print("  assign   - Assign a task to an agent")
-        print()
-        print("Examples:")
-        print("  swarm status --agents agent-1,agent-2,agent-3")
-        print("  swarm send agent-1 agent-2 \"Please review my PR\"")
-        print("  swarm inbox agent-2 --unread")
-        print("  swarm search \"auth bug\"")
-        print("  swarm learn --agent agent-1 --category bugs --title \"Auth fix\" --content \"...\"")
-        print("  swarm tasks --path ./src")
-        print("  swarm assign agent-2 \"Fix the login bug\"")
+        print("  vote     - Consensus voting")
+        print("  conflict - Conflict detection")
+        print("  profile  - Agent capabilities")
+        print("  prove    - Work proof system")
+        print("  patterns - Pattern mining")
         print()
         return 1
     

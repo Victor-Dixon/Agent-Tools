@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "swarm-toolbelt": {
+      "command": "python",
+      "args": ["/ABSOLUTE/PATH/TO/swarm-mcp/integration/swarm_mcp_server.py"],
+      "description": "🐺 Swarm Toolbelt: Voting, Conflicts, DNA, Proofs, Patterns"
+    }
+  }
+}
