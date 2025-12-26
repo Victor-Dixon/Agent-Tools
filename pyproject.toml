@@ -57,6 +57,7 @@ swarm-messaging-server = "swarm_mcp.servers.messaging:main"
 swarm-memory-server = "swarm_mcp.servers.memory:main"
 swarm-tasks-server = "swarm_mcp.servers.tasks:main"
 swarm-control-server = "swarm_mcp.servers.control:main"
+swarm-tools-server = "swarm_mcp.servers.tools:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["swarm_mcp"]
