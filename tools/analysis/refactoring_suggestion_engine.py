@@ -24,8 +24,9 @@ try:
     from .refactoring_ast_analyzer import ASTAnalyzer
     from .refactoring_models import CodeEntity, ModuleSuggestion, RefactoringSuggestion
 except ImportError:
-    from refactoring_ast_analyzer import ASTAnalyzer
-    from refactoring_models import CodeEntity, ModuleSuggestion, RefactoringSuggestion
+    # Fallback for direct execution
+    from tools.analysis.refactoring_ast_analyzer import ASTAnalyzer
+    from tools.analysis.refactoring_models import CodeEntity, ModuleSuggestion, RefactoringSuggestion
 
 
 class RefactoringSuggestionEngine:
