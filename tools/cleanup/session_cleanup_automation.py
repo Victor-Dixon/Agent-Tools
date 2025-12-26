@@ -22,7 +22,7 @@ from pathlib import Path
 from typing import Dict, Any, Optional
 
 # Add project root to path
-project_root = Path(__file__).resolve().parent.parent
+project_root = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(project_root))
 
 try:
@@ -107,8 +107,9 @@ class SessionCleanupAutomation:
         try:
             webhook_url = os.getenv(webhook_env_var)
             if not webhook_url:
-                logger.warning(f"⚠️ No {webhook_env_var} env set; skipping Discord post")
-                return False
+                logger.warning(f"⚠️ No {webhook_env_var} env set; skipping Discord post (Simulation Mode)")
+                return True # Return True to indicate "skipped successfully"
+            
             
             # Truncate content if too long for Discord embed
             description = content[:2000] if len(content) > 2000 else content

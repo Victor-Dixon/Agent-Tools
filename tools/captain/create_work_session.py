@@ -23,6 +23,11 @@ project_root = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(project_root))
 
 
+class TimeoutConstants:
+    """Timeout constants."""
+    HTTP_DEFAULT = 30
+    HTTP_SHORT = 10
+
 def generate_session_id() -> str:
     """Generate a UUID session ID."""
     return str(uuid.uuid4())
@@ -276,7 +281,6 @@ def main():
     except Exception as e:
         print(f"❌ Unexpected error: {e}", file=sys.stderr)
         import traceback
-from src.core.config.timeout_constants import TimeoutConstants
         traceback.print_exc()
         return 1
 

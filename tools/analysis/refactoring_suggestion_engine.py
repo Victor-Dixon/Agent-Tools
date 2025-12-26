@@ -24,8 +24,9 @@ try:
     from .refactoring_ast_analyzer import ASTAnalyzer
     from .refactoring_models import CodeEntity, ModuleSuggestion, RefactoringSuggestion
 except ImportError:
-    from refactoring_ast_analyzer import ASTAnalyzer
-    from refactoring_models import CodeEntity, ModuleSuggestion, RefactoringSuggestion
+    # Fallback for direct execution
+    from tools.analysis.refactoring_ast_analyzer import ASTAnalyzer
+    from tools.analysis.refactoring_models import CodeEntity, ModuleSuggestion, RefactoringSuggestion
 
 
 class RefactoringSuggestionEngine:
@@ -327,11 +328,43 @@ class RefactoringSuggestionService:
         return any(pattern in path_str for pattern in skip_patterns)
 
 
-# CLI entry point moved to refactoring_cli.py for V2 compliance
 def main():
-    """Main entry point for toolbelt registry compatibility."""
-    from .refactoring_cli import main as cli_main
-    cli_main()
+    """Main entry point."""
+    import argparse
+    import json
+    import sys
+    
+    parser = argparse.ArgumentParser(description="Refactoring Suggestion Engine")
+    parser.add_argument("path", help="File or directory to analyze")
+    parser.add_argument("--json", action="store_true", help="Output as JSON")
+    
+    args = parser.parse_args()
+    
+    service = RefactoringSuggestionService()
+    path = Path(args.path)
+    
+    suggestions = []
+    if path.is_file():
+        s = service.analyze_and_suggest(str(path))
+        if s:
+            suggestions.append(s)
+    elif path.is_dir():
+        suggestions = service.analyze_directory(str(path))
+        
+    if args.json:
+        # TODO: Serialize suggestions to JSON (requires to_dict method or similar)
+        print(json.dumps([str(s) for s in suggestions], indent=2)) 
+    else:
+        if not suggestions:
+            print("✅ No refactoring suggestions found (all files compliant).")
+        else:
+            print(f"🔍 Found {len(suggestions)} suggestions:")
+            for s in suggestions:
+                print("-" * 40)
+                print(f"File: {s.file_path}")
+                print(f"Reasoning: {s.reasoning}")
+                
+    sys.exit(0)
 
 
 if __name__ == "__main__":
