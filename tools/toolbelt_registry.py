@@ -303,28 +303,12 @@ TOOLS_REGISTRY: dict[str, dict[str, Any]] = {
         "flags": ["--test-coordinator"],
         "args_passthrough": True,
     },
-    "template-lint": {
-        "name": "Template Linter",
-        "module": "tools.validation.template_structure_linter",
-        "main_function": "main",
-        "description": "Lint template structures",
-        "flags": ["--template-lint"],
-        "args_passthrough": True,
-    },
     "session-transition": {
         "name": "Session Transition",
         "module": "tools.captain.session_transition_automator",
         "main_function": "main",
         "description": "Automate session transitions",
         "flags": ["--session-transition"],
-        "args_passthrough": True,
-    },
-    "stress-queue": {
-        "name": "Queue Stress Tester",
-        "module": "tools.verification.stress_test_messaging_queue",
-        "main_function": "main",
-        "description": "Stress test the messaging queue",
-        "flags": ["--stress-queue"],
         "args_passthrough": True,
     },
     "task-cli": {

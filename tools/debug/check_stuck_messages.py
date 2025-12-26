@@ -3,100 +3,85 @@
 Check Stuck Messages
 ====================
 
-Checks for messages stuck in PROCESSING status and optionally resets them.
+Checks for unheard messages in the swarm messaging system.
+Rewritten for Swarm MCP.
 
 Usage:
-    python tools/check_stuck_messages.py [--reset]
+    python tools/check_stuck_messages.py [--agent AGENT]
 
 Author: Agent-6
-Date: 2025-12-13
+Date: 2025-12-26
 """
 
 import argparse
 import sys
+import time
 from pathlib import Path
+from datetime import datetime, timedelta
 
 # Add project root to path
-project_root = Path(__file__).resolve().parent.parent
+project_root = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(project_root))
 
-from src.core.message_queue_error_monitor import MessageQueueErrorMonitor
-import logging
+try:
+    from swarm_mcp.core.messaging import MessageQueue, Howl
+except ImportError:
+    print("❌ Failed to import MessageQueue from swarm_mcp.core.messaging", file=sys.stderr)
+    sys.exit(1)
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+def check_stuck_messages(agent_id: str = None, threshold_minutes: int = 15):
+    """Check for messages that haven't been heard for a while."""
+    queue = MessageQueue()
+    
+    # Identify inboxes
+    territory = queue.territory
+    agents = []
+    if agent_id:
+        agents = [agent_id]
+    else:
+        # Scan territory for agents
+        if territory.exists():
+            agents = [d.name for d in territory.iterdir() if d.is_dir()]
+            
+    if not agents:
+        print("⚠️ No agents found with inboxes.")
+        return
 
+    stuck_count = 0
+    now = datetime.now()
+    threshold = timedelta(minutes=threshold_minutes)
+    
+    print(f"🔍 Checking for messages unheard for > {threshold_minutes} minutes")
+    print("=" * 50)
+
+    for agent in agents:
+        unheard = queue.listen(agent, unheard_only=True, limit=100)
+        for msg in unheard:
+            # msg.timestamp is already a datetime object in new system
+            age = now - msg.timestamp
+            
+            if age > threshold:
+                stuck_count += 1
+                urgency_icon = "🚨" if msg.urgency.value <= 2 else "⚠️"
+                print(f"{urgency_icon} Stuck Message for {agent}:")
+                print(f"   ID: {msg.id}")
+                print(f"   From: {msg.sender}")
+                print(f"   Age: {age}")
+                print(f"   Content: {msg.content[:50]}...")
+                print("-" * 30)
+
+    if stuck_count == 0:
+        print("✅ No stuck messages found.")
+    else:
+        print(f"⚠️ Found {stuck_count} stuck messages.")
 
 def main():
-    """Check for stuck messages and optionally reset them."""
-    parser = argparse.ArgumentParser(description='Check for stuck messages in queue')
-    parser.add_argument('--reset', action='store_true', help='Reset stuck messages to PENDING')
-    parser.add_argument('--all-checks', action='store_true', help='Run all monitoring checks')
+    parser = argparse.ArgumentParser(description='Check for stuck messages')
+    parser.add_argument('--agent', help='Check specific agent')
+    parser.add_argument('--minutes', type=int, default=15, help='Threshold in minutes')
     args = parser.parse_args()
     
-    print("🔍 Checking for Stuck Messages")
-    print("=" * 50)
-    
-    monitor = MessageQueueErrorMonitor()
-    
-    if args.all_checks:
-        # Run all checks
-        results = monitor.run_checks()
-        
-        print(f"\n📊 Monitoring Results:")
-        print(f"   Timestamp: {results['timestamp']}")
-        print(f"   Stuck Messages: {len(results['stuck_messages'])}")
-        print(f"   Total Alerts: {len(results['alerts'])}")
-        
-        if results['stuck_messages']:
-            print(f"\n⚠️  Stuck Messages Found:")
-            for msg in results['stuck_messages']:
-                severity_icon = "🚨" if msg['severity'] == 'critical' else "⚠️"
-                print(f"   {severity_icon} {msg['queue_id'][:20]}...")
-                print(f"      Recipient: {msg['recipient']}")
-                print(f"      Stuck Duration: {msg['stuck_duration_seconds']:.1f}s")
-                print(f"      Severity: {msg['severity']}")
-        
-        if results['alerts']:
-            print(f"\n📢 Alerts:")
-            for alert in results['alerts']:
-                severity_icon = "🚨" if alert['severity'] == 'critical' else "⚠️" if alert['severity'] == 'warning' else "ℹ️"
-                print(f"   {severity_icon} [{alert['severity'].upper()}] {alert['alert_type']}: {alert['message']}")
-        
-        # Reset if requested
-        if args.reset and results['stuck_messages']:
-            reset_count = monitor.reset_stuck_messages()
-            print(f"\n✅ Reset {reset_count} stuck messages to PENDING")
-        
-    else:
-        # Just check stuck messages
-        stuck_alerts = monitor.check_stuck_messages()
-        
-        if not stuck_alerts:
-            print("✅ No stuck messages found")
-            return 0
-        
-        print(f"\n⚠️  Found {len(stuck_alerts)} stuck message(s):")
-        for alert in stuck_alerts:
-            severity_icon = "🚨" if alert.severity == 'critical' else "⚠️"
-            print(f"   {severity_icon} {alert.queue_id[:20]}...")
-            print(f"      Recipient: {alert.recipient}")
-            print(f"      Stuck Duration: {alert.stuck_duration_seconds:.1f}s")
-            print(f"      Severity: {alert.severity}")
-        
-        if args.reset:
-            reset_count = monitor.reset_stuck_messages(stuck_alerts)
-            print(f"\n✅ Reset {reset_count} stuck messages to PENDING")
-        else:
-            print(f"\n💡 Tip: Use --reset to automatically reset stuck messages")
-    
-    return 0
-
+    check_stuck_messages(args.agent, args.minutes)
 
 if __name__ == "__main__":
-    sys.exit(main())
-
-
-
-
-
+    main()
