@@ -54,6 +54,11 @@
       "command": "python",
       "args": ["mcp_servers/backup_automation_server.py"],
       "description": "💾 Game server backup, recovery, and cloud sync"
+    },
+    "discord-integration": {
+      "command": "python",
+      "args": ["mcp_servers/discord_integration_server.py"],
+      "description": "💬 Discord webhooks, status posts, role sync, notifications"
     }
   }
 }
