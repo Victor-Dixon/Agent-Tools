@@ -34,7 +34,12 @@ def verify_all_tools():
         
         print(f"Testing {name:<30} (ID: {tool_id})")
         
-        cmd = [sys.executable, "-m", "tools.toolbelt", flag, "--help"]
+        # Special handling for tools that might exit 1 on "success" (e.g. security scanners finding issues)
+        args = ["--help"]
+        if tool_id == "security-scan":
+            args = ["--warn-only"]
+            
+        cmd = [sys.executable, "-m", "tools.toolbelt", flag] + args
         
         try:
             result = subprocess.run(

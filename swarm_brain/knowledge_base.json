@@ -1,8 +1,8 @@
 {
   "stats": {
-    "total_entries": 2,
+    "total_entries": 5,
     "contributors": {
-      "Agent-1": 2
+      "Agent-1": 5
     }
   },
   "entries": {
@@ -35,7 +35,52 @@
       ],
       "timestamp": "2025-12-26T18:47:43.528845",
       "metadata": {}
+    },
+    "kb-3": {
+      "id": "kb-3",
+      "title": "Backward Compatibility Shim Pattern",
+      "content": "Backward compatibility shims enable massive refactoring while preserving functionality. Delegation pattern is essential for modular architecture.",
+      "author": "Agent-1",
+      "category": "learning",
+      "tags": [
+        "refactoring",
+        "v2-compliance",
+        "architecture",
+        "pattern"
+      ],
+      "timestamp": "2025-12-26T19:15:13.898450",
+      "metadata": {}
+    },
+    "kb-4": {
+      "id": "kb-4",
+      "title": "Backward Compatibility Shim Pattern",
+      "content": "Backward compatibility shims enable massive refactoring while preserving functionality. Delegation pattern is essential for modular architecture.",
+      "author": "Agent-1",
+      "category": "learning",
+      "tags": [
+        "refactoring",
+        "v2-compliance",
+        "architecture",
+        "pattern"
+      ],
+      "timestamp": "2025-12-26T19:15:45.401599",
+      "metadata": {}
+    },
+    "kb-5": {
+      "id": "kb-5",
+      "title": "Backward Compatibility Shim Pattern",
+      "content": "Backward compatibility shims enable massive refactoring while preserving functionality. Delegation pattern is essential for modular architecture.",
+      "author": "Agent-1",
+      "category": "learning",
+      "tags": [
+        "refactoring",
+        "v2-compliance",
+        "architecture",
+        "pattern"
+      ],
+      "timestamp": "2025-12-26T19:16:14.078814",
+      "metadata": {}
     }
   },
-  "last_updated": "2025-12-26T18:47:43.528852"
+  "last_updated": "2025-12-26T19:16:14.078821"
 }

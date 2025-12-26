@@ -41,3 +41,11 @@ Thumbs.db
 *.cache
 dependency_cache.json
 
+# Security & Secrets
+.env
+thea_cookies
+*_token
+*_key
+*_secret
+password
+credential
