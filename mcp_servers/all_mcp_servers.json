@@ -39,6 +39,56 @@
       "command": "python",
       "args": ["-m", "swarm_mcp.servers.testing"],
       "description": "🐺 Coverage analysis and mutation testing"
+    },
+    "dependency-management": {
+      "command": "python",
+      "args": ["mcp_servers/dependency_management_server.py"],
+      "description": "📦 Automate package maintenance and updates"
+    },
+    "release-management": {
+      "command": "python",
+      "args": ["mcp_servers/release_management_server.py"],
+      "description": "🏷️ Versioning, changelogs, and releases"
+    },
+    "cicd-helper": {
+      "command": "python",
+      "args": ["mcp_servers/cicd_helper_server.py"],
+      "description": "🔄 Monitor and manage CI/CD pipelines"
+    },
+    "environment-setup": {
+      "command": "python",
+      "args": ["mcp_servers/environment_setup_server.py"],
+      "description": "🛠️ Bootstrap development environments"
+    },
+    "security-scanner": {
+      "command": "python",
+      "args": ["mcp_servers/security_scanner_server.py"],
+      "description": "🔒 Proactive security checks and audits"
+    },
+    "issue-todo-tracker": {
+      "command": "python",
+      "args": ["mcp_servers/issue_todo_tracker_server.py"],
+      "description": "📋 Code-to-issue automation and tracking"
+    },
+    "documentation-generator": {
+      "command": "python",
+      "args": ["mcp_servers/documentation_generator_server.py"],
+      "description": "📚 Keep documentation in sync with code"
+    },
+    "database-operations": {
+      "command": "python",
+      "args": ["mcp_servers/database_operations_server.py"],
+      "description": "🗄️ Database lifecycle management"
+    },
+    "code-quality-v2": {
+      "command": "python",
+      "args": ["mcp_servers/code_quality_server.py"],
+      "description": "✨ Linting, formatting, and type checking"
+    },
+    "performance-profiler": {
+      "command": "python",
+      "args": ["mcp_servers/performance_profiler_server.py"],
+      "description": "⚡ Identify performance bottlenecks"
     }
   }
 }
