@@ -67,9 +67,10 @@ class VerificationHarness:
 
     def verify_unit_test(self, test_path: str) -> VerificationResult:
         """Run a specific unit test file."""
+        import sys
         try:
             # Assume python/pytest for now
-            cmd = ["pytest", test_path]
+            cmd = [sys.executable, "-m", "pytest", test_path]
             result = subprocess.run(
                 cmd, 
                 cwd=self.workspace_root,
