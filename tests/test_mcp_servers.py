@@ -35,10 +35,6 @@ class TestMCPServers:
         response = json.loads(stdout)
         
         assert response["jsonrpc"] == "2.0"
-        # assert response["id"] == 1  # ID might be consumed by framework or not returned if notification?
-        # Standard MCP doesn't strictly require ID in response for initialize? 
-        # Actually JSON-RPC does. Let's see why it failed. 
-        # Ah, maybe my server implementation printed something else before JSON?
         
         assert "result" in response
         assert "capabilities" in response["result"]
@@ -75,3 +71,26 @@ class TestMCPServers:
         response = json.loads(stdout)
         
         assert response["result"]["serverInfo"]["name"] == "swarm-memory"
+
+    def test_tasks_server_initialize(self):
+        """Test swarm-tasks-server initialization and Stage 4 tools."""
+        init_req = {
+            "jsonrpc": "2.0",
+            "method": "initialize",
+            "id": 1
+        }
+        
+        stdout, _ = self._run_server("swarm_mcp.servers.tasks", init_req)
+        response = json.loads(stdout)
+        
+        assert response["result"]["serverInfo"]["name"] == "swarm-tasks"
+        tools = response["result"]["capabilities"]["tools"]
+        
+        # Core tasks
+        assert "add_task_to_inbox" in tools
+        assert "mark_task_complete" in tools
+        
+        # Stage 4 additions
+        assert "select_next_task" in tools
+        assert "verify_task_completion" in tools
+        assert "recover_system" in tools
