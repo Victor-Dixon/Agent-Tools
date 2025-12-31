@@ -1,14 +1,5 @@
 #!/usr/bin/env python3
-"""
-Security Audit Tools - Agent Toolbelt V2
-=======================================
-
-Audit web security posture for headers, external assets, and exposed endpoints.
-
-V2 Compliance: <400 lines
-Author: Agent-8 (Security Tooling)
-Date: 2025-02-14
-"""
+"""Security audit tools for headers, external assets, and exposed endpoints."""
 
 from __future__ import annotations
 
@@ -19,6 +10,7 @@ from dataclasses import dataclass
 from html.parser import HTMLParser
 from typing import Any
 from urllib.parse import urljoin, urlparse
+from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 from ..adapters.base_adapter import IToolAdapter, ToolResult, ToolSpec
@@ -26,37 +18,48 @@ from ..adapters.base_adapter import IToolAdapter, ToolResult, ToolSpec
 logger = logging.getLogger(__name__)
 
 
-DEFAULT_TRUSTED_CDNS = {
-    "cdnjs.cloudflare.com",
-    "cdn.jsdelivr.net",
-    "ajax.googleapis.com",
-    "fonts.googleapis.com",
-    "fonts.gstatic.com",
-    "unpkg.com",
-}
-
-DEFAULT_API_PATHS = [
-    "/api",
-    "/api/v1",
-    "/api/v2",
-    "/graphql",
-    "/swagger",
-    "/swagger/index.html",
-    "/openapi.json",
-]
-
-DEFAULT_DEBUG_PATHS = [
-    "/debug",
-    "/debug/vars",
-    "/status",
-    "/health",
-    "/actuator",
-    "/admin",
-    "/__debug",
-]
+DEFAULT_TRUSTED_CDNS = {"cdnjs.cloudflare.com", "cdn.jsdelivr.net", "ajax.googleapis.com", "fonts.googleapis.com", "fonts.gstatic.com", "unpkg.com"}
+DEFAULT_API_PATHS = ["/api", "/api/v1", "/api/v2", "/graphql", "/swagger", "/swagger/index.html", "/openapi.json"]
+DEFAULT_DEBUG_PATHS = ["/debug", "/debug/vars", "/status", "/health", "/actuator", "/admin", "/__debug"]
 
 DEFAULT_PORTS = [80, 443, 3000, 5000, 8000, 8080, 8443]
 DEFAULT_SUBDOMAINS = ["www", "api", "dev", "staging", "test", "admin"]
+COMMON_PUBLIC_SUFFIX_2 = {"co.uk", "org.uk", "ac.uk", "gov.uk", "com.au", "net.au", "org.au", "co.nz", "org.nz"}
+COMMON_HOST_PREFIXES = {"www", "m", "app", "beta"}
+
+
+def _apex_domain(host: str) -> str:
+    host = (host or "").strip(".").lower()
+    if not host:
+        return host
+    parts = host.split(".")
+    if len(parts) <= 2:
+        return host
+    if parts[0] in COMMON_HOST_PREFIXES:
+        parts = parts[1:]
+    if len(parts) <= 2:
+        return ".".join(parts)
+    suffix2 = ".".join(parts[-2:])
+    if suffix2 in COMMON_PUBLIC_SUFFIX_2 and len(parts) >= 3:
+        return ".".join(parts[-3:])
+    return ".".join(parts[-2:])
+
+
+def _fetch_status(url: str, timeout: float, user_agent: str) -> dict[str, Any]:
+    request = Request(url, headers={"User-Agent": user_agent})
+    try:
+        with urlopen(request, timeout=timeout) as resp:
+            return {"status": int(resp.status), "retry_after": resp.headers.get("Retry-After")}
+    except HTTPError as exc:
+        try:
+            return {
+                "status": int(getattr(exc, "code", 0) or 0),
+                "retry_after": exc.headers.get("Retry-After"),
+            }
+        except Exception:
+            return {"status": int(getattr(exc, "code", 0) or 0)}
+    except Exception as exc:
+        return {"status": "error", "error": str(exc)[:120]}
 @dataclass
 class ExternalResource:
     url: str
@@ -301,12 +304,7 @@ class SecurityAuditTool(IToolAdapter):
             "rate_limit_triggered": rate_limited,
         }
     def _probe_rate_limit(self, url: str, timeout: float) -> dict[str, Any]:
-        try:
-            request = Request(url, headers={"User-Agent": "AgentTools-RateProbe/1.0"})
-            with urlopen(request, timeout=timeout) as resp:
-                return {"status": resp.status, "retry_after": resp.headers.get("Retry-After")}
-        except Exception as exc:
-            return {"status": "error", "error": str(exc)[:120]}
+        return _fetch_status(url, timeout, "AgentTools-RateProbe/1.0")
 
     def _extract_backend_info(self, headers: dict[str, str]) -> dict[str, Any]:
         keys = ["server", "x-powered-by", "via"]
@@ -320,12 +318,9 @@ class SecurityAuditTool(IToolAdapter):
         results = []
         for path in paths:
             url = urljoin(base_url, path)
-            try:
-                request = Request(url, headers={"User-Agent": "AgentTools-EndpointProbe/1.0"})
-                with urlopen(request, timeout=timeout) as resp:
-                    results.append({"path": path, "status": resp.status, "url": url})
-            except Exception as exc:
-                results.append({"path": path, "status": "error", "error": str(exc)[:120]})
+            result = _fetch_status(url, timeout, "AgentTools-EndpointProbe/1.0")
+            if result.get("status") not in (404, "error"):
+                results.append({"path": path, "url": url, **result})
         return [r for r in results if r.get("status") not in (404, "error")]
 
     def _scan_ports(self, host: str, ports: list[int], timeout: float) -> dict[str, Any]:
@@ -343,9 +338,10 @@ class SecurityAuditTool(IToolAdapter):
             "open_ports": open_ports,
         }
     def _probe_subdomains(self, host: str, subdomains: list[str]) -> dict[str, Any]:
+        apex = _apex_domain(host)
         results = []
         for sub in subdomains:
-            fqdn = f"{sub}.{host}"
+            fqdn = f"{sub}.{apex}" if apex else f"{sub}.{host}"
             try:
                 socket.gethostbyname(fqdn)
                 results.append({"subdomain": fqdn, "resolved": True})
@@ -365,6 +361,11 @@ class SecurityAuditTool(IToolAdapter):
         score = 100
         findings = []
         for header, data in header_results.items():
+            if header.lower() == "access-control-allow-origin":
+                if data.get("present") and data.get("wildcard"):
+                    score -= 10
+                    findings.append("CORS wildcard '*' allows any origin")
+                continue
             if not data["present"]:
                 score -= 5
                 findings.append(f"Missing {header} header")
