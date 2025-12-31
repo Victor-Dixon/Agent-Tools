@@ -28,6 +28,18 @@ src/services/cli/
 python -m tools.cli.dispatchers.unified_dispatcher <command> [args...]
 ```
 
+### Legacy entrypoint (shim)
+
+The repository also includes a lightweight shim at `tools/cli.py` that forwards to
+`tools.cli.main` to preserve older automation that still runs:
+
+```bash
+python tools/cli.py <command> [args...]
+```
+
+This shim is intentionally minimal and should be replaced with a full CLI wrapper
+once the legacy path is retired.
+
 ### Core CLI
 ```bash
 python -m src.core.cli <command> [args...]
