@@ -38,13 +38,14 @@ def _apex_domain(host: str) -> str:
     suffix2 = ".".join(parts[-2:])
     if suffix2 in COMMON_PUBLIC_SUFFIX_2 and len(parts) >= 3:
         return ".".join(parts[-3:])
+    if len(parts) > 3 and len(parts[-1]) == 2:
+        return ".".join(parts[-3:])
     if parts[0] in COMMON_HOST_PREFIXES and len(parts) >= 3:
         candidate = ".".join(parts[1:])
         candidate_suffix2 = ".".join(candidate.split(".")[-2:])
         if candidate_suffix2 not in COMMON_PUBLIC_SUFFIX_2:
             return candidate
-    return host
-
+    return suffix2
 
 def _fetch_status(url: str, timeout: float, user_agent: str) -> dict[str, Any]:
     request = Request(url, headers={"User-Agent": user_agent})
