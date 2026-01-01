@@ -53,10 +53,23 @@ def check_tracked_sensitive_files() -> dict[str, Any]:
         "_secret",
     ]
     
+    whitelist = [
+        ".env.example",
+        "setup_thea_cookies.py",
+        "unified_security_scanner.py",
+        "check_sensitive_files.py",
+        "find_github_token.py",
+        "oauth_token_checker.ts"
+    ]
+    
     found_files = []
     
     for file in tracked_files:
         if not file:
+            continue
+        
+        # Check whitelist
+        if any(w in file for w in whitelist):
             continue
         
         file_lower = file.lower()

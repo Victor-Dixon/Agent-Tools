@@ -11,7 +11,7 @@ This is designed for use in GitHub Actions but can also be run locally.
 """
 
 from __future__ import annotations
-from technical_debt_analyzer import TechnicalDebtAnalyzer
+from .technical_debt_analyzer import TechnicalDebtAnalyzer
 from mcp_servers import v2_compliance_server as vc
 
 import argparse

@@ -1,3 +1,4 @@
+- [ ] [MAINTENANCE][HIGH][TASK-001] Fix broken links in footer [CLAIMED BY Agent-5]
 # 🐺 MASTER TASK LOG - WE ARE SWARM
 
 **Last Updated:** 2025-12-29

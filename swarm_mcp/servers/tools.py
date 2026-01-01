@@ -8,6 +8,7 @@ import json
 import sys
 import subprocess
 import shutil
+import os
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -27,12 +28,16 @@ def execute_toolbelt(flag: str, args: List[str] = None) -> Dict[str, Any]:
     # Ensure we run from workspace root
     cwd = Path(__file__).parent.parent.parent
     
+    env = os.environ.copy()
+    env["PYTHONPATH"] = str(cwd) + os.pathsep + env.get("PYTHONPATH", "")
+    
     cmd = [sys.executable, "-m", "tools.toolbelt", flag] + args
     
     try:
         result = subprocess.run(
             cmd,
             cwd=cwd,
+            env=env,
             capture_output=True,
             text=True,
             check=False
@@ -42,7 +47,10 @@ def execute_toolbelt(flag: str, args: List[str] = None) -> Dict[str, Any]:
             "success": result.returncode == 0,
             "stdout": result.stdout,
             "stderr": result.stderr,
-            "exit_code": result.returncode
+            "exit_code": result.returncode,
+            "debug_cwd": str(cwd),
+            "debug_pythonpath": env.get("PYTHONPATH"),
+            "debug_cmd": str(cmd)
         }
     except Exception as e:
         return {"success": False, "error": str(e)}
