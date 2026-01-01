@@ -31,11 +31,6 @@ def main() -> int:
         toolbelt_main()
         return 0
     return unified_main()
-"""Legacy CLI module shim for tooling expecting tools/cli.py."""
-
-from __future__ import annotations
-
-from tools.cli.main import main
 
 
 if __name__ == "__main__":
