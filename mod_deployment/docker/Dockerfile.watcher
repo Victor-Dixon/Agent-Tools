@@ -1,0 +1,46 @@
+# Mod Deployment - Update Watcher Service
+# ========================================
+# 
+# Watches Thunderstore for mod updates and automatically
+# deploys to staging server for testing.
+#
+# Features:
+# - Polls Thunderstore API for updates
+# - Downloads and caches new mod versions
+# - Deploys to staging for testing
+# - Sends Discord notifications
+# - Promotes tested mods to production
+
+FROM python:3.11-slim
+
+LABEL maintainer="Mod Deployment Automation"
+LABEL description="Thunderstore mod update watcher service"
+LABEL version="1.0.0"
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    docker.io \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy watcher code
+COPY watcher/ /app/watcher/
+COPY core/ /app/core/
+
+# Create data directory
+RUN mkdir -p /data /mods/cache
+
+# Environment variables
+ENV PYTHONUNBUFFERED=1
+ENV GAME=lethal-company
+ENV CHECK_INTERVAL=3600
+ENV AUTO_DEPLOY_TO_STAGING=true
+ENV AUTO_DEPLOY_TO_PRODUCTION=false
+
+ENTRYPOINT ["python", "-m", "watcher.main"]

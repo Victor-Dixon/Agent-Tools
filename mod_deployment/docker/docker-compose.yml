@@ -1,0 +1,172 @@
+# Mod Deployment - Docker Compose
+# ================================
+# 
+# Complete mod deployment infrastructure with:
+# - Production game server
+# - Staging server for mod testing
+# - Mod update watcher service
+# - Health monitoring dashboard
+#
+# Usage:
+#   docker-compose up -d              # Start all services
+#   docker-compose up -d production   # Start only production
+#   docker-compose logs -f watcher    # Follow watcher logs
+
+version: '3.8'
+
+services:
+  # Production Game Server
+  production:
+    build:
+      context: .
+      dockerfile: Dockerfile.game-server
+    container_name: game-server-production
+    ports:
+      - "${PROD_PORT:-7777}:7777/udp"
+      - "${PROD_PORT:-7777}:7777/tcp"
+    volumes:
+      - production_mods:/app/BepInEx/plugins
+      - production_config:/app/BepInEx/config
+      - production_backups:/app/mod_backups
+      - shared_cache:/mods/cache
+    environment:
+      - SERVER_NAME=${SERVER_NAME:-Production}
+      - SERVER_PORT=7777
+      - ENABLE_AUTO_UPDATE=false  # Manual updates only for production
+      - ENABLE_HEALTH_CHECK=true
+      - STEAM_APP_ID=${STEAM_APP_ID:-}
+      - STEAM_USERNAME=${STEAM_USERNAME:-}
+      - STEAM_PASSWORD=${STEAM_PASSWORD:-}
+    restart: unless-stopped
+    networks:
+      - mod_network
+    healthcheck:
+      test: ["CMD", "/app/scripts/health_check.sh"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 120s
+    labels:
+      - "mod.deployment.role=production"
+      - "mod.deployment.game=${GAME:-lethal-company}"
+
+  # Staging Server for Testing Mods
+  staging:
+    build:
+      context: .
+      dockerfile: Dockerfile.game-server
+    container_name: game-server-staging
+    ports:
+      - "${STAGING_PORT:-7778}:7777/udp"
+      - "${STAGING_PORT:-7778}:7777/tcp"
+    volumes:
+      - staging_mods:/app/BepInEx/plugins
+      - staging_config:/app/BepInEx/config
+      - staging_backups:/app/mod_backups
+      - shared_cache:/mods/cache
+    environment:
+      - SERVER_NAME=${SERVER_NAME:-Staging}
+      - SERVER_PORT=7777
+      - ENABLE_AUTO_UPDATE=true  # Auto-update enabled for testing
+      - ENABLE_HEALTH_CHECK=true
+      - STAGING_MODE=true
+    restart: unless-stopped
+    networks:
+      - mod_network
+    healthcheck:
+      test: ["CMD", "/app/scripts/health_check.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s
+    labels:
+      - "mod.deployment.role=staging"
+      - "mod.deployment.game=${GAME:-lethal-company}"
+
+  # Mod Update Watcher Service
+  watcher:
+    build:
+      context: .
+      dockerfile: Dockerfile.watcher
+    container_name: mod-watcher
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - watcher_data:/data
+      - shared_cache:/mods/cache
+    environment:
+      - GAME=${GAME:-lethal-company}
+      - THUNDERSTORE_API=https://thunderstore.io/api/v1/
+      - CHECK_INTERVAL=${UPDATE_CHECK_INTERVAL:-3600}
+      - STAGING_CONTAINER=game-server-staging
+      - PRODUCTION_CONTAINER=game-server-production
+      - DISCORD_WEBHOOK=${DISCORD_WEBHOOK:-}
+      - AUTO_DEPLOY_TO_STAGING=true
+      - AUTO_DEPLOY_TO_PRODUCTION=false
+      - REQUIRE_STAGING_APPROVAL=true
+    restart: unless-stopped
+    networks:
+      - mod_network
+    depends_on:
+      - staging
+    labels:
+      - "mod.deployment.role=watcher"
+
+  # Redis for state management (optional)
+  redis:
+    image: redis:7-alpine
+    container_name: mod-redis
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - mod_network
+    command: redis-server --appendonly yes
+
+  # Mod Management Dashboard (optional)
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: mod-dashboard
+    ports:
+      - "${DASHBOARD_PORT:-8080}:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - dashboard_data:/data
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - STAGING_URL=http://staging:7777
+      - PRODUCTION_URL=http://production:7777
+    restart: unless-stopped
+    networks:
+      - mod_network
+    depends_on:
+      - redis
+    labels:
+      - "mod.deployment.role=dashboard"
+
+networks:
+  mod_network:
+    driver: bridge
+
+volumes:
+  production_mods:
+    name: game_production_mods
+  production_config:
+    name: game_production_config
+  production_backups:
+    name: game_production_backups
+  staging_mods:
+    name: game_staging_mods
+  staging_config:
+    name: game_staging_config
+  staging_backups:
+    name: game_staging_backups
+  shared_cache:
+    name: game_shared_cache
+  watcher_data:
+    name: mod_watcher_data
+  redis_data:
+    name: mod_redis_data
+  dashboard_data:
+    name: mod_dashboard_data

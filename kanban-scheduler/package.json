@@ -1,0 +1,21 @@
+{
+  "name": "kanban-life-scheduler",
+  "version": "1.0.0",
+  "description": "Customized Kanban board scheduler for life and GitHub project management with AI agent integration",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "./start.sh",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && HOST=0.0.0.0 DANGEROUSLY_DISABLE_HOST_CHECK=true npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "setup": "npm run install-all && npm run db:setup"
+  },
+  "keywords": ["kanban", "scheduler", "project-management", "github", "ai-agents"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

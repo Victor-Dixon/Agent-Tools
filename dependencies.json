@@ -1,0 +1,3787 @@
+{
+  "nodes": {
+    "tools.toolbelt_registry": {
+      "tool_id": "tools.toolbelt_registry",
+      "path": "tools/toolbelt_registry.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.agent.unified_agent",
+        "tools.analysis.comprehensive_tool_analyzer",
+        "tools.captain.unified_captain",
+        "tools.cleanup.unified_cleanup",
+        "tools.communication.agent_status_validator",
+        "tools.deprecated.auto_validate_cycle_v2",
+        "tools.deprecated.compliance_history_tracker",
+        "tools.deprecated.devlog_manager",
+        "tools.deprecated.devlog_poster",
+        "tools.deprecated.monitor_twitch_bot_status",
+        "tools.deprecated.repo_safe_merge",
+        "tools.deprecated.start_github_pusher_service",
+        "tools.deprecated.swarm_orchestrator",
+        "tools.deprecated.swarm_site_health_automation",
+        "tools.deprecated.toolbelt",
+        "tools.deprecated.v2_compliance_summary",
+        "tools.deprecated.wordpress_manager",
+        "tools.discord.unified_discord",
+        "tools.github.unified_github",
+        "tools.monitoring.unified_monitor",
+        "tools.verification.unified_verifier",
+        "tools.wordpress.unified_wordpress"
+      ],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.doc_templates_mission": {
+      "tool_id": "tools.doc_templates_mission",
+      "path": "tools/doc_templates_mission.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.doc_templates_achievements": {
+      "tool_id": "tools.doc_templates_achievements",
+      "path": "tools/doc_templates_achievements.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_login_handler_refactored": {
+      "tool_id": "tools.thea.thea_login_handler_refactored",
+      "path": "tools/thea/thea_login_handler_refactored.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "thea_authentication_handler",
+        "thea_cookie_manager",
+        "thea_login_detector"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_automation_cookie_manager": {
+      "tool_id": "tools.thea.thea_automation_cookie_manager",
+      "path": "tools/thea/thea_automation_cookie_manager.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.demo_working_thea": {
+      "tool_id": "tools.thea.demo_working_thea",
+      "path": "tools/thea/demo_working_thea.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "thea_automation"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_automation_browser": {
+      "tool_id": "tools.thea.thea_automation_browser",
+      "path": "tools/thea/thea_automation_browser.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "selenium",
+        "selenium.webdriver.chrome.options",
+        "selenium.webdriver.common.by"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_login_detector": {
+      "tool_id": "tools.thea.thea_login_detector",
+      "path": "tools/thea/thea_login_detector.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "selenium.common.exceptions",
+        "selenium.webdriver.common.by",
+        "selenium.webdriver.support",
+        "selenium.webdriver.support.ui"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.send_prompt_file": {
+      "tool_id": "tools.thea.send_prompt_file",
+      "path": "tools/thea/send_prompt_file.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.tell_thea_session_summary": {
+      "tool_id": "tools.thea.tell_thea_session_summary",
+      "path": "tools/thea/tell_thea_session_summary.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "thea_automation"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.simple_thea_communication": {
+      "tool_id": "tools.thea.simple_thea_communication",
+      "path": "tools/thea/simple_thea_communication.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "pyautogui",
+        "pyperclip",
+        "response_detector",
+        "selenium",
+        "selenium.webdriver.chrome.options",
+        "thea_cookie_manager",
+        "thea_login_handler"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.demo_thea_simple": {
+      "tool_id": "tools.thea.demo_thea_simple",
+      "path": "tools/thea/demo_thea_simple.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.services.thea"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_login_handler": {
+      "tool_id": "tools.thea.thea_login_handler",
+      "path": "tools/thea/thea_login_handler.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "selenium",
+        "selenium.common.exceptions",
+        "selenium.webdriver.common.by",
+        "selenium.webdriver.support",
+        "selenium.webdriver.support.ui"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_cookie_manager": {
+      "tool_id": "tools.thea.thea_cookie_manager",
+      "path": "tools/thea/thea_cookie_manager.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "selenium"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.analyze_chatgpt_selectors": {
+      "tool_id": "tools.thea.analyze_chatgpt_selectors",
+      "path": "tools/thea/analyze_chatgpt_selectors.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "selenium",
+        "selenium.common.exceptions",
+        "selenium.webdriver.chrome.options",
+        "selenium.webdriver.common.by",
+        "selenium.webdriver.support",
+        "selenium.webdriver.support.ui",
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service",
+        "undetected_chromedriver"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.setup_thea_cookies": {
+      "tool_id": "tools.thea.setup_thea_cookies",
+      "path": "tools/thea/setup_thea_cookies.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "selenium",
+        "selenium.webdriver.chrome.options",
+        "selenium.webdriver.common.by",
+        "thea_login_handler",
+        "undetected_chromedriver"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.demo_thea_live": {
+      "tool_id": "tools.thea.demo_thea_live",
+      "path": "tools/thea/demo_thea_live.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.services.thea"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.demo_thea_interactive": {
+      "tool_id": "tools.thea.demo_thea_interactive",
+      "path": "tools/thea/demo_thea_interactive.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "pyautogui",
+        "pyperclip",
+        "src.infrastructure.browser"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.run_headless_refresh": {
+      "tool_id": "tools.thea.run_headless_refresh",
+      "path": "tools/thea/run_headless_refresh.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_keepalive": {
+      "tool_id": "tools.thea.thea_keepalive",
+      "path": "tools/thea/thea_keepalive.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_headless_send": {
+      "tool_id": "tools.thea.thea_headless_send",
+      "path": "tools/thea/thea_headless_send.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_automation": {
+      "tool_id": "tools.thea.thea_automation",
+      "path": "tools/thea/thea_automation.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "pyautogui",
+        "pyperclip",
+        "response_detector",
+        "selenium",
+        "selenium.webdriver.chrome.options",
+        "selenium.webdriver.common.by"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.debug_chatgpt_elements": {
+      "tool_id": "tools.thea.debug_chatgpt_elements",
+      "path": "tools/thea/debug_chatgpt_elements.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_automation_messaging": {
+      "tool_id": "tools.thea.thea_automation_messaging",
+      "path": "tools/thea/thea_automation_messaging.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "pyautogui",
+        "pyperclip",
+        "response_detector"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_authentication_handler": {
+      "tool_id": "tools.thea.thea_authentication_handler",
+      "path": "tools/thea/thea_authentication_handler.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "pyotp",
+        "selenium.common.exceptions",
+        "selenium.webdriver.common.by",
+        "selenium.webdriver.support",
+        "selenium.webdriver.support.ui",
+        "thea_cookie_manager",
+        "thea_login_detector"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.thea.thea_undetected_helper": {
+      "tool_id": "tools.thea.thea_undetected_helper",
+      "path": "tools/thea/thea_undetected_helper.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "selenium",
+        "selenium.webdriver.chrome.options",
+        "undetected_chromedriver"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.security.unified_security_scanner": {
+      "tool_id": "tools.security.unified_security_scanner",
+      "path": "tools/security/unified_security_scanner.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "pip_audit"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.security.check_sensitive_files": {
+      "tool_id": "tools.security.check_sensitive_files",
+      "path": "tools/security/check_sensitive_files.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.scan_technical_debt": {
+      "tool_id": "tools.analysis.scan_technical_debt",
+      "path": "tools/analysis/scan_technical_debt.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.refactoring_suggestion_engine": {
+      "tool_id": "tools.analysis.refactoring_suggestion_engine",
+      "path": "tools/analysis/refactoring_suggestion_engine.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "refactoring_ast_analyzer",
+        "refactoring_cli",
+        "refactoring_models"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.src_directory_report_generator": {
+      "tool_id": "tools.analysis.src_directory_report_generator",
+      "path": "tools/analysis/src_directory_report_generator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.seo_meta_tag_extractor": {
+      "tool_id": "tools.analysis.seo_meta_tag_extractor",
+      "path": "tools/analysis/seo_meta_tag_extractor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "bs4",
+        "requests"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.temp_violation_scanner": {
+      "tool_id": "tools.analysis.temp_violation_scanner",
+      "path": "tools/analysis/temp_violation_scanner.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.consolidation_analyzer": {
+      "tool_id": "tools.analysis.consolidation_analyzer",
+      "path": "tools/analysis/consolidation_analyzer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.github_architecture_audit": {
+      "tool_id": "tools.analysis.github_architecture_audit",
+      "path": "tools/analysis/github_architecture_audit.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.source_analyzer": {
+      "tool_id": "tools.analysis.source_analyzer",
+      "path": "tools/analysis/source_analyzer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.tech_debt_ci_summary": {
+      "tool_id": "tools.analysis.tech_debt_ci_summary",
+      "path": "tools/analysis/tech_debt_ci_summary.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "__future__",
+        "mcp_servers",
+        "technical_debt_analyzer"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.unified_analyzer": {
+      "tool_id": "tools.analysis.unified_analyzer",
+      "path": "tools/analysis/unified_analyzer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "difflib",
+        "systems.output_flywheel.unified_tools_metrics"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.analyze_swarm_coordination_patterns": {
+      "tool_id": "tools.analysis.analyze_swarm_coordination_patterns",
+      "path": "tools/analysis/analyze_swarm_coordination_patterns.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.comprehensive_tool_analyzer": {
+      "tool_id": "tools.analysis.comprehensive_tool_analyzer",
+      "path": "tools/analysis/comprehensive_tool_analyzer.py",
+      "dependencies": [
+        "tools.enhanced_integration_analyzer"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.analysis.technical_debt_analyzer": {
+      "tool_id": "tools.analysis.technical_debt_analyzer",
+      "path": "tools/analysis/technical_debt_analyzer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.devops.unified_environment": {
+      "tool_id": "tools.devops.unified_environment",
+      "path": "tools/devops/unified_environment.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "dotenv"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.devops.documentation_assistant": {
+      "tool_id": "tools.devops.documentation_assistant",
+      "path": "tools/devops/documentation_assistant.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "doc_templates_achievements",
+        "doc_templates_mission"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.devops.type_annotation_fixer": {
+      "tool_id": "tools.devops.type_annotation_fixer",
+      "path": "tools/devops/type_annotation_fixer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.cleanup.cleanup_stub_files": {
+      "tool_id": "tools.cleanup.cleanup_stub_files",
+      "path": "tools/cleanup/cleanup_stub_files.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.cleanup.workspace_auto_cleaner": {
+      "tool_id": "tools.cleanup.workspace_auto_cleaner",
+      "path": "tools/cleanup/workspace_auto_cleaner.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.cleanup.session_cleanup_automation": {
+      "tool_id": "tools.cleanup.session_cleanup_automation",
+      "path": "tools/cleanup/session_cleanup_automation.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "dotenv",
+        "requests",
+        "src.core.unified_logging_system"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.cleanup.unified_cleanup": {
+      "tool_id": "tools.cleanup.unified_cleanup",
+      "path": "tools/cleanup/unified_cleanup.py",
+      "dependencies": [
+        "tools.archive_communication_validation_tools",
+        "tools.archive_consolidated_tools",
+        "tools.archive_consolidation_candidates",
+        "tools.archive_deprecated_tools",
+        "tools.archive_merge_plans",
+        "tools.archive_remaining_candidates",
+        "tools.archive_source_repos",
+        "tools.cleanup_obsolete_docs",
+        "tools.cleanup_old_merge_directories",
+        "tools.cleanup_superpowered_venv",
+        "tools.comprehensive_disk_cleanup",
+        "tools.delete_deprecated_tools",
+        "tools.delete_outdated_docs",
+        "tools.disk_space_cleanup",
+        "tools.disk_space_optimization"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.cleanup.cleanup_obsolete_files": {
+      "tool_id": "tools.cleanup.cleanup_obsolete_files",
+      "path": "tools/cleanup/cleanup_obsolete_files.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.monitoring.unified_monitor": {
+      "tool_id": "tools.monitoring.unified_monitor",
+      "path": "tools/monitoring/unified_monitor.py",
+      "dependencies": [
+        "tools.agent_activity_detector"
+      ],
+      "dependents": [],
+      "external_deps": [
+        "psutil",
+        "src.core.deferred_push_queue",
+        "src.core.optimized_stall_resume_prompt",
+        "src.services.messaging_infrastructure"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.verification.unified_verifier": {
+      "tool_id": "tools.verification.unified_verifier",
+      "path": "tools/verification/unified_verifier.py",
+      "dependencies": [
+        "tools.verify_archived_repos",
+        "tools.verify_batch1_main_branches",
+        "tools.verify_batch1_main_content",
+        "tools.verify_batch1_merge_commits",
+        "tools.verify_batch2_prs",
+        "tools.verify_batch2_target_repos",
+        "tools.verify_bulk_deletion_ssot",
+        "tools.verify_contract_leads_merge",
+        "tools.verify_discord_buttons",
+        "tools.verify_failed_merge_repos",
+        "tools.verify_file_comprehensive",
+        "tools.verify_file_usage_enhanced",
+        "tools.verify_github_repo_cicd",
+        "tools.verify_hostinger_credentials",
+        "tools.verify_merged_repo_cicd_enhanced",
+        "tools.verify_phase1_repos",
+        "tools.verify_repo_merge_status"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.coverage.changed_file_report": {
+      "tool_id": "tools.coverage.changed_file_report",
+      "path": "tools/coverage/changed_file_report.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.coverage.mutation_gate": {
+      "tool_id": "tools.coverage.mutation_gate",
+      "path": "tools/coverage/mutation_gate.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.discord.unified_discord": {
+      "tool_id": "tools.discord.unified_discord",
+      "path": "tools/discord/unified_discord.py",
+      "dependencies": [
+        "tools.check_discord_running",
+        "tools.restart_discord_bot",
+        "tools.start_discord_system",
+        "tools.test_all_agent_discord_channels",
+        "tools.test_discord_bot_debug",
+        "tools.test_discord_commands",
+        "tools.upload_file_to_discord",
+        "tools.verify_discord_buttons"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.captain.create_work_session": {
+      "tool_id": "tools.captain.create_work_session",
+      "path": "tools/captain/create_work_session.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.config.timeout_constants",
+        "uuid"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.captain.unified_captain": {
+      "tool_id": "tools.captain.unified_captain",
+      "path": "tools/captain/unified_captain.py",
+      "dependencies": [
+        "tools.captain_find_idle_agents",
+        "tools.captain_inbox_manager",
+        "tools.captain_loop_closer",
+        "tools.captain_swarm_coordinator",
+        "tools.captain_task_assigner",
+        "tools.captain_workspace_cleanup"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.captain.claim_and_fix_master_task": {
+      "tool_id": "tools.captain.claim_and_fix_master_task",
+      "path": "tools/captain/claim_and_fix_master_task.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.captain.task_cli": {
+      "tool_id": "tools.captain.task_cli",
+      "path": "tools/captain/task_cli.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.services.messaging_cli"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.captain.session_transition_automator": {
+      "tool_id": "tools.captain.session_transition_automator",
+      "path": "tools/captain/session_transition_automator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.messaging_core",
+        "src.core.messaging_models_core"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.validation.unified_validator": {
+      "tool_id": "tools.validation.unified_validator",
+      "path": "tools/validation/unified_validator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.validation.schema_org_validator": {
+      "tool_id": "tools.validation.schema_org_validator",
+      "path": "tools/validation/schema_org_validator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "bs4",
+        "requests"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.validation.template_structure_linter": {
+      "tool_id": "tools.validation.template_structure_linter",
+      "path": "tools/validation/template_structure_linter.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "__future__",
+        "src.core.messaging_models",
+        "src.core.messaging_templates"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.validation.audit_imports": {
+      "tool_id": "tools.validation.audit_imports",
+      "path": "tools/validation/audit_imports.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "importlib"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.github.unified_github": {
+      "tool_id": "tools.github.unified_github",
+      "path": "tools/github/unified_github.py",
+      "dependencies": [
+        "tools.analyze_merge_failures",
+        "tools.analyze_merge_plans",
+        "tools.audit_github_repos",
+        "tools.complete_merge_into_main",
+        "tools.fix_github_prs",
+        "tools.github_architecture_audit",
+        "tools.github_pr_debugger",
+        "tools.unified_github_pr_creator"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.consolidation.analyze_dependencies": {
+      "tool_id": "tools.consolidation.analyze_dependencies",
+      "path": "tools/consolidation/analyze_dependencies.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "dependency_mapper"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.consolidation.dependency_mapper": {
+      "tool_id": "tools.consolidation.dependency_mapper",
+      "path": "tools/consolidation/dependency_mapper.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.consolidation.consolidate_messaging": {
+      "tool_id": "tools.consolidation.consolidate_messaging",
+      "path": "tools/consolidation/consolidate_messaging.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.consolidation.tool_inventory": {
+      "tool_id": "tools.consolidation.tool_inventory",
+      "path": "tools/consolidation/tool_inventory.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.agent.unified_agent": {
+      "tool_id": "tools.agent.unified_agent",
+      "path": "tools/agent/unified_agent.py",
+      "dependencies": [
+        "tools.agent_activity_detector",
+        "tools.agent_lifecycle_automator",
+        "tools.agent_orient",
+        "tools.agent_task_finder",
+        "tools.check_status_monitor_and_agent_statuses",
+        "tools.hard_onboard_agents_6_7_8",
+        "tools.heal_stalled_agents"
+      ],
+      "dependents": [],
+      "external_deps": [
+        "src.core.constants.agent_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.autonomous.task_models": {
+      "tool_id": "tools.autonomous.task_models",
+      "path": "tools/autonomous/task_models.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.github_pusher_agent": {
+      "tool_id": "tools.deprecated.github_pusher_agent",
+      "path": "tools/deprecated/github_pusher_agent.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.deferred_push_queue",
+        "src.core.local_repo_layer",
+        "src.core.synthetic_github"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.wordpress_deployment_manager": {
+      "tool_id": "tools.deprecated.wordpress_deployment_manager",
+      "path": "tools/deprecated/wordpress_deployment_manager.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "wordpress_manager"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.agent_task_finder": {
+      "tool_id": "tools.deprecated.agent_task_finder",
+      "path": "tools/deprecated/agent_task_finder.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.analysis_toolkit": {
+      "tool_id": "tools.deprecated.analysis_toolkit",
+      "path": "tools/deprecated/analysis_toolkit.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.web_domain_security_audit": {
+      "tool_id": "tools.deprecated.web_domain_security_audit",
+      "path": "tools/deprecated/web_domain_security_audit.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.START_CHAT_BOT_NOW": {
+      "tool_id": "tools.deprecated.START_CHAT_BOT_NOW",
+      "path": "tools/deprecated/START_CHAT_BOT_NOW.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "dotenv",
+        "src.services.chat_presence"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.auto_workspace_cleanup": {
+      "tool_id": "tools.deprecated.auto_workspace_cleanup",
+      "path": "tools/deprecated/auto_workspace_cleanup.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.start_services_direct": {
+      "tool_id": "tools.deprecated.start_services_direct",
+      "path": "tools/deprecated/start_services_direct.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.task_creator": {
+      "tool_id": "tools.deprecated.task_creator",
+      "path": "tools/deprecated/task_creator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_swarm_response_generator": {
+      "tool_id": "tools.deprecated.captain_swarm_response_generator",
+      "path": "tools/deprecated/captain_swarm_response_generator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.messaging_core"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_find_idle_agents": {
+      "tool_id": "tools.deprecated.captain_find_idle_agents",
+      "path": "tools/deprecated/captain_find_idle_agents.py",
+      "dependencies": [
+        "tools_v2.categories.captain_tools"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.swarm_profile_manager": {
+      "tool_id": "tools.deprecated.swarm_profile_manager",
+      "path": "tools/deprecated/swarm_profile_manager.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.agent_activity_detector": {
+      "tool_id": "tools.deprecated.agent_activity_detector",
+      "path": "tools/deprecated/agent_activity_detector.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.auto_status_updater": {
+      "tool_id": "tools.deprecated.auto_status_updater",
+      "path": "tools/deprecated/auto_status_updater.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_import_validator": {
+      "tool_id": "tools.deprecated.captain_import_validator",
+      "path": "tools/deprecated/captain_import_validator.py",
+      "dependencies": [
+        "tools_v2.categories.import_fix_tools"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_cycle_scheduler": {
+      "tool_id": "tools.deprecated.captain_cycle_scheduler",
+      "path": "tools/deprecated/captain_cycle_scheduler.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.get_swarm_time": {
+      "tool_id": "tools.deprecated.get_swarm_time",
+      "path": "tools/deprecated/get_swarm_time.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.utils.swarm_time"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.sites_registry": {
+      "tool_id": "tools.deprecated.sites_registry",
+      "path": "tools/deprecated/sites_registry.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "__future__"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_roi_quick_calc": {
+      "tool_id": "tools.deprecated.captain_roi_quick_calc",
+      "path": "tools/deprecated/captain_roi_quick_calc.py",
+      "dependencies": [
+        "tools_v2.categories.captain_coordination_tools"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.opportunity_scanners": {
+      "tool_id": "tools.deprecated.opportunity_scanners",
+      "path": "tools/deprecated/opportunity_scanners.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.github_create_and_push_repo": {
+      "tool_id": "tools.deprecated.github_create_and_push_repo",
+      "path": "tools/deprecated/github_create_and_push_repo.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "requests"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.message_delivery_verifier": {
+      "tool_id": "tools.deprecated.message_delivery_verifier",
+      "path": "tools/deprecated/message_delivery_verifier.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.message_queue",
+        "src.core.message_queue_persistence"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.browser_pool_manager": {
+      "tool_id": "tools.deprecated.browser_pool_manager",
+      "path": "tools/deprecated/browser_pool_manager.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "selenium",
+        "selenium.webdriver.chrome.options"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_morning_briefing": {
+      "tool_id": "tools.deprecated.captain_morning_briefing",
+      "path": "tools/deprecated/captain_morning_briefing.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.code_analysis_tool": {
+      "tool_id": "tools.deprecated.code_analysis_tool",
+      "path": "tools/deprecated/code_analysis_tool.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.v2_compliance_checker": {
+      "tool_id": "tools.deprecated.v2_compliance_checker",
+      "path": "tools/deprecated/v2_compliance_checker.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.swarm_orchestrator": {
+      "tool_id": "tools.deprecated.swarm_orchestrator",
+      "path": "tools/deprecated/swarm_orchestrator.py",
+      "dependencies": [
+        "tools.gas_messaging",
+        "tools.opportunity_scanners",
+        "tools.task_creator"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.devlog_compressor": {
+      "tool_id": "tools.deprecated.devlog_compressor",
+      "path": "tools/deprecated/devlog_compressor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.github_consolidation_recovery": {
+      "tool_id": "tools.deprecated.github_consolidation_recovery",
+      "path": "tools/deprecated/github_consolidation_recovery.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "requests",
+        "src.core.config.timeout_constants",
+        "src.core.deferred_push_queue",
+        "src.core.synthetic_github"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.find_github_token": {
+      "tool_id": "tools.deprecated.find_github_token",
+      "path": "tools/deprecated/find_github_token.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.unified_github_pr_creator": {
+      "tool_id": "tools.deprecated.unified_github_pr_creator",
+      "path": "tools/deprecated/unified_github_pr_creator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "requests",
+        "src.core.config.timeout_constants",
+        "src.core.utils.github_utils"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.start_discord_system": {
+      "tool_id": "tools.deprecated.start_discord_system",
+      "path": "tools/deprecated/start_discord_system.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "atexit",
+        "dotenv",
+        "psutil",
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_task_assigner": {
+      "tool_id": "tools.deprecated.captain_task_assigner",
+      "path": "tools/deprecated/captain_task_assigner.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "captain_swarm_coordinator"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.reset_stuck_messages": {
+      "tool_id": "tools.deprecated.reset_stuck_messages",
+      "path": "tools/deprecated/reset_stuck_messages.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.agent_fuel_monitor": {
+      "tool_id": "tools.deprecated.agent_fuel_monitor",
+      "path": "tools/deprecated/agent_fuel_monitor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_gas_check": {
+      "tool_id": "tools.deprecated.captain_gas_check",
+      "path": "tools/deprecated/captain_gas_check.py",
+      "dependencies": [
+        "tools_v2.categories.captain_tools_extension"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_send_jet_fuel": {
+      "tool_id": "tools.deprecated.captain_send_jet_fuel",
+      "path": "tools/deprecated/captain_send_jet_fuel.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.messaging_core"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.auto_remediate_loc": {
+      "tool_id": "tools.deprecated.auto_remediate_loc",
+      "path": "tools/deprecated/auto_remediate_loc.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "__future__"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.git_work_verifier": {
+      "tool_id": "tools.deprecated.git_work_verifier",
+      "path": "tools/deprecated/git_work_verifier.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.auto_validate_cycle_v2": {
+      "tool_id": "tools.deprecated.auto_validate_cycle_v2",
+      "path": "tools/deprecated/auto_validate_cycle_v2.py",
+      "dependencies": [
+        "tools.agent_cycle_v2_report_validator"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_message_processor": {
+      "tool_id": "tools.deprecated.captain_message_processor",
+      "path": "tools/deprecated/captain_message_processor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.messaging_core"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.swarm_website_auto_update": {
+      "tool_id": "tools.deprecated.swarm_website_auto_update",
+      "path": "tools/deprecated/swarm_website_auto_update.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.services.swarm_website.auto_updater"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.swarm_system_inventory": {
+      "tool_id": "tools.deprecated.swarm_system_inventory",
+      "path": "tools/deprecated/swarm_system_inventory.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.swarm_activity_feed_poster": {
+      "tool_id": "tools.deprecated.swarm_activity_feed_poster",
+      "path": "tools/deprecated/swarm_activity_feed_poster.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "requests",
+        "requests.auth"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.auto_fix_missing_imports": {
+      "tool_id": "tools.deprecated.auto_fix_missing_imports",
+      "path": "tools/deprecated/auto_fix_missing_imports.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_architectural_checker": {
+      "tool_id": "tools.deprecated.captain_architectural_checker",
+      "path": "tools/deprecated/captain_architectural_checker.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.coverage_analyzer": {
+      "tool_id": "tools.deprecated.coverage_analyzer",
+      "path": "tools/deprecated/coverage_analyzer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.website_manager": {
+      "tool_id": "tools.deprecated.website_manager",
+      "path": "tools/deprecated/website_manager.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "paramiko",
+        "wordpress_manager"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_pattern_optimizer": {
+      "tool_id": "tools.deprecated.captain_pattern_optimizer",
+      "path": "tools/deprecated/captain_pattern_optimizer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "captain_loop_closer",
+        "captain_swarm_coordinator"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.devlog_manager": {
+      "tool_id": "tools.deprecated.devlog_manager",
+      "path": "tools/deprecated/devlog_manager.py",
+      "dependencies": [
+        "tools.discord_mermaid_renderer",
+        "tools_v2.utils.discord_mermaid_renderer"
+      ],
+      "dependents": [],
+      "external_deps": [
+        "devlog_compressor",
+        "dotenv",
+        "requests",
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.monitor_twitch_bot_status": {
+      "tool_id": "tools.deprecated.monitor_twitch_bot_status",
+      "path": "tools/deprecated/monitor_twitch_bot_status.py",
+      "dependencies": [
+        "tools.start_twitchbot_with_fixes"
+      ],
+      "dependents": [],
+      "external_deps": [
+        "dotenv",
+        "src.services.chat_presence.chat_presence_orchestrator"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.monitor_4agent_dependency_chain": {
+      "tool_id": "tools.deprecated.monitor_4agent_dependency_chain",
+      "path": "tools/deprecated/monitor_4agent_dependency_chain.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.toolbelt_help": {
+      "tool_id": "tools.deprecated.toolbelt_help",
+      "path": "tools/deprecated/toolbelt_help.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.import_chain_validator": {
+      "tool_id": "tools.deprecated.import_chain_validator",
+      "path": "tools/deprecated/import_chain_validator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "importlib.util"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.refactoring_models": {
+      "tool_id": "tools.deprecated.refactoring_models",
+      "path": "tools/deprecated/refactoring_models.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.meta_tag_completeness_checker": {
+      "tool_id": "tools.deprecated.meta_tag_completeness_checker",
+      "path": "tools/deprecated/meta_tag_completeness_checker.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "seo_meta_tag_extractor"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.memory_leak_scanner": {
+      "tool_id": "tools.deprecated.memory_leak_scanner",
+      "path": "tools/deprecated/memory_leak_scanner.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.auto_learn_preferences": {
+      "tool_id": "tools.deprecated.auto_learn_preferences",
+      "path": "tools/deprecated/auto_learn_preferences.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_next_task_picker": {
+      "tool_id": "tools.deprecated.captain_next_task_picker",
+      "path": "tools/deprecated/captain_next_task_picker.py",
+      "dependencies": [
+        "tools_v2.categories.captain_coordination_tools"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.task_verification_tool": {
+      "tool_id": "tools.deprecated.task_verification_tool",
+      "path": "tools/deprecated/task_verification_tool.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.toolbelt_runner": {
+      "tool_id": "tools.deprecated.toolbelt_runner",
+      "path": "tools/deprecated/toolbelt_runner.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "importlib"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.auto_assign_next_round": {
+      "tool_id": "tools.deprecated.auto_assign_next_round",
+      "path": "tools/deprecated/auto_assign_next_round.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.agent_mode_manager",
+        "src.services.messaging_infrastructure"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_loop_detector": {
+      "tool_id": "tools.deprecated.captain_loop_detector",
+      "path": "tools/deprecated/captain_loop_detector.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.architecture_review": {
+      "tool_id": "tools.deprecated.architecture_review",
+      "path": "tools/deprecated/architecture_review.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_inbox_assistant": {
+      "tool_id": "tools.deprecated.captain_inbox_assistant",
+      "path": "tools/deprecated/captain_inbox_assistant.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.messaging_core"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_inbox_helper": {
+      "tool_id": "tools.deprecated.captain_inbox_helper",
+      "path": "tools/deprecated/captain_inbox_helper.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.discord_bot_troubleshoot": {
+      "tool_id": "tools.deprecated.discord_bot_troubleshoot",
+      "path": "tools/deprecated/discord_bot_troubleshoot.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "discord",
+        "dotenv",
+        "psutil",
+        "src.discord_commander.unified_discord_bot"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.v2_function_size_checker": {
+      "tool_id": "tools.deprecated.v2_function_size_checker",
+      "path": "tools/deprecated/v2_function_size_checker.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.github_repo_roi_calculator": {
+      "tool_id": "tools.deprecated.github_repo_roi_calculator",
+      "path": "tools/deprecated/github_repo_roi_calculator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.autonomous_leaderboard": {
+      "tool_id": "tools.deprecated.autonomous_leaderboard",
+      "path": "tools/deprecated/autonomous_leaderboard.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.gamification.autonomous_competition_system"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_leaderboard_update": {
+      "tool_id": "tools.deprecated.captain_leaderboard_update",
+      "path": "tools/deprecated/captain_leaderboard_update.py",
+      "dependencies": [
+        "tools_v2.categories.captain_coordination_tools"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.start_twitchbot_with_fixes": {
+      "tool_id": "tools.deprecated.start_twitchbot_with_fixes",
+      "path": "tools/deprecated/start_twitchbot_with_fixes.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "dotenv",
+        "src.services.chat_presence"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.clean_message_queue": {
+      "tool_id": "tools.deprecated.clean_message_queue",
+      "path": "tools/deprecated/clean_message_queue.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.discord_bot_cleanup": {
+      "tool_id": "tools.deprecated.discord_bot_cleanup",
+      "path": "tools/deprecated/discord_bot_cleanup.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "psutil",
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.start_message_queue_processor": {
+      "tool_id": "tools.deprecated.start_message_queue_processor",
+      "path": "tools/deprecated/start_message_queue_processor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.message_queue_processor"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.swarm_brain_cli": {
+      "tool_id": "tools.deprecated.swarm_brain_cli",
+      "path": "tools/deprecated/swarm_brain_cli.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.swarm_brain.swarm_memory"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.start_monitoring_system": {
+      "tool_id": "tools.deprecated.start_monitoring_system",
+      "path": "tools/deprecated/start_monitoring_system.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.orchestrators.overnight.orchestrator"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.discord_mermaid_renderer": {
+      "tool_id": "tools.deprecated.discord_mermaid_renderer",
+      "path": "tools/deprecated/discord_mermaid_renderer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "dotenv",
+        "requests",
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.devlog_poster": {
+      "tool_id": "tools.deprecated.devlog_poster",
+      "path": "tools/deprecated/devlog_poster.py",
+      "dependencies": [
+        "tools.discord_mermaid_renderer",
+        "tools_v2.utils.discord_mermaid_renderer"
+      ],
+      "dependents": [],
+      "external_deps": [
+        "dotenv",
+        "requests",
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_update_log": {
+      "tool_id": "tools.deprecated.captain_update_log",
+      "path": "tools/deprecated/captain_update_log.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.stop_twitchbot": {
+      "tool_id": "tools.deprecated.stop_twitchbot",
+      "path": "tools/deprecated/stop_twitchbot.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "signal",
+        "src.services.chat_presence.chat_presence_orchestrator"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_loop_closer": {
+      "tool_id": "tools.deprecated.captain_loop_closer",
+      "path": "tools/deprecated/captain_loop_closer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "captain_swarm_coordinator"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.swarm_status_broadcaster": {
+      "tool_id": "tools.deprecated.swarm_status_broadcaster",
+      "path": "tools/deprecated/swarm_status_broadcaster.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.autonomous_task_engine": {
+      "tool_id": "tools.deprecated.autonomous_task_engine",
+      "path": "tools/deprecated/autonomous_task_engine.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "autonomous.task_models",
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.mission_control": {
+      "tool_id": "tools.deprecated.mission_control",
+      "path": "tools/deprecated/mission_control.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.swarm_coordination_dashboard": {
+      "tool_id": "tools.deprecated.swarm_coordination_dashboard",
+      "path": "tools/deprecated/swarm_coordination_dashboard.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.repository_analyzer": {
+      "tool_id": "tools.deprecated.repository_analyzer",
+      "path": "tools/deprecated/repository_analyzer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "difflib"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.agent_checkin": {
+      "tool_id": "tools.deprecated.agent_checkin",
+      "path": "tools/deprecated/agent_checkin.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.utils.unified_utilities"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.circular_import_detector": {
+      "tool_id": "tools.deprecated.circular_import_detector",
+      "path": "tools/deprecated/circular_import_detector.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.agent_message_history": {
+      "tool_id": "tools.deprecated.agent_message_history",
+      "path": "tools/deprecated/agent_message_history.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.agent_orient": {
+      "tool_id": "tools.deprecated.agent_orient",
+      "path": "tools/deprecated/agent_orient.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.start_github_pusher_service": {
+      "tool_id": "tools.deprecated.start_github_pusher_service",
+      "path": "tools/deprecated/start_github_pusher_service.py",
+      "dependencies": [
+        "tools.github_pusher_agent"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.agent_mission_controller": {
+      "tool_id": "tools.deprecated.agent_mission_controller",
+      "path": "tools/deprecated/agent_mission_controller.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.monitor_twitch_bot": {
+      "tool_id": "tools.deprecated.monitor_twitch_bot",
+      "path": "tools/deprecated/monitor_twitch_bot.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.repo_safe_merge": {
+      "tool_id": "tools.deprecated.repo_safe_merge",
+      "path": "tools/deprecated/repo_safe_merge.py",
+      "dependencies": [
+        "tools.github_rate_limit_handler",
+        "tools.unified_github_pr_creator"
+      ],
+      "dependents": [],
+      "external_deps": [
+        "src.core.consolidation_buffer",
+        "src.core.deferred_push_queue",
+        "src.core.local_repo_layer",
+        "src.core.merge_conflict_resolver",
+        "src.core.repository_merge_improvements",
+        "src.core.synthetic_github",
+        "stat"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.discord_startup_listener": {
+      "tool_id": "tools.deprecated.discord_startup_listener",
+      "path": "tools/deprecated/discord_startup_listener.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "atexit",
+        "discord",
+        "discord.ext",
+        "dotenv"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_swarm_coordinator": {
+      "tool_id": "tools.deprecated.captain_swarm_coordinator",
+      "path": "tools/deprecated/captain_swarm_coordinator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.gas_messaging": {
+      "tool_id": "tools.deprecated.gas_messaging",
+      "path": "tools/deprecated/gas_messaging.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.github_pr_debugger": {
+      "tool_id": "tools.deprecated.github_pr_debugger",
+      "path": "tools/deprecated/github_pr_debugger.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "requests",
+        "src.core.config.timeout_constants",
+        "src.core.utils.github_utils"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.agent_lifecycle_automator": {
+      "tool_id": "tools.deprecated.agent_lifecycle_automator",
+      "path": "tools/deprecated/agent_lifecycle_automator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.wordpress_admin_deployer": {
+      "tool_id": "tools.deprecated.wordpress_admin_deployer",
+      "path": "tools/deprecated/wordpress_admin_deployer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "requests",
+        "selenium",
+        "selenium.common.exceptions",
+        "selenium.webdriver.chrome.options",
+        "selenium.webdriver.common.by",
+        "selenium.webdriver.support",
+        "selenium.webdriver.support.ui",
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.compliance_dashboard": {
+      "tool_id": "tools.deprecated.compliance_dashboard",
+      "path": "tools/deprecated/compliance_dashboard.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "complexity_analyzer",
+        "compliance_history_tracker",
+        "dashboard_data_aggregator",
+        "dashboard_html_generator_refactored",
+        "refactoring_suggestion_engine",
+        "v2_compliance_checker"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.v2_compliance_summary": {
+      "tool_id": "tools.deprecated.v2_compliance_summary",
+      "path": "tools/deprecated/v2_compliance_summary.py",
+      "dependencies": [
+        "tools.comprehensive_v2_check"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.toolbelt": {
+      "tool_id": "tools.deprecated.toolbelt",
+      "path": "tools/deprecated/toolbelt.py",
+      "dependencies": [
+        "tools.toolbelt_help",
+        "tools.toolbelt_registry",
+        "tools.toolbelt_runner"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.wordpress_manager": {
+      "tool_id": "tools.deprecated.wordpress_manager",
+      "path": "tools/deprecated/wordpress_manager.py",
+      "dependencies": [
+        "tools.activate_wordpress_theme"
+      ],
+      "dependents": [],
+      "external_deps": [
+        "dotenv",
+        "paramiko",
+        "requests"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.swarm_site_health_automation": {
+      "tool_id": "tools.deprecated.swarm_site_health_automation",
+      "path": "tools/deprecated/swarm_site_health_automation.py",
+      "dependencies": [
+        "tools.hostinger_wordpress_manager"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.session_quick_checkin": {
+      "tool_id": "tools.deprecated.session_quick_checkin",
+      "path": "tools/deprecated/session_quick_checkin.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.refactoring_ast_analyzer": {
+      "tool_id": "tools.deprecated.refactoring_ast_analyzer",
+      "path": "tools/deprecated/refactoring_ast_analyzer.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.compliance_history_tracker": {
+      "tool_id": "tools.deprecated.compliance_history_tracker",
+      "path": "tools/deprecated/compliance_history_tracker.py",
+      "dependencies": [
+        "tools.complexity_analyzer",
+        "tools.compliance_history_database",
+        "tools.compliance_history_models",
+        "tools.compliance_history_reports",
+        "tools.v2_compliance_checker"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.auto_inbox_processor": {
+      "tool_id": "tools.deprecated.auto_inbox_processor",
+      "path": "tools/deprecated/auto_inbox_processor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.agent_cycle_v2_report_validator": {
+      "tool_id": "tools.deprecated.agent_cycle_v2_report_validator",
+      "path": "tools/deprecated/agent_cycle_v2_report_validator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.unified_blogging_automation": {
+      "tool_id": "tools.deprecated.unified_blogging_automation",
+      "path": "tools/deprecated/unified_blogging_automation.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "markdown",
+        "markdown2",
+        "requests",
+        "requests.auth",
+        "src.core.config.timeout_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.v2_compliance_dashboard_sync": {
+      "tool_id": "tools.deprecated.v2_compliance_dashboard_sync",
+      "path": "tools/deprecated/v2_compliance_dashboard_sync.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_inbox_manager": {
+      "tool_id": "tools.deprecated.captain_inbox_manager",
+      "path": "tools/deprecated/captain_inbox_manager.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.v2_checker_formatters": {
+      "tool_id": "tools.deprecated.v2_checker_formatters",
+      "path": "tools/deprecated/v2_checker_formatters.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "complexity_analyzer",
+        "refactoring_suggestion_engine",
+        "v2_checker_models"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_snapshot": {
+      "tool_id": "tools.deprecated.captain_snapshot",
+      "path": "tools/deprecated/captain_snapshot.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.utils.unified_utilities"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.project_scan": {
+      "tool_id": "tools.deprecated.project_scan",
+      "path": "tools/deprecated/project_scan.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.deprecated.captain_progress_dashboard": {
+      "tool_id": "tools.deprecated.captain_progress_dashboard",
+      "path": "tools/deprecated/captain_progress_dashboard.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.wordpress.unified_wordpress": {
+      "tool_id": "tools.wordpress.unified_wordpress",
+      "path": "tools/wordpress/unified_wordpress.py",
+      "dependencies": [
+        "tools.activate_wordpress_theme",
+        "tools.check_theme_syntax",
+        "tools.clear_wordpress_transients",
+        "tools.debug_wordpress_deployer",
+        "tools.deploy_via_sftp",
+        "tools.deploy_via_wordpress_admin",
+        "tools.deploy_via_wordpress_rest_api",
+        "tools.diagnose_ariajet_wordpress_path",
+        "tools.enable_wordpress_debug"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.cli.command_discovery": {
+      "tool_id": "tools.cli.command_discovery",
+      "path": "tools/cli/command_discovery.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.debug.fix_message_queue": {
+      "tool_id": "tools.debug.fix_message_queue",
+      "path": "tools/debug/fix_message_queue.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.debug.diagnose_github_cli_auth": {
+      "tool_id": "tools.debug.diagnose_github_cli_auth",
+      "path": "tools/debug/diagnose_github_cli_auth.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.debug.unified_debugger": {
+      "tool_id": "tools.debug.unified_debugger",
+      "path": "tools/debug/unified_debugger.py",
+      "dependencies": [
+        "tools.debug.debug_message_queue"
+      ],
+      "dependents": [],
+      "external_deps": [
+        "glob",
+        "psutil"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.debug.debug_message_queue": {
+      "tool_id": "tools.debug.debug_message_queue",
+      "path": "tools/debug/debug_message_queue.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.debug.unified_debugger"
+      ],
+      "external_deps": [
+        "psutil"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.debug.check_stuck_messages": {
+      "tool_id": "tools.debug.check_stuck_messages",
+      "path": "tools/debug/check_stuck_messages.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.core.message_queue_error_monitor"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.communication.messaging_infrastructure_validator": {
+      "tool_id": "tools.communication.messaging_infrastructure_validator",
+      "path": "tools/communication/messaging_infrastructure_validator.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.communication.unified_communication_validator"
+      ],
+      "external_deps": [
+        "src.core.message_queue_persistence",
+        "src.core.utils.validation_utils"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.communication.unified_communication_validator": {
+      "tool_id": "tools.communication.unified_communication_validator",
+      "path": "tools/communication/unified_communication_validator.py",
+      "dependencies": [
+        "tools.communication.agent_status_validator",
+        "tools.communication.coordination_pattern_validator",
+        "tools.communication.coordination_validator",
+        "tools.communication.integration_validator",
+        "tools.communication.message_validator",
+        "tools.communication.messaging_infrastructure_validator",
+        "tools.communication.multi_agent_validator",
+        "tools.communication.swarm_status_validator"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.communication.coordination_pattern_validator": {
+      "tool_id": "tools.communication.coordination_pattern_validator",
+      "path": "tools/communication/coordination_pattern_validator.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.communication.unified_communication_validator"
+      ],
+      "external_deps": [
+        "src.core.utils.validation_utils"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.communication.agent_status_validator": {
+      "tool_id": "tools.communication.agent_status_validator",
+      "path": "tools/communication/agent_status_validator.py",
+      "dependencies": [
+        "tools.agent_activity_detector"
+      ],
+      "dependents": [
+        "tools.communication.unified_communication_validator"
+      ],
+      "external_deps": [
+        "src.core.constants.agent_constants"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.communication.message_validator": {
+      "tool_id": "tools.communication.message_validator",
+      "path": "tools/communication/message_validator.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.communication.unified_communication_validator"
+      ],
+      "external_deps": [
+        "src.core.utils.validation_utils"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.communication.integration_validator": {
+      "tool_id": "tools.communication.integration_validator",
+      "path": "tools/communication/integration_validator.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.communication.unified_communication_validator"
+      ],
+      "external_deps": [
+        "src.core.utils.validation_utils"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.communication.swarm_status_validator": {
+      "tool_id": "tools.communication.swarm_status_validator",
+      "path": "tools/communication/swarm_status_validator.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.communication.unified_communication_validator"
+      ],
+      "external_deps": [
+        "src.core.constants.agent_constants",
+        "src.core.utils.validation_utils"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.communication.multi_agent_validator": {
+      "tool_id": "tools.communication.multi_agent_validator",
+      "path": "tools/communication/multi_agent_validator.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.communication.unified_communication_validator"
+      ],
+      "external_deps": [
+        "src.core.constants.agent_constants",
+        "src.core.multi_agent_request_validator",
+        "src.core.utils.validation_utils"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.communication.coordination_validator": {
+      "tool_id": "tools.communication.coordination_validator",
+      "path": "tools/communication/coordination_validator.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.communication.unified_communication_validator"
+      ],
+      "external_deps": [
+        "src.core.utils.validation_utils"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.codemods.migrate_managers": {
+      "tool_id": "tools.codemods.migrate_managers",
+      "path": "tools/codemods/migrate_managers.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "__future__",
+        "difflib"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.codemods.migrate_orchestrators": {
+      "tool_id": "tools.codemods.migrate_orchestrators",
+      "path": "tools/codemods/migrate_orchestrators.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "__future__",
+        "difflib"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.codemods.replace_prints_with_logger": {
+      "tool_id": "tools.codemods.replace_prints_with_logger",
+      "path": "tools/codemods/replace_prints_with_logger.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "__future__",
+        "astor"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.toolbelt.executors.messaging_executor": {
+      "tool_id": "tools.toolbelt.executors.messaging_executor",
+      "path": "tools/toolbelt/executors/messaging_executor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.toolbelt.executors.v2_executor": {
+      "tool_id": "tools.toolbelt.executors.v2_executor",
+      "path": "tools/toolbelt/executors/v2_executor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.toolbelt.executors.onboarding_executor": {
+      "tool_id": "tools.toolbelt.executors.onboarding_executor",
+      "path": "tools/toolbelt/executors/onboarding_executor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.toolbelt.executors.consolidation_executor": {
+      "tool_id": "tools.toolbelt.executors.consolidation_executor",
+      "path": "tools/toolbelt/executors/consolidation_executor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.toolbelt.executors.leaderboard_executor": {
+      "tool_id": "tools.toolbelt.executors.leaderboard_executor",
+      "path": "tools/toolbelt/executors/leaderboard_executor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.toolbelt.executors.swarm_executor": {
+      "tool_id": "tools.toolbelt.executors.swarm_executor",
+      "path": "tools/toolbelt/executors/swarm_executor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.toolbelt.executors.agent_executor": {
+      "tool_id": "tools.toolbelt.executors.agent_executor",
+      "path": "tools/toolbelt/executors/agent_executor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.services.agent_management"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.toolbelt.executors.compliance_tracking_executor": {
+      "tool_id": "tools.toolbelt.executors.compliance_tracking_executor",
+      "path": "tools/toolbelt/executors/compliance_tracking_executor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.toolbelt.executors.refactor_executor": {
+      "tool_id": "tools.toolbelt.executors.refactor_executor",
+      "path": "tools/toolbelt/executors/refactor_executor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.toolbelt.executors.compliance_executor": {
+      "tool_id": "tools.toolbelt.executors.compliance_executor",
+      "path": "tools/toolbelt/executors/compliance_executor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "importlib"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.toolbelt.executors.vector_executor": {
+      "tool_id": "tools.toolbelt.executors.vector_executor",
+      "path": "tools/toolbelt/executors/vector_executor.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "src.services.agent_management",
+        "src.services.work_indexer"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools.cli.commands.registry": {
+      "tool_id": "tools.cli.commands.registry",
+      "path": "tools/cli/commands/registry.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.cli.dispatchers.unified_dispatcher"
+      ],
+      "external_deps": [],
+      "registry": "toolbelt_registry"
+    },
+    "tools.cli.dispatchers.unified_dispatcher": {
+      "tool_id": "tools.cli.dispatchers.unified_dispatcher",
+      "path": "tools/cli/dispatchers/unified_dispatcher.py",
+      "dependencies": [
+        "tools.cli.commands.registry"
+      ],
+      "dependents": [],
+      "external_deps": [
+        "importlib"
+      ],
+      "registry": "toolbelt_registry"
+    },
+    "tools_v2.toolbelt_core": {
+      "tool_id": "tools_v2.toolbelt_core",
+      "path": "tools_v2/toolbelt_core.py",
+      "dependencies": [],
+      "dependents": [
+        "tools_v2.categories.github_consolidation_tools",
+        "tools_v2.demo_swarm_pulse"
+      ],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "tool_registry"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.rank_tools_v2": {
+      "tool_id": "tools_v2.rank_tools_v2",
+      "path": "tools_v2/rank_tools_v2.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.advisor_cli": {
+      "tool_id": "tools_v2.advisor_cli",
+      "path": "tools_v2/advisor_cli.py",
+      "dependencies": [
+        "tools_v2.categories.intelligent_mission_advisor"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.tool_registry": {
+      "tool_id": "tools_v2.tool_registry",
+      "path": "tools_v2/tool_registry.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "importlib"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.demo_swarm_pulse": {
+      "tool_id": "tools_v2.demo_swarm_pulse",
+      "path": "tools_v2/demo_swarm_pulse.py",
+      "dependencies": [
+        "tools_v2.toolbelt_core"
+      ],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.adapters.base_adapter": {
+      "tool_id": "tools_v2.adapters.base_adapter",
+      "path": "tools_v2/adapters/base_adapter.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.adapters.error_types": {
+      "tool_id": "tools_v2.adapters.error_types",
+      "path": "tools_v2/adapters/error_types.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.swarm_state_reader": {
+      "tool_id": "tools_v2.categories.swarm_state_reader",
+      "path": "tools_v2/categories/swarm_state_reader.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.validation_tools": {
+      "tool_id": "tools_v2.categories.validation_tools",
+      "path": "tools_v2/categories/validation_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "integrity_validator",
+        "src.features.flags",
+        "src.obs.metrics",
+        "ssot_validator"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.message_analytics_tools": {
+      "tool_id": "tools_v2.categories.message_analytics_tools",
+      "path": "tools_v2/categories/message_analytics_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "src.core.agent_activity_tracker",
+        "src.core.analytics.engines.metrics_engine",
+        "src.core.analytics.framework.pattern_analysis_engine",
+        "src.repositories.message_repository"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.discord_tools": {
+      "tool_id": "tools_v2.categories.discord_tools",
+      "path": "tools_v2/categories/discord_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.refactoring_tools": {
+      "tool_id": "tools_v2.categories.refactoring_tools",
+      "path": "tools_v2/categories/refactoring_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.v2_tools": {
+      "tool_id": "tools_v2.categories.v2_tools",
+      "path": "tools_v2/categories/v2_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.swarm_consciousness": {
+      "tool_id": "tools_v2.categories.swarm_consciousness",
+      "path": "tools_v2/categories/swarm_consciousness.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.infrastructure_workspace_tools": {
+      "tool_id": "tools_v2.categories.infrastructure_workspace_tools",
+      "path": "tools_v2/categories/infrastructure_workspace_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "auto_status_updater",
+        "session_transition_automator",
+        "swarm_status_broadcaster",
+        "unified_agent_status_monitor",
+        "workspace_auto_cleaner",
+        "workspace_health_monitor"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.intelligent_mission_advisor_analysis": {
+      "tool_id": "tools_v2.categories.intelligent_mission_advisor_analysis",
+      "path": "tools_v2/categories/intelligent_mission_advisor_analysis.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.infrastructure_audit_tools": {
+      "tool_id": "tools_v2.categories.infrastructure_audit_tools",
+      "path": "tools_v2/categories/infrastructure_audit_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "audit_broken_tools",
+        "comprehensive_tool_runtime_audit",
+        "importlib"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.coordination_tools": {
+      "tool_id": "tools_v2.categories.coordination_tools",
+      "path": "tools_v2/categories/coordination_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "swarm_status_broadcaster"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.import_fix_tools": {
+      "tool_id": "tools_v2.categories.import_fix_tools",
+      "path": "tools_v2/categories/import_fix_tools.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.deprecated.captain_import_validator"
+      ],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "import_chain_validator",
+        "importlib.util",
+        "validate_imports"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.captain_tools_utilities": {
+      "tool_id": "tools_v2.categories.captain_tools_utilities",
+      "path": "tools_v2/categories/captain_tools_utilities.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "captain_tools_architecture"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.captain_tools_core": {
+      "tool_id": "tools_v2.categories.captain_tools_core",
+      "path": "tools_v2/categories/captain_tools_core.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.agent_ops_tools": {
+      "tool_id": "tools_v2.categories.agent_ops_tools",
+      "path": "tools_v2/categories/agent_ops_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "src.services.agent_management"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.swarm_brain_tools": {
+      "tool_id": "tools_v2.categories.swarm_brain_tools",
+      "path": "tools_v2/categories/swarm_brain_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "src.swarm_brain"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.workflow_tools": {
+      "tool_id": "tools_v2.categories.workflow_tools",
+      "path": "tools_v2/categories/workflow_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.captain_tools": {
+      "tool_id": "tools_v2.categories.captain_tools",
+      "path": "tools_v2/categories/captain_tools.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.deprecated.captain_find_idle_agents"
+      ],
+      "external_deps": [
+        "captain_tools_advanced",
+        "captain_tools_core",
+        "captain_tools_monitoring"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.memory_safety_tools": {
+      "tool_id": "tools_v2.categories.memory_safety_tools",
+      "path": "tools_v2/categories/memory_safety_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "importlib.util"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.onboarding_tools": {
+      "tool_id": "tools_v2.categories.onboarding_tools",
+      "path": "tools_v2/categories/onboarding_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.analysis_tools": {
+      "tool_id": "tools_v2.categories.analysis_tools",
+      "path": "tools_v2/categories/analysis_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.intelligent_mission_advisor_guidance": {
+      "tool_id": "tools_v2.categories.intelligent_mission_advisor_guidance",
+      "path": "tools_v2/categories/intelligent_mission_advisor_guidance.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.config_tools": {
+      "tool_id": "tools_v2.categories.config_tools",
+      "path": "tools_v2/categories/config_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.messaging_tools": {
+      "tool_id": "tools_v2.categories.messaging_tools",
+      "path": "tools_v2/categories/messaging_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.debate_tools": {
+      "tool_id": "tools_v2.categories.debate_tools",
+      "path": "tools_v2/categories/debate_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.discord_profile_tools": {
+      "tool_id": "tools_v2.categories.discord_profile_tools",
+      "path": "tools_v2/categories/discord_profile_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "core.tool_spec"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.integration_tools": {
+      "tool_id": "tools_v2.categories.integration_tools",
+      "path": "tools_v2/categories/integration_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "audit_imports"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.message_history_tools": {
+      "tool_id": "tools_v2.categories.message_history_tools",
+      "path": "tools_v2/categories/message_history_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "core.tool_spec",
+        "src.repositories.message_repository"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.intelligent_mission_advisor": {
+      "tool_id": "tools_v2.categories.intelligent_mission_advisor",
+      "path": "tools_v2/categories/intelligent_mission_advisor.py",
+      "dependencies": [],
+      "dependents": [
+        "tools_v2.advisor_cli"
+      ],
+      "external_deps": [],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.ssot_validation_tools": {
+      "tool_id": "tools_v2.categories.ssot_validation_tools",
+      "path": "tools_v2/categories/ssot_validation_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.captain_tools_coordination": {
+      "tool_id": "tools_v2.categories.captain_tools_coordination",
+      "path": "tools_v2/categories/captain_tools_coordination.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.mod_deployment_tools": {
+      "tool_id": "tools_v2.categories.mod_deployment_tools",
+      "path": "tools_v2/categories/mod_deployment_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "core.dependency_resolver",
+        "core.health_checker",
+        "core.mod_manager",
+        "core.profile_manager",
+        "core.thunderstore_client"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.session_tools": {
+      "tool_id": "tools_v2.categories.session_tools",
+      "path": "tools_v2/categories/session_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.captain_tools_architecture": {
+      "tool_id": "tools_v2.categories.captain_tools_architecture",
+      "path": "tools_v2/categories/captain_tools_architecture.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.captain_tools_messaging": {
+      "tool_id": "tools_v2.categories.captain_tools_messaging",
+      "path": "tools_v2/categories/captain_tools_messaging.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.captain_tools_advanced": {
+      "tool_id": "tools_v2.categories.captain_tools_advanced",
+      "path": "tools_v2/categories/captain_tools_advanced.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.docs_tools": {
+      "tool_id": "tools_v2.categories.docs_tools",
+      "path": "tools_v2/categories/docs_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.health_tools": {
+      "tool_id": "tools_v2.categories.health_tools",
+      "path": "tools_v2/categories/health_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.infrastructure_tools": {
+      "tool_id": "tools_v2.categories.infrastructure_tools",
+      "path": "tools_v2/categories/infrastructure_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "infrastructure_audit_tools",
+        "infrastructure_utility_tools",
+        "infrastructure_workspace_tools"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.captain_tools_validation": {
+      "tool_id": "tools_v2.categories.captain_tools_validation",
+      "path": "tools_v2/categories/captain_tools_validation.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.intelligent_mission_advisor_adapter": {
+      "tool_id": "tools_v2.categories.intelligent_mission_advisor_adapter",
+      "path": "tools_v2/categories/intelligent_mission_advisor_adapter.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "intelligent_mission_advisor"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.captain_tools_monitoring": {
+      "tool_id": "tools_v2.categories.captain_tools_monitoring",
+      "path": "tools_v2/categories/captain_tools_monitoring.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.communication_tools": {
+      "tool_id": "tools_v2.categories.communication_tools",
+      "path": "tools_v2/categories/communication_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "dotenv",
+        "requests"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.captain_tools_extension": {
+      "tool_id": "tools_v2.categories.captain_tools_extension",
+      "path": "tools_v2/categories/captain_tools_extension.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.deprecated.captain_gas_check"
+      ],
+      "external_deps": [
+        "captain_tools_architecture",
+        "captain_tools_core",
+        "captain_tools_messaging",
+        "captain_tools_utilities"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.memory_safety_adapters": {
+      "tool_id": "tools_v2.categories.memory_safety_adapters",
+      "path": "tools_v2/categories/memory_safety_adapters.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "memory_safety_tools"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.oss_tools": {
+      "tool_id": "tools_v2.categories.oss_tools",
+      "path": "tools_v2/categories/oss_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "src.infrastructure.persistence.sqlite_task_repo",
+        "src.opensource.contribution_tracker",
+        "src.opensource.github_integration",
+        "src.opensource.portfolio_builder",
+        "src.opensource.project_manager",
+        "src.opensource.task_integration"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.dashboard_tools": {
+      "tool_id": "tools_v2.categories.dashboard_tools",
+      "path": "tools_v2/categories/dashboard_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "dashboard_charts",
+        "dashboard_data_aggregator",
+        "dashboard_html_generator_refactored",
+        "dashboard_styles"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.discord_webhook_tools": {
+      "tool_id": "tools_v2.categories.discord_webhook_tools",
+      "path": "tools_v2/categories/discord_webhook_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "discord",
+        "discord.ext",
+        "requests"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.infrastructure_utility_tools": {
+      "tool_id": "tools_v2.categories.infrastructure_utility_tools",
+      "path": "tools_v2/categories/infrastructure_utility_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "browser_pool_manager"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.swarm_mission_control": {
+      "tool_id": "tools_v2.categories.swarm_mission_control",
+      "path": "tools_v2/categories/swarm_mission_control.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.agent_activity_tools": {
+      "tool_id": "tools_v2.categories.agent_activity_tools",
+      "path": "tools_v2/categories/agent_activity_tools.py",
+      "dependencies": [
+        "tools_v2.categories.agent_activity_tools"
+      ],
+      "dependents": [
+        "tools_v2.categories.agent_activity_tools"
+      ],
+      "external_deps": [
+        "adapters.base_adapter",
+        "core.tool_spec",
+        "src.core.message_queue"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.mission_calculator": {
+      "tool_id": "tools_v2.categories.mission_calculator",
+      "path": "tools_v2/categories/mission_calculator.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.bi_tools": {
+      "tool_id": "tools_v2.categories.bi_tools",
+      "path": "tools_v2/categories/bi_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.observability_tools": {
+      "tool_id": "tools_v2.categories.observability_tools",
+      "path": "tools_v2/categories/observability_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "src.obs.metrics"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.autonomous_workflow_tools": {
+      "tool_id": "tools_v2.categories.autonomous_workflow_tools",
+      "path": "tools_v2/categories/autonomous_workflow_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "__future__",
+        "src.services.messaging_service"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.message_task_tools": {
+      "tool_id": "tools_v2.categories.message_task_tools",
+      "path": "tools_v2/categories/message_task_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "src.message_task.dedupe",
+        "src.message_task.messaging_integration",
+        "src.message_task.parsers.ai_parser",
+        "src.message_task.parsers.fallback_regex",
+        "src.message_task.parsers.structured_parser"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.compliance_tools": {
+      "tool_id": "tools_v2.categories.compliance_tools",
+      "path": "tools_v2/categories/compliance_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.proposal_tools": {
+      "tool_id": "tools_v2.categories.proposal_tools",
+      "path": "tools_v2/categories/proposal_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.captain_coordination_tools": {
+      "tool_id": "tools_v2.categories.captain_coordination_tools",
+      "path": "tools_v2/categories/captain_coordination_tools.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.deprecated.captain_leaderboard_update",
+        "tools.deprecated.captain_next_task_picker",
+        "tools.deprecated.captain_roi_quick_calc"
+      ],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "src.swarm_brain.swarm_memory",
+        "toolbelt_core"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.queue_monitor_tools": {
+      "tool_id": "tools_v2.categories.queue_monitor_tools",
+      "path": "tools_v2/categories/queue_monitor_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "core.tool_spec",
+        "src.core.message_queue"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.vector_tools": {
+      "tool_id": "tools_v2.categories.vector_tools",
+      "path": "tools_v2/categories/vector_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "src.services.agent_management",
+        "src.services.vector_database",
+        "src.services.vector_database.vector_database_models",
+        "src.services.work_indexer"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.system_tools": {
+      "tool_id": "tools_v2.categories.system_tools",
+      "path": "tools_v2/categories/system_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "core.tool_spec"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.web_tools": {
+      "tool_id": "tools_v2.categories.web_tools",
+      "path": "tools_v2/categories/web_tools.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "discord_web_test_automation",
+        "utils.discord_mermaid_renderer"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.categories.github_consolidation_tools": {
+      "tool_id": "tools_v2.categories.github_consolidation_tools",
+      "path": "tools_v2/categories/github_consolidation_tools.py",
+      "dependencies": [
+        "tools_v2.toolbelt_core"
+      ],
+      "dependents": [],
+      "external_deps": [
+        "adapters.base_adapter",
+        "core.tool_spec",
+        "src.tools.github_scanner"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.utils.discord_mermaid_renderer": {
+      "tool_id": "tools_v2.utils.discord_mermaid_renderer",
+      "path": "tools_v2/utils/discord_mermaid_renderer.py",
+      "dependencies": [],
+      "dependents": [
+        "tools.deprecated.devlog_manager",
+        "tools.deprecated.devlog_poster"
+      ],
+      "external_deps": [
+        "dotenv",
+        "requests"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.core.tool_facade": {
+      "tool_id": "tools_v2.core.tool_facade",
+      "path": "tools_v2/core/tool_facade.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [
+        "toolbelt_core"
+      ],
+      "registry": "tool_registry_v2"
+    },
+    "tools_v2.core.tool_spec": {
+      "tool_id": "tools_v2.core.tool_spec",
+      "path": "tools_v2/core/tool_spec.py",
+      "dependencies": [],
+      "dependents": [],
+      "external_deps": [],
+      "registry": "tool_registry_v2"
+    }
+  },
+  "graph": {
+    "tools.toolbelt_registry": [],
+    "tools.doc_templates_mission": [],
+    "tools.doc_templates_achievements": [],
+    "tools.thea.thea_login_handler_refactored": [],
+    "tools.thea.thea_automation_cookie_manager": [],
+    "tools.thea.demo_working_thea": [],
+    "tools.thea.thea_automation_browser": [],
+    "tools.thea.thea_login_detector": [],
+    "tools.thea.send_prompt_file": [],
+    "tools.thea.tell_thea_session_summary": [],
+    "tools.thea.simple_thea_communication": [],
+    "tools.thea.demo_thea_simple": [],
+    "tools.thea.thea_login_handler": [],
+    "tools.thea.thea_cookie_manager": [],
+    "tools.thea.analyze_chatgpt_selectors": [],
+    "tools.thea.setup_thea_cookies": [],
+    "tools.thea.demo_thea_live": [],
+    "tools.thea.demo_thea_interactive": [],
+    "tools.thea.run_headless_refresh": [],
+    "tools.thea.thea_keepalive": [],
+    "tools.thea.thea_headless_send": [],
+    "tools.thea.thea_automation": [],
+    "tools.thea.debug_chatgpt_elements": [],
+    "tools.thea.thea_automation_messaging": [],
+    "tools.thea.thea_authentication_handler": [],
+    "tools.thea.thea_undetected_helper": [],
+    "tools.security.unified_security_scanner": [],
+    "tools.security.check_sensitive_files": [],
+    "tools.analysis.scan_technical_debt": [],
+    "tools.analysis.refactoring_suggestion_engine": [],
+    "tools.analysis.src_directory_report_generator": [],
+    "tools.analysis.seo_meta_tag_extractor": [],
+    "tools.analysis.temp_violation_scanner": [],
+    "tools.analysis.consolidation_analyzer": [],
+    "tools.analysis.github_architecture_audit": [],
+    "tools.analysis.source_analyzer": [],
+    "tools.analysis.tech_debt_ci_summary": [],
+    "tools.analysis.unified_analyzer": [],
+    "tools.analysis.analyze_swarm_coordination_patterns": [],
+    "tools.analysis.comprehensive_tool_analyzer": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.analysis.technical_debt_analyzer": [],
+    "tools.devops.unified_environment": [],
+    "tools.devops.documentation_assistant": [],
+    "tools.devops.type_annotation_fixer": [],
+    "tools.cleanup.cleanup_stub_files": [],
+    "tools.cleanup.workspace_auto_cleaner": [],
+    "tools.cleanup.session_cleanup_automation": [],
+    "tools.cleanup.unified_cleanup": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.cleanup.cleanup_obsolete_files": [],
+    "tools.monitoring.unified_monitor": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.verification.unified_verifier": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.coverage.changed_file_report": [],
+    "tools.coverage.mutation_gate": [],
+    "tools.discord.unified_discord": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.captain.create_work_session": [],
+    "tools.captain.unified_captain": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.captain.claim_and_fix_master_task": [],
+    "tools.captain.task_cli": [],
+    "tools.captain.session_transition_automator": [],
+    "tools.validation.unified_validator": [],
+    "tools.validation.schema_org_validator": [],
+    "tools.validation.template_structure_linter": [],
+    "tools.validation.audit_imports": [],
+    "tools.github.unified_github": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.consolidation.analyze_dependencies": [],
+    "tools.consolidation.dependency_mapper": [],
+    "tools.consolidation.consolidate_messaging": [],
+    "tools.consolidation.tool_inventory": [],
+    "tools.agent.unified_agent": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.autonomous.task_models": [],
+    "tools.deprecated.github_pusher_agent": [],
+    "tools.deprecated.wordpress_deployment_manager": [],
+    "tools.deprecated.agent_task_finder": [],
+    "tools.deprecated.analysis_toolkit": [],
+    "tools.deprecated.web_domain_security_audit": [],
+    "tools.deprecated.START_CHAT_BOT_NOW": [],
+    "tools.deprecated.auto_workspace_cleanup": [],
+    "tools.deprecated.start_services_direct": [],
+    "tools.deprecated.task_creator": [],
+    "tools.deprecated.captain_swarm_response_generator": [],
+    "tools.deprecated.captain_find_idle_agents": [
+      "tools_v2.categories.captain_tools"
+    ],
+    "tools.deprecated.swarm_profile_manager": [],
+    "tools.deprecated.agent_activity_detector": [],
+    "tools.deprecated.auto_status_updater": [],
+    "tools.deprecated.captain_import_validator": [
+      "tools_v2.categories.import_fix_tools"
+    ],
+    "tools.deprecated.captain_cycle_scheduler": [],
+    "tools.deprecated.get_swarm_time": [],
+    "tools.deprecated.sites_registry": [],
+    "tools.deprecated.captain_roi_quick_calc": [
+      "tools_v2.categories.captain_coordination_tools"
+    ],
+    "tools.deprecated.opportunity_scanners": [],
+    "tools.deprecated.github_create_and_push_repo": [],
+    "tools.deprecated.message_delivery_verifier": [],
+    "tools.deprecated.browser_pool_manager": [],
+    "tools.deprecated.captain_morning_briefing": [],
+    "tools.deprecated.code_analysis_tool": [],
+    "tools.deprecated.v2_compliance_checker": [],
+    "tools.deprecated.swarm_orchestrator": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.deprecated.devlog_compressor": [],
+    "tools.deprecated.github_consolidation_recovery": [],
+    "tools.deprecated.find_github_token": [],
+    "tools.deprecated.unified_github_pr_creator": [],
+    "tools.deprecated.start_discord_system": [],
+    "tools.deprecated.captain_task_assigner": [],
+    "tools.deprecated.reset_stuck_messages": [],
+    "tools.deprecated.agent_fuel_monitor": [],
+    "tools.deprecated.captain_gas_check": [
+      "tools_v2.categories.captain_tools_extension"
+    ],
+    "tools.deprecated.captain_send_jet_fuel": [],
+    "tools.deprecated.auto_remediate_loc": [],
+    "tools.deprecated.git_work_verifier": [],
+    "tools.deprecated.auto_validate_cycle_v2": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.deprecated.captain_message_processor": [],
+    "tools.deprecated.swarm_website_auto_update": [],
+    "tools.deprecated.swarm_system_inventory": [],
+    "tools.deprecated.swarm_activity_feed_poster": [],
+    "tools.deprecated.auto_fix_missing_imports": [],
+    "tools.deprecated.captain_architectural_checker": [],
+    "tools.deprecated.coverage_analyzer": [],
+    "tools.deprecated.website_manager": [],
+    "tools.deprecated.captain_pattern_optimizer": [],
+    "tools.deprecated.devlog_manager": [
+      "tools.toolbelt_registry",
+      "tools_v2.utils.discord_mermaid_renderer"
+    ],
+    "tools.deprecated.monitor_twitch_bot_status": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.deprecated.monitor_4agent_dependency_chain": [],
+    "tools.deprecated.toolbelt_help": [],
+    "tools.deprecated.import_chain_validator": [],
+    "tools.deprecated.refactoring_models": [],
+    "tools.deprecated.meta_tag_completeness_checker": [],
+    "tools.deprecated.memory_leak_scanner": [],
+    "tools.deprecated.auto_learn_preferences": [],
+    "tools.deprecated.captain_next_task_picker": [
+      "tools_v2.categories.captain_coordination_tools"
+    ],
+    "tools.deprecated.task_verification_tool": [],
+    "tools.deprecated.toolbelt_runner": [],
+    "tools.deprecated.auto_assign_next_round": [],
+    "tools.deprecated.captain_loop_detector": [],
+    "tools.deprecated.architecture_review": [],
+    "tools.deprecated.captain_inbox_assistant": [],
+    "tools.deprecated.captain_inbox_helper": [],
+    "tools.deprecated.discord_bot_troubleshoot": [],
+    "tools.deprecated.v2_function_size_checker": [],
+    "tools.deprecated.github_repo_roi_calculator": [],
+    "tools.deprecated.autonomous_leaderboard": [],
+    "tools.deprecated.captain_leaderboard_update": [
+      "tools_v2.categories.captain_coordination_tools"
+    ],
+    "tools.deprecated.start_twitchbot_with_fixes": [],
+    "tools.deprecated.clean_message_queue": [],
+    "tools.deprecated.discord_bot_cleanup": [],
+    "tools.deprecated.start_message_queue_processor": [],
+    "tools.deprecated.swarm_brain_cli": [],
+    "tools.deprecated.start_monitoring_system": [],
+    "tools.deprecated.discord_mermaid_renderer": [],
+    "tools.deprecated.devlog_poster": [
+      "tools.toolbelt_registry",
+      "tools_v2.utils.discord_mermaid_renderer"
+    ],
+    "tools.deprecated.captain_update_log": [],
+    "tools.deprecated.stop_twitchbot": [],
+    "tools.deprecated.captain_loop_closer": [],
+    "tools.deprecated.swarm_status_broadcaster": [],
+    "tools.deprecated.autonomous_task_engine": [],
+    "tools.deprecated.mission_control": [],
+    "tools.deprecated.swarm_coordination_dashboard": [],
+    "tools.deprecated.repository_analyzer": [],
+    "tools.deprecated.agent_checkin": [],
+    "tools.deprecated.circular_import_detector": [],
+    "tools.deprecated.agent_message_history": [],
+    "tools.deprecated.agent_orient": [],
+    "tools.deprecated.start_github_pusher_service": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.deprecated.agent_mission_controller": [],
+    "tools.deprecated.monitor_twitch_bot": [],
+    "tools.deprecated.repo_safe_merge": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.deprecated.discord_startup_listener": [],
+    "tools.deprecated.captain_swarm_coordinator": [],
+    "tools.deprecated.gas_messaging": [],
+    "tools.deprecated.github_pr_debugger": [],
+    "tools.deprecated.agent_lifecycle_automator": [],
+    "tools.deprecated.wordpress_admin_deployer": [],
+    "tools.deprecated.compliance_dashboard": [],
+    "tools.deprecated.v2_compliance_summary": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.deprecated.toolbelt": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.deprecated.wordpress_manager": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.deprecated.swarm_site_health_automation": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.deprecated.session_quick_checkin": [],
+    "tools.deprecated.refactoring_ast_analyzer": [],
+    "tools.deprecated.compliance_history_tracker": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.deprecated.auto_inbox_processor": [],
+    "tools.deprecated.agent_cycle_v2_report_validator": [],
+    "tools.deprecated.unified_blogging_automation": [],
+    "tools.deprecated.v2_compliance_dashboard_sync": [],
+    "tools.deprecated.captain_inbox_manager": [],
+    "tools.deprecated.v2_checker_formatters": [],
+    "tools.deprecated.captain_snapshot": [],
+    "tools.deprecated.project_scan": [],
+    "tools.deprecated.captain_progress_dashboard": [],
+    "tools.wordpress.unified_wordpress": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.cli.command_discovery": [],
+    "tools.debug.fix_message_queue": [],
+    "tools.debug.diagnose_github_cli_auth": [],
+    "tools.debug.unified_debugger": [
+      "tools.debug.debug_message_queue"
+    ],
+    "tools.debug.debug_message_queue": [],
+    "tools.debug.check_stuck_messages": [],
+    "tools.communication.messaging_infrastructure_validator": [],
+    "tools.communication.unified_communication_validator": [
+      "tools.communication.agent_status_validator",
+      "tools.communication.coordination_pattern_validator",
+      "tools.communication.coordination_validator",
+      "tools.communication.integration_validator",
+      "tools.communication.message_validator",
+      "tools.communication.messaging_infrastructure_validator",
+      "tools.communication.multi_agent_validator",
+      "tools.communication.swarm_status_validator"
+    ],
+    "tools.communication.coordination_pattern_validator": [],
+    "tools.communication.agent_status_validator": [
+      "tools.toolbelt_registry"
+    ],
+    "tools.communication.message_validator": [],
+    "tools.communication.integration_validator": [],
+    "tools.communication.swarm_status_validator": [],
+    "tools.communication.multi_agent_validator": [],
+    "tools.communication.coordination_validator": [],
+    "tools.codemods.migrate_managers": [],
+    "tools.codemods.migrate_orchestrators": [],
+    "tools.codemods.replace_prints_with_logger": [],
+    "tools.toolbelt.executors.messaging_executor": [],
+    "tools.toolbelt.executors.v2_executor": [],
+    "tools.toolbelt.executors.onboarding_executor": [],
+    "tools.toolbelt.executors.consolidation_executor": [],
+    "tools.toolbelt.executors.leaderboard_executor": [],
+    "tools.toolbelt.executors.swarm_executor": [],
+    "tools.toolbelt.executors.agent_executor": [],
+    "tools.toolbelt.executors.compliance_tracking_executor": [],
+    "tools.toolbelt.executors.refactor_executor": [],
+    "tools.toolbelt.executors.compliance_executor": [],
+    "tools.toolbelt.executors.vector_executor": [],
+    "tools.cli.commands.registry": [],
+    "tools.cli.dispatchers.unified_dispatcher": [
+      "tools.cli.commands.registry"
+    ],
+    "tools_v2.toolbelt_core": [],
+    "tools_v2.rank_tools_v2": [],
+    "tools_v2.advisor_cli": [
+      "tools_v2.categories.intelligent_mission_advisor"
+    ],
+    "tools_v2.tool_registry": [],
+    "tools_v2.demo_swarm_pulse": [
+      "tools_v2.toolbelt_core"
+    ],
+    "tools_v2.adapters.base_adapter": [],
+    "tools_v2.adapters.error_types": [],
+    "tools_v2.categories.swarm_state_reader": [],
+    "tools_v2.categories.validation_tools": [],
+    "tools_v2.categories.message_analytics_tools": [],
+    "tools_v2.categories.discord_tools": [],
+    "tools_v2.categories.refactoring_tools": [],
+    "tools_v2.categories.v2_tools": [],
+    "tools_v2.categories.swarm_consciousness": [],
+    "tools_v2.categories.infrastructure_workspace_tools": [],
+    "tools_v2.categories.intelligent_mission_advisor_analysis": [],
+    "tools_v2.categories.infrastructure_audit_tools": [],
+    "tools_v2.categories.coordination_tools": [],
+    "tools_v2.categories.import_fix_tools": [],
+    "tools_v2.categories.captain_tools_utilities": [],
+    "tools_v2.categories.captain_tools_core": [],
+    "tools_v2.categories.agent_ops_tools": [],
+    "tools_v2.categories.swarm_brain_tools": [],
+    "tools_v2.categories.workflow_tools": [],
+    "tools_v2.categories.captain_tools": [],
+    "tools_v2.categories.memory_safety_tools": [],
+    "tools_v2.categories.onboarding_tools": [],
+    "tools_v2.categories.analysis_tools": [],
+    "tools_v2.categories.intelligent_mission_advisor_guidance": [],
+    "tools_v2.categories.config_tools": [],
+    "tools_v2.categories.messaging_tools": [],
+    "tools_v2.categories.debate_tools": [],
+    "tools_v2.categories.discord_profile_tools": [],
+    "tools_v2.categories.integration_tools": [],
+    "tools_v2.categories.message_history_tools": [],
+    "tools_v2.categories.intelligent_mission_advisor": [],
+    "tools_v2.categories.ssot_validation_tools": [],
+    "tools_v2.categories.captain_tools_coordination": [],
+    "tools_v2.categories.mod_deployment_tools": [],
+    "tools_v2.categories.session_tools": [],
+    "tools_v2.categories.captain_tools_architecture": [],
+    "tools_v2.categories.captain_tools_messaging": [],
+    "tools_v2.categories.captain_tools_advanced": [],
+    "tools_v2.categories.docs_tools": [],
+    "tools_v2.categories.health_tools": [],
+    "tools_v2.categories.infrastructure_tools": [],
+    "tools_v2.categories.captain_tools_validation": [],
+    "tools_v2.categories.intelligent_mission_advisor_adapter": [],
+    "tools_v2.categories.captain_tools_monitoring": [],
+    "tools_v2.categories.communication_tools": [],
+    "tools_v2.categories.captain_tools_extension": [],
+    "tools_v2.categories.memory_safety_adapters": [],
+    "tools_v2.categories.oss_tools": [],
+    "tools_v2.categories.dashboard_tools": [],
+    "tools_v2.categories.discord_webhook_tools": [],
+    "tools_v2.categories.infrastructure_utility_tools": [],
+    "tools_v2.categories.swarm_mission_control": [],
+    "tools_v2.categories.agent_activity_tools": [
+      "tools_v2.categories.agent_activity_tools"
+    ],
+    "tools_v2.categories.mission_calculator": [],
+    "tools_v2.categories.bi_tools": [],
+    "tools_v2.categories.observability_tools": [],
+    "tools_v2.categories.autonomous_workflow_tools": [],
+    "tools_v2.categories.message_task_tools": [],
+    "tools_v2.categories.compliance_tools": [],
+    "tools_v2.categories.proposal_tools": [],
+    "tools_v2.categories.captain_coordination_tools": [],
+    "tools_v2.categories.queue_monitor_tools": [],
+    "tools_v2.categories.vector_tools": [],
+    "tools_v2.categories.system_tools": [],
+    "tools_v2.categories.web_tools": [],
+    "tools_v2.categories.github_consolidation_tools": [
+      "tools_v2.toolbelt_core"
+    ],
+    "tools_v2.utils.discord_mermaid_renderer": [],
+    "tools_v2.core.tool_facade": [],
+    "tools_v2.core.tool_spec": []
+  },
+  "external_dependencies": [
+    "__future__",
+    "adapters.base_adapter",
+    "adapters.error_types",
+    "astor",
+    "atexit",
+    "audit_broken_tools",
+    "audit_imports",
+    "auto_status_updater",
+    "autonomous.task_models",
+    "browser_pool_manager",
+    "bs4",
+    "captain_loop_closer",
+    "captain_swarm_coordinator",
+    "captain_tools_advanced",
+    "captain_tools_architecture",
+    "captain_tools_core",
+    "captain_tools_messaging",
+    "captain_tools_monitoring",
+    "captain_tools_utilities",
+    "complexity_analyzer",
+    "compliance_history_tracker",
+    "comprehensive_tool_runtime_audit",
+    "core.dependency_resolver",
+    "core.health_checker",
+    "core.mod_manager",
+    "core.profile_manager",
+    "core.thunderstore_client",
+    "core.tool_spec",
+    "dashboard_charts",
+    "dashboard_data_aggregator",
+    "dashboard_html_generator_refactored",
+    "dashboard_styles",
+    "dependency_mapper",
+    "devlog_compressor",
+    "difflib",
+    "discord",
+    "discord.ext",
+    "discord_web_test_automation",
+    "doc_templates_achievements",
+    "doc_templates_mission",
+    "dotenv",
+    "glob",
+    "import_chain_validator",
+    "importlib",
+    "importlib.util",
+    "infrastructure_audit_tools",
+    "infrastructure_utility_tools",
+    "infrastructure_workspace_tools",
+    "integrity_validator",
+    "intelligent_mission_advisor",
+    "markdown",
+    "markdown2",
+    "mcp_servers",
+    "memory_safety_tools",
+    "paramiko",
+    "pip_audit",
+    "psutil",
+    "pyautogui",
+    "pyotp",
+    "pyperclip",
+    "refactoring_ast_analyzer",
+    "refactoring_cli",
+    "refactoring_models",
+    "refactoring_suggestion_engine",
+    "requests",
+    "requests.auth",
+    "response_detector",
+    "selenium",
+    "selenium.common.exceptions",
+    "selenium.webdriver.chrome.options",
+    "selenium.webdriver.common.by",
+    "selenium.webdriver.support",
+    "selenium.webdriver.support.ui",
+    "seo_meta_tag_extractor",
+    "session_transition_automator",
+    "signal",
+    "src.core.agent_activity_tracker",
+    "src.core.agent_mode_manager",
+    "src.core.analytics.engines.metrics_engine",
+    "src.core.analytics.framework.pattern_analysis_engine",
+    "src.core.config.timeout_constants",
+    "src.core.consolidation_buffer",
+    "src.core.constants.agent_constants",
+    "src.core.deferred_push_queue",
+    "src.core.gamification.autonomous_competition_system",
+    "src.core.local_repo_layer",
+    "src.core.merge_conflict_resolver",
+    "src.core.message_queue",
+    "src.core.message_queue_error_monitor",
+    "src.core.message_queue_persistence",
+    "src.core.message_queue_processor",
+    "src.core.messaging_core",
+    "src.core.messaging_models",
+    "src.core.messaging_models_core",
+    "src.core.messaging_templates",
+    "src.core.multi_agent_request_validator",
+    "src.core.optimized_stall_resume_prompt",
+    "src.core.repository_merge_improvements",
+    "src.core.synthetic_github",
+    "src.core.unified_logging_system",
+    "src.core.utils.github_utils",
+    "src.core.utils.validation_utils",
+    "src.discord_commander.unified_discord_bot",
+    "src.features.flags",
+    "src.infrastructure.browser",
+    "src.infrastructure.browser.browser_models",
+    "src.infrastructure.browser.thea_browser_service",
+    "src.infrastructure.persistence.sqlite_task_repo",
+    "src.message_task.dedupe",
+    "src.message_task.messaging_integration",
+    "src.message_task.parsers.ai_parser",
+    "src.message_task.parsers.fallback_regex",
+    "src.message_task.parsers.structured_parser",
+    "src.obs.metrics",
+    "src.opensource.contribution_tracker",
+    "src.opensource.github_integration",
+    "src.opensource.portfolio_builder",
+    "src.opensource.project_manager",
+    "src.opensource.task_integration",
+    "src.orchestrators.overnight.orchestrator",
+    "src.repositories.message_repository",
+    "src.services.agent_management",
+    "src.services.chat_presence",
+    "src.services.chat_presence.chat_presence_orchestrator",
+    "src.services.messaging_cli",
+    "src.services.messaging_infrastructure",
+    "src.services.messaging_service",
+    "src.services.swarm_website.auto_updater",
+    "src.services.thea",
+    "src.services.vector_database",
+    "src.services.vector_database.vector_database_models",
+    "src.services.work_indexer",
+    "src.swarm_brain",
+    "src.swarm_brain.swarm_memory",
+    "src.tools.github_scanner",
+    "src.utils.swarm_time",
+    "src.utils.unified_utilities",
+    "ssot_validator",
+    "stat",
+    "swarm_status_broadcaster",
+    "systems.output_flywheel.unified_tools_metrics",
+    "technical_debt_analyzer",
+    "thea_authentication_handler",
+    "thea_automation",
+    "thea_cookie_manager",
+    "thea_login_detector",
+    "thea_login_handler",
+    "tool_registry",
+    "toolbelt_core",
+    "undetected_chromedriver",
+    "unified_agent_status_monitor",
+    "utils.discord_mermaid_renderer",
+    "uuid",
+    "v2_checker_models",
+    "v2_compliance_checker",
+    "validate_imports",
+    "wordpress_manager",
+    "workspace_auto_cleaner",
+    "workspace_health_monitor"
+  ],
+  "circular_dependencies": [
+    [
+      "tools_v2.categories.agent_activity_tools",
+      "tools_v2.categories.agent_activity_tools"
+    ]
+  ],
+  "registry_relationships": {
+    "toolbelt_registry": [
+      "tools.agent.unified_agent",
+      "tools.analysis.analyze_swarm_coordination_patterns",
+      "tools.analysis.comprehensive_tool_analyzer",
+      "tools.analysis.consolidation_analyzer",
+      "tools.analysis.refactoring_suggestion_engine",
+      "tools.analysis.seo_meta_tag_extractor",
+      "tools.analysis.source_analyzer",
+      "tools.analysis.tech_debt_ci_summary",
+      "tools.analysis.technical_debt_analyzer",
+      "tools.analysis.unified_analyzer",
+      "tools.captain.claim_and_fix_master_task",
+      "tools.captain.create_work_session",
+      "tools.captain.session_transition_automator",
+      "tools.captain.task_cli",
+      "tools.captain.unified_captain",
+      "tools.cleanup.session_cleanup_automation",
+      "tools.cleanup.unified_cleanup",
+      "tools.cleanup.workspace_auto_cleaner",
+      "tools.debug.check_stuck_messages",
+      "tools.debug.debug_message_queue",
+      "tools.debug.diagnose_github_cli_auth",
+      "tools.debug.fix_message_queue",
+      "tools.debug.unified_debugger",
+      "tools.devops.documentation_assistant",
+      "tools.devops.type_annotation_fixer",
+      "tools.devops.unified_environment",
+      "tools.discord.unified_discord",
+      "tools.github.unified_github",
+      "tools.monitoring.unified_monitor",
+      "tools.security.check_sensitive_files",
+      "tools.security.unified_security_scanner",
+      "tools.validation.audit_imports",
+      "tools.validation.schema_org_validator",
+      "tools.validation.template_structure_linter",
+      "tools.validation.unified_validator",
+      "tools.verification.integration_test_coordinator",
+      "tools.verification.stress_test_messaging_queue",
+      "tools.verification.unified_verifier",
+      "tools.wordpress.unified_wordpress"
+    ],
+    "tool_registry_lock": [
+      "tools_v2.categories.agent_ops_tools",
+      "tools_v2.categories.analysis_tools",
+      "tools_v2.categories.bi_tools",
+      "tools_v2.categories.captain_tools",
+      "tools_v2.categories.compliance_tools",
+      "tools_v2.categories.config_tools",
+      "tools_v2.categories.coordination_tools",
+      "tools_v2.categories.discord_tools",
+      "tools_v2.categories.docs_tools",
+      "tools_v2.categories.health_tools",
+      "tools_v2.categories.infrastructure_tools",
+      "tools_v2.categories.integration_tools",
+      "tools_v2.categories.intelligent_mission_advisor_adapter",
+      "tools_v2.categories.memory_safety_adapters",
+      "tools_v2.categories.message_task_tools",
+      "tools_v2.categories.messaging_tools",
+      "tools_v2.categories.observability_tools",
+      "tools_v2.categories.onboarding_tools",
+      "tools_v2.categories.oss_tools",
+      "tools_v2.categories.session_tools",
+      "tools_v2.categories.swarm_brain_tools",
+      "tools_v2.categories.swarm_consciousness",
+      "tools_v2.categories.testing_tools",
+      "tools_v2.categories.v2_tools",
+      "tools_v2.categories.validation_tools",
+      "tools_v2.categories.vector_tools",
+      "tools_v2.categories.workflow_tools"
+    ]
+  }
+}

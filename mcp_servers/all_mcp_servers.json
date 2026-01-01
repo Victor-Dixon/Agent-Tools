@@ -89,6 +89,31 @@
       "command": "python",
       "args": ["mcp_servers/performance_profiler_server.py"],
       "description": "⚡ Identify performance bottlenecks"
+    },
+    "mod-deployment": {
+      "command": "python",
+      "args": ["mcp_servers/mod_deployment_server.py"],
+      "description": "🎮 Thunderstore mod deployment automation for game servers"
+    },
+    "server-monitoring": {
+      "command": "python",
+      "args": ["mcp_servers/server_monitoring_server.py"],
+      "description": "📊 Game server performance monitoring and alerting"
+    },
+    "backup-automation": {
+      "command": "python",
+      "args": ["mcp_servers/backup_automation_server.py"],
+      "description": "💾 Game server backup, recovery, and cloud sync"
+    },
+    "discord-integration": {
+      "command": "python",
+      "args": ["mcp_servers/discord_integration_server.py"],
+      "description": "💬 Discord webhooks, status posts, role sync, notifications"
+    },
+    "player-analytics": {
+      "command": "python",
+      "args": ["mcp_servers/player_analytics_server.py"],
+      "description": "📈 Player session tracking, engagement metrics, retention analytics"
     }
   }
 }

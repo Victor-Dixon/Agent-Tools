@@ -346,11 +346,11 @@ class ToolRegistry:
             flag: Tool flag (e.g., "--scan", "-s")
 
         Returns:
-            Tool configuration or None if not found
+            Tool configuration with 'id' included, or None if not found
         """
         tool_id = self._flag_map.get(flag)
         if tool_id:
-            return self.tools[tool_id]
+            return {"id": tool_id, **self.tools[tool_id]}
         return None
 
     def get_tool_by_name(self, name: str) -> dict[str, Any] | None:

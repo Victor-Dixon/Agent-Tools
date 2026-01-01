@@ -1,0 +1,6677 @@
+{
+  "tools": {
+    "unified_agent": {
+      "name": "unified_agent",
+      "path": "agent/unified_agent.py",
+      "type": "unified",
+      "category": "agent_ops",
+      "lines_of_code": 360,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "asyncio",
+        "datetime",
+        "src",
+        "src.core.constants.agent_constants",
+        "tools",
+        "tools.agent_activity_detector",
+        "tools.agent_lifecycle_automator",
+        "tools.agent_orient",
+        "tools.agent_task_finder",
+        "tools.check_status_monitor_and_agent_statuses",
+        "tools.hard_onboard_agents_6_7_8",
+        "tools.heal_stalled_agents"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--agents",
+        "--json",
+        "--keyword"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "analyze_swarm_coordination_patterns": {
+      "name": "analyze_swarm_coordination_patterns",
+      "path": "analysis/analyze_swarm_coordination_patterns.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 495,
+      "v2_compliant": false,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "comprehensive_tool_analyzer": {
+      "name": "comprehensive_tool_analyzer",
+      "path": "analysis/comprehensive_tool_analyzer.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 366,
+      "v2_compliant": true,
+      "dependencies": [
+        "tools",
+        "tools.enhanced_integration_analyzer"
+      ],
+      "cli_flags": [],
+      "registry": "toolbelt_registry",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "consolidation_analyzer": {
+      "name": "consolidation_analyzer",
+      "path": "analysis/consolidation_analyzer.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 204,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [
+        "--candidates",
+        "--filter-qa",
+        "--mode",
+        "--output",
+        "--tools-dir"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "github_architecture_audit": {
+      "name": "github_architecture_audit",
+      "path": "analysis/github_architecture_audit.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 361,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "refactoring_suggestion_engine": {
+      "name": "refactoring_suggestion_engine",
+      "path": "analysis/refactoring_suggestion_engine.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 338,
+      "v2_compliant": true,
+      "dependencies": [
+        "refactoring_ast_analyzer",
+        "refactoring_cli",
+        "refactoring_models"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "scan_technical_debt": {
+      "name": "scan_technical_debt",
+      "path": "analysis/scan_technical_debt.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 233,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [
+        "--output",
+        "--path",
+        "--summary-only"
+      ],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "seo_meta_tag_extractor": {
+      "name": "seo_meta_tag_extractor",
+      "path": "analysis/seo_meta_tag_extractor.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 222,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "bs4",
+        "requests",
+        "urllib",
+        "urllib.parse"
+      ],
+      "cli_flags": [
+        "--json",
+        "--timeout",
+        "--validate"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "source_analyzer": {
+      "name": "source_analyzer",
+      "path": "analysis/source_analyzer.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 224,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--directories",
+        "--file",
+        "--json",
+        "--messaging",
+        "--output",
+        "--structure"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "src_directory_report_generator": {
+      "name": "src_directory_report_generator",
+      "path": "analysis/src_directory_report_generator.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 166,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "tech_debt_ci_summary": {
+      "name": "tech_debt_ci_summary",
+      "path": "analysis/tech_debt_ci_summary.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 284,
+      "v2_compliant": true,
+      "dependencies": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "mcp_servers",
+        "technical_debt_analyzer"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "technical_debt_analyzer": {
+      "name": "technical_debt_analyzer",
+      "path": "analysis/technical_debt_analyzer.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 343,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "hashlib"
+      ],
+      "cli_flags": [
+        "--output",
+        "--project-root",
+        "--report"
+      ],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "temp_violation_scanner": {
+      "name": "temp_violation_scanner",
+      "path": "analysis/temp_violation_scanner.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 50,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_analyzer": {
+      "name": "unified_analyzer",
+      "path": "analysis/unified_analyzer.py",
+      "type": "unified",
+      "category": "analysis",
+      "lines_of_code": 403,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "difflib",
+        "subprocess",
+        "systems",
+        "systems.output_flywheel.unified_tools_metrics",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "task_models": {
+      "name": "task_models",
+      "path": "autonomous/task_models.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 69,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "claim_and_fix_master_task": {
+      "name": "claim_and_fix_master_task",
+      "path": "captain/claim_and_fix_master_task.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 390,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "create_work_session": {
+      "name": "create_work_session",
+      "path": "captain/create_work_session.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 289,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.config.timeout_constants",
+        "subprocess",
+        "traceback",
+        "uuid"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "session_transition_automator": {
+      "name": "session_transition_automator",
+      "path": "captain/session_transition_automator.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 495,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.messaging_core",
+        "src.core.messaging_models_core"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "task_cli": {
+      "name": "task_cli",
+      "path": "captain/task_cli.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 88,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.services.messaging_cli"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_captain": {
+      "name": "unified_captain",
+      "path": "captain/unified_captain.py",
+      "type": "unified",
+      "category": "captain",
+      "lines_of_code": 380,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "tools",
+        "tools.captain_find_idle_agents",
+        "tools.captain_inbox_manager",
+        "tools.captain_loop_closer",
+        "tools.captain_swarm_coordinator",
+        "tools.captain_task_assigner",
+        "tools.captain_workspace_cleanup"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--days",
+        "--dry-run",
+        "--hours",
+        "--json",
+        "--output",
+        "--priority",
+        "--task"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "cleanup_obsolete_files": {
+      "name": "cleanup_obsolete_files",
+      "path": "cleanup/cleanup_obsolete_files.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 120,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "cleanup_stub_files": {
+      "name": "cleanup_stub_files",
+      "path": "cleanup/cleanup_stub_files.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 219,
+      "v2_compliant": true,
+      "dependencies": [
+        "shutil"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "session_cleanup_automation": {
+      "name": "session_cleanup_automation",
+      "path": "cleanup/session_cleanup_automation.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 302,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "dotenv",
+        "requests",
+        "src",
+        "src.core.unified_logging_system"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_cleanup": {
+      "name": "unified_cleanup",
+      "path": "cleanup/unified_cleanup.py",
+      "type": "unified",
+      "category": "general",
+      "lines_of_code": 335,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "tools",
+        "tools.archive_communication_validation_tools",
+        "tools.archive_consolidated_tools",
+        "tools.archive_consolidation_candidates",
+        "tools.archive_deprecated_tools",
+        "tools.archive_merge_plans",
+        "tools.archive_remaining_candidates",
+        "tools.archive_source_repos",
+        "tools.cleanup_obsolete_docs",
+        "tools.cleanup_old_merge_directories",
+        "tools.cleanup_superpowered_venv",
+        "tools.comprehensive_disk_cleanup",
+        "tools.delete_deprecated_tools",
+        "tools.delete_outdated_docs",
+        "tools.disk_space_cleanup",
+        "tools.disk_space_optimization"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "workspace_auto_cleaner": {
+      "name": "workspace_auto_cleaner",
+      "path": "cleanup/workspace_auto_cleaner.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 234,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "shutil"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--archive",
+        "--clean-temp",
+        "--days",
+        "--dry-run",
+        "--full",
+        "--organize",
+        "--report"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "command_discovery": {
+      "name": "command_discovery",
+      "path": "cli/command_discovery.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 274,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "registry": {
+      "name": "registry",
+      "path": "cli/commands/registry.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 2383,
+      "v2_compliant": false,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_dispatcher": {
+      "name": "unified_dispatcher",
+      "path": "cli/dispatchers/unified_dispatcher.py",
+      "type": "unified",
+      "category": "general",
+      "lines_of_code": 165,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "importlib",
+        "tools",
+        "tools.cli.commands.registry",
+        "traceback"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "migrate_managers": {
+      "name": "migrate_managers",
+      "path": "codemods/migrate_managers.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 113,
+      "v2_compliant": true,
+      "dependencies": [
+        "__future__",
+        "argparse",
+        "difflib"
+      ],
+      "cli_flags": [
+        "--map",
+        "--root",
+        "--verbose",
+        "--write"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "migrate_orchestrators": {
+      "name": "migrate_orchestrators",
+      "path": "codemods/migrate_orchestrators.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 70,
+      "v2_compliant": true,
+      "dependencies": [
+        "__future__",
+        "argparse",
+        "difflib"
+      ],
+      "cli_flags": [
+        "--map",
+        "--root",
+        "--write"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "replace_prints_with_logger": {
+      "name": "replace_prints_with_logger",
+      "path": "codemods/replace_prints_with_logger.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 144,
+      "v2_compliant": true,
+      "dependencies": [
+        "__future__",
+        "astor"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_status_validator": {
+      "name": "agent_status_validator",
+      "path": "communication/agent_status_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 340,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.constants.agent_constants",
+        "tools",
+        "tools.agent_activity_detector"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "coordination_pattern_validator": {
+      "name": "coordination_pattern_validator",
+      "path": "communication/coordination_pattern_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 202,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.utils.validation_utils"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "coordination_validator": {
+      "name": "coordination_validator",
+      "path": "communication/coordination_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 239,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.utils.validation_utils"
+      ],
+      "cli_flags": [
+        "--json"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "integration_validator": {
+      "name": "integration_validator",
+      "path": "communication/integration_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 211,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "hashlib",
+        "src",
+        "src.core.utils.validation_utils"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "message_validator": {
+      "name": "message_validator",
+      "path": "communication/message_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 222,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.core.utils.validation_utils"
+      ],
+      "cli_flags": [
+        "--file",
+        "--json"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "messaging_infrastructure_validator": {
+      "name": "messaging_infrastructure_validator",
+      "path": "communication/messaging_infrastructure_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 208,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.core.message_queue_persistence",
+        "src.core.utils.validation_utils"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "multi_agent_validator": {
+      "name": "multi_agent_validator",
+      "path": "communication/multi_agent_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 206,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.core.constants.agent_constants",
+        "src.core.multi_agent_request_validator",
+        "src.core.utils.validation_utils"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_status_validator": {
+      "name": "swarm_status_validator",
+      "path": "communication/swarm_status_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 207,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.constants.agent_constants",
+        "src.core.utils.validation_utils"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_communication_validator": {
+      "name": "unified_communication_validator",
+      "path": "communication/unified_communication_validator.py",
+      "type": "unified",
+      "category": "validation",
+      "lines_of_code": 138,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "tools",
+        "tools.communication.agent_status_validator",
+        "tools.communication.coordination_pattern_validator",
+        "tools.communication.coordination_validator",
+        "tools.communication.integration_validator",
+        "tools.communication.message_validator",
+        "tools.communication.messaging_infrastructure_validator",
+        "tools.communication.multi_agent_validator",
+        "tools.communication.swarm_status_validator"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "consolidate_messaging": {
+      "name": "consolidate_messaging",
+      "path": "consolidation/consolidate_messaging.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 125,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "shutil"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "tool_inventory": {
+      "name": "tool_inventory",
+      "path": "consolidation/tool_inventory.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 410,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [
+        "--output",
+        "--tools-dir",
+        "--tools-v2-dir"
+      ],
+      "registry": "both",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "discord_commands_tester": {
+      "name": "discord_commands_tester",
+      "path": "coordination/discord_commands_tester.py",
+      "type": "specialized",
+      "category": "discord",
+      "lines_of_code": 388,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "asyncio",
+        "datetime",
+        "discord",
+        "discord.ext",
+        "pyautogui",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "discord_simple_test": {
+      "name": "discord_simple_test",
+      "path": "coordination/discord_simple_test.py",
+      "type": "specialized",
+      "category": "discord",
+      "lines_of_code": 148,
+      "v2_compliant": true,
+      "dependencies": [
+        "pyautogui",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "changed_file_report": {
+      "name": "changed_file_report",
+      "path": "coverage/changed_file_report.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 106,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "subprocess",
+        "xml",
+        "xml.etree.ElementTree"
+      ],
+      "cli_flags": [
+        "--base",
+        "--min",
+        "--strict"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "mutation_gate": {
+      "name": "mutation_gate",
+      "path": "coverage/mutation_gate.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 168,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "subprocess"
+      ],
+      "cli_flags": [
+        "--min",
+        "--run"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "check_stuck_messages": {
+      "name": "check_stuck_messages",
+      "path": "debug/check_stuck_messages.py",
+      "type": "specialized",
+      "category": "debug",
+      "lines_of_code": 102,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.core.message_queue_error_monitor"
+      ],
+      "cli_flags": [
+        "--all-checks",
+        "--reset"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "debug_message_queue": {
+      "name": "debug_message_queue",
+      "path": "debug/debug_message_queue.py",
+      "type": "specialized",
+      "category": "debug",
+      "lines_of_code": 486,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "psutil"
+      ],
+      "cli_flags": [
+        "--fix",
+        "--verbose"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "diagnose_github_cli_auth": {
+      "name": "diagnose_github_cli_auth",
+      "path": "debug/diagnose_github_cli_auth.py",
+      "type": "specialized",
+      "category": "debug",
+      "lines_of_code": 358,
+      "v2_compliant": true,
+      "dependencies": [
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "fix_message_queue": {
+      "name": "fix_message_queue",
+      "path": "debug/fix_message_queue.py",
+      "type": "specialized",
+      "category": "debug",
+      "lines_of_code": 168,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_debugger": {
+      "name": "unified_debugger",
+      "path": "debug/unified_debugger.py",
+      "type": "unified",
+      "category": "debug",
+      "lines_of_code": 150,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "glob",
+        "psutil",
+        "tools",
+        "tools.debug.debug_message_queue"
+      ],
+      "cli_flags": [
+        "--all",
+        "--logs",
+        "--process",
+        "--queue"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "START_CHAT_BOT_NOW": {
+      "name": "START_CHAT_BOT_NOW",
+      "path": "deprecated/START_CHAT_BOT_NOW.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 293,
+      "v2_compliant": true,
+      "dependencies": [
+        "asyncio",
+        "dotenv",
+        "src",
+        "src.services.chat_presence"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "__main__": {
+      "name": "__main__",
+      "path": "deprecated/__main__.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 22,
+      "v2_compliant": true,
+      "dependencies": [
+        "tools",
+        "tools.toolbelt"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_activity_detector": {
+      "name": "agent_activity_detector",
+      "path": "deprecated/agent_activity_detector.py",
+      "type": "specialized",
+      "category": "agent_ops",
+      "lines_of_code": 133,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_checkin": {
+      "name": "agent_checkin",
+      "path": "deprecated/agent_checkin.py",
+      "type": "specialized",
+      "category": "agent_ops",
+      "lines_of_code": 130,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.utils.unified_utilities"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_cycle_v2_report_validator": {
+      "name": "agent_cycle_v2_report_validator",
+      "path": "deprecated/agent_cycle_v2_report_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 324,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_fuel_monitor": {
+      "name": "agent_fuel_monitor",
+      "path": "deprecated/agent_fuel_monitor.py",
+      "type": "specialized",
+      "category": "monitoring",
+      "lines_of_code": 360,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.config.timeout_constants",
+        "subprocess"
+      ],
+      "cli_flags": [
+        "--dry-run",
+        "--mission",
+        "--schedule"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_lifecycle_automator": {
+      "name": "agent_lifecycle_automator",
+      "path": "deprecated/agent_lifecycle_automator.py",
+      "type": "specialized",
+      "category": "agent_ops",
+      "lines_of_code": 241,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_message_history": {
+      "name": "agent_message_history",
+      "path": "deprecated/agent_message_history.py",
+      "type": "specialized",
+      "category": "agent_ops",
+      "lines_of_code": 289,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--sender"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_mission_controller": {
+      "name": "agent_mission_controller",
+      "path": "deprecated/agent_mission_controller.py",
+      "type": "specialized",
+      "category": "agent_ops",
+      "lines_of_code": 593,
+      "v2_compliant": false,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_orient": {
+      "name": "agent_orient",
+      "path": "deprecated/agent_orient.py",
+      "type": "specialized",
+      "category": "agent_ops",
+      "lines_of_code": 212,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_task_finder": {
+      "name": "agent_task_finder",
+      "path": "deprecated/agent_task_finder.py",
+      "type": "specialized",
+      "category": "agent_ops",
+      "lines_of_code": 142,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "analysis_toolkit": {
+      "name": "analysis_toolkit",
+      "path": "deprecated/analysis_toolkit.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 257,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "subprocess"
+      ],
+      "cli_flags": [
+        "--ci-gate",
+        "--debt",
+        "--execute",
+        "--file",
+        "--json",
+        "--max-files",
+        "--root",
+        "--structure",
+        "--violations"
+      ],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "architecture_review": {
+      "name": "architecture_review",
+      "path": "deprecated/architecture_review.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 128,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--approve",
+        "--comments",
+        "--files",
+        "--provide",
+        "--reject",
+        "--request",
+        "--scope"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "auto_assign_next_round": {
+      "name": "auto_assign_next_round",
+      "path": "deprecated/auto_assign_next_round.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 248,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "src",
+        "src.core.agent_mode_manager",
+        "src.services.messaging_infrastructure",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "auto_fix_missing_imports": {
+      "name": "auto_fix_missing_imports",
+      "path": "deprecated/auto_fix_missing_imports.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 261,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "auto_inbox_processor": {
+      "name": "auto_inbox_processor",
+      "path": "deprecated/auto_inbox_processor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 328,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "shutil"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "auto_learn_preferences": {
+      "name": "auto_learn_preferences",
+      "path": "deprecated/auto_learn_preferences.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 382,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--feedback",
+        "--message",
+        "--quality",
+        "--response",
+        "--response-time",
+        "--summary",
+        "--user"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "auto_remediate_loc": {
+      "name": "auto_remediate_loc",
+      "path": "deprecated/auto_remediate_loc.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 292,
+      "v2_compliant": true,
+      "dependencies": [
+        "__future__"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "auto_status_updater": {
+      "name": "auto_status_updater",
+      "path": "deprecated/auto_status_updater.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 304,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "auto_validate_cycle_v2": {
+      "name": "auto_validate_cycle_v2",
+      "path": "deprecated/auto_validate_cycle_v2.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 164,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "tools",
+        "tools.agent_cycle_v2_report_validator",
+        "traceback"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "auto_workspace_cleanup": {
+      "name": "auto_workspace_cleanup",
+      "path": "deprecated/auto_workspace_cleanup.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 246,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "shutil"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "autonomous_leaderboard": {
+      "name": "autonomous_leaderboard",
+      "path": "deprecated/autonomous_leaderboard.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 173,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.core.gamification.autonomous_competition_system"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--award",
+        "--show",
+        "--top"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "autonomous_task_engine": {
+      "name": "autonomous_task_engine",
+      "path": "deprecated/autonomous_task_engine.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 798,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "autonomous",
+        "autonomous.task_models",
+        "datetime",
+        "src",
+        "src.core.config.timeout_constants",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "browser_pool_manager": {
+      "name": "browser_pool_manager",
+      "path": "deprecated/browser_pool_manager.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 268,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "selenium",
+        "selenium.webdriver.chrome.options",
+        "threading",
+        "time"
+      ],
+      "cli_flags": [
+        "--disable-background-networking",
+        "--disable-default-apps",
+        "--disable-dev-shm-usage",
+        "--disable-extensions",
+        "--disable-gpu",
+        "--disable-logging",
+        "--disable-notifications",
+        "--disable-popup-blocking",
+        "--disable-sync",
+        "--disk-cache-size=0",
+        "--dns-prefetch-disable",
+        "--headless=new",
+        "--media-cache-size=0",
+        "--no-sandbox"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_architectural_checker": {
+      "name": "captain_architectural_checker",
+      "path": "deprecated/captain_architectural_checker.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 208,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_cycle_scheduler": {
+      "name": "captain_cycle_scheduler",
+      "path": "deprecated/captain_cycle_scheduler.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 130,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "subprocess",
+        "time"
+      ],
+      "cli_flags": [
+        "--interval",
+        "--mode"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_find_idle_agents": {
+      "name": "captain_find_idle_agents",
+      "path": "deprecated/captain_find_idle_agents.py",
+      "type": "specialized",
+      "category": "agent_ops",
+      "lines_of_code": 169,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "tools_v2",
+        "tools_v2.categories.captain_tools",
+        "warnings"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_gas_check": {
+      "name": "captain_gas_check",
+      "path": "deprecated/captain_gas_check.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 150,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "tools_v2",
+        "tools_v2.categories.captain_tools_extension",
+        "warnings"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_import_validator": {
+      "name": "captain_import_validator",
+      "path": "deprecated/captain_import_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 166,
+      "v2_compliant": true,
+      "dependencies": [
+        "tools_v2",
+        "tools_v2.categories.import_fix_tools",
+        "warnings"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_inbox_assistant": {
+      "name": "captain_inbox_assistant",
+      "path": "deprecated/captain_inbox_assistant.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 389,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.messaging_core"
+      ],
+      "cli_flags": [
+        "--auto-archive",
+        "--auto-send",
+        "--process",
+        "--report",
+        "--scan"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_inbox_helper": {
+      "name": "captain_inbox_helper",
+      "path": "deprecated/captain_inbox_helper.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 295,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--auto-respond",
+        "--dry-run",
+        "--inbox"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_inbox_manager": {
+      "name": "captain_inbox_manager",
+      "path": "deprecated/captain_inbox_manager.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 219,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--analyze",
+        "--output",
+        "--summary"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_leaderboard_update": {
+      "name": "captain_leaderboard_update",
+      "path": "deprecated/captain_leaderboard_update.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 122,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "tools_v2",
+        "tools_v2.categories.captain_coordination_tools",
+        "warnings"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--points",
+        "--task"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_loop_closer": {
+      "name": "captain_loop_closer",
+      "path": "deprecated/captain_loop_closer.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 214,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "captain_swarm_coordinator",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--generate-report",
+        "--identify-blockers",
+        "--identify-closable"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_loop_detector": {
+      "name": "captain_loop_detector",
+      "path": "deprecated/captain_loop_detector.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 275,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_message_processor": {
+      "name": "captain_message_processor",
+      "path": "deprecated/captain_message_processor.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 357,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "shutil",
+        "src",
+        "src.core.messaging_core"
+      ],
+      "cli_flags": [
+        "--auto-archive",
+        "--auto-send",
+        "--process",
+        "--report"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_morning_briefing": {
+      "name": "captain_morning_briefing",
+      "path": "deprecated/captain_morning_briefing.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 208,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "warnings"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_next_task_picker": {
+      "name": "captain_next_task_picker",
+      "path": "deprecated/captain_next_task_picker.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 86,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "tools_v2",
+        "tools_v2.categories.captain_coordination_tools",
+        "warnings"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--specialty-only"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_pattern_optimizer": {
+      "name": "captain_pattern_optimizer",
+      "path": "deprecated/captain_pattern_optimizer.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 164,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "captain_loop_closer",
+        "captain_swarm_coordinator",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--analyze",
+        "--generate-plan",
+        "--output"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_progress_dashboard": {
+      "name": "captain_progress_dashboard",
+      "path": "deprecated/captain_progress_dashboard.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 245,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_roi_quick_calc": {
+      "name": "captain_roi_quick_calc",
+      "path": "deprecated/captain_roi_quick_calc.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 125,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "tools_v2",
+        "tools_v2.categories.captain_coordination_tools",
+        "warnings"
+      ],
+      "cli_flags": [
+        "--autonomy",
+        "--complexity",
+        "--points",
+        "--v2"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_send_jet_fuel": {
+      "name": "captain_send_jet_fuel",
+      "path": "deprecated/captain_send_jet_fuel.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 258,
+      "v2_compliant": true,
+      "dependencies": [
+        "src",
+        "src.core.messaging_core"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_snapshot": {
+      "name": "captain_snapshot",
+      "path": "deprecated/captain_snapshot.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 112,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "src",
+        "src.utils.unified_utilities",
+        "warnings"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_swarm_coordinator": {
+      "name": "captain_swarm_coordinator",
+      "path": "deprecated/captain_swarm_coordinator.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 333,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--check-status",
+        "--generate-report",
+        "--identify-loops",
+        "--optimize-pattern"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_swarm_response_generator": {
+      "name": "captain_swarm_response_generator",
+      "path": "deprecated/captain_swarm_response_generator.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 273,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.messaging_core"
+      ],
+      "cli_flags": [
+        "--auto-send",
+        "--process",
+        "--report"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_task_assigner": {
+      "name": "captain_task_assigner",
+      "path": "deprecated/captain_task_assigner.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 242,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "captain_swarm_coordinator",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--assign-critical",
+        "--assign-markers",
+        "--log"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_update_log": {
+      "name": "captain_update_log",
+      "path": "deprecated/captain_update_log.py",
+      "type": "specialized",
+      "category": "captain",
+      "lines_of_code": 60,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--cycle",
+        "--event",
+        "--points"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "circular_import_detector": {
+      "name": "circular_import_detector",
+      "path": "deprecated/circular_import_detector.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 195,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "clean_message_queue": {
+      "name": "clean_message_queue",
+      "path": "deprecated/clean_message_queue.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 148,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "traceback"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "code_analysis_tool": {
+      "name": "code_analysis_tool",
+      "path": "deprecated/code_analysis_tool.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 286,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [
+        "--json",
+        "--output"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "compliance_dashboard": {
+      "name": "compliance_dashboard",
+      "path": "deprecated/compliance_dashboard.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 131,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "complexity_analyzer",
+        "compliance_history_tracker",
+        "dashboard_data_aggregator",
+        "dashboard_html_generator_refactored",
+        "datetime",
+        "refactoring_suggestion_engine",
+        "v2_compliance_checker"
+      ],
+      "cli_flags": [
+        "--no-history",
+        "--output",
+        "--pattern"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "compliance_history_tracker": {
+      "name": "compliance_history_tracker",
+      "path": "deprecated/compliance_history_tracker.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 200,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "tools",
+        "tools.complexity_analyzer",
+        "tools.compliance_history_database",
+        "tools.compliance_history_models",
+        "tools.compliance_history_reports",
+        "tools.v2_compliance_checker"
+      ],
+      "cli_flags": [
+        "--commit",
+        "--limit"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "coverage_analyzer": {
+      "name": "coverage_analyzer",
+      "path": "deprecated/coverage_analyzer.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 279,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "subprocess"
+      ],
+      "cli_flags": [
+        "--output",
+        "--pipeline",
+        "--src-root",
+        "--tests-root"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "devlog_compressor": {
+      "name": "devlog_compressor",
+      "path": "deprecated/devlog_compressor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 370,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "base64",
+        "datetime",
+        "gzip"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "devlog_manager": {
+      "name": "devlog_manager",
+      "path": "deprecated/devlog_manager.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 571,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "devlog_compressor",
+        "dotenv",
+        "requests",
+        "src",
+        "src.core.config.timeout_constants",
+        "subprocess",
+        "time",
+        "tools",
+        "tools.discord_mermaid_renderer",
+        "tools_v2",
+        "tools_v2.utils.discord_mermaid_renderer"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "devlog_poster": {
+      "name": "devlog_poster",
+      "path": "deprecated/devlog_poster.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 408,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "dotenv",
+        "requests",
+        "src",
+        "src.core.config.timeout_constants",
+        "time",
+        "tools",
+        "tools.discord_mermaid_renderer",
+        "tools_v2",
+        "tools_v2.utils.discord_mermaid_renderer"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--category",
+        "--file",
+        "--major"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "discord_bot_cleanup": {
+      "name": "discord_bot_cleanup",
+      "path": "deprecated/discord_bot_cleanup.py",
+      "type": "specialized",
+      "category": "discord",
+      "lines_of_code": 113,
+      "v2_compliant": true,
+      "dependencies": [
+        "psutil",
+        "src",
+        "src.core.config.timeout_constants"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "discord_bot_troubleshoot": {
+      "name": "discord_bot_troubleshoot",
+      "path": "deprecated/discord_bot_troubleshoot.py",
+      "type": "specialized",
+      "category": "discord",
+      "lines_of_code": 179,
+      "v2_compliant": true,
+      "dependencies": [
+        "discord",
+        "dotenv",
+        "psutil",
+        "src",
+        "src.discord_commander.unified_discord_bot",
+        "traceback"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "discord_mermaid_renderer": {
+      "name": "discord_mermaid_renderer",
+      "path": "utils/discord_mermaid_renderer.py",
+      "type": "specialized",
+      "category": "discord",
+      "lines_of_code": 270,
+      "v2_compliant": true,
+      "dependencies": [
+        "base64",
+        "dotenv",
+        "requests",
+        "urllib",
+        "urllib.parse"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "discord_startup_listener": {
+      "name": "discord_startup_listener",
+      "path": "deprecated/discord_startup_listener.py",
+      "type": "specialized",
+      "category": "discord",
+      "lines_of_code": 305,
+      "v2_compliant": true,
+      "dependencies": [
+        "asyncio",
+        "atexit",
+        "discord",
+        "discord.ext",
+        "dotenv",
+        "subprocess",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "find_github_token": {
+      "name": "find_github_token",
+      "path": "deprecated/find_github_token.py",
+      "type": "specialized",
+      "category": "github",
+      "lines_of_code": 264,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "gas_messaging": {
+      "name": "gas_messaging",
+      "path": "deprecated/gas_messaging.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 25,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "get_swarm_time": {
+      "name": "get_swarm_time",
+      "path": "deprecated/get_swarm_time.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 87,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.utils.swarm_time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "git_work_verifier": {
+      "name": "git_work_verifier",
+      "path": "deprecated/git_work_verifier.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 318,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "github_consolidation_recovery": {
+      "name": "github_consolidation_recovery",
+      "path": "deprecated/github_consolidation_recovery.py",
+      "type": "specialized",
+      "category": "github",
+      "lines_of_code": 394,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "requests",
+        "src",
+        "src.core.config.timeout_constants",
+        "src.core.deferred_push_queue",
+        "src.core.synthetic_github"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "github_create_and_push_repo": {
+      "name": "github_create_and_push_repo",
+      "path": "deprecated/github_create_and_push_repo.py",
+      "type": "specialized",
+      "category": "github",
+      "lines_of_code": 340,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "requests",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "github_pr_debugger": {
+      "name": "github_pr_debugger",
+      "path": "deprecated/github_pr_debugger.py",
+      "type": "specialized",
+      "category": "debug",
+      "lines_of_code": 613,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "requests",
+        "src",
+        "src.core.config.timeout_constants",
+        "src.core.utils.github_utils",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "github_pusher_agent": {
+      "name": "github_pusher_agent",
+      "path": "deprecated/github_pusher_agent.py",
+      "type": "specialized",
+      "category": "agent_ops",
+      "lines_of_code": 531,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.core.deferred_push_queue",
+        "src.core.local_repo_layer",
+        "src.core.synthetic_github",
+        "subprocess",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "github_repo_roi_calculator": {
+      "name": "github_repo_roi_calculator",
+      "path": "deprecated/github_repo_roi_calculator.py",
+      "type": "specialized",
+      "category": "github",
+      "lines_of_code": 283,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "import_chain_validator": {
+      "name": "import_chain_validator",
+      "path": "deprecated/import_chain_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 140,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "importlib",
+        "importlib.util"
+      ],
+      "cli_flags": [
+        "--fix-suggestions"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "mcp_tools_self_test": {
+      "name": "mcp_tools_self_test",
+      "path": "deprecated/mcp_tools_self_test.py",
+      "type": "specialized",
+      "category": "testing",
+      "lines_of_code": 217,
+      "v2_compliant": true,
+      "dependencies": [
+        "mcp_servers",
+        "traceback"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "memory_leak_scanner": {
+      "name": "memory_leak_scanner",
+      "path": "deprecated/memory_leak_scanner.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 166,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "message_delivery_verifier": {
+      "name": "message_delivery_verifier",
+      "path": "deprecated/message_delivery_verifier.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 361,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.message_queue",
+        "src.core.message_queue_persistence"
+      ],
+      "cli_flags": [
+        "--message-id",
+        "--stats"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "meta_tag_completeness_checker": {
+      "name": "meta_tag_completeness_checker",
+      "path": "deprecated/meta_tag_completeness_checker.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 260,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "seo_meta_tag_extractor"
+      ],
+      "cli_flags": [
+        "--file",
+        "--json",
+        "--timeout"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "mission_control": {
+      "name": "mission_control",
+      "path": "deprecated/mission_control.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 419,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.config.timeout_constants",
+        "subprocess"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--save",
+        "--specialization"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "monitor_4agent_dependency_chain": {
+      "name": "monitor_4agent_dependency_chain",
+      "path": "deprecated/monitor_4agent_dependency_chain.py",
+      "type": "specialized",
+      "category": "monitoring",
+      "lines_of_code": 159,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "monitor_twitch_bot": {
+      "name": "monitor_twitch_bot",
+      "path": "deprecated/monitor_twitch_bot.py",
+      "type": "specialized",
+      "category": "monitoring",
+      "lines_of_code": 76,
+      "v2_compliant": true,
+      "dependencies": [
+        "src",
+        "src.core.config.timeout_constants",
+        "subprocess",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "monitor_twitch_bot_status": {
+      "name": "monitor_twitch_bot_status",
+      "path": "deprecated/monitor_twitch_bot_status.py",
+      "type": "specialized",
+      "category": "monitoring",
+      "lines_of_code": 101,
+      "v2_compliant": true,
+      "dependencies": [
+        "asyncio",
+        "datetime",
+        "dotenv",
+        "src",
+        "src.services.chat_presence.chat_presence_orchestrator",
+        "time",
+        "tools",
+        "tools.start_twitchbot_with_fixes"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "opportunity_scanners": {
+      "name": "opportunity_scanners",
+      "path": "deprecated/opportunity_scanners.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 52,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "project_scan": {
+      "name": "project_scan",
+      "path": "deprecated/project_scan.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 202,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "refactoring_ast_analyzer": {
+      "name": "refactoring_ast_analyzer",
+      "path": "deprecated/refactoring_ast_analyzer.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 13,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "refactoring_models": {
+      "name": "refactoring_models",
+      "path": "deprecated/refactoring_models.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 36,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "repo_safe_merge": {
+      "name": "repo_safe_merge",
+      "path": "deprecated/repo_safe_merge.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 1434,
+      "v2_compliant": false,
+      "dependencies": [
+        "datetime",
+        "shutil",
+        "src",
+        "src.core.consolidation_buffer",
+        "src.core.deferred_push_queue",
+        "src.core.local_repo_layer",
+        "src.core.merge_conflict_resolver",
+        "src.core.repository_merge_improvements",
+        "src.core.synthetic_github",
+        "stat",
+        "subprocess",
+        "time",
+        "tools",
+        "tools.github_rate_limit_handler",
+        "tools.unified_github_pr_creator"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "repository_analyzer": {
+      "name": "repository_analyzer",
+      "path": "deprecated/repository_analyzer.py",
+      "type": "specialized",
+      "category": "analysis",
+      "lines_of_code": 289,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "difflib",
+        "subprocess"
+      ],
+      "cli_flags": [
+        "--analysis-dir",
+        "--output",
+        "--project-root",
+        "--report",
+        "--repos"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "reset_stuck_messages": {
+      "name": "reset_stuck_messages",
+      "path": "deprecated/reset_stuck_messages.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 124,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "shutil"
+      ],
+      "cli_flags": [
+        "--fail-old",
+        "--min-age"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "session_quick_checkin": {
+      "name": "session_quick_checkin",
+      "path": "deprecated/session_quick_checkin.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 66,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "subprocess"
+      ],
+      "cli_flags": [
+        "--message"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "sites_registry": {
+      "name": "sites_registry",
+      "path": "deprecated/sites_registry.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 225,
+      "v2_compliant": true,
+      "dependencies": [
+        "__future__",
+        "argparse"
+      ],
+      "cli_flags": [
+        "--adapter",
+        "--allow",
+        "--base-url",
+        "--creds-source",
+        "--domain",
+        "--env",
+        "--health-path",
+        "--id",
+        "--notes",
+        "--type"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "start_discord_system": {
+      "name": "start_discord_system",
+      "path": "deprecated/start_discord_system.py",
+      "type": "specialized",
+      "category": "discord",
+      "lines_of_code": 521,
+      "v2_compliant": false,
+      "dependencies": [
+        "atexit",
+        "dotenv",
+        "psutil",
+        "src",
+        "src.core.config.timeout_constants",
+        "subprocess",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "start_github_pusher_service": {
+      "name": "start_github_pusher_service",
+      "path": "deprecated/start_github_pusher_service.py",
+      "type": "specialized",
+      "category": "github",
+      "lines_of_code": 102,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "tools",
+        "tools.github_pusher_agent"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "start_message_queue_processor": {
+      "name": "start_message_queue_processor",
+      "path": "deprecated/start_message_queue_processor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 79,
+      "v2_compliant": true,
+      "dependencies": [
+        "src",
+        "src.core.message_queue_processor",
+        "time",
+        "traceback"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "start_monitoring_system": {
+      "name": "start_monitoring_system",
+      "path": "deprecated/start_monitoring_system.py",
+      "type": "specialized",
+      "category": "monitoring",
+      "lines_of_code": 111,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "asyncio",
+        "src",
+        "src.orchestrators.overnight.orchestrator"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "start_services_direct": {
+      "name": "start_services_direct",
+      "path": "deprecated/start_services_direct.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 115,
+      "v2_compliant": true,
+      "dependencies": [
+        "subprocess",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "start_twitchbot_with_fixes": {
+      "name": "start_twitchbot_with_fixes",
+      "path": "deprecated/start_twitchbot_with_fixes.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 202,
+      "v2_compliant": true,
+      "dependencies": [
+        "asyncio",
+        "dotenv",
+        "src",
+        "src.services.chat_presence",
+        "traceback"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "stop_twitchbot": {
+      "name": "stop_twitchbot",
+      "path": "deprecated/stop_twitchbot.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 39,
+      "v2_compliant": true,
+      "dependencies": [
+        "signal",
+        "src",
+        "src.services.chat_presence.chat_presence_orchestrator"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_activity_feed_poster": {
+      "name": "swarm_activity_feed_poster",
+      "path": "deprecated/swarm_activity_feed_poster.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 283,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "requests",
+        "requests.auth"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_brain_cli": {
+      "name": "swarm_brain_cli",
+      "path": "deprecated/swarm_brain_cli.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 158,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.swarm_brain.swarm_memory"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--content",
+        "--decision",
+        "--file",
+        "--limit",
+        "--participants",
+        "--query",
+        "--rationale",
+        "--tags",
+        "--title",
+        "--verbose"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_coordination_dashboard": {
+      "name": "swarm_coordination_dashboard",
+      "path": "deprecated/swarm_coordination_dashboard.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 307,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "time"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--output",
+        "--refresh"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_orchestrator": {
+      "name": "swarm_orchestrator",
+      "path": "deprecated/swarm_orchestrator.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 316,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "time",
+        "tools",
+        "tools.gas_messaging",
+        "tools.opportunity_scanners",
+        "tools.task_creator"
+      ],
+      "cli_flags": [
+        "--cycles",
+        "--daemon"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_profile_manager": {
+      "name": "swarm_profile_manager",
+      "path": "deprecated/swarm_profile_manager.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 222,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_site_health_automation": {
+      "name": "swarm_site_health_automation",
+      "path": "deprecated/swarm_site_health_automation.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 452,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "tools",
+        "tools.hostinger_wordpress_manager"
+      ],
+      "cli_flags": [
+        "--delegate-manual",
+        "--dry-run",
+        "--run-full-check",
+        "--site"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_status_broadcaster": {
+      "name": "swarm_status_broadcaster",
+      "path": "deprecated/swarm_status_broadcaster.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 303,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.core.config.timeout_constants",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_system_inventory": {
+      "name": "swarm_system_inventory",
+      "path": "deprecated/swarm_system_inventory.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 511,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "toolbelt_registry",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_website_auto_update": {
+      "name": "swarm_website_auto_update",
+      "path": "deprecated/swarm_website_auto_update.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 99,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.services.swarm_website.auto_updater"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "task_creator": {
+      "name": "task_creator",
+      "path": "deprecated/task_creator.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 25,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "task_verification_tool": {
+      "name": "task_verification_tool",
+      "path": "deprecated/task_verification_tool.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 250,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "subprocess"
+      ],
+      "cli_flags": [
+        "--file",
+        "--json"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "toolbelt": {
+      "name": "toolbelt",
+      "path": "deprecated/toolbelt.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 120,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "tools",
+        "tools.toolbelt_help",
+        "tools.toolbelt_registry",
+        "tools.toolbelt_runner"
+      ],
+      "cli_flags": [
+        "--help",
+        "--list",
+        "--version"
+      ],
+      "registry": "toolbelt_registry",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "toolbelt_help": {
+      "name": "toolbelt_help",
+      "path": "deprecated/toolbelt_help.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 114,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "toolbelt_runner": {
+      "name": "toolbelt_runner",
+      "path": "deprecated/toolbelt_runner.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 95,
+      "v2_compliant": true,
+      "dependencies": [
+        "importlib"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_blogging_automation": {
+      "name": "unified_blogging_automation",
+      "path": "deprecated/unified_blogging_automation.py",
+      "type": "unified",
+      "category": "general",
+      "lines_of_code": 487,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "markdown",
+        "markdown2",
+        "requests",
+        "requests.auth",
+        "src",
+        "src.core.config.timeout_constants"
+      ],
+      "cli_flags": [
+        "--all-sites",
+        "--config",
+        "--content",
+        "--dry-run",
+        "--purpose",
+        "--site",
+        "--status",
+        "--title"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_github_pr_creator": {
+      "name": "unified_github_pr_creator",
+      "path": "deprecated/unified_github_pr_creator.py",
+      "type": "unified",
+      "category": "github",
+      "lines_of_code": 426,
+      "v2_compliant": false,
+      "dependencies": [
+        "datetime",
+        "requests",
+        "src",
+        "src.core.config.timeout_constants",
+        "src.core.utils.github_utils",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "v2_checker_formatters": {
+      "name": "v2_checker_formatters",
+      "path": "deprecated/v2_checker_formatters.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 173,
+      "v2_compliant": true,
+      "dependencies": [
+        "complexity_analyzer",
+        "refactoring_suggestion_engine",
+        "v2_checker_models"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "v2_compliance_checker": {
+      "name": "v2_compliance_checker",
+      "path": "deprecated/v2_compliance_checker.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 264,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "v2_compliance_dashboard_sync": {
+      "name": "v2_compliance_dashboard_sync",
+      "path": "deprecated/v2_compliance_dashboard_sync.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 210,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "v2_compliance_summary": {
+      "name": "v2_compliance_summary",
+      "path": "deprecated/v2_compliance_summary.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 111,
+      "v2_compliant": true,
+      "dependencies": [
+        "tools",
+        "tools.comprehensive_v2_check"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "v2_function_size_checker": {
+      "name": "v2_function_size_checker",
+      "path": "deprecated/v2_function_size_checker.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 137,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [
+        "--report"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "web_domain_security_audit": {
+      "name": "web_domain_security_audit",
+      "path": "deprecated/web_domain_security_audit.py",
+      "type": "specialized",
+      "category": "security",
+      "lines_of_code": 252,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "website_manager": {
+      "name": "website_manager",
+      "path": "deprecated/website_manager.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 563,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "paramiko",
+        "wordpress_manager"
+      ],
+      "cli_flags": [
+        "--add-features",
+        "--add-placeholders",
+        "--batch",
+        "--create",
+        "--deploy",
+        "--site",
+        "--update-colors"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "wordpress_admin_deployer": {
+      "name": "wordpress_admin_deployer",
+      "path": "deprecated/wordpress_admin_deployer.py",
+      "type": "specialized",
+      "category": "web",
+      "lines_of_code": 389,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "requests",
+        "selenium",
+        "selenium.common.exceptions",
+        "selenium.webdriver.chrome.options",
+        "selenium.webdriver.common.by",
+        "selenium.webdriver.support",
+        "selenium.webdriver.support.ui",
+        "src",
+        "src.core.config.timeout_constants",
+        "time"
+      ],
+      "cli_flags": [
+        "--headless=new",
+        "--window-size=1920,1080"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "wordpress_deployment_manager": {
+      "name": "wordpress_deployment_manager",
+      "path": "deprecated/wordpress_deployment_manager.py",
+      "type": "specialized",
+      "category": "web",
+      "lines_of_code": 62,
+      "v2_compliant": true,
+      "dependencies": [
+        "wordpress_manager"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "wordpress_manager": {
+      "name": "wordpress_manager",
+      "path": "deprecated/wordpress_manager.py",
+      "type": "specialized",
+      "category": "web",
+      "lines_of_code": 1440,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "dotenv",
+        "paramiko",
+        "requests",
+        "socket",
+        "time",
+        "tools",
+        "tools.activate_wordpress_theme"
+      ],
+      "cli_flags": [
+        "--activate-theme",
+        "--add-home-link",
+        "--add-menu",
+        "--assign-menu",
+        "--auto-login",
+        "--create-page",
+        "--deploy",
+        "--deploy-file",
+        "--deploy-plugin",
+        "--deploy-plugin-file",
+        "--dry-run",
+        "--list",
+        "--list-themes",
+        "--menu-name",
+        "--no-auto-flush",
+        "--no-browser-fallback",
+        "--plugin-name",
+        "--port",
+        "--post-status",
+        "--purge-cache",
+        "--remote-base",
+        "--remote-path",
+        "--replace-theme",
+        "--site",
+        "--update-post-status",
+        "--username",
+        "--verify",
+        "--wp-cli-path"
+      ],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "documentation_assistant": {
+      "name": "documentation_assistant",
+      "path": "devops/documentation_assistant.py",
+      "type": "specialized",
+      "category": "infrastructure",
+      "lines_of_code": 208,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "doc_templates_achievements",
+        "doc_templates_mission"
+      ],
+      "cli_flags": [
+        "--achievement",
+        "--agent",
+        "--name"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "type_annotation_fixer": {
+      "name": "type_annotation_fixer",
+      "path": "devops/type_annotation_fixer.py",
+      "type": "specialized",
+      "category": "infrastructure",
+      "lines_of_code": 266,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse"
+      ],
+      "cli_flags": [
+        "--directory",
+        "--dry-run",
+        "--fix"
+      ],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_environment": {
+      "name": "unified_environment",
+      "path": "devops/unified_environment.py",
+      "type": "unified",
+      "category": "infrastructure",
+      "lines_of_code": 109,
+      "v2_compliant": true,
+      "dependencies": [
+        "dotenv",
+        "shutil",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_discord": {
+      "name": "unified_discord",
+      "path": "discord/unified_discord.py",
+      "type": "unified",
+      "category": "discord",
+      "lines_of_code": 300,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "tools",
+        "tools.check_discord_running",
+        "tools.restart_discord_bot",
+        "tools.start_discord_system",
+        "tools.test_all_agent_discord_channels",
+        "tools.test_discord_bot_debug",
+        "tools.test_discord_commands",
+        "tools.upload_file_to_discord",
+        "tools.verify_discord_buttons"
+      ],
+      "cli_flags": [
+        "--channel",
+        "--file",
+        "--json"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "doc_templates_achievements": {
+      "name": "doc_templates_achievements",
+      "path": "doc_templates_achievements.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 160,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "doc_templates_mission": {
+      "name": "doc_templates_mission",
+      "path": "doc_templates_mission.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 141,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_github": {
+      "name": "unified_github",
+      "path": "github/unified_github.py",
+      "type": "unified",
+      "category": "github",
+      "lines_of_code": 318,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "tools",
+        "tools.analyze_merge_failures",
+        "tools.analyze_merge_plans",
+        "tools.audit_github_repos",
+        "tools.complete_merge_into_main",
+        "tools.fix_github_prs",
+        "tools.github_architecture_audit",
+        "tools.github_pr_debugger",
+        "tools.unified_github_pr_creator"
+      ],
+      "cli_flags": [
+        "--base",
+        "--body",
+        "--branch",
+        "--head",
+        "--json",
+        "--repo",
+        "--title"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_monitor": {
+      "name": "unified_monitor",
+      "path": "monitoring/unified_monitor.py",
+      "type": "unified",
+      "category": "monitoring",
+      "lines_of_code": 855,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "asyncio",
+        "datetime",
+        "psutil",
+        "shutil",
+        "src",
+        "src.core.deferred_push_queue",
+        "src.core.optimized_stall_resume_prompt",
+        "src.services.messaging_infrastructure",
+        "subprocess",
+        "time",
+        "tools",
+        "tools.agent_activity_detector"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "check_sensitive_files": {
+      "name": "check_sensitive_files",
+      "path": "security/check_sensitive_files.py",
+      "type": "specialized",
+      "category": "security",
+      "lines_of_code": 172,
+      "v2_compliant": true,
+      "dependencies": [
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_security_scanner": {
+      "name": "unified_security_scanner",
+      "path": "security/unified_security_scanner.py",
+      "type": "unified",
+      "category": "security",
+      "lines_of_code": 202,
+      "v2_compliant": true,
+      "dependencies": [
+        "pip_audit",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "analyze_chatgpt_selectors": {
+      "name": "analyze_chatgpt_selectors",
+      "path": "thea/analyze_chatgpt_selectors.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 444,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "selenium",
+        "selenium.common.exceptions",
+        "selenium.webdriver.chrome.options",
+        "selenium.webdriver.common.by",
+        "selenium.webdriver.support",
+        "selenium.webdriver.support.ui",
+        "src",
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service",
+        "undetected_chromedriver",
+        "urllib",
+        "urllib.parse"
+      ],
+      "cli_flags": [
+        "--cookie-path",
+        "--disable-dev-shm-usage",
+        "--disable-gpu",
+        "--headless",
+        "--no-sandbox",
+        "--no-thea-service",
+        "--output",
+        "--url",
+        "--verbose",
+        "--window-size=1920,1080"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "debug_chatgpt_elements": {
+      "name": "debug_chatgpt_elements",
+      "path": "thea/debug_chatgpt_elements.py",
+      "type": "specialized",
+      "category": "debug",
+      "lines_of_code": 150,
+      "v2_compliant": true,
+      "dependencies": [
+        "src",
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "demo_thea_interactive": {
+      "name": "demo_thea_interactive",
+      "path": "thea/demo_thea_interactive.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 168,
+      "v2_compliant": true,
+      "dependencies": [
+        "pyautogui",
+        "pyperclip",
+        "src",
+        "src.infrastructure.browser",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "demo_thea_live": {
+      "name": "demo_thea_live",
+      "path": "thea/demo_thea_live.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 133,
+      "v2_compliant": true,
+      "dependencies": [
+        "src",
+        "src.services.thea",
+        "time",
+        "traceback"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "demo_thea_simple": {
+      "name": "demo_thea_simple",
+      "path": "thea/demo_thea_simple.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 57,
+      "v2_compliant": true,
+      "dependencies": [
+        "src",
+        "src.services.thea",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "demo_working_thea": {
+      "name": "demo_working_thea",
+      "path": "thea/demo_working_thea.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 77,
+      "v2_compliant": true,
+      "dependencies": [
+        "thea_automation",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "run_headless_refresh": {
+      "name": "run_headless_refresh",
+      "path": "thea/run_headless_refresh.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 38,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "src",
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service",
+        "traceback"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "send_prompt_file": {
+      "name": "send_prompt_file",
+      "path": "thea/send_prompt_file.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 128,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "setup_thea_cookies": {
+      "name": "setup_thea_cookies",
+      "path": "thea/setup_thea_cookies.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 369,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "selenium",
+        "selenium.webdriver.chrome.options",
+        "selenium.webdriver.common.by",
+        "thea_login_handler",
+        "time",
+        "undetected_chromedriver"
+      ],
+      "cli_flags": [
+        "--disable-blink-features=AutomationControlled",
+        "--disable-dev-shm-usage",
+        "--disable-gpu",
+        "--headless",
+        "--headless=new",
+        "--no-sandbox",
+        "--window-size=1920,1080"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "simple_thea_communication": {
+      "name": "simple_thea_communication",
+      "path": "thea/simple_thea_communication.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 363,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "pyautogui",
+        "pyperclip",
+        "response_detector",
+        "selenium",
+        "selenium.webdriver.chrome.options",
+        "thea_cookie_manager",
+        "thea_login_handler",
+        "time"
+      ],
+      "cli_flags": [
+        "--disable-dev-shm-usage",
+        "--disable-extensions",
+        "--disable-features=VizDisplayCompositor",
+        "--disable-gpu",
+        "--disable-images",
+        "--disable-plugins",
+        "--disable-web-security",
+        "--headless",
+        "--headless=new",
+        "--message",
+        "--no-sandbox",
+        "--password",
+        "--remote-debugging-port=9222",
+        "--username",
+        "--window-size=1920,1080"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "tell_thea_session_summary": {
+      "name": "tell_thea_session_summary",
+      "path": "thea/tell_thea_session_summary.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 148,
+      "v2_compliant": true,
+      "dependencies": [
+        "thea_automation",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_authentication_handler": {
+      "name": "thea_authentication_handler",
+      "path": "thea/thea_authentication_handler.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 187,
+      "v2_compliant": true,
+      "dependencies": [
+        "pyotp",
+        "selenium",
+        "selenium.common.exceptions",
+        "selenium.webdriver.common.by",
+        "selenium.webdriver.support",
+        "selenium.webdriver.support.ui",
+        "thea_cookie_manager",
+        "thea_login_detector",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_automation": {
+      "name": "thea_automation",
+      "path": "thea/thea_automation.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 483,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "pyautogui",
+        "pyperclip",
+        "response_detector",
+        "selenium",
+        "selenium.webdriver.chrome.options",
+        "selenium.webdriver.common.by",
+        "time"
+      ],
+      "cli_flags": [
+        "--disable-dev-shm-usage",
+        "--disable-gpu",
+        "--headless",
+        "--headless=new",
+        "--message",
+        "--no-sandbox",
+        "--window-size=1920,1080"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_automation_browser": {
+      "name": "thea_automation_browser",
+      "path": "thea/thea_automation_browser.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 196,
+      "v2_compliant": true,
+      "dependencies": [
+        "selenium",
+        "selenium.webdriver.chrome.options",
+        "selenium.webdriver.common.by",
+        "time"
+      ],
+      "cli_flags": [
+        "--disable-dev-shm-usage",
+        "--disable-gpu",
+        "--headless=new",
+        "--no-sandbox",
+        "--window-size=1920,1080"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_automation_cookie_manager": {
+      "name": "thea_automation_cookie_manager",
+      "path": "thea/thea_automation_cookie_manager.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 168,
+      "v2_compliant": true,
+      "dependencies": [
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_automation_messaging": {
+      "name": "thea_automation_messaging",
+      "path": "thea/thea_automation_messaging.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 171,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "pyautogui",
+        "pyperclip",
+        "response_detector",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_cookie_manager": {
+      "name": "thea_cookie_manager",
+      "path": "thea/thea_cookie_manager.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 143,
+      "v2_compliant": true,
+      "dependencies": [
+        "selenium"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_headless_send": {
+      "name": "thea_headless_send",
+      "path": "thea/thea_headless_send.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 123,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "src",
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service"
+      ],
+      "cli_flags": [
+        "--timeout",
+        "-m"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_keepalive": {
+      "name": "thea_keepalive",
+      "path": "thea/thea_keepalive.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 92,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "src",
+        "src.infrastructure.browser.browser_models",
+        "src.infrastructure.browser.thea_browser_service",
+        "time"
+      ],
+      "cli_flags": [
+        "--cookie-path",
+        "--min-interval-minutes"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_login_detector": {
+      "name": "thea_login_detector",
+      "path": "thea/thea_login_detector.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 180,
+      "v2_compliant": true,
+      "dependencies": [
+        "selenium",
+        "selenium.common.exceptions",
+        "selenium.webdriver.common.by",
+        "selenium.webdriver.support",
+        "selenium.webdriver.support.ui"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_login_handler": {
+      "name": "thea_login_handler",
+      "path": "thea/thea_login_handler.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 819,
+      "v2_compliant": false,
+      "dependencies": [
+        "selenium",
+        "selenium.common.exceptions",
+        "selenium.webdriver.common.by",
+        "selenium.webdriver.support",
+        "selenium.webdriver.support.ui",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_login_handler_refactored": {
+      "name": "thea_login_handler_refactored",
+      "path": "thea/thea_login_handler_refactored.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 67,
+      "v2_compliant": true,
+      "dependencies": [
+        "thea_authentication_handler",
+        "thea_cookie_manager",
+        "thea_login_detector"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "thea_undetected_helper": {
+      "name": "thea_undetected_helper",
+      "path": "thea/thea_undetected_helper.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 225,
+      "v2_compliant": true,
+      "dependencies": [
+        "selenium",
+        "selenium.webdriver.chrome.options",
+        "undetected_chromedriver"
+      ],
+      "cli_flags": [
+        "--disable-blink-features=AutomationControlled",
+        "--disable-dev-shm-usage",
+        "--headless",
+        "--headless=new",
+        "--no-sandbox",
+        "--window-size=1920,1080"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_executor": {
+      "name": "agent_executor",
+      "path": "toolbelt/executors/agent_executor.py",
+      "type": "specialized",
+      "category": "agent_ops",
+      "lines_of_code": 65,
+      "v2_compliant": true,
+      "dependencies": [
+        "src",
+        "src.services.agent_management"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "compliance_executor": {
+      "name": "compliance_executor",
+      "path": "toolbelt/executors/compliance_executor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 225,
+      "v2_compliant": true,
+      "dependencies": [
+        "importlib"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "compliance_tracking_executor": {
+      "name": "compliance_tracking_executor",
+      "path": "toolbelt/executors/compliance_tracking_executor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 101,
+      "v2_compliant": true,
+      "dependencies": [
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "consolidation_executor": {
+      "name": "consolidation_executor",
+      "path": "toolbelt/executors/consolidation_executor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 136,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "leaderboard_executor": {
+      "name": "leaderboard_executor",
+      "path": "toolbelt/executors/leaderboard_executor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 101,
+      "v2_compliant": true,
+      "dependencies": [
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "messaging_executor": {
+      "name": "messaging_executor",
+      "path": "toolbelt/executors/messaging_executor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 40,
+      "v2_compliant": true,
+      "dependencies": [
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "onboarding_executor": {
+      "name": "onboarding_executor",
+      "path": "toolbelt/executors/onboarding_executor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 115,
+      "v2_compliant": true,
+      "dependencies": [
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "refactor_executor": {
+      "name": "refactor_executor",
+      "path": "toolbelt/executors/refactor_executor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 135,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_executor": {
+      "name": "swarm_executor",
+      "path": "toolbelt/executors/swarm_executor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 92,
+      "v2_compliant": true,
+      "dependencies": [
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "v2_executor": {
+      "name": "v2_executor",
+      "path": "toolbelt/executors/v2_executor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 39,
+      "v2_compliant": true,
+      "dependencies": [
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "vector_executor": {
+      "name": "vector_executor",
+      "path": "toolbelt/executors/vector_executor.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 61,
+      "v2_compliant": true,
+      "dependencies": [
+        "src",
+        "src.services.agent_management",
+        "src.services.work_indexer"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "toolbelt_registry": {
+      "name": "toolbelt_registry",
+      "path": "toolbelt_registry.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 395,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "audit_imports": {
+      "name": "audit_imports",
+      "path": "validation/audit_imports.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 149,
+      "v2_compliant": true,
+      "dependencies": [
+        "importlib"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "schema_org_validator": {
+      "name": "schema_org_validator",
+      "path": "validation/schema_org_validator.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 289,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "bs4",
+        "requests"
+      ],
+      "cli_flags": [
+        "--json",
+        "--timeout",
+        "--validate-types"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "template_structure_linter": {
+      "name": "template_structure_linter",
+      "path": "validation/template_structure_linter.py",
+      "type": "specialized",
+      "category": "validation",
+      "lines_of_code": 207,
+      "v2_compliant": true,
+      "dependencies": [
+        "__future__",
+        "argparse",
+        "src",
+        "src.core.messaging_models",
+        "src.core.messaging_templates"
+      ],
+      "cli_flags": [
+        "--recipient",
+        "--sender"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_validator": {
+      "name": "unified_validator",
+      "path": "validation/unified_validator.py",
+      "type": "unified",
+      "category": "validation",
+      "lines_of_code": 522,
+      "v2_compliant": false,
+      "dependencies": [
+        "argparse",
+        "datetime"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--all",
+        "--author",
+        "--checklist",
+        "--devlog-only",
+        "--dir",
+        "--file",
+        "--json",
+        "--verbose"
+      ],
+      "registry": "none",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_verifier": {
+      "name": "unified_verifier",
+      "path": "verification/unified_verifier.py",
+      "type": "unified",
+      "category": "general",
+      "lines_of_code": 390,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "tools",
+        "tools.verify_archived_repos",
+        "tools.verify_batch1_main_branches",
+        "tools.verify_batch1_main_content",
+        "tools.verify_batch1_merge_commits",
+        "tools.verify_batch2_prs",
+        "tools.verify_batch2_target_repos",
+        "tools.verify_bulk_deletion_ssot",
+        "tools.verify_contract_leads_merge",
+        "tools.verify_discord_buttons",
+        "tools.verify_failed_merge_repos",
+        "tools.verify_file_comprehensive",
+        "tools.verify_file_usage_enhanced",
+        "tools.verify_github_repo_cicd",
+        "tools.verify_hostinger_credentials",
+        "tools.verify_merged_repo_cicd_enhanced",
+        "tools.verify_phase1_repos",
+        "tools.verify_repo_merge_status"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "unified_wordpress": {
+      "name": "unified_wordpress",
+      "path": "wordpress/unified_wordpress.py",
+      "type": "unified",
+      "category": "web",
+      "lines_of_code": 334,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "datetime",
+        "tools",
+        "tools.activate_wordpress_theme",
+        "tools.check_theme_syntax",
+        "tools.clear_wordpress_transients",
+        "tools.debug_wordpress_deployer",
+        "tools.deploy_via_sftp",
+        "tools.deploy_via_wordpress_admin",
+        "tools.deploy_via_wordpress_rest_api",
+        "tools.diagnose_ariajet_wordpress_path",
+        "tools.enable_wordpress_debug"
+      ],
+      "cli_flags": [
+        "--auto-login",
+        "--file",
+        "--json",
+        "--site",
+        "--target",
+        "--theme"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "base_adapter": {
+      "name": "base_adapter",
+      "path": "adapters/base_adapter.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 127,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "error_types": {
+      "name": "error_types",
+      "path": "adapters/error_types.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 118,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "advisor_cli": {
+      "name": "advisor_cli",
+      "path": "advisor_cli.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 238,
+      "v2_compliant": true,
+      "dependencies": [
+        "argparse",
+        "tools_v2",
+        "tools_v2.categories.intelligent_mission_advisor"
+      ],
+      "cli_flags": [
+        "--agent",
+        "--allow-duplication",
+        "--guide",
+        "--json",
+        "--no-roi",
+        "--recommend",
+        "--swarm",
+        "--validate"
+      ],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_activity_tools": {
+      "name": "agent_activity_tools",
+      "path": "categories/agent_activity_tools.py",
+      "type": "category",
+      "category": "agent_ops",
+      "lines_of_code": 209,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "core",
+        "core.tool_spec",
+        "datetime",
+        "src",
+        "src.core.message_queue",
+        "time",
+        "tools_v2",
+        "tools_v2.categories.agent_activity_tools"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "agent_ops_tools": {
+      "name": "agent_ops_tools",
+      "path": "categories/agent_ops_tools.py",
+      "type": "category",
+      "category": "agent_ops",
+      "lines_of_code": 102,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "src",
+        "src.services.agent_management"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "analysis_tools": {
+      "name": "analysis_tools",
+      "path": "categories/analysis_tools.py",
+      "type": "category",
+      "category": "analysis",
+      "lines_of_code": 134,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "autonomous_workflow_tools": {
+      "name": "autonomous_workflow_tools",
+      "path": "categories/autonomous_workflow_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 576,
+      "v2_compliant": false,
+      "dependencies": [
+        "__future__",
+        "datetime",
+        "src",
+        "src.services.messaging_service"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "bi_tools": {
+      "name": "bi_tools",
+      "path": "categories/bi_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 217,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_coordination_tools": {
+      "name": "captain_coordination_tools",
+      "path": "categories/captain_coordination_tools.py",
+      "type": "category",
+      "category": "captain",
+      "lines_of_code": 327,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "datetime",
+        "src",
+        "src.swarm_brain.swarm_memory",
+        "toolbelt_core"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_tools": {
+      "name": "captain_tools",
+      "path": "categories/captain_tools.py",
+      "type": "category",
+      "category": "captain",
+      "lines_of_code": 55,
+      "v2_compliant": true,
+      "dependencies": [
+        "captain_tools_advanced",
+        "captain_tools_core",
+        "captain_tools_monitoring"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_tools_advanced": {
+      "name": "captain_tools_advanced",
+      "path": "categories/captain_tools_advanced.py",
+      "type": "category",
+      "category": "captain",
+      "lines_of_code": 287,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_tools_architecture": {
+      "name": "captain_tools_architecture",
+      "path": "categories/captain_tools_architecture.py",
+      "type": "category",
+      "category": "captain",
+      "lines_of_code": 155,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_tools_coordination": {
+      "name": "captain_tools_coordination",
+      "path": "categories/captain_tools_coordination.py",
+      "type": "category",
+      "category": "captain",
+      "lines_of_code": 345,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "datetime",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_tools_core": {
+      "name": "captain_tools_core",
+      "path": "categories/captain_tools_core.py",
+      "type": "category",
+      "category": "captain",
+      "lines_of_code": 279,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "datetime",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_tools_extension": {
+      "name": "captain_tools_extension",
+      "path": "categories/captain_tools_extension.py",
+      "type": "category",
+      "category": "captain",
+      "lines_of_code": 54,
+      "v2_compliant": true,
+      "dependencies": [
+        "captain_tools_architecture",
+        "captain_tools_core",
+        "captain_tools_messaging",
+        "captain_tools_utilities"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_tools_messaging": {
+      "name": "captain_tools_messaging",
+      "path": "categories/captain_tools_messaging.py",
+      "type": "category",
+      "category": "captain",
+      "lines_of_code": 194,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "datetime",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_tools_monitoring": {
+      "name": "captain_tools_monitoring",
+      "path": "categories/captain_tools_monitoring.py",
+      "type": "category",
+      "category": "monitoring",
+      "lines_of_code": 314,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "datetime",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_tools_utilities": {
+      "name": "captain_tools_utilities",
+      "path": "categories/captain_tools_utilities.py",
+      "type": "category",
+      "category": "captain",
+      "lines_of_code": 345,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "captain_tools_architecture",
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "captain_tools_validation": {
+      "name": "captain_tools_validation",
+      "path": "categories/captain_tools_validation.py",
+      "type": "category",
+      "category": "validation",
+      "lines_of_code": 199,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "communication_tools": {
+      "name": "communication_tools",
+      "path": "categories/communication_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 153,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime",
+        "dotenv",
+        "requests"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "compliance_tools": {
+      "name": "compliance_tools",
+      "path": "categories/compliance_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 97,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "config_tools": {
+      "name": "config_tools",
+      "path": "categories/config_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 232,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "coordination_tools": {
+      "name": "coordination_tools",
+      "path": "categories/coordination_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 475,
+      "v2_compliant": false,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "subprocess",
+        "swarm_status_broadcaster"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "dashboard_tools": {
+      "name": "dashboard_tools",
+      "path": "categories/dashboard_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 315,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "dashboard_charts",
+        "dashboard_data_aggregator",
+        "dashboard_html_generator_refactored",
+        "dashboard_styles",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "debate_tools": {
+      "name": "debate_tools",
+      "path": "categories/debate_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 333,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "discord_profile_tools": {
+      "name": "discord_profile_tools",
+      "path": "categories/discord_profile_tools.py",
+      "type": "category",
+      "category": "discord",
+      "lines_of_code": 92,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "core",
+        "core.tool_spec"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "discord_tools": {
+      "name": "discord_tools",
+      "path": "categories/discord_tools.py",
+      "type": "category",
+      "category": "discord",
+      "lines_of_code": 146,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "discord_webhook_tools": {
+      "name": "discord_webhook_tools",
+      "path": "categories/discord_webhook_tools.py",
+      "type": "category",
+      "category": "discord",
+      "lines_of_code": 414,
+      "v2_compliant": false,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "discord",
+        "discord.ext",
+        "requests"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "docs_tools": {
+      "name": "docs_tools",
+      "path": "categories/docs_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 112,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "github_consolidation_tools": {
+      "name": "github_consolidation_tools",
+      "path": "categories/github_consolidation_tools.py",
+      "type": "category",
+      "category": "github",
+      "lines_of_code": 584,
+      "v2_compliant": false,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "core",
+        "core.tool_spec",
+        "src",
+        "src.tools.github_scanner",
+        "subprocess",
+        "tools_v2",
+        "tools_v2.toolbelt_core"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "health_tools": {
+      "name": "health_tools",
+      "path": "categories/health_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 106,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "import_fix_tools": {
+      "name": "import_fix_tools",
+      "path": "categories/import_fix_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 430,
+      "v2_compliant": false,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "import_chain_validator",
+        "importlib",
+        "importlib.util",
+        "subprocess",
+        "validate_imports"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "infrastructure_audit_tools": {
+      "name": "infrastructure_audit_tools",
+      "path": "categories/infrastructure_audit_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 320,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "audit_broken_tools",
+        "comprehensive_tool_runtime_audit",
+        "importlib",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "infrastructure_tools": {
+      "name": "infrastructure_tools",
+      "path": "categories/infrastructure_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 61,
+      "v2_compliant": true,
+      "dependencies": [
+        "infrastructure_audit_tools",
+        "infrastructure_utility_tools",
+        "infrastructure_workspace_tools"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "infrastructure_utility_tools": {
+      "name": "infrastructure_utility_tools",
+      "path": "categories/infrastructure_utility_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 253,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "browser_pool_manager"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "infrastructure_workspace_tools": {
+      "name": "infrastructure_workspace_tools",
+      "path": "categories/infrastructure_workspace_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 248,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "auto_status_updater",
+        "session_transition_automator",
+        "swarm_status_broadcaster",
+        "unified_agent_status_monitor",
+        "workspace_auto_cleaner",
+        "workspace_health_monitor"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "integration_tools": {
+      "name": "integration_tools",
+      "path": "categories/integration_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 368,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "audit_imports",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "intelligent_mission_advisor": {
+      "name": "intelligent_mission_advisor",
+      "path": "categories/intelligent_mission_advisor.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 787,
+      "v2_compliant": false,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "intelligent_mission_advisor_adapter": {
+      "name": "intelligent_mission_advisor_adapter",
+      "path": "categories/intelligent_mission_advisor_adapter.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 220,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "intelligent_mission_advisor"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "intelligent_mission_advisor_analysis": {
+      "name": "intelligent_mission_advisor_analysis",
+      "path": "categories/intelligent_mission_advisor_analysis.py",
+      "type": "category",
+      "category": "analysis",
+      "lines_of_code": 235,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "intelligent_mission_advisor_guidance": {
+      "name": "intelligent_mission_advisor_guidance",
+      "path": "categories/intelligent_mission_advisor_guidance.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 275,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "memory_safety_adapters": {
+      "name": "memory_safety_adapters",
+      "path": "categories/memory_safety_adapters.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 198,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "memory_safety_tools"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "memory_safety_tools": {
+      "name": "memory_safety_tools",
+      "path": "categories/memory_safety_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 410,
+      "v2_compliant": false,
+      "dependencies": [
+        "importlib",
+        "importlib.util"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "message_analytics_tools": {
+      "name": "message_analytics_tools",
+      "path": "categories/message_analytics_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 311,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "datetime",
+        "src",
+        "src.core.agent_activity_tracker",
+        "src.core.analytics.engines.metrics_engine",
+        "src.core.analytics.framework.pattern_analysis_engine",
+        "src.repositories.message_repository"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "message_history_tools": {
+      "name": "message_history_tools",
+      "path": "categories/message_history_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 311,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "core",
+        "core.tool_spec",
+        "datetime",
+        "src",
+        "src.repositories.message_repository"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "message_task_tools": {
+      "name": "message_task_tools",
+      "path": "categories/message_task_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 108,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "src",
+        "src.message_task.dedupe",
+        "src.message_task.messaging_integration",
+        "src.message_task.parsers.ai_parser",
+        "src.message_task.parsers.fallback_regex",
+        "src.message_task.parsers.structured_parser"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "messaging_tools": {
+      "name": "messaging_tools",
+      "path": "categories/messaging_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 170,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "mission_calculator": {
+      "name": "mission_calculator",
+      "path": "categories/mission_calculator.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 121,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "mod_deployment_tools": {
+      "name": "mod_deployment_tools",
+      "path": "categories/mod_deployment_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 435,
+      "v2_compliant": false,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "core",
+        "core.dependency_resolver",
+        "core.health_checker",
+        "core.mod_manager",
+        "core.profile_manager",
+        "core.thunderstore_client"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "deprecated",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "observability_tools": {
+      "name": "observability_tools",
+      "path": "categories/observability_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 144,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "src",
+        "src.obs.metrics"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "onboarding_tools": {
+      "name": "onboarding_tools",
+      "path": "categories/onboarding_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 119,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "oss_tools": {
+      "name": "oss_tools",
+      "path": "categories/oss_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 255,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "src",
+        "src.infrastructure.persistence.sqlite_task_repo",
+        "src.opensource.contribution_tracker",
+        "src.opensource.github_integration",
+        "src.opensource.portfolio_builder",
+        "src.opensource.project_manager",
+        "src.opensource.task_integration"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "proposal_tools": {
+      "name": "proposal_tools",
+      "path": "categories/proposal_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 358,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "queue_monitor_tools": {
+      "name": "queue_monitor_tools",
+      "path": "categories/queue_monitor_tools.py",
+      "type": "category",
+      "category": "monitoring",
+      "lines_of_code": 76,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "core",
+        "core.tool_spec",
+        "src",
+        "src.core.message_queue"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "refactoring_tools": {
+      "name": "refactoring_tools",
+      "path": "categories/refactoring_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 329,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "session_tools": {
+      "name": "session_tools",
+      "path": "categories/session_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 264,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "ssot_validation_tools": {
+      "name": "ssot_validation_tools",
+      "path": "categories/ssot_validation_tools.py",
+      "type": "category",
+      "category": "validation",
+      "lines_of_code": 414,
+      "v2_compliant": false,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_brain_tools": {
+      "name": "swarm_brain_tools",
+      "path": "categories/swarm_brain_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 165,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "src",
+        "src.swarm_brain"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_consciousness": {
+      "name": "swarm_consciousness",
+      "path": "categories/swarm_consciousness.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 378,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "datetime",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_mission_control": {
+      "name": "swarm_mission_control",
+      "path": "categories/swarm_mission_control.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 388,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "swarm_state_reader": {
+      "name": "swarm_state_reader",
+      "path": "categories/swarm_state_reader.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 166,
+      "v2_compliant": true,
+      "dependencies": [
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "system_tools": {
+      "name": "system_tools",
+      "path": "categories/system_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 238,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "core",
+        "core.tool_spec",
+        "datetime",
+        "time"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "testing_tools": {
+      "name": "testing_tools",
+      "path": "categories/testing_tools.py",
+      "type": "category",
+      "category": "testing",
+      "lines_of_code": 93,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "v2_tools": {
+      "name": "v2_tools",
+      "path": "categories/v2_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 97,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "validation_tools": {
+      "name": "validation_tools",
+      "path": "categories/validation_tools.py",
+      "type": "category",
+      "category": "validation",
+      "lines_of_code": 360,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "integrity_validator",
+        "src",
+        "src.features.flags",
+        "src.obs.metrics",
+        "ssot_validator",
+        "subprocess"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "vector_tools": {
+      "name": "vector_tools",
+      "path": "categories/vector_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 147,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "src",
+        "src.services.agent_management",
+        "src.services.vector_database",
+        "src.services.vector_database.vector_database_models",
+        "src.services.work_indexer"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "web_tools": {
+      "name": "web_tools",
+      "path": "categories/web_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 137,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "discord_web_test_automation",
+        "utils",
+        "utils.discord_mermaid_renderer"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "needs_attention",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "workflow_tools": {
+      "name": "workflow_tools",
+      "path": "categories/workflow_tools.py",
+      "type": "category",
+      "category": "general",
+      "lines_of_code": 237,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "datetime"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "tool_facade": {
+      "name": "tool_facade",
+      "path": "core/tool_facade.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 11,
+      "v2_compliant": true,
+      "dependencies": [
+        "toolbelt_core"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "tool_spec": {
+      "name": "tool_spec",
+      "path": "core/tool_spec.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 37,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "demo_swarm_pulse": {
+      "name": "demo_swarm_pulse",
+      "path": "demo_swarm_pulse.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 98,
+      "v2_compliant": true,
+      "dependencies": [
+        "tools_v2",
+        "tools_v2.toolbelt_core"
+      ],
+      "cli_flags": [],
+      "registry": "none",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "rank_tools_v2": {
+      "name": "rank_tools_v2",
+      "path": "rank_tools_v2.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 97,
+      "v2_compliant": true,
+      "dependencies": [],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "tool_registry": {
+      "name": "tool_registry",
+      "path": "tool_registry.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 108,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "importlib"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    },
+    "toolbelt_core": {
+      "name": "toolbelt_core",
+      "path": "toolbelt_core.py",
+      "type": "specialized",
+      "category": "general",
+      "lines_of_code": 200,
+      "v2_compliant": true,
+      "dependencies": [
+        "adapters",
+        "adapters.base_adapter",
+        "adapters.error_types",
+        "time",
+        "tool_registry"
+      ],
+      "cli_flags": [],
+      "registry": "tool_registry_v2",
+      "status": "active",
+      "migration_target": null,
+      "migration_priority": null,
+      "notes": null
+    }
+  },
+  "categories": {
+    "agent_ops": {
+      "tools": [
+        "unified_agent",
+        "agent_activity_detector",
+        "agent_checkin",
+        "agent_lifecycle_automator",
+        "agent_message_history",
+        "agent_mission_controller",
+        "agent_orient",
+        "agent_task_finder",
+        "captain_find_idle_agents",
+        "github_pusher_agent",
+        "agent_executor",
+        "agent_activity_tools",
+        "agent_ops_tools"
+      ],
+      "target_file": "tools/categories/agent_ops_tools.py",
+      "existing": false
+    },
+    "analysis": {
+      "tools": [
+        "analyze_swarm_coordination_patterns",
+        "comprehensive_tool_analyzer",
+        "consolidation_analyzer",
+        "github_architecture_audit",
+        "refactoring_suggestion_engine",
+        "scan_technical_debt",
+        "seo_meta_tag_extractor",
+        "source_analyzer",
+        "src_directory_report_generator",
+        "tech_debt_ci_summary",
+        "technical_debt_analyzer",
+        "temp_violation_scanner",
+        "unified_analyzer",
+        "analysis_toolkit",
+        "code_analysis_tool",
+        "coverage_analyzer",
+        "refactoring_ast_analyzer",
+        "repository_analyzer",
+        "analysis_tools",
+        "intelligent_mission_advisor_analysis"
+      ],
+      "target_file": "tools/categories/analysis_tools.py",
+      "existing": false
+    },
+    "general": {
+      "tools": [
+        "task_models",
+        "cleanup_obsolete_files",
+        "cleanup_stub_files",
+        "session_cleanup_automation",
+        "unified_cleanup",
+        "workspace_auto_cleaner",
+        "command_discovery",
+        "registry",
+        "unified_dispatcher",
+        "migrate_managers",
+        "migrate_orchestrators",
+        "replace_prints_with_logger",
+        "consolidate_messaging",
+        "tool_inventory",
+        "changed_file_report",
+        "mutation_gate",
+        "START_CHAT_BOT_NOW",
+        "__main__",
+        "architecture_review",
+        "auto_assign_next_round",
+        "auto_fix_missing_imports",
+        "auto_inbox_processor",
+        "auto_learn_preferences",
+        "auto_remediate_loc",
+        "auto_status_updater",
+        "auto_validate_cycle_v2",
+        "auto_workspace_cleanup",
+        "autonomous_leaderboard",
+        "autonomous_task_engine",
+        "browser_pool_manager",
+        "circular_import_detector",
+        "clean_message_queue",
+        "compliance_dashboard",
+        "compliance_history_tracker",
+        "devlog_compressor",
+        "devlog_manager",
+        "devlog_poster",
+        "gas_messaging",
+        "get_swarm_time",
+        "git_work_verifier",
+        "memory_leak_scanner",
+        "message_delivery_verifier",
+        "meta_tag_completeness_checker",
+        "mission_control",
+        "opportunity_scanners",
+        "project_scan",
+        "refactoring_models",
+        "repo_safe_merge",
+        "reset_stuck_messages",
+        "session_quick_checkin",
+        "sites_registry",
+        "start_message_queue_processor",
+        "start_services_direct",
+        "start_twitchbot_with_fixes",
+        "stop_twitchbot",
+        "swarm_activity_feed_poster",
+        "swarm_brain_cli",
+        "swarm_coordination_dashboard",
+        "swarm_orchestrator",
+        "swarm_profile_manager",
+        "swarm_site_health_automation",
+        "swarm_status_broadcaster",
+        "swarm_system_inventory",
+        "swarm_website_auto_update",
+        "task_creator",
+        "task_verification_tool",
+        "toolbelt",
+        "toolbelt_help",
+        "toolbelt_runner",
+        "unified_blogging_automation",
+        "v2_checker_formatters",
+        "v2_compliance_checker",
+        "v2_compliance_dashboard_sync",
+        "v2_compliance_summary",
+        "v2_function_size_checker",
+        "website_manager",
+        "doc_templates_achievements",
+        "doc_templates_mission",
+        "analyze_chatgpt_selectors",
+        "demo_thea_interactive",
+        "demo_thea_live",
+        "demo_thea_simple",
+        "demo_working_thea",
+        "run_headless_refresh",
+        "send_prompt_file",
+        "setup_thea_cookies",
+        "simple_thea_communication",
+        "tell_thea_session_summary",
+        "thea_authentication_handler",
+        "thea_automation",
+        "thea_automation_browser",
+        "thea_automation_cookie_manager",
+        "thea_automation_messaging",
+        "thea_cookie_manager",
+        "thea_headless_send",
+        "thea_keepalive",
+        "thea_login_detector",
+        "thea_login_handler",
+        "thea_login_handler_refactored",
+        "thea_undetected_helper",
+        "compliance_executor",
+        "compliance_tracking_executor",
+        "consolidation_executor",
+        "leaderboard_executor",
+        "messaging_executor",
+        "onboarding_executor",
+        "refactor_executor",
+        "swarm_executor",
+        "v2_executor",
+        "vector_executor",
+        "toolbelt_registry",
+        "unified_verifier",
+        "base_adapter",
+        "error_types",
+        "advisor_cli",
+        "autonomous_workflow_tools",
+        "bi_tools",
+        "communication_tools",
+        "compliance_tools",
+        "config_tools",
+        "coordination_tools",
+        "dashboard_tools",
+        "debate_tools",
+        "docs_tools",
+        "health_tools",
+        "import_fix_tools",
+        "infrastructure_audit_tools",
+        "infrastructure_tools",
+        "infrastructure_utility_tools",
+        "infrastructure_workspace_tools",
+        "integration_tools",
+        "intelligent_mission_advisor",
+        "intelligent_mission_advisor_adapter",
+        "intelligent_mission_advisor_guidance",
+        "memory_safety_adapters",
+        "memory_safety_tools",
+        "message_analytics_tools",
+        "message_history_tools",
+        "message_task_tools",
+        "messaging_tools",
+        "mission_calculator",
+        "mod_deployment_tools",
+        "observability_tools",
+        "onboarding_tools",
+        "oss_tools",
+        "proposal_tools",
+        "refactoring_tools",
+        "session_tools",
+        "swarm_brain_tools",
+        "swarm_consciousness",
+        "swarm_mission_control",
+        "swarm_state_reader",
+        "system_tools",
+        "v2_tools",
+        "vector_tools",
+        "web_tools",
+        "workflow_tools",
+        "tool_facade",
+        "tool_spec",
+        "demo_swarm_pulse",
+        "rank_tools_v2",
+        "tool_registry",
+        "toolbelt_core"
+      ],
+      "target_file": "tools/categories/general_tools.py",
+      "existing": false
+    },
+    "captain": {
+      "tools": [
+        "claim_and_fix_master_task",
+        "create_work_session",
+        "session_transition_automator",
+        "task_cli",
+        "unified_captain",
+        "captain_architectural_checker",
+        "captain_cycle_scheduler",
+        "captain_gas_check",
+        "captain_inbox_assistant",
+        "captain_inbox_helper",
+        "captain_inbox_manager",
+        "captain_leaderboard_update",
+        "captain_loop_closer",
+        "captain_loop_detector",
+        "captain_message_processor",
+        "captain_morning_briefing",
+        "captain_next_task_picker",
+        "captain_pattern_optimizer",
+        "captain_progress_dashboard",
+        "captain_roi_quick_calc",
+        "captain_send_jet_fuel",
+        "captain_snapshot",
+        "captain_swarm_coordinator",
+        "captain_swarm_response_generator",
+        "captain_task_assigner",
+        "captain_update_log",
+        "captain_coordination_tools",
+        "captain_tools",
+        "captain_tools_advanced",
+        "captain_tools_architecture",
+        "captain_tools_coordination",
+        "captain_tools_core",
+        "captain_tools_extension",
+        "captain_tools_messaging",
+        "captain_tools_utilities"
+      ],
+      "target_file": "tools/categories/captain_tools.py",
+      "existing": false
+    },
+    "validation": {
+      "tools": [
+        "agent_status_validator",
+        "coordination_pattern_validator",
+        "coordination_validator",
+        "integration_validator",
+        "message_validator",
+        "messaging_infrastructure_validator",
+        "multi_agent_validator",
+        "swarm_status_validator",
+        "unified_communication_validator",
+        "agent_cycle_v2_report_validator",
+        "captain_import_validator",
+        "import_chain_validator",
+        "audit_imports",
+        "schema_org_validator",
+        "template_structure_linter",
+        "unified_validator",
+        "captain_tools_validation",
+        "ssot_validation_tools",
+        "validation_tools"
+      ],
+      "target_file": "tools/categories/validation_tools.py",
+      "existing": false
+    },
+    "discord": {
+      "tools": [
+        "discord_commands_tester",
+        "discord_simple_test",
+        "discord_bot_cleanup",
+        "discord_bot_troubleshoot",
+        "discord_mermaid_renderer",
+        "discord_startup_listener",
+        "start_discord_system",
+        "unified_discord",
+        "discord_profile_tools",
+        "discord_tools",
+        "discord_webhook_tools"
+      ],
+      "target_file": "tools/categories/discord_tools.py",
+      "existing": false
+    },
+    "debug": {
+      "tools": [
+        "check_stuck_messages",
+        "debug_message_queue",
+        "diagnose_github_cli_auth",
+        "fix_message_queue",
+        "unified_debugger",
+        "github_pr_debugger",
+        "debug_chatgpt_elements"
+      ],
+      "target_file": "tools/categories/debug_tools.py",
+      "existing": false
+    },
+    "monitoring": {
+      "tools": [
+        "agent_fuel_monitor",
+        "monitor_4agent_dependency_chain",
+        "monitor_twitch_bot",
+        "monitor_twitch_bot_status",
+        "start_monitoring_system",
+        "unified_monitor",
+        "captain_tools_monitoring",
+        "queue_monitor_tools"
+      ],
+      "target_file": "tools/categories/monitoring_tools.py",
+      "existing": false
+    },
+    "github": {
+      "tools": [
+        "find_github_token",
+        "github_consolidation_recovery",
+        "github_create_and_push_repo",
+        "github_repo_roi_calculator",
+        "start_github_pusher_service",
+        "unified_github_pr_creator",
+        "unified_github",
+        "github_consolidation_tools"
+      ],
+      "target_file": "tools/categories/github_tools.py",
+      "existing": false
+    },
+    "testing": {
+      "tools": [
+        "mcp_tools_self_test",
+        "testing_tools"
+      ],
+      "target_file": "tools/categories/testing_tools.py",
+      "existing": false
+    },
+    "security": {
+      "tools": [
+        "web_domain_security_audit",
+        "check_sensitive_files",
+        "unified_security_scanner"
+      ],
+      "target_file": "tools/categories/security_tools.py",
+      "existing": false
+    },
+    "web": {
+      "tools": [
+        "wordpress_admin_deployer",
+        "wordpress_deployment_manager",
+        "wordpress_manager",
+        "unified_wordpress"
+      ],
+      "target_file": "tools/categories/web_tools.py",
+      "existing": false
+    },
+    "infrastructure": {
+      "tools": [
+        "documentation_assistant",
+        "type_annotation_fixer",
+        "unified_environment"
+      ],
+      "target_file": "tools/categories/infrastructure_tools.py",
+      "existing": false
+    }
+  },
+  "duplicates": {
+    "duplicate_discord_mermaid_renderer": {
+      "tools": [
+        "discord_mermaid_renderer"
+      ],
+      "keep": "discord_mermaid_renderer",
+      "delete": [],
+      "reason": "Duplicate name found between tools/ and tools_v2/"
+    }
+  }
+}

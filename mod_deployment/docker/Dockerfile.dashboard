@@ -1,0 +1,31 @@
+# Mod Deployment - Dashboard
+# ===========================
+# 
+# Simple web dashboard for mod management
+# Shows installed mods, updates, health status
+
+FROM python:3.11-slim
+
+LABEL maintainer="Mod Deployment Automation"
+LABEL description="Mod management dashboard"
+LABEL version="1.0.0"
+
+WORKDIR /app
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements-dashboard.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY dashboard/ /app/dashboard/
+COPY core/ /app/core/
+
+RUN mkdir -p /data
+
+ENV PYTHONUNBUFFERED=1
+EXPOSE 8080
+
+ENTRYPOINT ["python", "-m", "dashboard.main"]

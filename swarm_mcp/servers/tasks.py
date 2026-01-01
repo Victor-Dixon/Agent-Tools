@@ -14,6 +14,15 @@ from typing import Any, Dict, List, Optional
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
+# Import Stage 4 Capabilities
+try:
+    from swarm_mcp.core.task_scoring import TaskScorer, ScoredTask
+    from swarm_mcp.core.verification import VerificationHarness, VerificationType
+    from swarm_mcp.core.recovery import RecoveryManager, FailureEvent
+    HAS_STAGE_4 = True
+except ImportError:
+    HAS_STAGE_4 = False
+
 # Locate MASTER_TASK_LOG.md relative to workspace root
 TASK_LOG_PATH = Path(__file__).parent.parent.parent / "MASTER_TASK_LOG.md"
 
@@ -150,6 +159,120 @@ def get_tasks(section: Optional[str] = None) -> Dict[str, Any]:
     except Exception as e:
         return {"success": False, "error": str(e)}
 
+# --- Stage 4 Implementations ---
+
+def select_next_task(context: Optional[str] = None) -> Dict[str, Any]:
+    """
+    Select the highest ROI task from INBOX.
+    Uses Impact Scoring logic.
+    """
+    if not HAS_STAGE_4:
+        return {"success": False, "error": "Stage 4 modules not available"}
+        
+    try:
+        # Get inbox tasks
+        result = get_tasks("INBOX")
+        if not result.get("success"):
+            return result
+            
+        raw_tasks = result.get("tasks", [])
+        if not raw_tasks:
+            return {"success": False, "error": "No tasks in INBOX"}
+            
+        scorer = TaskScorer()
+        scored_tasks = []
+        
+        for i, raw_task in enumerate(raw_tasks):
+            # Parse description and metadata
+            clean_desc = raw_task.replace("- [ ] ", "")
+            attrs = scorer.parse_task_metadata(clean_desc)
+            
+            scored_tasks.append(ScoredTask(
+                id=f"task_{i}",
+                description=clean_desc,
+                value=attrs.get("value", 5.0),
+                urgency=attrs.get("urgency", 5.0),
+                effort=attrs.get("effort", 5.0),
+                risk=attrs.get("risk", 1.0)
+            ))
+            
+        best_task = scorer.select_next_task(scored_tasks)
+        
+        if best_task:
+            return {
+                "success": True, 
+                "task": best_task.description,
+                "roi_score": best_task.roi_score,
+                "explanation": f"Value={best_task.value}, Urgency={best_task.urgency}, Effort={best_task.effort}"
+            }
+        else:
+             return {"success": False, "error": "Could not select task"}
+             
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+def verify_task_completion(
+    task_description: str, 
+    checks: List[Dict[str, Any]]
+) -> Dict[str, Any]:
+    """
+    Run automated verification harness for a task.
+    """
+    if not HAS_STAGE_4:
+        return {"success": False, "error": "Stage 4 modules not available"}
+        
+    try:
+        harness = VerificationHarness(workspace_root=str(Path(__file__).parent.parent.parent))
+        results = harness.run_suite(checks)
+        
+        all_passed = all(r.passed for r in results)
+        
+        return {
+            "success": True,
+            "verified": all_passed,
+            "results": [
+                {
+                    "type": r.type.value,
+                    "target": r.target,
+                    "passed": r.passed,
+                    "details": r.details
+                }
+                for r in results
+            ]
+        }
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+def recover_system(error_log: str) -> Dict[str, Any]:
+    """
+    Autonomous recovery from failure.
+    """
+    if not HAS_STAGE_4:
+        return {"success": False, "error": "Stage 4 modules not available"}
+        
+    try:
+        recovery = RecoveryManager(workspace_root=str(Path(__file__).parent.parent.parent))
+        event = recovery.analyze_failure(error_log)
+        strategy = recovery.propose_strategy(event)
+        
+        # In a real autonomous mode, we might execute immediately.
+        # For now, we return the plan.
+        
+        return {
+            "success": True,
+            "analysis": {
+                "component": event.component,
+                "severity": event.severity,
+                "timestamp": event.timestamp
+            },
+            "proposed_strategy": strategy,
+            "status": "ready_to_execute" 
+            # We don't auto-execute in this demo tool for safety
+        }
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+
 def main():
     """MCP server main loop."""
     print(
@@ -199,9 +322,50 @@ def main():
                                     },
                                 },
                             },
+                            "select_next_task": {
+                                "description": "Select highest ROI task from INBOX (Stage 4)",
+                                "inputSchema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "context": {"type": "string"}
+                                    }
+                                }
+                            },
+                            "verify_task_completion": {
+                                "description": "Verify task with automated checks (Stage 4)",
+                                "inputSchema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "task_description": {"type": "string"},
+                                        "checks": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "type": {"type": "string", "enum": ["page_fetch", "unit_test", "file_exists"]},
+                                                    "target": {"type": "string"},
+                                                    "extra": {"type": "object"}
+                                                },
+                                                "required": ["type", "target"]
+                                            }
+                                        }
+                                    },
+                                    "required": ["task_description", "checks"]
+                                }
+                            },
+                            "recover_system": {
+                                "description": "Analyze failure and propose recovery (Stage 4)",
+                                "inputSchema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "error_log": {"type": "string"}
+                                    },
+                                    "required": ["error_log"]
+                                }
+                            }
                         }
                     },
-                    "serverInfo": {"name": "swarm-tasks", "version": "1.0.0"},
+                    "serverInfo": {"name": "swarm-tasks", "version": "1.1.0"},
                 },
             }
         )
@@ -223,6 +387,12 @@ def main():
                     result = mark_task_complete(**arguments)
                 elif tool_name == "get_tasks":
                     result = get_tasks(**arguments)
+                elif tool_name == "select_next_task":
+                    result = select_next_task(**arguments)
+                elif tool_name == "verify_task_completion":
+                    result = verify_task_completion(**arguments)
+                elif tool_name == "recover_system":
+                    result = recover_system(**arguments)
                 else:
                     result = {"success": False, "error": f"Unknown tool: {tool_name}"}
 

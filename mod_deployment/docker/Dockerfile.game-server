@@ -1,0 +1,82 @@
+# Mod Deployment - Game Server Base Image
+# =========================================
+# 
+# Base image for modded game server deployment
+# Supports Lethal Company, Valheim, and other Unity games with BepInEx
+#
+# Build: docker build -f Dockerfile.game-server -t modded-game-server .
+# Run:   docker run -p 7777:7777 -v ./mods:/app/BepInEx/plugins modded-game-server
+
+FROM ubuntu:22.04
+
+LABEL maintainer="Mod Deployment Automation"
+LABEL description="Base image for modded game servers with BepInEx"
+LABEL version="1.0.0"
+
+# Prevent interactive prompts
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    wget \
+    curl \
+    unzip \
+    lib32gcc-s1 \
+    lib32stdc++6 \
+    ca-certificates \
+    software-properties-common \
+    python3 \
+    python3-pip \
+    jq \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies for mod management
+RUN pip3 install requests
+
+# Create app directory
+WORKDIR /app
+
+# Install SteamCMD
+RUN mkdir -p /steamcmd && \
+    cd /steamcmd && \
+    wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && \
+    tar -xzf steamcmd_linux.tar.gz && \
+    rm steamcmd_linux.tar.gz
+
+# Add SteamCMD to PATH
+ENV PATH="/steamcmd:${PATH}"
+
+# Create directories for mod management
+RUN mkdir -p /app/BepInEx/plugins \
+             /app/BepInEx/patchers \
+             /app/BepInEx/config \
+             /app/mod_backups \
+             /app/rollback_points \
+             /mods/staging \
+             /mods/cache
+
+# Copy mod deployment scripts
+COPY scripts/ /app/scripts/
+RUN chmod +x /app/scripts/*.sh
+
+# Environment variables
+ENV GAME_PATH=/app
+ENV MODS_PATH=/mods
+ENV STAGING_PATH=/mods/staging
+ENV SERVER_PORT=7777
+ENV ENABLE_AUTO_UPDATE=true
+ENV UPDATE_CHECK_INTERVAL=3600
+ENV ENABLE_HEALTH_CHECK=true
+ENV HEALTH_CHECK_INTERVAL=60
+
+# Health check
+HEALTHCHECK --interval=60s --timeout=10s --start-period=120s --retries=3 \
+    CMD /app/scripts/health_check.sh || exit 1
+
+# Expose game server port (typical Unity multiplayer port)
+EXPOSE 7777/udp
+EXPOSE 7777/tcp
+
+# Default entrypoint
+ENTRYPOINT ["/app/scripts/entrypoint.sh"]
+CMD ["start"]

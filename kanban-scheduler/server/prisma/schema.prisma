@@ -1,0 +1,214 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  username  String   @unique
+  password  String
+  name      String?
+  avatar    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  boards            Board[]
+  tasks             Task[]
+  projects          Project[]
+  comments          Comment[]
+  whiteboards       Whiteboard[]
+  projectMembers    ProjectMember[]
+  projectInvitations ProjectInvitation[]
+
+  @@map("users")
+}
+
+model Board {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  color       String   @default("#3B82F6")
+  isDefault   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lists  List[]
+  tasks  Task[]
+
+  @@map("boards")
+}
+
+model List {
+  id       String  @id @default(cuid())
+  name     String
+  position Int
+  color    String  @default("#6B7280")
+
+  // Relations
+  boardId String
+  board   Board  @relation(fields: [boardId], references: [id], onDelete: Cascade)
+  tasks   Task[]
+
+  @@map("lists")
+}
+
+model Task {
+  id          String     @id @default(cuid())
+  title       String
+  description String?
+  status      String     @default("TODO")
+  priority    String     @default("MEDIUM")
+  dueDate     DateTime?
+  completedAt DateTime?
+  position    Int        @default(0)
+  tags        String?
+  metadata    String?
+  category    String?    // Code Quality, Documentation, Testing, Security, Performance, UX, Deployment
+  phase       String?    // 0A, 0B, 1, 2, 3, 4, 5
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  // Relations
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  boardId   String?
+  board     Board?   @relation(fields: [boardId], references: [id], onDelete: Cascade)
+  listId    String?
+  list      List?    @relation(fields: [listId], references: [id], onDelete: Cascade)
+  projectId String?
+  project   Project? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  comments  Comment[]
+  subtasks  Subtask[]
+
+  @@map("tasks")
+}
+
+model Subtask {
+  id          String     @id @default(cuid())
+  title       String
+  completed   Boolean    @default(false)
+  position    Int        @default(0)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  // Relations
+  taskId String
+  task   Task   @relation(fields: [taskId], references: [id], onDelete: Cascade)
+
+  @@map("subtasks")
+}
+
+model Project {
+  id          String        @id @default(cuid())
+  name        String
+  description String?
+  status      String        @default("ACTIVE")
+  type        String        @default("PERSONAL")
+  phase       String        @default("0A")
+  githubUrl   String?
+  githubId    Int?          @unique
+  color       String        @default("#10B981")
+  startDate   DateTime?
+  endDate     DateTime?
+  isPublic    Boolean       @default(false) // Allow public access requests
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  // Relations
+  userId     String
+  user       User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tasks      Task[]
+  members    ProjectMember[]
+  invitations ProjectInvitation[]
+
+  @@map("projects")
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  taskId String
+  task   Task   @relation(fields: [taskId], references: [id], onDelete: Cascade)
+
+  @@map("comments")
+}
+
+model Whiteboard {
+  id              String    @id @default(cuid())
+  title           String
+  content         String?   // Markdown or plain text content
+  imageUrl        String?   // URL or path to uploaded image
+  transcription   String?   // OCR/transcription result from image
+  tags            String?   // Comma-separated tags
+  isPinned        Boolean   @default(false)
+  color           String    @default("#8B5CF6")
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  // Relations
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("whiteboards")
+}
+
+model ProjectMember {
+  id        String   @id @default(cuid())
+  role      String   @default("MEMBER") // OWNER, ADMIN, MEMBER, VIEWER
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  userId    String
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, projectId])
+  @@map("project_members")
+}
+
+model ProjectInvitation {
+  id        String   @id @default(cuid())
+  status    String   @default("PENDING") // PENDING, ACCEPTED, REJECTED, CANCELLED
+  message   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  userId    String
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, projectId])
+  @@map("project_invitations")
+}
+
+// Note: SQLite doesn't support enums, using String fields instead
+// Valid values:
+// TaskStatus: TODO, IN_PROGRESS, IN_REVIEW, DONE, BLOCKED, CANCELLED
+// Priority: LOW, MEDIUM, HIGH, URGENT
+// ProjectStatus: ACTIVE, ON_HOLD, COMPLETED, CANCELLED
+// ProjectType: PERSONAL, WORK, GITHUB, LEARNING, HEALTH, FINANCE, OTHER
+// ProjectPhase: 0A (Organization and Planning), 0B (Research), 1 (Design), 2 (Development), 3 (Testing), 4 (Deployment), 5 (Maintenance)
+// ProjectMemberRole: OWNER, ADMIN, MEMBER, VIEWER
+// ProjectInvitationStatus: PENDING, ACCEPTED, REJECTED, CANCELLED

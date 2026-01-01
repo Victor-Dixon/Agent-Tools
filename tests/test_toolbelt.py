@@ -35,7 +35,10 @@ class TestToolbelt:
     def test_help_generation(self):
         """Test that help generation runs without error."""
         with patch("sys.argv", ["tools/cli.py", "--help"]):
-            assert main() == 0
+            # argparse --help calls sys.exit(0), so we catch SystemExit
+            with pytest.raises(SystemExit) as exc_info:
+                main()
+            assert exc_info.value.code == 0
 
     def test_list_tools(self):
         """Test that tool listing runs without error."""

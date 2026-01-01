@@ -37,6 +37,10 @@
       "tools_v2.categories.analysis_tools",
       "DuplicationTool"
     ],
+    "security.audit": [
+      "tools_v2.categories.security_audit_tools",
+      "SecurityAuditTool"
+    ],
     "bi.metrics": [
       "tools_v2.categories.bi_tools",
       "QuickMetricsTool"
