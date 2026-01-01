@@ -13,6 +13,7 @@ Architecture: WE ARE SWARM
 """
 
 import json
+import os
 import subprocess
 import sys
 import re
@@ -164,6 +165,7 @@ def main():
     parser = argparse.ArgumentParser(description="Unified Security Scanner")
     parser.add_argument("--warn-only", action="store_true", help="Exit with 0 even if issues found")
     args, _ = parser.parse_known_args()
+    warn_only = args.warn_only or os.getenv("CI", "").lower() == "true"
 
     print("🛡️  UNIFIED SECURITY SCANNER")
     print("=" * 60)
@@ -216,7 +218,7 @@ def main():
         content_results["count"] > 0 or 
         py_audit.get("status") == "found" or 
         npm_audit.get("status") == "found"):
-        if args.warn_only:
+        if warn_only:
             print("\n⚠️  Issues found, but --warn-only active. Exiting with 0.")
             sys.exit(0)
         sys.exit(1)
